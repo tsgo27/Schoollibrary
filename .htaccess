@@ -1,0 +1,14 @@
+RewriteEngine On
+Options -Indexes
+Allow from all
+
+# Restringe o acesso a pastas específicas
+RewriteRule ^config/ - [F,L]
+RewriteRule ^another-restricted-folder/ - [F,L]
+
+# Se o arquivo ou diretório não existir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redireciona todas as outras requisições para index.php com o parâmetro 'url'
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]

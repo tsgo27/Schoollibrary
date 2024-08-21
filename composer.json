@@ -1,0 +1,36 @@
+{
+    "name": "project/school-library",
+    "description": "Projeto Interdisciplinar PHP Biblioteca \"School Library\"",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "schoollibrary\\Controllers\\": "Controllers/",
+            "schoollibrary\\Models\\": "Models/",
+            "schoollibrary\\Config\\": "Config/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tiago Soares da Conceiçao",
+            "email": "tsgo.soares@gmail.com"
+        },
+        {
+            "name": "Vanessa da Silva Santos",
+            "email": "vanessa.santos@email.com"
+        },
+        {
+            "name": "Jakeline Macedo da Silva",
+            "email": "jakeline.silva@email.com"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {
+        "drewlabs/php-dompdf": "^0.9.0",
+        "masterminds/html5": "^2.9",
+        "nyholm/psr7": "^1.5",
+        "phenx/php-font-lib": ">=0.5.4 <1.0.0",
+        "phenx/php-svg-lib": ">=0.5.2 <1.0.0",
+        "symfony/http-foundation": "^5.1.5",
+        "sabberworm/php-css-parser": "^8.4"
+    }
+}

@@ -1,0 +1,8 @@
+.DS_Store
+/tests
+.vscode
+/vendor
+/.idea
+src/**/tests
+index.php
+document.html

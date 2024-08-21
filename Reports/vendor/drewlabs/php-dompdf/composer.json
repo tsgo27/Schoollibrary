@@ -1,0 +1,32 @@
+{
+    "name": "drewlabs/php-dompdf",
+    "description": "Simple wrapper around php dompdf/dompdf library",
+    "keywords": [
+        "pdf",
+        "dom"
+    ],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Azandrew",
+            "email": "azandrewdevelopper@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "dompdf/dompdf": "^1.0.2|^2.0.1",
+        "symfony/http-foundation": "^5.1.5",
+        "nyholm/psr7": "^1.5"
+    },
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Drewlabs\\Dompdf\\": "src/"
+        },
+        "files": [
+            "src/proxies.php"
+        ]
+    },
+    "repositories": []
+}

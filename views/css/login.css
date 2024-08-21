@@ -1,0 +1,291 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+.text-login{
+    width: 175px;
+    margin-left: 30%;
+    padding: 20px;
+    
+}
+
+
+.imag-login {
+    width: 960px; /* Defina a largura do quadrado */
+    height: 922px; /* Defina a altura do quadrado */
+    object-fit: cover; /* A imagem será redimensionada para preencher o quadrado, cortando partes se necessário */
+    
+}
+
+#versao{
+    width: auto;
+    position: fixed;
+    top: 95%;
+    margin-left: 27%;
+    font-size: 13px;
+    color: #2a2936;
+}
+
+
+
+#caps-lock-alert{
+    width: 10px;
+    width: auto;
+    display: none;
+    color: #b87a04;
+    background-color: #fff3cd;
+    border-color: #b87a04;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;  
+}
+
+
+
+/* ícone olho input password */
+.input-box .form__input-icon {
+    font-size: 1.2em;
+    color: #9c9a9a;
+    position: absolute;
+    top: 50%;
+    left: 0.0cm;
+    transform: translateY(-50%);
+}
+
+
+
+.input-box .form__input-icon.fa-eye {
+    margin-left: 92%;
+    right: 2.4em;
+}
+
+
+
+/* ico do olho password */
+.input-box {
+    position: relative;
+
+}
+
+/* ---End */
+
+
+/* Alert notificação "E-mail ou senha incorretos" */
+.alert-danger {
+    width: 480px;
+    width: auto;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+/* ---End */
+
+
+/* Container imagem tela de login" */
+.container-login {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+
+/* ---End */
+
+
+
+/* container tela login" */
+.content-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+
+}
+
+/* ---End */
+
+
+
+/* imagem tela de login" */
+.img-box {
+    width: 50%;
+    height: 100%;
+    background-color: #888787;
+ 
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ---End */
+
+
+
+
+/* Button Entrar" */
+.content-box .form-box .input-box input[type=submit] {
+    background: #003d7a;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+    ;
+}
+
+
+.content-box .form-box .input-box input[type=submit]:hover {
+    background: #264768;
+}
+
+/* ---End */
+
+
+
+
+/* ---Input Email- Senha */
+.content-box .form-box {
+    width: 50%;
+}
+
+/* ---End */
+
+
+
+
+/* ---Titulo LOGIN */
+.content-box .form-box h2 {
+    color: #32324f;
+    font-weight: 600;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ---End */
+
+
+
+
+
+/* ---Espaçamento dos input Email e Senha */
+.content-box .form-box .input-box {
+    margin-bottom: 20px;
+
+}
+
+/* ---End */
+
+
+/* ---Fonte dos  input Email e Senha   */
+.content-box .form-box .input-box input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-weight: 400;
+    border: none;
+    font-size: 17px;
+    color: #32324f;
+    background-color: #ecf2f7;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+
+/* ---End */
+
+
+
+/* ---Cor das letras placeholter input Email e Senha   */
+.content-box .form-box .input-box input::placeholder {
+    color: #a9adb6;
+
+}
+
+/* ---End */
+
+
+.content-box .form-box .input-box p {
+    color: #32324f;
+}
+
+.content-box .form-box .input-box p a {
+    color: #4aa4ee;
+}
+
+.content-box .form-box .input-box p a:hover {
+    color: #3286ca;
+}
+
+.content-box .form-box h3 {
+    color: #607d8b;
+    text-decoration: none;
+    margin: 40px 0 15px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 22px;
+}
+
+
+/*resposividade mobile*/
+@media (max-width:868px) {
+    .container-login .img-box {
+        display: none;
+    }
+
+    .alert-danger {
+        width: auto;
+    }
+
+    .container-login .content-box {
+        width: 100%;
+    }
+
+    .container-login .content-box .form-box {
+        width: 100%;
+        padding: 40px;
+        background: white;
+        margin: 50px;
+    }
+
+
+    .container-login .content-box .form-box h3 {
+        margin: 30px 0 10px;
+    }
+}
+
+@media (max-width:1700px) {
+    .container-login .content-box .form-box .remember {
+        flex-wrap: wrap;
+    }
+
+    .container-login .content-box .form-box .remember a {
+        margin-top: 20px;
+    }
+
+
+}
