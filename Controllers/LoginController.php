@@ -8,9 +8,9 @@ function buscarNovaMatricula($pdo, $idUsuario) {
         $stmt->execute([$idUsuario]);
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result['matricula'];
-        
+
     } catch (PDOException $e) {
-        error_log($e->getMessage(), 3, __DIR__ . '/../logs/php_errors.log');
+        error_log($e->getMessage()); 
         $_SESSION['error'] = 'Erro ao tentar acessar o banco de dados.';
         header('Location: ../views/Login.php');
         exit();
@@ -31,8 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE matricula = ?");
         $stmt->execute([$matricula]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
     } catch (PDOException $e) {
-        error_log($e->getMessage(), 3, __DIR__ . '/../logs/php_errors.log');
+        error_log($e->getMessage());
         $_SESSION['error'] = 'Erro ao tentar acessar o banco de dados.';
         header('Location: ../views/Login.php');
         exit();
@@ -41,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($user) {
         if ($user['user_status'] === 'Ativo') {
             if (password_verify($senha, $user['senha'])) {
+                // Regenerar a sessão e definir cookie httponly
                 session_regenerate_id(true);
                 ini_set('session.cookie_httponly', 1);
 
