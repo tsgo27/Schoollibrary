@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         } else {
             // Se o campo 'observacao' estiver vazio, exiba um alerta no navegador e redirecione
-            echo '<script>alert("O campo \'observacao\' não pode estar vazio."); window.location.href = "http://localhost/schoollibrary/views/Emprestimo.php";</script>';
+            echo '<script>alert("O campo \'observação\' não pode estar vazio."); window.location.href = "http://localhost/schoollibrary/views/Emprestimo.php";</script>';
             exit();
         }
     } catch (Exception $e) {
