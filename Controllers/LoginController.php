@@ -2,14 +2,20 @@
 session_start();
 require_once __DIR__ . '/../Config/web-config.php';
 
-
 function buscarNovaMatricula($pdo, $idUsuario) {
-    $stmt = $pdo->prepare("SELECT matricula FROM usuarios WHERE idUsuario = ?");
-    $stmt->execute([$idUsuario]);
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $result['matricula'];
+    try {
+        $stmt = $pdo->prepare("SELECT matricula FROM usuarios WHERE idUsuario = ?");
+        $stmt->execute([$idUsuario]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result['matricula'];
+        
+    } catch (PDOException $e) {
+        error_log($e->getMessage(), 3, __DIR__ . '/../logs/php_errors.log');
+        $_SESSION['error'] = 'Erro ao tentar acessar o banco de dados.';
+        header('Location: ../views/Login.php');
+        exit();
+    }
 }
-
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $matricula = filter_input(INPUT_POST, 'matricula', FILTER_SANITIZE_NUMBER_INT);
@@ -21,14 +27,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
-    $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE matricula = ?");
-    $stmt->execute([$matricula]);
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    try {
+        $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE matricula = ?");
+        $stmt->execute([$matricula]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        error_log($e->getMessage(), 3, __DIR__ . '/../logs/php_errors.log');
+        $_SESSION['error'] = 'Erro ao tentar acessar o banco de dados.';
+        header('Location: ../views/Login.php');
+        exit();
+    }
 
     if ($user) {
         if ($user['user_status'] === 'Ativo') {
             if (password_verify($senha, $user['senha'])) {
-                // Regenerar a sessão e definir cookie httponly
                 session_regenerate_id(true);
                 ini_set('session.cookie_httponly', 1);
 

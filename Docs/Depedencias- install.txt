@@ -10,7 +10,6 @@ Localize a linha que contém a extensão referente a: ";extension=gd".
 
 Remova o ponto e vírgula (;) no início da linha para descomentar a extensão (extension=gd).
 
-
 -------
 2° Baixar e Instalar o Composer:
 	
