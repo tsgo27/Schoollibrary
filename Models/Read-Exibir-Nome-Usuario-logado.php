@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/../Config/web-extends.php';
 
+/** @var PDO $pdo */
+
 try {
     if (!isset($pdo)) {
         throw new Exception('A conexão com o banco de dados não foi estabelecida.');
