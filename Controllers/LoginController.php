@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             exit();
         }
     } else {
-        $_SESSION['error'] = 'Acesso negado. Matrícula ou senha inválidos';
+        $_SESSION['error'] = 'Acesso negado. Matrícula ou senha inválida.';
         header('Location: ../views/Login.php');
         exit();
     }   
