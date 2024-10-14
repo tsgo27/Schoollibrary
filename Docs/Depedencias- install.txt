@@ -4,7 +4,7 @@ Procedimento para instalar a biblioteca Dompdf e gerar relatórios em PDF. Siga 
 ------
 1° Configurar a extensão 'gd' no arquivo de configuração:
 
-Abra o arquivo "php.ini" localizado na pasta do XAMPP.
+Abra o arquivo "php.ini" localizado na pasta do XAMPP "C:\xampp\php.ini".
 
 Localize a linha que contém a extensão referente a: ";extension=gd".
 
