@@ -3,7 +3,7 @@ Siga as instruções abaixo:
 
 
 ------
-1° Configurar a extensão 'gd' no arquivo de configuração:
+1° Configurar a extensão 'gd' no arquivo de configuração do XAMPP:
 
 Abra o arquivo "php.ini" localizado na pasta do XAMPP "C:\xampp\php.ini".
 

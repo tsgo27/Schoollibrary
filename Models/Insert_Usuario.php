@@ -43,7 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Inserindo os dados do formulário no banco
             $stmt = $pdo->prepare(
-                "INSERT INTO usuarios (matricula, nome, telefone, email, senha, user_tipo, user_status, data_registro) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())"
+                "INSERT INTO usuarios (matricula, nome, telefone, email, senha, user_tipo, user_status, data_registro) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, NOW())"
             );
             $stmt->execute([$matricula, $nome, $telefone, $email, $senha,  $tipo, $status]);
 
