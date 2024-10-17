@@ -4,7 +4,6 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 if (!isset($_SESSION['idUsuario'])) {
-    // Redirecionar para página de login
     $loginUrl = '/schoollibrary/views/Login.php';
     header("Location: $loginUrl");
     exit();
