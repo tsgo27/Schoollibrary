@@ -1,3 +1,10 @@
+<?php
+session_start();
+require_once __DIR__ . '/../Config/verify_csrf.php';
+//Token randômico
+$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
    
@@ -16,6 +23,7 @@
 
 <body>
    <form action="../Controllers/LoginController.php" method="POST">
+   <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
       <div class="container-login">
          <div class="img-box">
             <img src="../public/img/imag-login.png" alt="login" class="imag-login">
@@ -31,7 +39,6 @@
                   <i class="form__input-icon fas fa-eye" data-password-eye></i>
                </div>
                <?php
-               session_start();
                ?>
                <?php
                if (!empty($_SESSION['error'])) {
@@ -50,7 +57,6 @@
    </form>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="../public/js/view_password.js"></script>
 <script src="../public/js/CapsLock.js"></script>
 </html>
