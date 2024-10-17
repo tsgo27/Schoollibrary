@@ -25,7 +25,6 @@ require_once __DIR__ . '/../Config/web-extends.php';
 
 
 
-
 <!--------NavbBar Start------------------------------->
     <div id="content">
         <div class="top-navbar">
