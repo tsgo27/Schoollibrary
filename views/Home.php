@@ -43,12 +43,12 @@ require_once __DIR__ . '/../Config/web-extends.php';
                             <nav class="navbar p-0">
                                 <ul class="nav navbar-nav flex-row ml-auto">
                                     <li class="dropdown nav-item">
-                                        <a class="nav-link" href="#" data-toggle="dropdown">
+                                        <a class="nav-link" href="" data-toggle="dropdown">
                                             <img src="../public/img/perfil.png" alt="Imagem do usuário" style="width: 40px; border-radius:50%;" />
                                             <span class="xp-user-live"></span>
                                         </a>
                                         <ul class="dropdown-menu small-menu">
-                                            <li><a href="#"><span class="material-icons">person_outline</span><?php echo 'Olá, ' . $userName; ?></li>
+                                            <li><a href=""><span class="material-icons">person_outline</span><?php echo 'Olá, ' . $userName; ?></li>
                                             <li><a href="../Controllers/LogoutController.php"><span class="material-icons">logout</span>Sair</a></li>
                                         </ul>
                                     </li>
