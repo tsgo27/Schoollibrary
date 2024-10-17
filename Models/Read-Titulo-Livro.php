@@ -5,21 +5,18 @@ require_once __DIR__ . '/../Config/web-extends.php';
 
 $input = $_POST['input'];
 
-// Atualiza a consulta SQL para incluir livros com status "Emprestado" e "Reservado"
 $query = $pdo->prepare("SELECT Titulo, SubTitulo, Situacao FROM obra WHERE LOWER(Titulo) LIKE LOWER(:input) LIMIT 10");
 $query->bindValue(':input', '%' . $input . '%', PDO::PARAM_STR);
 $query->execute();
 
 $results = $query->fetchAll(PDO::FETCH_ASSOC);
-
 if ($results) {
     foreach ($results as $result) {
         $titulo = htmlspecialchars($result['Titulo']);
         $subtitulo = htmlspecialchars($result['SubTitulo']);
-        $situacao = htmlspecialchars($result['Situacao']); // Obtém o status do livro
+        $situacao = htmlspecialchars($result['Situacao']); 
 
         if ($situacao == 'Disponível') {
-            // Formatando a sugestão com a cor verde para o título se disponível
             $suggestion = '<div class="titulo-suggestion clickable" data-titulo="' . $titulo . '" data-subtitulo="' . $subtitulo . '">
                             <span style="color: green;">' . $titulo . '</span>
                            </div>';

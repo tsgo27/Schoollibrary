@@ -1,12 +1,11 @@
 <?php
 /** @var PDO $pdo */
+
 ##########---------GRÁFICO DE BARRAS-----------------########################
-if (!isset($pdo)) {
-    die("Erro: $pdo não está definido.");
-}
 // Busca os empréstimos
 $pdo->query("SET lc_time_names = 'pt_BR'");
-$sqlEmprestimos = "SELECT DATE_FORMAT(DataEmprestimo, '%m') as Mes, DATE_FORMAT(DataEmprestimo, '%M') as NomeMes, COUNT(*) as Quantidade FROM emprestimo GROUP BY Mes";
+$sqlEmprestimos = "SELECT DATE_FORMAT(DataEmprestimo, '%m') as Mes, DATE_FORMAT(DataEmprestimo, '%M')
+as NomeMes, COUNT(*) as Quantidade FROM emprestimo GROUP BY Mes";
 $resultEmprestimos = $pdo->query($sqlEmprestimos)->fetchAll(PDO::FETCH_ASSOC);
 
 
