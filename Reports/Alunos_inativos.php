@@ -1,5 +1,4 @@
 <?php
-// Autenticar usuário 
 require_once __DIR__ . '/../Config/web-extends.php';
 
 // AUTOLOAD DO COMPOSER
@@ -27,7 +26,7 @@ $options->setChroot(__DIR__);
 $options->setIsRemoteEnabled(true);
 
 // ACESSAR IMAGEM EXTERNA
-$logo = "<img src='http://localhost/School_library/public/img/logo-colegio.png' style= 'width:120px'>";
+$logo = "<img src='http://localhost/schoollibrary/public/img/logo-colegio.png' style= 'width:120px'>";
 
 $dompdf = new Dompdf($options);
 
