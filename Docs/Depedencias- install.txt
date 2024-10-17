@@ -1,4 +1,5 @@
-Procedimento para instalar a biblioteca Dompdf e gerar relatórios em PDF. Siga as instruções abaixo:
+Procedimento para instalar a biblioteca Dompdf e gerar relatórios em PDF. 
+Siga as instruções abaixo:
 
 
 ------
@@ -26,6 +27,6 @@ Ou utilize o instalador direto em: https://getcomposer.org/Composer-Setup.exe
 
 -------
 4° Após completar todos os procedimentos, agora você pode criar relatórios em PDF. 
-Conforme sua necessidade utilizando as linguagens PHP e HTML.
+Conforme sua necessidade.
 
 
