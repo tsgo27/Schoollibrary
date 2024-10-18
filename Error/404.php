@@ -1,16 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="pt=BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Error/css/404.css">
     <title>Página não encontrada</title>
-    <link rel="stylesheet" href="../views/css/404.css"> 
-    <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon" /> 
 </head>
-<header> 
-<svg width="380px" height="500px" viewBox="0 0 837 1045" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<header>
+    <svg width="380px" height="500px" viewBox="0 0 837 1045" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <path d="M353,9 L626.664028,170 L626.664028,487 L353,642 L79.3359724,487 L79.3359724,170 L353,9 Z" id="Polygon-1" stroke="#007FB2" stroke-width="6" sketch:type="MSShapeGroup"></path>
         <path d="M78.5,529 L147,569.186414 L147,648.311216 L78.5,687 L10,648.311216 L10,569.186414 L78.5,529 Z" id="Polygon-2" stroke="#EF4A5B" stroke-width="6" sketch:type="MSShapeGroup"></path>
@@ -19,11 +18,12 @@
         <path d="M281,801 L383,861.025276 L383,979.21169 L281,1037 L179,979.21169 L179,861.025276 L281,801 Z" id="Polygon-5" stroke="#36B455" stroke-width="6" sketch:type="MSShapeGroup"></path>
     </g>
 </svg>
-<div class="message-box">
-  <h3>Ops! Está página e/ou link não existe...</h3><br>
-  <p class="page-title">Não foi possível encontrar a página que você procura!</p>
-  <div class="buttons-con">
-  <div class="action-link-wrap"><a href="../views/Home.php" class="link-button">Voltar para Home</a></div>
-</div>
-</body>
+    <div class="message-box">
+        <h3>Ops! Está página e/ou link não existe...</h3><br>
+        <p class="page-title">Não foi possível encontrar a página que você procura!</p>
+        <div class="buttons-con">
+            <div class="action-link-wrap"><a href="../views/Home.php" class="link-button">Voltar para Home</a></div>
+        </div>
+        </body>
+
 </html>
