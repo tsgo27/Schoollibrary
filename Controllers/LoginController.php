@@ -18,7 +18,7 @@ function buscarNovaMatricula($pdo, $idUsuario) {
 
     } catch (PDOException $e) {
         error_log($e->getMessage()); 
-        $_SESSION['error'] = 'Erro ao tentar acessar o banco de dados.';
+        $_SESSION['error'] = 'Erro ao tentar acessar o banco de dados';
         header('Location: ../views/Login.php');
         exit();
     }
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $senha = $_POST['ss'];
 
         if (empty($matricula) || empty($senha)) {
-            $_SESSION['error'] = 'Por favor, preencha todos os campos.';
+            $_SESSION['error'] = 'Por favor, preencha todos os campos';
             header('Location: ../views/Login.php');
             exit();
         }
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     header("Location: ../views/Home.php");
                     exit();
                 } else {
-                    $_SESSION['error'] = 'Matrícula ou senha inválidos.';
+                    $_SESSION['error'] = 'Matrícula ou senha inválidos';
                     header('Location: ../views/Login.php');
                     exit();
                 }
@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 exit();
             }
         } else {
-            $_SESSION['error'] = 'Acesso negado. Matrícula ou senha inválida.';
+            $_SESSION['error'] = 'Acesso negado. Matrícula ou senha inválida';
             header('Location: ../views/Login.php');
             exit();
         }
