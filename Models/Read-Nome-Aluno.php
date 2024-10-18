@@ -1,18 +1,17 @@
 <?php
 require_once __DIR__ . '/../Config/web-extends.php';
 
-/** @var PDO $pdo */
+/*
+* Bucar nome do aluno pela matricula
+*
+*/
 
 try {
-    // Verifique a conexão (já configurada no arquivo database_server.php)
     if ($pdo->errorCode() != "0000") {
         die("Erro na conexão com o banco de dados: " . implode(", ", $pdo->errorInfo()));
     }
 
-    // Obtenha a matrícula fornecida pelo AJAX
     $matricula = $_POST["matricula"];
-
-    // Consulta SQL para buscar o nome e o status do aluno com base na matrícula
     $sql = "SELECT nome, user_status FROM alunos WHERE matricula = :matricula";
 
     $stmt = $pdo->prepare($sql);
@@ -21,7 +20,6 @@ try {
 
     // Verifique se a consulta foi bem-sucedida
     if ($stmt->rowCount() > 0) {
-        // Se encontrou resultados, obtenha o nome e o status do aluno
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         $nome = $row["nome"];
         $status = $row["user_status"];

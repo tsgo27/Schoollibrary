@@ -1,6 +1,11 @@
 <?php
+
+/*
+* Exibir valores cards
+*
+*/
+
 try {
-    /** @var PDO $pdo */
     // Consulta SQL para contar o número de alunos
     $sqlAlunos = "SELECT COUNT(*) AS total_alunos FROM alunos";
     $resultAlunos = $pdo->query($sqlAlunos);

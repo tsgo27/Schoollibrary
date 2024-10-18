@@ -1,7 +1,10 @@
 <?php
 require_once __DIR__ . '/../Config/web-extends.php';
 
-/** @var PDO $pdo */
+/*
+* Bucar nome título do livro
+*
+*/
 
 $input = $_POST['input'];
 
@@ -14,7 +17,7 @@ if ($results) {
     foreach ($results as $result) {
         $titulo = htmlspecialchars($result['Titulo']);
         $subtitulo = htmlspecialchars($result['SubTitulo']);
-        $situacao = htmlspecialchars($result['Situacao']); 
+        $situacao = htmlspecialchars($result['Situacao']);
 
         if ($situacao == 'Disponível') {
             $suggestion = '<div class="titulo-suggestion clickable" data-titulo="' . $titulo . '" data-subtitulo="' . $subtitulo . '">
@@ -30,6 +33,5 @@ if ($results) {
         echo $suggestion;
     }
 } else {
-    echo 'Sem sugestões ou livro não disponível'; 
+    echo 'Sem sugestões ou livro não disponível';
 }
-?>

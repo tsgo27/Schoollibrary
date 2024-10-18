@@ -1,5 +1,9 @@
 <?php
-require_once __DIR__ . '/../Config/web-extends.php';
+
+/*
+* Exibir nome do user logado
+*
+*/
 
 try {
     if (!isset($pdo)) {

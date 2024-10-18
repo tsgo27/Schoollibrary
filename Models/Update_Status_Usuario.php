@@ -2,7 +2,6 @@
 session_start();
 require_once __DIR__ . '/../Config/web-extends.php'; 
 
-/** @var PDO $pdo */
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
