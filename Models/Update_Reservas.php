@@ -55,9 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmtUpdateObra->bindParam(':Situacao', $situacao);
             $stmtUpdateObra->bindParam(':editaTitulo', $titulo);
 
-            // Executa a query de atualização na tabela obra
+           
             if ($stmtUpdateObra->execute()) {
-                // Redireciona o usuário para a página de origem
                 header("Location: http://localhost/schoollibrary/views/Reservas.php");
                 exit();
             } else {

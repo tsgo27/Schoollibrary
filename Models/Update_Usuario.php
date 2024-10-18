@@ -3,7 +3,6 @@ session_start();
 require_once __DIR__ . '/../Config/web-extends.php';
 require_once __DIR__ . '/../Config/verify_csrf.php';
 
-
 // Gera o token CSRF se ainda não existir
 if (!isset($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -13,9 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Verifica o token CSRF
         if (!verify_csrf_token($_POST['csrf_token'])) {
-            echo '<script>alert("Token CSRF inválido."); window.location.href = document.referrer;</script>';
-            exit();
+            throw new Exception('Token CSRF inválido');
         }
+
         // Obtém e filtra os dados do formulário Editar
         $idUsuario = htmlspecialchars(filter_input(INPUT_POST, 'idUsuario', FILTER_SANITIZE_NUMBER_INT), ENT_QUOTES, 'UTF-8');
         $matricula = htmlspecialchars(filter_input(INPUT_POST, 'matricula', FILTER_SANITIZE_NUMBER_INT), ENT_QUOTES, 'UTF-8');
@@ -42,23 +41,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Executa a query de atualização
         if ($stmt->execute()) {
-            // Redireciona o usuário para a página de edição
             header("Location: http://localhost/schoollibrary/views/Usuarios.php");
             exit();
         } else {
-            throw new Exception("Erro na atualização");
+            throw new Exception("Erro na atualização da tabela obra");
         }
-        
-    } catch (PDOException $e) {
-        // Tratar exceções de conexão PDO
-        echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
-        exit();
-        
+
     } catch (Exception $e) {
-        // Tratar outras exceções
-        echo "Ocorreu um erro: " . $e->getMessage();
+        $_SESSION['error'] = $e->getMessage();
+        header("Location: http://localhost/schoollibrary/views/Usuarios.php");
         exit();
-        
+
     } finally {
         // Fecha a declaração e a conexão com o banco de dados
         $stmt = null;

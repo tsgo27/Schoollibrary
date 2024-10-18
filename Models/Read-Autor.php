@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../Config/web-extends.php';
 
+/*
+* Buscar Nome do autor
+*
+*/
 
 $input = $_POST['input'];
 $query = $pdo->prepare("SELECT NomeAutor FROM autor WHERE NomeAutor LIKE :input AND StatusAutor = 'Ativo' LIMIT 10");

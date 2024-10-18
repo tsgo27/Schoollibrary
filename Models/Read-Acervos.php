@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../Config/web-extends.php';
 
+/*
+* Buscar acervo do livro
+*
+*/
 
 $input = $_POST['input'];
 $query = $pdo->prepare("SELECT Acervo FROM acervo WHERE Acervo LIKE :input AND StatusAcervo = 'Ativo' LIMIT 10");
