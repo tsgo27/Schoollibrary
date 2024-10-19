@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once __DIR__ . '/../Config/web-config.php';
+require_once __DIR__ . '/../Config/web-database.php';
 require_once __DIR__ . '/../Config/verify_csrf.php';
 
 

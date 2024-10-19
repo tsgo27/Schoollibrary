@@ -1,7 +1,8 @@
 <?php
 require_once __DIR__ . '/env_loader.php';
+
 /*
-* Connection configuration
+* Database Connections
 *
 */
 
