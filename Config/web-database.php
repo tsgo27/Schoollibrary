@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/env_loader.php';
+require_once __DIR__ . '/web-app.php';
 
 /*
 * Database Connections
