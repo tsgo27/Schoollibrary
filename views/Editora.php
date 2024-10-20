@@ -168,7 +168,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Estado</label>
                                         <select name="addEstado" id="addEstado" class="form-control" required>
                                             <?php
-                                            require_once __DIR__ . '/../Config/web-config.php';
+                                            require_once __DIR__ . '/../Config/web-database.php';
                                             $query = $pdo->query("SELECT nome_estado FROM estado;");
                                             $registros = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -218,7 +218,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Estado</label>
                                         <select name="editaEstado" id="editaEstado" class="form-control">
                                             <?php
-                                            require_once __DIR__ . '/../Config/web-config.php';
+                                            require_once __DIR__ . '/../Config/web-database.php';
                                             $query = $pdo->query("SELECT nome_estado FROM estado;");
                                             $registros = $query->fetchAll(PDO::FETCH_ASSOC);
 

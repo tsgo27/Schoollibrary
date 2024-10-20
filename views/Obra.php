@@ -77,7 +77,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                 <select class="form-control" id="select-editoras">
                     <option value="">Selecione Editora</option>
                     <?php
-                    require_once __DIR__ . '/../Config/web-config.php';
+                    require_once __DIR__ . '/../Config/web-database.php';
                     $query = $pdo->query("SELECT NomeEditora FROM editora;");
                     $registros = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -101,7 +101,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                 <select class="form-control" id="select-generos">
                     <option value="">Selecione Gênero</option>
                     <?php
-                    require_once __DIR__ . '/../Config/web-config.php';
+                    require_once __DIR__ . '/../Config/web-database.php';
                     $query = $pdo->query("SELECT NomeGenero FROM genero;");
                     $registros = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -265,7 +265,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Gêneros</label>
                                         <select type="text" name="AddEGenero" id="AddEGenero" class="form-control" required>
                                             <?php
-                                            require_once __DIR__ . '/../Config/web-config.php';
+                                            require_once __DIR__ . '/../Config/web-database.php';
                                             $query = $pdo->query("SELECT NomeGenero FROM genero ORDER BY NomeGenero;");
                                             $registros = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -277,7 +277,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Editoras</label>
                                         <select type="text" name="AddEditora" id="AddEditora" class="form-control" required>
                                             <?php
-                                            require_once __DIR__ . '/../Config/web-config.php';
+                                            require_once __DIR__ . '/../Config/web-database.php';
                                             $query = $pdo->query("SELECT NomeEditora FROM editora ORDER BY NomeEditora ASC;");
                                             $registros = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -343,7 +343,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Gêneros</label>
                                         <select type="text" name="editaGenero" id="editaGenero" class="form-control">
                                             <?php
-                                            require_once __DIR__ . '/../Config/web-config.php';
+                                            require_once __DIR__ . '/../Config/web-database.php';
                                             // Query
                                             $query = $pdo->query("SELECT NomeGenero FROM genero;");
                                             $registros = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -356,7 +356,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Editoras</label>
                                         <select type="text" name="editaEditora" id="editaEditora" class="form-control">
                                             <?php
-                                            require_once __DIR__ . '/../Config/web-config.php';
+                                            require_once __DIR__ . '/../Config/web-database.php';
                                             // Query
                                             $query = $pdo->query("SELECT NomeEditora FROM editora;");
                                             $registros = $query->fetchAll(PDO::FETCH_ASSOC);
