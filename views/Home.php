@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/../Config/web_extends.php';
-require_once __DIR__ . '/../Config/Base_url.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

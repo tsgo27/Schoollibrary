@@ -1,7 +1,5 @@
 <?php
 require_once __DIR__ . '/../Config/web_extends.php';
-require_once __DIR__ . '/../Config/Base_url.php';
-
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 ?>
 <!DOCTYPE html>
