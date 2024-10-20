@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../Config/web_extends.php';
+require_once __DIR__ . '/../Config/Base_url.php';
 
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 ?>
@@ -154,7 +155,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form method="POST" action="../Models/Insert_Autor.php" id="cadastroForm">
+                            <form method="POST" action="<?php echo BASE_URL; ?>/Models/Insert_Autor.php" id="cadastroForm">
                             <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
                                 <div class="modal-body">
                                     <div class="form-group">
@@ -189,7 +190,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form method="POST" action="../Models/Update_Autor.php" id="cadastroFormu">
+                            <form method="POST" action="<?php echo BASE_URL; ?>/Models/Update_Autor.php" id="cadastroFormu">
                             <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
                                 <div class="modal-body">
                                     <div class="form-group">

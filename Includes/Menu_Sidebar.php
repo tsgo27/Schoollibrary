@@ -32,11 +32,11 @@
                     <i class="material-icons">subtitles_off</i>Itens Inativos
                 </a>
                 <ul class="collapse list-unstyled menu" id="inactiveItemsSubmenu">
-                    <li><a href="Autor-inativos.php">Autores</a></li>
-                    <li><a href="Editora-inativos.php">Editoras</a></li>
-                    <li><a href="Acervo-inativos.php">Acervos</a></li>
-                    <li><a href="Genero-inativos.php">Gêneros</a></li>
-                    <li><a href="Aluno-inativos.php">Alunos</a></li>
+                    <li><a href="Autor_inativos.php">Autores</a></li>
+                    <li><a href="Editora_inativos.php">Editoras</a></li>
+                    <li><a href="Acervo_inativos.php">Acervos</a></li>
+                    <li><a href="Genero_inativos.php">Gêneros</a></li>
+                    <li><a href="Aluno_inativos.php">Alunos</a></li>
                 </ul>
             </li>
         </ul>

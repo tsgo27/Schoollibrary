@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../Config/web_extends.php';
+require_once __DIR__ . '/../Config/Base_url.php';
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 ?>
 <!DOCTYPE html>
@@ -162,7 +163,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form method="POST" action="../Models/Insert_Aluno.php" id="cadastroForm">
+                            <form method="POST" action="<?php echo BASE_URL; ?>/Models/Insert_Aluno.php" id="cadastroForm">
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label>Matrícula</label>
@@ -203,7 +204,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form method="POST" action="../Models/Update_Aluno.php" id="updateForm">
+                            <form method="POST" action="<?php echo BASE_URL; ?>/Models/Update_Aluno.php" id="updateForm">
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <input type="hidden" name="idAluno" id="idAluno" class="form-control">

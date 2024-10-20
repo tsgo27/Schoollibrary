@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../Config/web_extends.php';
+require_once __DIR__ . '/../Config/Base_url.php';
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 ?>
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Library | Autores</title>
+    <title>School Library | Alunos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../views/css/layout-main.css">
     <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon"/>
@@ -25,7 +26,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     ?>
 
 
-<!--------NavbBar Start------------------------------->
+<!----NavbBar Start------------------------------------>
     <div id="content">
         <div class="top-navbar">
             <div class="xd-topbar">
@@ -57,19 +58,18 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                     </div>
                 </div>
                 <div class="xp-breadcrumbbar text-center">
-                    <h4 class="page-title">Autores - Inativos</h4>
+                    <h4 class="page-title">Alunos - Inativo</h4>
                     <ol class="breadcrumb">
-                        <li class="sub-titulo"><a>School Library / Autores</a></li>
+                        <li class="sub-titulo"><a>School Library / Alunos</a></li>
                     </ol>
                 </div>
             </div>
         </div>
-<!--------NavbBar END--------------------------------->
+<!---------NavbBar END--------------------------------->
 
 
 
-
-<!--------Tabela Principal-content-Start-------------->
+<!---------Tabela Principal-content-Start-------------->
         <div class="main-content">
             <div class="row">
                 <div class="col-md-12">
@@ -77,12 +77,16 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                         <div class="table-title">
                             <div class="row">
                                 <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
-                                    <h2 class="ml-lg-2">Autores</h2>
+                                    <a href="../Reports/Alunos_inativos.php" target="_blank" class="btn btn-primary" id="gerarRelatorio">
+                                        <i class="material-icons">&#xe8ad;</i>
+                                        <span>Imprimir</span>
+                                    </a>
+                                    <h2 class="ml-lg-2">Alunos</h2>
                                 </div>
                                 <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
                                     <div class="container">
                                         <div class="box-search">
-                                            <input type="search" class="form-control" placeholder="Informe nome do Autor" id="pesquisar">
+                                            <input type="search" class="form-control" placeholder="Informe nome Aluno" id="pesquisar">
                                         </div>
                                     </div>
                                 </div>
@@ -93,33 +97,41 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Autor</th>
+                                        <th>Matrícula</th>
+                                        <th>Nome</th>
+                                        <th>Telefone</th>
+                                        <th>Email</th>
                                         <th>Status</th>
+                                        <th>Obs. / Empréstimo</th>
                                         <th>Ação</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php
+                                    <?php
                                     try {
                                         if (!isset($pdo)) {
                                             throw new Exception('A conexão com o banco de dados não foi estabelecida.');
                                         }
 
-                                        $sql = "SELECT * FROM Autor WHERE StatusAutor = 'Inativo' ORDER BY data_registro DESC";
+                                        $sql = "SELECT * FROM alunos WHERE user_status = 'Inativo' ORDER BY data_registro DESC";
                                         $result = $pdo->query($sql);
-
+                                        
                                         if ($result->rowCount() > 0) {
                                             while ($user_data = $result->fetch(PDO::FETCH_ASSOC)) {
-                                        
-                                                echo "<tr>";
-                                                echo "<td>" . htmlspecialchars($user_data ['codAutor']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['NomeAutor']) . "</td>";
-                                                echo "<td>" .  htmlspecialchars($user_data ['StatusAutor']) . "</td>";
+
+                                                echo "<td>" . htmlspecialchars($user_data['id_Aluno']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['matricula']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['nome']) . "</td>";
+                                                echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['telefone']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['email']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['user_status']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['observacao']) . "</td>";
+
 
                                                 echo "<td class='col-lg-3'>
-                                                    <a href='#editEmployeeModal' class='edit editarAutor btn btn-warning' data-toggle='modal'>Editar</a>
+                                                    <a href='#editEmployeeModal' class='edit editarUsuario btn btn-warning' data-toggle='modal'>Editar</a>
                                                     </td>";
-                                                echo "<tr>";
+                                                echo "</tr>";
                                             }
                                         } else {  
                                             echo "<tr><td colspan='12'>Nenhum resultado encontrado.</td></tr>";
@@ -131,34 +143,37 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                 </tbody>
                             </table>
                         </div>
-                        <div class="clearfix">
-                        </div>
                     </div>
                 </div>
-<!--------Tabela Principal-content-END---------------->
+<!-------------Tabela Principal-content-END------------>
 
 
 
 
-<!---------Popup Editar Autor-Start------------->
+<!-------------Popup Editar Aluno-Start---------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Editar Autor</h5>
+                                <h5 class="modal-title">Editar Aluno</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form method="POST" action="../Models/Update_Autor.php" id="cadastroFormu">
-                            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
+                            <form method="POST" action="<?php echo BASE_URL; ?>/Models/Update_Aluno.php" id="updateForm">
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <input type="hidden" name="codAutor" id="codAutor" class="form-control">
-                                        <label>Autor</label>
-                                        <input type="text" name="editaAutor" id="editaAutor" class="form-control">
-                                        <label>Status</label>
-                                        <select name="editaStatus" id="editaStatus" class="form-control">
+                                        <input type="hidden" name="idAluno" id="idAluno" class="form-control">
+                                        <label>Matrícula</label>
+                                        <input type="text" name="matricula" id="matricula" maxlength="9" class="form-control">
+                                        <label>Nome</label>
+                                        <input type="text" name="editarNome" id="editarNome" maxlength="60" class="form-control">
+                                        <label>Telefone</label>
+                                        <input type="tel" name="editarTelefone" id="editarTelefone"  maxlength="14" class="form-control">
+                                        <label>E-mail</label>
+                                        <input type="email" name="editarEmail" id="editarEmail" maxlength="100" class="form-control">
+                                        <label>Status Aluno</label>
+                                        <select name="editarStatus" id="editarStatus" class="form-control">
                                             <option value="Ativo">Ativo</option>
                                             <option value="Inativo">Inativo</option>
                                         </select>
@@ -166,26 +181,20 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                    <input type="submit" name="update" id="update" class="btn btn-success" value="Atualizar">
+                                    <button type="submit" name="update" id="update" class="btn btn-success">Atualizar</button>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
-                </div>
-<!---------Popup Autor-END---------------------->
-            </div>
-        </div>
-    </div>
-    </div>
-
+<!-------------Popup Editar Aluno-END------------------>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="../public/js/EditCamposAutor.js"></script>
-<script src="../public/js/SweetAlert_Update_Autor.js"></script>
-<script src="../public/js/SweetAlert_Insert_Autor.js"></script>
+<script src="../public/js/EditCampos_Alunos.js"></script>  
+<script src="../public/js/SweetAlert_Insert_Aluno.js"></script>   
+<script src="../public/js/SweetAlert_Update_Aluno.js"></script>   
 <script src="../public/js/MenuSidebar.js"></script>
-<script src="../public/js/PesquisarAutor.js"></script>
+<script src="../public/js/Pesquisar.js"></script>
 </html>

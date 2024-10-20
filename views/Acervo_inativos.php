@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../Config/web_extends.php';
+require_once __DIR__ . '/../Config/Base_url.php';
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 ?>
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Library | Editoras</title>
+    <title>School Library | Acervos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../views/css/layout-main.css">
     <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon"/>
@@ -25,7 +26,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     ?>
 
 
-<!--------NavbBar Start----------------------------->
+<!----NavbBar Start------------------------------------>
     <div id="content">
         <div class="top-navbar">
             <div class="xd-topbar">
@@ -57,17 +58,18 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                     </div>
                 </div>
                 <div class="xp-breadcrumbbar text-center">
-                    <h4 class="page-title">Editoras - Inativos</h4>
+                    <h4 class="page-title">Acervos - Inativos</h4>
                     <ol class="breadcrumb">
-                        <li class="sub-titulo"><a>School Library / Editoras</a></li>
+                        <li class="sub-titulo"><a>School Library / Acervos</a></li>
                     </ol>
                 </div>
             </div>
         </div>
-<!--------NavbBar END------------------------------->
+<!----Menu Sidebar END--------------------------------->
 
 
-<!--------Tabela Principal-content-Start------------>
+
+<!---------Tabela Principal-content-Start------------>
         <div class="main-content">
             <div class="row">
                 <div class="col-md-12">
@@ -75,12 +77,12 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                         <div class="table-title">
                             <div class="row">
                                 <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
-                                    <h2 class="ml-lg-2">Editoras</h2>
+                                    <h2 class="ml-lg-2">Acervos</h2>
                                 </div>
                                 <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
                                     <div class="container">
                                         <div class="box-search">
-                                            <input type="search" class="form-control" placeholder="Informe nome Editora" id="pesquisar">
+                                            <input type="search" class="form-control" placeholder="Informe o Endereço" id="pesquisar">
                                         </div>
                                     </div>
                                 </div>
@@ -91,40 +93,35 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Editora</th>
-                                        <th>Cidade</th>
-                                        <th>Estado</th>
+                                        <th>Endereço</th>
                                         <th>Status</th>
                                         <th>Ação</th>
                                     </tr>
                                 </thead>
-                                 <tbody>
+                                <tbody>
                                     <?php
                                     try {
                                         if (!isset($pdo)) {
                                             throw new Exception('A conexão com o banco de dados não foi estabelecida.');
                                         }
 
-                                        $sql = "SELECT * FROM editora WHERE StatusEditora = 'Inativos' ORDER BY data_registro DESC";
+                                        $sql = "SELECT * FROM acervo WHERE StatusAcervo = 'Inativo' ORDER BY data_registro DESC";
                                         $result = $pdo->query($sql);
-                                        
-                                        if ($result->rowCount() > 0) {
-                                            while ($editora_data = $result->fetch(PDO::FETCH_ASSOC)) {
-                                                
-                                                echo "<td>" . htmlspecialchars($editora_data['codEditora']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($editora_data['NomeEditora']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($editora_data['Cidade']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($editora_data['Estado']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($editora_data['StatusEditora']) . "</td>";
 
+                                        if ($result->rowCount() > 0) {
+                                            while ($acervo_data = $result->fetch(PDO::FETCH_ASSOC)) {
+
+                                                echo "<tr>";
+                                                echo "<td>" . htmlspecialchars($acervo_data['codAcervo']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($acervo_data['Acervo']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($acervo_data['StatusAcervo']) . "</td>";
 
                                                 echo "<td class='col-lg-3'>
-                                                    <a href='#editEmployeeModal' class='edit editarEditora btn btn-warning' data-toggle='modal'>Editar</a>
-                                                    <!--button class='delete excluirEditora btn btn-danger excluir-button' data-cod-editora='{$editora_data['codEditora']}'>Excluir</button-->
+                                                    <a href='#editEmployeeModal' class='edit editarAcervo btn btn-warning' data-toggle='modal'>Editar</a>
                                                     </td>";
                                                 echo "<tr>";
                                             }
-                                        } else {  
+                                        } else {
                                             echo "<tr><td colspan='12'>Nenhum resultado encontrado.</td></tr>";
                                         }
                                     } catch (PDOException $e) {
@@ -134,46 +131,30 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                 </tbody>
                             </table>
                         </div>
-                        <div class="clearfix">
-                        </div>
                     </div>
                 </div>
-<!--------Tabela Principal-content-END-------------->
+<!---------Tabela Principal-content-END-------------->
 
 
 
 
-<!---------Popup Editar Editora-Start--------------->
+<!-------------Popup Editar Acervo-Start-------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Editar Editora</h5>
+                                <h5 class="modal-title">Editar acervo</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form method="POST" action="../Models/Update_Editora.php" id="cadastroFormu">
+                            <form method="POST" action="<?php echo BASE_URL; ?>/Models/Update_Acervo.php" id="cadastroFormu">
                             <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <input type="hidden" name="codEditora" id="codEditora" class="form-control">
-                                        <label>Editora</label>
-                                        <input type="text" name="editaEditora" id="editaEditora" class="form-control">
-                                        <label>Cidade</label>
-                                        <input type="text" name="editaCidade" id="editaCidade" maxlength="60" class="form-control">
-                                        <label>Estado</label>
-                                        <select name="editaEstado" id="editaEstado" class="form-control">
-                                            <?php
-                                            require_once __DIR__ . '/../Config/web_database.php';
-                                            $query = $pdo->query("SELECT nome_estado FROM estado;");
-                                            $registros = $query->fetchAll(PDO::FETCH_ASSOC);
-
-                                            foreach ($registros as $registro) {
-                                                echo "<option value=\"" . $registro['nome_estado'] . "\">" . $registro['nome_estado'] . "</option>";
-                                            }
-                                            ?>
-                                        </select>
+                                        <input type="hidden" name="codAcervo" id="codAcervo" class="form-control">
+                                        <label>Acervo</label>
+                                        <input type="text" name="editaAcervo" id="editaAcervo" class="form-control">
                                         <label>Status</label>
                                         <select name="editaStatus" id="editaStatus" class="form-control">
                                             <option value="Ativo">Ativo</option>
@@ -189,19 +170,19 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                         </form>
                     </div>
                 </div>
+<!-------------Popup Editar Acervo-END---------------->
             </div>
         </div>
     </div>
     </div>
-<!---------Popup Editar--Editora-END---------------->
-
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="../public/js/EditCamposEditora.js"></script>
-<script src="../public/js/SweetAlert_Update_Editora.js"></script>
-<script src="../public/js/SweetAlert_Insert_Editora.js"></script>
+<script src="../public/js/SweetAlert_Insert_Acervo.js"></script>
+<script src="../public/js/SweetAlert_Update_Acervo.js"></script>
+<script src="../public/js/EditCamposAcervo.js"></script>
+<script src="../public/js/PesquisarAutor.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
-<script src="../public/js/PesquisarEditoras.js"></script>
+
 </html>
