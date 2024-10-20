@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../Config/web-extends.php';
+require_once __DIR__ . '/../Config/web_extends.php';
 
 // AUTOLOAD DO COMPOSER
 require __DIR__.'/vendor/autoload.php';
