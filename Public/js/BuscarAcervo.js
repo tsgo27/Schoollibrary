@@ -3,7 +3,7 @@ $(document).ready(function() {
     let input = $(this).val();
     if (input.length >= 2) {
       $.ajax({
-        url: "../Models/Read-Acervos.php",
+        url: "../Models/Read_Acervos.php",
         type: "POST",
         data: { input: input },
         success: function(data) {

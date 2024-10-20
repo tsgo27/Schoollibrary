@@ -1,6 +1,5 @@
 <?php
-require_once __DIR__ . '/../Config/web-extends.php';
-//Token randômico
+require_once __DIR__ . '/../Config/web_extends.php';
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 ?>
 <!DOCTYPE html>

@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/web-app.php';
+require_once __DIR__ . '/web_app.php';
 
 /*
 * Database Connections
@@ -16,9 +16,9 @@ try {
 } catch (PDOException $e) {
     if (filter_var($_ENV['DEBUG_MODE'], FILTER_VALIDATE_BOOLEAN)) {
         $error_message = urlencode($e->getMessage());
-        header("Location: ../Error/web-db.php?error=$error_message");
+        header("Location: ../Error/web_db.php?error=$error_message");
     } else {
-        header('Location: ../Error/web-db.php');
+        header('Location: ../Error/web_db.php');
     }
     exit();
 }

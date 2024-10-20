@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__ . '/../Config/web-extends.php';
+require_once __DIR__ . '/../Config/web_extends.php';
+require_once __DIR__ . '/../Config/Base_url.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -47,7 +48,7 @@ require_once __DIR__ . '/../Config/web-extends.php';
                                         </a>
                                         <ul class="dropdown-menu small-menu">
                                             <li><a href=""><span class="material-icons">person_outline</span><?php echo 'Olá, ' . $userName; ?></li>
-                                            <li><a href="../Controllers/LogoutController.php"><span class="material-icons">logout</span>Sair</a></li>
+                                            <li><a href="<?php echo BASE_URL; ?>/Controllers/LogoutController.php"><span class="material-icons">logout</span>Sair</a></li>
                                         </ul>
                                     </li>
                                 </ul>

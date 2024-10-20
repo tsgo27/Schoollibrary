@@ -1,7 +1,9 @@
 <?php
 session_start();
 require_once __DIR__ . '/../Config/verify_csrf.php';
-//Token randômico
+require_once __DIR__ . '/../Config/Base_url.php';
+
+
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 ?>
@@ -22,7 +24,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 </head>
 
 <body>
-   <form action="../Controllers/LoginController.php" method="POST">
+<form action="<?php echo BASE_URL; ?>/Controllers/LoginController.php" method="POST">
    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
       <div class="container-login">
          <div class="img-box">

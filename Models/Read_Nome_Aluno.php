@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../Config/web-extends.php';
+require_once __DIR__ . '/../Config/web_extends.php';
 
 /*
 * Bucar nome do aluno pela matricula
