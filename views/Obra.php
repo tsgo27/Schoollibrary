@@ -13,7 +13,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../views/css/layout-main.css">
     <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 </head>
 
