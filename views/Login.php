@@ -17,7 +17,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
    <link rel="stylesheet" href="./css/login.css">
    <link rel="stylesheet" href="../public/fonts/fonts.css">
    <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon"/>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
 </head>
 
 <body>
