@@ -57,5 +57,9 @@ require_once __DIR__ . '/../Config/web_extends.php';
         </table>
     </div>
 </body>
-
+<script type='text/php'>
+    if (isset($pdf)) {
+        $pdf->page_text(720, 550, "Página {PAGE_NUM} de {PAGE_COUNT}", null, 12, array(0,0,0));
+    }
+</script>
 </html>

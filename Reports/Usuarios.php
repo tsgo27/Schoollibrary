@@ -24,6 +24,8 @@ $dataFormatada = date('d/m/Y');
 $options = new Options();
 $options->setChroot(__DIR__);
 $options->setIsRemoteEnabled(true);
+$options->set('isPhpEnabled', true); // Habilita a execução de scripts PHP
+$dompdf = new Dompdf($options);
 
 // ACESSAR IMAGEM EXTERNA
 $logo = "<img src='http://localhost/schoollibrary/public/img/logo-colegio.png' style= 'width:120px'>";
