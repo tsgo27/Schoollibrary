@@ -33,6 +33,7 @@
                                         <div>
                                             <span class="f-left m-t-10 text-muted">
                                                 <i class="text-c-blue f-16 icofont icofont-book-alt m-r-10"></i>Obras Cadastrados
+                                                <a href="../views/Obra.php" class="text-c-blue">Visualizar</a>
                                             </span>
                                         </div>
                                     </div>
@@ -50,6 +51,7 @@
                                         <div>
                                             <span class="f-left m-t-10 text-muted">
                                                 <i class="text-c-pink f-16 icofont icofont-book-alt m-r-10"></i>Obras alugados
+                                                <a href="../views/Emprestimo.php" class="text-c-blue">Visualizar</a>
                                             </span>
                                         </div>
                                     </div>
@@ -66,6 +68,7 @@
                                         <div>
                                             <span class="f-left m-t-10 text-muted">
                                                 <i class="text-c-green f-16 icofont icofont-book-alt m-r-10"></i>Obras para alugar
+                                                <a href="../views/Obra.php" class="text-c-blue">Visualizar</a>
                                             </span>
                                         </div>
                                     </div>
@@ -82,6 +85,7 @@
                                         <div>
                                             <span class="f-left m-t-10 text-muted">
                                                 <i class="text-c-yellow f-16 icofont icofont-ui-user-group m-r-10"></i>Alunos Cadastrados
+                                                <a href="../views/aluno.php" class="text-c-blue">Visualizar</a>
                                             </span>
                                         </div>
                                     </div>
