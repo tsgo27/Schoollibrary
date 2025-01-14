@@ -1,6 +1,6 @@
 {
     "name": "project/school-library",
-    "description": "Projeto Interdisciplinar PHP Biblioteca \"School Library\"",
+    "description": "Projeto Interdisciplinar Extensionista - 2023 PHP Biblioteca \"School Library\"",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -16,11 +16,11 @@
         },
         {
             "name": "Vanessa da Silva Santos",
-            "email": "vanessa.santos@email.com"
+            "email": "vanessa30lv@gmail.com"
         },
         {
             "name": "Jakeline Macedo da Silva",
-            "email": "jakeline.silva@email.com"
+            "email": "jakelinebrt@gmail.com"
         }
     ],
     "minimum-stability": "alpha",
