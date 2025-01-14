@@ -16,6 +16,11 @@ function loadEnv($filePath) {
             continue;
         }
 
+        // Verifica se a linha contém um sinal de igual
+        if (strpos($line, '=') === false) {
+            continue;
+        }
+
         list($name, $value) = explode('=', $line, 2);
         $name = trim($name);
         $value = trim($value);
@@ -24,7 +29,6 @@ function loadEnv($filePath) {
         $_ENV[$name] = $value;
     }
 }
-
 
 loadEnv(__DIR__ . '/.env');
 ?>
