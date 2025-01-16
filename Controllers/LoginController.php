@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_SESSION['login_attempts'] >= 5) {
             $time_since_last_attempt = time() - $_SESSION['last_attempt_time'];
             if ($time_since_last_attempt < 300) { // 5 minutos
-                $_SESSION['error'] = 'Tentativas excedidas.  Aguarde 5 minutos.';
+                $_SESSION['error'] = 'Tentativas excedidas. Aguarde 5 minutos.';
                 header('Location: ../views/Login.php');
                 exit();
             } else {
