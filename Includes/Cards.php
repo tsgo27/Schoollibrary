@@ -63,12 +63,12 @@
                                 <div class="card widget-card-1">
                                     <div class="card-block-small">
                                         <i class="icofont icofont-book-alt bg-c-green card1-icon"></i>
-                                        <span class="text-c-green f-w-600">Livros Dísponiveis</span>
+                                        <span class="text-c-green f-w-600">Livros Reservados</span>
                                         <h4><?php echo $totalObrasDisponiveis; ?></h4>
                                         <div>
                                             <span class="f-left m-t-10 text-muted">
                                                 <i class="text-c-green f-16 icofont icofont-book-alt m-r-10"></i>Obras para alugar
-                                                <a href="../views/Obra.php" class="text-c-blue">Visualizar</a>
+                                                <a href="../views/reserva.php" class="text-c-blue">Visualizar</a>
                                             </span>
                                         </div>
                                     </div>

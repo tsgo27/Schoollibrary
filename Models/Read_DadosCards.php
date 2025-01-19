@@ -25,10 +25,10 @@ try {
     $TotalEmprestado = $rowEmprestadas['TotalEmprestado'];
 
     // Consulta SQL para contar o número de obras disponíveis
-    $sqlDisponiveis = "SELECT COUNT(*) AS total_obras_disponiveis FROM obra WHERE Situacao = 'Disponivel'";
+    $sqlDisponiveis = "SELECT COUNT(*) AS total_obras_reservado FROM obra WHERE Situacao = 'Reservado'";
     $resultDisponiveis = $pdo->query($sqlDisponiveis);
     $rowDisponiveis = $resultDisponiveis->fetch(PDO::FETCH_ASSOC);
-    $totalObrasDisponiveis = $rowDisponiveis['total_obras_disponiveis'];
+    $totalObrasDisponiveis = $rowDisponiveis['total_obras_reservado'];
 
 } catch (PDOException $e) {
     echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
