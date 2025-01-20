@@ -1,7 +1,7 @@
 <?php
-// Define opções de segurança para cookies
-ini_set('session.cookie_secure', 1);
-ini_set('session.cookie_httponly', 1);
+
+ini_set('session.cookie_secure', 1);  // Se o seu site estiver rodando sobre HTTPS, esta opção é válida
+ini_set('session.cookie_httponly', 1); // Impede acesso via JavaScript
 
 session_start();
 require_once __DIR__ . '/../Config/web_database.php';
@@ -22,19 +22,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Função para buscar nova matrícula
         function buscarNovaMatricula($pdo, $idUsuario)
-        {
-            try {
-                $stmt = $pdo->prepare("SELECT matricula FROM usuarios WHERE idUsuario = ?");
-                $stmt->execute([$idUsuario]);
-                $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                return $result['matricula'];
-            } catch (PDOException $e) {
-                error_log($e->getMessage());
-                $_SESSION['error'] = 'Erro ao tentar acessar o banco de dados';
-                header('Location: ../views/Login.php');
-                exit();
-            }
-        }
+{
+    try {
+        $stmt = $pdo->prepare("SELECT matricula FROM usuarios WHERE idUsuario = ?");
+        $stmt->execute([$idUsuario]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        // Verifique se o resultado está sendo retornado corretamente
+        var_dump($result); // Veja se o resultado tem a matrícula
+
+        return $result['matricula'];
+    } catch (PDOException $e) {
+        error_log($e->getMessage());
+        $_SESSION['error'] = 'Erro ao tentar acessar o banco de dados';
+        header('Location: ../views/Login.php');
+        exit();
+    }
+}
 
         // Sanitização e Validação de Entrada: Matrícula e Senha
         $matricula = filter_input(INPUT_POST, 'matricula', FILTER_SANITIZE_NUMBER_INT);
@@ -69,14 +73,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($user) {
             if ($user['user_status'] === 'Ativo') {
+                
                 if (password_verify($senha, $user['senha'])) {
                     session_regenerate_id(true);
                     $_SESSION['idUsuario'] = $user['idUsuario'];
                     $_SESSION['matricula'] = $matricula;
+                    
+                    
                     $novaMatricula = buscarNovaMatricula($pdo, $user['idUsuario']);
                     if ($novaMatricula != $matricula) {
                         $_SESSION['matricula'] = $novaMatricula;
                     }
+
                     unset($_SESSION['error']);
                     $_SESSION['login_attempts'] = 0; // Reset login attempts on successful login
                     header("Location: ../views/Home.php");

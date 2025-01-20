@@ -13,6 +13,12 @@ session_unset();
 // Destrói a sessão atual, apagando todas as informações relacionadas à sessão, como cookies e dados armazenados no servidor.
 session_destroy();
 
+// Remove o cookie de sessão no navegador para garantir que a sessão será efetivamente destruída do lado do cliente.
+if (ini_get("session.use_cookies")) {
+    $params = session_get_cookie_params();
+    setcookie(session_name(), '', time() - 42000, $params["path"], $params["domain"], $params["secure"], $params["httponly"]);
+}
+
 // Redireciona o usuário para a página de login após a destruição da sessão.
 header("Location: ../views/Login.php");
 
