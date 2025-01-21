@@ -34,7 +34,7 @@ DB_USER=root
 
 DB_PASSWORD=
 
-
+---
 
 ## Licença
 Copyright © 2023 School Library.
