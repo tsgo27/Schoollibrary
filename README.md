@@ -41,6 +41,15 @@ DB_PASSWORD=
 
 ---
 
+## Autores
+
+- [Jakeline Macedo da Silva](https://www.linkedin.com/in/jakeline-silva-80635398/)
+- [Tiago Soares da Conceição](https://www.linkedin.com/in/tsgo27/)
+- [Vanessa da Silva Santos](https://www.linkedin.com/in/vanessa-da-silva-santos-50688b227/)
+
+
+---
+
 ## Licença
 Copyright © 2023 School Library.
 
