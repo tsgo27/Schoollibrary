@@ -1,6 +1,6 @@
 # School Library - Sistema de Gestão de Biblioteca Escolar
 
-O School Library foi desenvolvido para facilitar e otimizar o gerenciamento de livros, tornando o processo de empréstimo e devolução mais ágil e eficiente para alunos e professores. Além disso, o sistema conta com um dashboard intuitivo que apresenta indicadores de quantos livros estão reservados, emprestados, e também o status dos alunos (ativos ou inativos), proporcionando uma visão clara e prática.
+O Sistema foi desenvolvido para facilitar e otimizar o gerenciamento de livros, tornando o processo de empréstimo e devolução mais ágil e eficiente para alunos. Além disso, o sistema conta com um dashboard intuitivo que apresenta indicadores de quantos livros estão reservados, emprestados, e também o status dos alunos (ativos ou inativos), proporcionando uma visão clara e prática.
 
 ![Screenshot_1](https://github.com/user-attachments/assets/d106ef30-22fd-4d91-8433-296fa8fa0c67)
 
