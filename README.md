@@ -25,6 +25,17 @@ git clone https://github.com/Tsg27/Schoollibrary.git
 
 ---
 
+## Variáveis ​​de ambiente
+Para executar este projeto, você precisará alterar as seguintes variáveis ​​de ambiente no seu arquivo .env
+
+DB_NAME=school_library
+
+DB_USER=root
+
+DB_PASSWORD=
+
+
+
 ## Licença
 Copyright © 2023 School Library.
 
