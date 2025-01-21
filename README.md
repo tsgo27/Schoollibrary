@@ -1,8 +1,12 @@
 # School Library - Sistema de Gestão de Biblioteca Escolar
 
-O Sistema de Gerenciamento de Biblioteca Escolar é uma solução web que facilita o gerenciamento da biblioteca, otimizando o processo de empréstimo e devolução de livros para alunos e professores, além de permitir pesquisas rápidas e eficientes.
+O School Library foi desenvolvido para facilitar e otimizar o gerenciamento de livros, tornando o processo de empréstimo e devolução mais ágil e eficiente para alunos e professores. Além disso, o sistema conta com um dashboard intuitivo que apresenta indicadores de quantos livros estão reservados, emprestados, e também o status dos alunos (ativos ou inativos), proporcionando uma visão clara e prática.
 
 <img width="960" alt="tela-login-schoollibrary" src="https://github.com/user-attachments/assets/51fd3c8e-e3c4-44b7-a3b3-465cfd8bbd13">
+
+##
+
+![Screenshot_2](https://github.com/user-attachments/assets/8a5707a0-f012-4c1f-abd9-e28649642501)
 
 ---
 
