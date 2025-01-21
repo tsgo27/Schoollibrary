@@ -21,3 +21,11 @@ Clone o repositório para sua máquina local:
 
 ```bash
 git clone https://github.com/Tsg27/Schoollibrary.git
+```
+
+---
+
+## License
+Copyright © 2023 School Library.
+
+Este projeto é licenciado [MIT](https://choosealicense.com/licenses/mit/)
