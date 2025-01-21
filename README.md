@@ -2,7 +2,9 @@
 
 O School Library foi desenvolvido para facilitar e otimizar o gerenciamento de livros, tornando o processo de empréstimo e devolução mais ágil e eficiente para alunos e professores. Além disso, o sistema conta com um dashboard intuitivo que apresenta indicadores de quantos livros estão reservados, emprestados, e também o status dos alunos (ativos ou inativos), proporcionando uma visão clara e prática.
 
-<img width="960" alt="tela-login-schoollibrary" src="https://github.com/user-attachments/assets/51fd3c8e-e3c4-44b7-a3b3-465cfd8bbd13">
+
+![Screenshot_1](https://github.com/user-attachments/assets/d106ef30-22fd-4d91-8433-296fa8fa0c67)
+
 
 ##
 
