@@ -25,7 +25,7 @@ git clone https://github.com/Tsg27/Schoollibrary.git
 
 ---
 
-## License
+## Licença
 Copyright © 2023 School Library.
 
 Este projeto é licenciado [MIT](https://choosealicense.com/licenses/mit/)
