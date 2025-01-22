@@ -18,15 +18,6 @@ O Sistema foi desenvolvido para facilitar e otimizar o gerenciamento de livros, 
 - **Banco de Dados**: MySQL  
 - **Back-End**: PHP  
 
----
-
-## Clone o Repositório
-
-Clone o repositório para sua máquina local:
-
-```bash
-git clone https://github.com/Tsg27/Schoollibrary.git
-```
 
 ---
 
