@@ -27,9 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $pdo->prepare("SELECT matricula FROM usuarios WHERE idUsuario = ?");
         $stmt->execute([$idUsuario]);
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        
-        // Verifique se o resultado está sendo retornado corretamente
-        var_dump($result); // Veja se o resultado tem a matrícula
+
 
         return $result['matricula'];
     } catch (PDOException $e) {
@@ -73,13 +71,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($user) {
             if ($user['user_status'] === 'Ativo') {
-                
+
                 if (password_verify($senha, $user['senha'])) {
                     session_regenerate_id(true);
                     $_SESSION['idUsuario'] = $user['idUsuario'];
                     $_SESSION['matricula'] = $matricula;
-                    
-                    
+
+
                     $novaMatricula = buscarNovaMatricula($pdo, $user['idUsuario']);
                     if ($novaMatricula != $matricula) {
                         $_SESSION['matricula'] = $novaMatricula;
@@ -97,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     exit();
                 }
             } else {
-                $_SESSION['error'] = 'Usuário inativo';
+                $_SESSION['error'] = 'Usuário inativo. Contate o administrador';
                 header('Location: ../views/Login.php');
                 exit();
             }
