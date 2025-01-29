@@ -21,16 +21,6 @@ O Sistema foi desenvolvido para facilitar e otimizar o gerenciamento de livros, 
 
 ---
 
-## Variáveis ​​de ambiente
-Para executar este projeto, você precisará alterar as seguintes variáveis ​​de ambiente no seu arquivo .env
-
-DB_NAME=school_library
-
-DB_USER=root
-
-DB_PASSWORD=
-
----
 
 ## Autores
 
