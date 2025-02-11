@@ -15,11 +15,12 @@ try {
     ));
 } catch (PDOException $e) {
     if (filter_var($_ENV['DEBUG_MODE'], FILTER_VALIDATE_BOOLEAN)) {
-        $error_message = urlencode($e->getMessage());
-        header("Location: ../page/erro_conexao.php?error=$error_message");
+        $error_message = mb_convert_encoding($e->getMessage(), 'UTF-8', 'ISO-8859-1');
+        header("Location: ../page/erro_conexao.php?error=" . urlencode($error_message));
     } else {
         header('Location: ../page/erro_conexao.php');
     }
     exit();
 }
+
 ?>
