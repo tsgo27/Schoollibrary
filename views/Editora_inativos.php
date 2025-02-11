@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../Config/web_extends.php';
+require_once __DIR__ . '/../Config/bootstrap.php';
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 ?>
 <!DOCTYPE html>
@@ -163,7 +163,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Estado</label>
                                         <select name="editaEstado" id="editaEstado" class="form-control">
                                             <?php
-                                            require_once __DIR__ . '/../Config/web_database.php';
+                                            require_once __DIR__ . '/../Config/bootstrap.php';
                                             $query = $pdo->query("SELECT nome_estado FROM estado;");
                                             $registros = $query->fetchAll(PDO::FETCH_ASSOC);
 

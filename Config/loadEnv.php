@@ -1,6 +1,6 @@
 <?php
 /*
-* Load environment variables from .env file
+* Carregar variáveis ​​de ambiente do arquivo .env
 *
 */
 
@@ -8,7 +8,7 @@ function loadEnv($filePath) {
     try {
         // Verifica se o arquivo .env existe e é legível
         if (!file_exists($filePath) || !is_readable($filePath)) {
-            throw new Exception("Erro ao carregar arquivo de conexão!.");
+            throw new Exception("Erro ao carregar arquivo .env");
         }
 
         // Lê as linhas do arquivo .env
@@ -33,9 +33,7 @@ function loadEnv($filePath) {
         }
     } catch (Exception $e) {
         // Exibe uma mensagem mais genérica e segura
-        echo "Erro ao carregar arquivo de conexão!";
-        // Para fins de depuração ou produção, você pode registrar o erro em um log:
-        // error_log($e->getMessage(), 3, 'path/to/error_log.log');
+        echo "Erro ao carregar variáveis de ambiente: " . $e->getMessage();
         exit();
     }
 }
