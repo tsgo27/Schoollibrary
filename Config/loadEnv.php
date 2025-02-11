@@ -8,7 +8,7 @@ function loadEnv($filePath) {
     try {
         // Verifica se o arquivo .env existe e é legível
         if (!file_exists($filePath) || !is_readable($filePath)) {
-            throw new Exception("Erro ao carregar arquivo .env");
+            throw new Exception("Erro ao carregar arquivo .env!");
         }
 
         // Lê as linhas do arquivo .env
@@ -39,7 +39,7 @@ function loadEnv($filePath) {
 }
 
 // Caminho do arquivo .env
-$envFilePath = __DIR__ . '/../.env'; 
+$envFilePath = __DIR__ . '/../.env';  // Ajuste para caminho correto
 
 // Carrega as variáveis do arquivo .env
 loadEnv($envFilePath);

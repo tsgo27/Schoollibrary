@@ -2,7 +2,7 @@
 require_once __DIR__ . '/loadEnv.php';
 
 /*
-* Database Connections
+* Conexões de banco de dados
 *
 */
 
@@ -16,9 +16,9 @@ try {
 } catch (PDOException $e) {
     if (filter_var($_ENV['DEBUG_MODE'], FILTER_VALIDATE_BOOLEAN)) {
         $error_message = urlencode($e->getMessage());
-        header("Location: ../Error/web_db.php?error=$error_message");
+        header("Location: ../page/erro_conexao.php?error=$error_message");
     } else {
-        header('Location: ../Error/web_db.php');
+        header('Location: ../page/erro_conexao.php');
     }
     exit();
 }

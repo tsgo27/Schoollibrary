@@ -4,7 +4,7 @@ ini_set('session.cookie_secure', 1);  // Se o site usa HTTPS, ativa cookies segu
 ini_set('session.cookie_httponly', 1); // Impede acesso aos cookies via JavaScript
 
 session_start();
-require_once __DIR__ . '/../Config/bootstrap.php';
+require_once __DIR__ . '/../Config/db_config.php';
 require_once __DIR__ . '/../Config/verify_csrf.php';
 
 // Gera o token CSRF se ainda não existir
