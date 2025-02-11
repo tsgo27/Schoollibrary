@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception('Matrícula ou senha incorretos');
         }
 
-        if ($user['user_status'] !== 'ativo') {
+        if ($user['user_status'] !== 'Ativo') {
             throw new Exception('Usuário inativo. Contate o administrador');
         }
 

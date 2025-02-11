@@ -25,7 +25,7 @@ try {
         $status = $row["user_status"];
 
         // Verifique o status do aluno
-        if ($status == 'ativo') {
+        if ($status == 'Ativo') {
             // Se o aluno estiver ativo, retorne o nome do aluno
             echo $nome;
         } else {
