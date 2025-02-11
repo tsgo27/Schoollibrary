@@ -1,6 +1,6 @@
 <?php
 define('VIEW_PATH', __DIR__ . '/views/');
-define('ERROR_PATH', __DIR__ . '/Error/');
+define('ERROR_PATH', __DIR__ . '/Page/');
 
 // Obtém a URL da consulta e a sanitiza
 $url = isset($_GET['url']) ? filter_var($_GET['url'], FILTER_SANITIZE_URL) : '';

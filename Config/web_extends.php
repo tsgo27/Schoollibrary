@@ -3,13 +3,14 @@
 * extends 
 *
 */
-
+// Define o caminho base do sistema para a construção das URLso
 define('BASE_URL', '/schoollibrary');
 
+// Inclui os arquivos necessários para a configuração e funcionamento do sistema.
 require_once __DIR__ . '/../Config/web_database.php'; 
 require_once __DIR__ . '/../Controllers/SessionController.php'; 
-require_once __DIR__ . '/../Models/Read_Nome_Usuario_logado.php'; 
-require_once __DIR__ . '/../Models/Read_DadosCards.php';
-require_once __DIR__ . '/../Models/Read_DadosGraficos.php';
+require_once __DIR__ . '/../Models/get_user_name.php'; 
+require_once __DIR__ . '/../Models/get_dados_cards.php';
+require_once __DIR__ . '/../Models/get_dados_graficos.php';
 
 ?>

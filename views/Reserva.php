@@ -169,7 +169,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 
 
-<!---------Popup Adicionar Reservas-Start------------->
+<!---------Modal Adicionar Reservas-Start------------->
                 <div class="modal fade" tabindex="-1" id="addEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -211,11 +211,11 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                         </form>
                     </div>
                 </div>
-<!---------Popup Acervo Reservas--END----------------->
+<!---------Modal Acervo Reservas--END----------------->
 
 
 
-<!---------Popup Editar Reservas-Start----------------->
+<!---------Modal Editar Reservas-Start----------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -257,7 +257,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                         </div>
                     </div>
                 </div>
-<!---------Popup Editar--Reservas-END------------------>
+<!---------Modal Editar--Reservas-END------------------>
             </div>
         </div>
     </div>

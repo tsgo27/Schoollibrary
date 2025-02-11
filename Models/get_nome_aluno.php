@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../Config/web_extends.php';
 
 /*
-* Bucar nome do aluno pela matricula
+* Buscar nome do aluno pela matricula
 *
 */
 
@@ -25,7 +25,7 @@ try {
         $status = $row["user_status"];
 
         // Verifique o status do aluno
-        if ($status == 'Ativo') {
+        if ($status == 'ativo') {
             // Se o aluno estiver ativo, retorne o nome do aluno
             echo $nome;
         } else {

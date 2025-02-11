@@ -1,6 +1,8 @@
 <?php
 session_start();
-require_once __DIR__ . '/../Config/web_extends.php'; 
+require_once __DIR__ . '/../Config/web_extends.php';
+
+
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -10,15 +12,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $novoStatus = htmlspecialchars(filter_input(INPUT_POST, 'novo_status'), ENT_QUOTES, 'UTF-8');
 
         // Verificar se o usuário existe no banco de dados
-        $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE matricula = ?");
+        $stmt = $pdo->prepare("SELECT 1 FROM usuarios WHERE matricula = ?");
         $stmt->execute([$matricula]);
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if (!$user) {
-            $_SESSION['error'] = 'Usuário não encontrado.';
-            header('Location: /schoollibrary/views/Login.php');
+        if ($stmt->fetchColumn() === false) {
+            header('Location:/schoollibrary/views/Login.php');
             exit();
         }
+
+
 
         // Atualizar o status do usuário no banco de dados
         $stmt = $pdo->prepare("UPDATE usuarios SET user_status = ? WHERE matricula = ?");
@@ -33,7 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 } else {
-    header('Location: /schoollibrary/views/Login.php');
+    header('Location:/schoollibrary/views/Login.php');
     exit();
 }
-?>

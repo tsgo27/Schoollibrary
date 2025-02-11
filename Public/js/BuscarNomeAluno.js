@@ -3,7 +3,7 @@ $(document).ready(function() {
         if (matricula !== "") {
             $.ajax({
                 type: "POST",
-                url: "../Models/Read-Nome-Aluno.php",
+                url: "../Models/get_nome_aluno.php",
                 data: { matricula: matricula },
                 success: function(response) {
                     $(campoAluno).val(response);

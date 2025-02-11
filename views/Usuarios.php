@@ -162,7 +162,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 
 
-<!-------------Popup Adicionar Usuário-Start---------->
+<!-------------Modal Adicionar Usuário-Start---------->
                 <div class="modal fade" tabindex="-1" id="addEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -208,12 +208,12 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                         </form>
                     </div>
                 </div>
-<!-------------Popup Adicionar Usuário--END----------->
+<!-------------Modal Adicionar Usuário--END----------->
 
 
 
 
-<!-------------Popup Editar Usuário-Start---------------->
+<!-------------Modal Editar Usuário-Start---------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -252,7 +252,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                             </form>
                         </div>
                     </div>
-<!-------------Popup Editar usuário-END------------------>
+<!-------------Modal Editar usuário-END------------------>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
