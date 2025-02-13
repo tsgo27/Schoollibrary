@@ -8,7 +8,7 @@ function loadEnv($filePath) {
     try {
         // Verifica se o arquivo .env existe e é legível
         if (!file_exists($filePath) || !is_readable($filePath)) {
-            throw new Exception("Erro ao carregar arquivo .env!");
+            throw new Exception("Contate o suporte técnico.");
         }
 
         // Lê as linhas do arquivo .env
@@ -33,13 +33,13 @@ function loadEnv($filePath) {
         }
     } catch (Exception $e) {
         // Exibe uma mensagem mais genérica e segura
-        echo "Erro ao carregar variáveis de ambiente: " . $e->getMessage();
+        echo "Erro ao carregar variáveis de ambiente. " . $e->getMessage();
         exit();
     }
 }
 
 // Caminho do arquivo .env
-$envFilePath = __DIR__ . '/../.env';  // Ajuste para caminho correto
+$envFilePath = __DIR__ . '/../.env'; 
 
 // Carrega as variáveis do arquivo .env
 loadEnv($envFilePath);

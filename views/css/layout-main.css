@@ -13,11 +13,19 @@ html {
 }
 
 .sub-titulo{
-    color: #000000;
+    color: #ffffff;
 }
 
 .col-md-12 {
     max-width: 96%;
+}
+
+
+
+/* Estilo para permitir que o texto quebre dentro das células da tabela */
+.table-cell-wrap {
+    white-space: normal !important;
+    word-wrap: break-word;
 }
 
 
@@ -27,7 +35,7 @@ html {
 
 #select-editora{
     top: 20px;
-    margin-left: 170px;
+    margin-left: 180px;
 }
 
 
@@ -561,11 +569,9 @@ a:focus {
 
 table.table tr th,
 table.table tr td {
-    border-color: #e9e9e9;
-    padding: 8px 15px;
-    font-size: 14px;
-    font-weight: 400;
-    vertical-align: middle;
+    
+    font-size: 15px;
+    
 }
 
 table.table tr th:first-child {
