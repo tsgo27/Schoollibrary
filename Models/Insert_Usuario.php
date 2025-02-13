@@ -13,7 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = htmlspecialchars(filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL), ENT_QUOTES, 'UTF-8');
         $senha = htmlspecialchars(filter_input(INPUT_POST, 'senha', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $tipo = htmlspecialchars(filter_input(INPUT_POST, 'user_tipo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $status = htmlspecialchars(filter_input(INPUT_POST, 'user_status', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $status = htmlspecialchars(filter_input(INPUT_POST, 'user_status', FILTER_DEFAULT) ?: 'Ativo', ENT_QUOTES, 'UTF-8');
+
 
         // Verificando se os campos obrigatórios foram preenchidos
         if (empty($matricula) || empty($nome) || empty($email) || empty($senha)) {

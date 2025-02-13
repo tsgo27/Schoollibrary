@@ -186,15 +186,14 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <input type="email" name="email" maxlength="60" class="form-control" required>
                                         <label>Senha</label>
                                         <input type="password" name="senha" maxlength="100" class="form-control" required>
-                                        <div id="password-strength"></div> <!-- Exibir msg da força da senha -->
+                                        <div id="password-strength"></div> <!-- Exibir barra de força da senha -->
                                         <label>Tipo usuário</label>
                                         <select name="user_tipo" maxlength="15" class="form-control" required>
                                             <option value="Administrador">Administrador</option>
                                             <option value="Diretora">Diretora</option>
                                             <option value="Professor">Professor</option>
                                         </select>
-                                        <label>Status conta</label>
-                                        <select name="user_status" class="form-control" required>
+                                        <select name="user_status" class="form-control" required hidden>
                                             <option value="Ativo">Ativo</option>
                                             <option value="Inativo">Inativo</option>
                                         </select>
