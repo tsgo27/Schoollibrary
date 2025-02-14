@@ -29,25 +29,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':status', $status);
 
-        // Executa a query de atualização
-        if ($stmt->execute()) {
-            // Redireciona o usuário para a página de origem com uma mensagem de sucesso
+         // Executa a query de atualização
+         if ($stmt->execute()) {
             header("Location: http://localhost/schoollibrary/views/Aluno.php");
             exit();
         } else {
-            // Se ocorreu algum erro na atualização, mostra o erro
-            throw new Exception("Erro na atualização");
+            throw new Exception("Erro na atualização da tabela obra");
         }
+
     } catch (Exception $e) {
-        echo "Ocorreu um erro: " . $e->getMessage();
+        $_SESSION['error'] = $e->getMessage();
+        header("Location: http://localhost/schoollibrary/views/Aluno.php");
         exit();
+
+    } finally {
+        // Fecha a declaração e a conexão com o banco de dados
+        $stmt = null;
+        $pdo = null;
     }
-
-   
-    $stmt = null;
-    $pdo = null;
-
-    // Termina o script para evitar saída adicional
-    exit();
 }
 ?>
