@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once __DIR__ . '/../Config/bootstrap.php';
 
 
@@ -44,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-    // Fecha a declaração e a conexão com o banco de dados
+   
     $stmt = null;
     $pdo = null;
 

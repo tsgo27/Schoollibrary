@@ -1,8 +1,5 @@
 <?php
-session_start();
 require_once __DIR__ . '/../Config/bootstrap.php';
-require_once __DIR__ . '/../Config/verify_csrf.php';
-
 
 
 // Gera o token CSRF se ainda não existir
@@ -36,25 +33,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindValue(':Status', $Status);
 
         // Executa a query de atualização
-        if ($stmt->execute()) {
-            // Redireciona o usuário para a página de origem
-            header("Location: http://localhost/schoollibrary/views/Acervo.php");
-            exit();
-        } else {
+        if (!$stmt->execute()) {
             throw new Exception("Erro na atualização");
         }
-    } catch (PDOException $e) {
-        // Tratar exceções de conexão PDO
-        echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
-        exit();
-
     } catch (Exception $e) {
-        // Tratar outras exceções
+        // Tratar exceções
         echo "Ocorreu um erro: " . $e->getMessage();
-        
         exit();
     } finally {
-        // Fecha a declaração e a conexão com o banco de dados
+        // Finaliza as variáveis de conexão
         $stmt = null;
         $pdo = null;
     }

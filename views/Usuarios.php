@@ -232,7 +232,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Nome</label>
                                         <input type="text" name="editarNome" id="editarNome" maxlength="60" class="form-control">
                                         <label>Telefone</label>
-                                        <input type="tel" name="editarTelefone" id="editarTelefone" maxlength="14" class="form-control">
+                                        <input type="tel" name="editarTelefone" id="editarTelefone" maxlength="14" class="form-control phone_with_ddd">
                                         <label>E-mail</label>
                                         <input type="email" name="editarEmail" id="editarEmail" maxlength="100" class="form-control">
                                         <label>Tipo Usuário</label>

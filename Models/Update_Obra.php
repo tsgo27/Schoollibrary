@@ -1,7 +1,5 @@
 <?php
-session_start();
 require_once __DIR__ . '/../Config/bootstrap.php';
-require_once __DIR__ . '/../Config/verify_csrf.php';
 
 
 
@@ -16,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!verify_csrf_token($_POST['csrf_token'])) {
             throw new Exception('Token CSRF inválido');
         }
+
         // Filtra os dados do formulário usando htmlspecialchars() e filter_input()
         $codObra = htmlspecialchars(filter_input(INPUT_POST, 'codObra', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $isbn = htmlspecialchars(filter_input(INPUT_POST, 'editaIsbn', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
@@ -30,7 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $editora = htmlspecialchars(filter_input(INPUT_POST, 'editaEditora', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $situacao = htmlspecialchars(filter_input(INPUT_POST, 'editaSituacao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
-       
         // Cria a query de atualização usando Prepared Statements
         $sqlUpdateObra = "UPDATE obra SET Isbn = :isbn, Titulo = :titulo, SubTitulo = :subtitulo, Autor = :autor, Edicao = :edicao, Ano = :ano, Copia = :copia, Acervo = :acervo, Genero = :genero, Editora = :editora, Situacao = :situacao WHERE CodObra = :codObra";
         $stmtUpdateObra = $pdo->prepare($sqlUpdateObra);
@@ -54,21 +52,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmtUpdateObra->bindValue(':situacao', $situacao);
 
         // Executa a query de atualização na tabela obra
-        if ($stmtUpdateObra->execute()) {
-            // Redireciona o usuário para a página de origem
-            header("Location: http://localhost/schoollibrary/views/Obra.php");
-            exit();
-        } else {
+        if (!$stmtUpdateObra->execute()) {
             throw new Exception("Erro na atualização da tabela obra");
         }
-    } catch (PDOException $e) {
-        // Tratar exceções de conexão PDO
-        echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
-        exit();
-    } catch (Exception $e) {
-        // Tratar outras exceções
-        echo "Ocorreu um erro: " . $e->getMessage();
-        exit();
+
+        // Executa a query de atualização na tabela obra
+        $stmtUpdateObra->execute();
+
+
     } finally {
         // Fecha as declarações e a conexão com o banco de dados
         $stmtUpdateObra = null;

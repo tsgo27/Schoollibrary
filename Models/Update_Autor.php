@@ -1,7 +1,5 @@
 <?php
-session_start();
 require_once __DIR__ . '/../Config/bootstrap.php';
-require_once __DIR__ . '/../Config/verify_csrf.php';
 
 
 
@@ -16,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!verify_csrf_token($_POST['csrf_token'])) {
             throw new Exception('Token CSRF inválido');
         }
+
         // Obtém e filtra os dados do formulário Autor
         $codAutor = htmlspecialchars(filter_input(INPUT_POST, 'codAutor', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $autor = htmlspecialchars(filter_input(INPUT_POST, 'editaAutor', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
@@ -35,26 +34,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindValue(':statusAutor', $statusAutor);
 
         // Executa a query de atualização
-        if ($stmt->execute()) {
-            // Redireciona o usuário para a página de origem
-            header("Location: http://localhost/schoollibrary/views/Autor.php");
-            exit();
-        } else {
+        if (!$stmt->execute()) {
             throw new Exception("Erro na atualização");
         }
         
-    } catch (PDOException $e) {
-        // Tratar exceções de conexão PDO
-        echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
-        exit();
-        
     } catch (Exception $e) {
-        // Tratar outras exceções
+        // Exibe erro genérico
         echo "Ocorreu um erro: " . $e->getMessage();
         exit();
         
     } finally {
-        // Fecha a declaração e a conexão com o banco de dados
+        // Libera recursos, fechando a declaração e a conexão com o banco de dados
         $stmt = null;
         $pdo = null;
     }

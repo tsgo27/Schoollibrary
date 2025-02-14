@@ -368,6 +368,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <select name="editaSituacao" id="editaSituacao" maxlength="15" class="form-control">
                                             <option value="Manutenção">Manutenção</option>
                                             <option value="Descontinuado">Descontinuado</option>
+                                            <option value="Disponível">Disponível</option>
                                         </select>
                                     </div>
                                 </div>

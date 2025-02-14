@@ -1,7 +1,5 @@
 <?php
-session_start();
 require_once __DIR__ . '/../Config/bootstrap.php';
-require_once __DIR__ . '/../Config/verify_csrf.php';
 
 
 
@@ -22,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $genero = htmlspecialchars(filter_input(INPUT_POST, 'editaGenero', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $statusGenero = htmlspecialchars(filter_input(INPUT_POST, 'editaStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
-
         // Cria a query de atualização usando Prepared Statements
         $sql = "UPDATE genero SET NomeGenero = :genero, StatusGenero = :statusGenero WHERE CodGenero = :codGenero";
         $stmt = $pdo->prepare($sql);
@@ -37,21 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindValue(':statusGenero', $statusGenero);
 
         // Executa a query de atualização
-        if ($stmt->execute()) {
-            // Redireciona o usuário para a página de origem
-            header("Location: http://localhost/schoollibrary/views/Genero.php");
-            exit();
-        } else {
-            throw new Exception("Erro na atualização");
-        }
-    } catch (PDOException $e) {
-        // Tratar exceções de conexão PDO
-        echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
-        exit();
-    } catch (Exception $e) {
-        // Tratar outras exceções
-        echo "Ocorreu um erro: " . $e->getMessage();
-        exit();
+        $stmt->execute();
+
     } finally {
         // Fecha a declaração e a conexão com o banco de dados
         $stmt = null;

@@ -1,7 +1,5 @@
 <?php
-session_start();
 require_once __DIR__ . '/../Config/bootstrap.php';
-require_once __DIR__ . '/../Config/verify_csrf.php';
 
 
 
@@ -25,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $DataExpiracao = htmlspecialchars(filter_input(INPUT_POST, 'editaExpiracao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $situacao = htmlspecialchars(filter_input(INPUT_POST, 'situacao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
-        
         // Cria a query de atualização usando Prepared Statements
         $sqlUpdateReserva = "UPDATE reservas SET Titulo = :editaTitulo, SubTitulo = :editaSubtitulo, DataReserva = :editaReserva, DataExpiracao = :editaExpiracao, Situacao = :Situacao WHERE CodReserva = :codReserva";
         $stmtUpdateReserva = $pdo->prepare($sqlUpdateReserva);
@@ -56,21 +53,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmtUpdateObra->bindParam(':Situacao', $situacao);
             $stmtUpdateObra->bindParam(':editaTitulo', $titulo);
 
-           
-            if ($stmtUpdateObra->execute()) {
-                header("Location: http://localhost/schoollibrary/views/Reservas.php");
-                exit();
-            } else {
-                throw new Exception("Erro na atualização da tabela obra");
-            }
+            // Executa a query na tabela obra
+            $stmtUpdateObra->execute();
         } else {
-            throw new Exception("Erro na atualização da tabela reservas");
+            throw new Exception("Erro na atualização da tabela reserva");
         }
-        
     } catch (Exception $e) {
         echo "Ocorreu um erro: " . $e->getMessage();
         exit();
-
     } finally {
         // Fecha as declarações e a conexão com o banco de dados
         $stmtUpdateReserva = null;
