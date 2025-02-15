@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception('Token CSRF inválido');
         }
 
-        // Filtrando os dados do formulário usando apenas htmlspecialchars()
+        // Filtrando e sanitizando os dados do formulário
         $codGenero = htmlspecialchars(filter_input(INPUT_POST, 'codGenero', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $genero = htmlspecialchars(filter_input(INPUT_POST, 'editaGenero', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $statusGenero = htmlspecialchars(filter_input(INPUT_POST, 'editaStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
@@ -34,8 +34,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindValue(':statusGenero', $statusGenero);
 
         // Executa a query de atualização
-        $stmt->execute();
-
+        if ($stmt->execute()) {
+            // Redireciona o usuário para a página de origem
+            header("Location: http://localhost/schoollibrary/views/Genero.php");
+            exit();
+        } else {
+            throw new Exception("Erro na atualização");
+        }
+        
+    } catch (Exception $e) {
+        // Tratar outras exceções
+        echo "Ocorreu um erro: " . $e->getMessage();
+        exit();
     } finally {
         // Fecha a declaração e a conexão com o banco de dados
         $stmt = null;

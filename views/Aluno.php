@@ -104,7 +104,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <th>Telefone</th>
                                         <th>Email</th>
                                         <th>Status</th>
-                                        <th>Obs. / Empréstimo</th>
                                         <th>Ação</th>
                                     </tr>
                                 </thead>
@@ -127,7 +126,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                                 echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['telefone']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['email']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['user_status']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['observacao']) . "</td>";
 
                                                 echo "<td class='col-lg-3'>
                                                     <a href='#editEmployeeModal' class='edit editarUsuario btn btn-warning' data-toggle='modal'>Editar</a>
@@ -168,7 +166,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Nome</label>
                                         <input type="text" name="nome" maxlength="60" class="form-control" required>
                                         <label>Telefone</label>
-                                        <input type="tel" name="telefone" maxlength="14" class="form-control" required>
+                                        <input type="tel" name="telefone" maxlength="14" class="form-control phone_with_ddd" required>
                                         <label>E-mail</label>
                                         <input type="email" name="email" maxlength="60" class="form-control" required>
                                         <label>Status Aluno</label>
@@ -210,7 +208,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Nome</label>
                                         <input type="text" name="editarNome" id="editarNome" maxlength="60" class="form-control">
                                         <label>Telefone</label>
-                                        <input type="tel" name="editarTelefone" id="editarTelefone"  maxlength="14" class="form-control">
+                                        <input type="tel" name="editarTelefone" id="editarTelefone"  maxlength="14" class="form-control phone_with_ddd">
                                         <label>E-mail</label>
                                         <input type="email" name="editarEmail" id="editarEmail" maxlength="100" class="form-control">
                                         <label>Status Aluno</label>
@@ -231,6 +229,12 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.phone_with_ddd').mask('00 00000-0000'); // Mascara telefone
+});
+</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../public/js/EditCampos_Alunos.js"></script>  

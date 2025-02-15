@@ -22,7 +22,6 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                     <th>Nome</th>
                     <th>Telefone</th>
                     <th>Email</th>
-                    <th>Observações</th>
                     <th>Status</th>
                 </tr>
             </thead>
@@ -44,7 +43,6 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['nome']) . "</td>";
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['telefone']) . "</td>";
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['email']) . "</td>";
-                            echo "<td class='col-lg-1'>" . htmlspecialchars($user_data['observacao']) . "</td>";
                             echo "<td class='col-lg-1'>" . htmlspecialchars($user_data['user_status']) . "</td>";                            
                         }
                     }

@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Executa a query na tabela obra
             $stmtUpdateObra->execute();
         } else {
-            throw new Exception("Erro na atualização da tabela reserva");
+            throw new Exception("Erro na atualização");
         }
     } catch (Exception $e) {
         echo "Ocorreu um erro: " . $e->getMessage();

@@ -1,16 +1,21 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09/08/2024 às 22:45
--- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.2.4
+-- Tempo de geração: 15/02/2025 às 06:37
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Banco de dados: `school_library`
@@ -57,7 +62,6 @@ CREATE TABLE `alunos` (
   `telefone` varchar(14) DEFAULT NULL,
   `email` varchar(80) DEFAULT NULL,
   `user_status` varchar(7) DEFAULT NULL,
-  `observacao` varchar(60) DEFAULT NULL,
   `data_registro` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -65,18 +69,18 @@ CREATE TABLE `alunos` (
 -- Despejando dados para a tabela `alunos`
 --
 
-INSERT INTO `alunos` (`id_Aluno`, `matricula`, `nome`, `telefone`, `email`, `user_status`, `observacao`, `data_registro`) VALUES
-(24, 202320120, 'Igor Silva', '6200000-0000', 'igor.silva@teste.com', 'Inativo', 'Obra em atraso', '2023-12-07 14:37:51'),
-(26, 202320121, 'Maria', '6200000-0000', 'maria.silva@teste.com', 'Inativo', 'Obra em atraso', '2023-12-07 16:01:58'),
-(27, 202319202, 'Daniel Soares', '6200000-0000', 'daniel.soares@teste.com', 'Ativo', NULL, '2023-12-13 15:28:11'),
-(28, 202319203, 'Dani Martins', '6200000-0000', 'dani.martins@teste.com', 'Ativo', NULL, '2023-12-13 16:58:23'),
-(29, 202319204, 'Carol Maia', '6200000-0000', 'carol.maia@teste.com', 'Ativo', NULL, '2023-12-13 16:59:29'),
-(30, 202320205, 'Eminem Soares', '6200000-0000', 'eminem.soares@teste.com', 'Ativo', NULL, '2023-12-13 17:00:42'),
-(31, 202320206, 'Rafal oliveira', '62992594657', 'rafael.oliveira@teste.com', 'Ativo', NULL, '2023-12-13 17:01:24'),
-(32, 202320207, 'Ivani Filho', '6200000-0000', 'ivani.filho@teste.com', 'Ativo', NULL, '2023-12-13 17:02:14'),
-(33, 202320208, 'joão Gustavo', '6200000-0000', 'joao.gustavo@teste.com', 'Ativo', NULL, '2023-12-13 17:02:50'),
-(34, 202320209, 'Debora Soares', '6200000-0000', 'debora.soares@teste.com', 'Ativo', '', '2023-12-13 17:03:26'),
-(35, 548789889, 'Mia Silva', '62992594657', 'dani@email.com', 'Ativo', NULL, '2024-08-09 11:22:03');
+INSERT INTO `alunos` (`id_Aluno`, `matricula`, `nome`, `telefone`, `email`, `user_status`, `data_registro`) VALUES
+(24, 202320120, 'Igor Silva', '6200000-0000', 'igor.silva@teste.com', 'Ativo', '2023-12-07 14:37:51'),
+(26, 202320121, 'Maria', '6200000-0000', 'maria.silva@teste.com', 'Ativo', '2023-12-07 16:01:58'),
+(27, 202319202, 'Daniel Soares', '6200000-0000', 'daniel.soares@teste.com', 'Ativo', '2023-12-13 15:28:11'),
+(28, 202319203, 'Dani Martins', '6200000-0000', 'dani.martins@teste.com', 'Ativo', '2023-12-13 16:58:23'),
+(29, 202319204, 'Carol Maia', '6200000-0000', 'carol.maia@teste.com', 'Ativo', '2023-12-13 16:59:29'),
+(30, 202320205, 'Eminem Soares', '6200000-0000', 'eminem.soares@teste.com', 'Ativo', '2023-12-13 17:00:42'),
+(31, 202320206, 'Rafal oliveira', '62992594657', 'rafael.oliveira@teste.com', 'Ativo', '2023-12-13 17:01:24'),
+(32, 202320207, 'Ivani Filho', '6200000-0000', 'ivani.filho@teste.com', 'Ativo', '2023-12-13 17:02:14'),
+(33, 202320208, 'joão Gustavo', '6698123-0800', 'joao.gustavo@teste.com', 'Ativo', '2023-12-13 17:02:50'),
+(34, 202320209, 'Debora Soares', '6200000-0000', 'debora.soares@teste.com', 'Ativo', '2023-12-13 17:03:26'),
+(35, 548789889, 'Mia Silva', '6299259-4099', 'dani@email.com', 'Inativo', '2024-08-09 11:22:03');
 
 -- --------------------------------------------------------
 
@@ -106,7 +110,7 @@ INSERT INTO `autor` (`codAutor`, `NomeAutor`, `StatusAutor`, `data_registro`) VA
 (8, 'Carlos Cientista', 'Ativo', '2023-12-13 10:15:26'),
 (9, ' Sofia Jardineira', 'Ativo', '2023-12-13 10:15:33'),
 (36, 'Maria Rita', 'Ativo', '2024-08-05 16:57:29'),
-(37, 'Maria Linda', 'Ativo', '2024-08-05 17:08:46');
+(37, 'Maria Silva', 'Ativo', '2024-08-05 17:08:46');
 
 -- --------------------------------------------------------
 
@@ -274,7 +278,7 @@ INSERT INTO `obra` (`codObra`, `Isbn`, `Titulo`, `SubTitulo`, `Autor`, `Edicao`,
 (17, ' 978-0-567890-1', 'Poesias Efêmeras', 'Versos do Coração ', 'Ana Poetisa  ', 4, 2018, 2, 'GB-4-L-1-2', 'Poesia', 'Imaginários Ltda.', 'Disponível', '2023-12-13 10:38:49'),
 (18, '978-0-678901-2', 'O Último Refúgio ', 'Entre Montanhas', 'Victor Viajante', 5, 1995, 1, 'CA-LE-N2', 'Ficção Científica', 'Exploração Livros', 'Disponível', '2023-12-13 15:52:10'),
 (19, '978-0-123456-0', 'Além das Estrelas ', 'Explorando o Cosmos', 'Lucas Astrônomo', 4, 2021, 1, 'GB-4-L-1-3', 'Aventura', 'Conhecimento Press', 'Disponível', '2023-12-13 16:03:35'),
-(20, '978-0-234567-1', 'O Código da História', 'Desvendando o Passado', 'Clara Historiadora', 1, 1993, 5, 'CA-LE-N1', 'Poesia', 'Contos Coloridos', 'Disponível', '2023-12-13 16:11:20'),
+(20, '978-0-234567-1', 'O Código da História', 'Desvendando o Passado', 'Clara Historiadora', 1, 1993, 5, 'CA-LE-N1', 'Poesia', 'Contos Coloridos', 'Reservado', '2023-12-13 16:11:20'),
 (21, '978-0-345678-2', 'Entre Dois Mundos', 'A Fronteira Invisível', 'Roberto Viajante', 1, 1993, 5, 'GB-4-L-1-3', 'Mistério', 'Editora Enigma', 'Disponível', '2023-12-13 16:14:05'),
 (22, '978-0-456789-7', 'Poemas da Meia-Noite', 'Versos Sob a Lua', 'Lídia Poetisa', 1, 1998, 1, 'GB-4-L-1-1', 'Literatura Infantojuvenil', 'Saraiva', 'Disponível', '2023-12-13 16:15:49'),
 (23, '489-457-58-65', 'Livros de teste', 'Principe', 'Tiago,', 5, 1993, 4, 'CA-LE-N2', 'Historia', 'AstroEdições', 'Disponível', '2024-08-09 16:26:41'),
@@ -305,7 +309,7 @@ CREATE TABLE `reservas` (
 INSERT INTO `reservas` (`CodReserva`, `Matricula`, `NomeAluno`, `Titulo`, `SubTitulo`, `DataReserva`, `DataExpiracao`, `Situacao`, `data_registro`) VALUES
 (13, 202320209, 'Debora Soares', ' O Jardim Secreto', 'Flores da Esperança', '2024-08-09', '2024-08-16', 'Disponível', '2024-08-09 14:51:53'),
 (15, 202320206, 'Rafal oliveira', 'Entre Dois Mundos', 'A Fronteira Invisível', '2024-08-09', '2024-08-16', 'Disponível', '2024-08-09 15:05:38'),
-(16, 202320205, 'Eminem Soares', 'O Código da História', 'Desvendando o Passado', '2024-08-16', '2024-08-23', 'Disponível', '2024-08-09 15:06:17'),
+(16, 202320205, 'Eminem Soares', 'O Código da História', 'Desvendando o Passado', '2024-08-16', '2024-08-23', 'Reservado', '2024-08-09 15:06:17'),
 (17, 202319204, 'Carol Maia', 'Enigmas da Ciência', 'Desvendando o Inexplorado', '2024-08-10', '2024-08-16', 'Reservado', '2024-08-09 15:07:18');
 
 -- --------------------------------------------------------
@@ -331,8 +335,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`idUsuario`, `matricula`, `nome`, `telefone`, `email`, `senha`, `user_status`, `user_tipo`, `data_registro`) VALUES
-(1, 202120120, 'Tiago', '62 99259-4657', 'tsgo.soares@gmail.com', '$2y$10$U1bMtvFli0fUfGinjKXzpeRqXinr/j6dRAGSC.iumv63XmDvt7KKq', 'Ativo', 'Administrador', '2023-08-30 20:11:45'),
-(18, 458441258, 'Daniel Soares', '62992594657', 'daniel.soares@teste.com', '$2y$10$x.IO33DqNErx9vcec7o7euMg64dIj.c52b8OlA9zQ5kkNYcdYpBMK', 'Ativo', 'Administrador', '2024-08-07 17:23:58');
+(1, 202120120, 'Tiago', '62 99259-4657', 'tsgo.soares@gmail.com', '$2y$10$U1bMtvFli0fUfGinjKXzpeRqXinr/j6dRAGSC.iumv63XmDvt7KKq', 'Ativo', 'Administrador', '2023-08-30 20:11:45');
 
 --
 -- Índices para tabelas despejadas
@@ -461,7 +464,7 @@ ALTER TABLE `reservas`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idUsuario` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `idUsuario` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -33,15 +33,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindValue(':Status', $Status);
 
         // Executa a query de atualização
-        if (!$stmt->execute()) {
+        if ($stmt->execute()) {
+            // Redireciona o usuário para a página de origem
+            header("Location: http://localhost/schoollibrary/views/Acervo.php");
+            exit();
+        } else {
             throw new Exception("Erro na atualização");
         }
+
     } catch (Exception $e) {
-        // Tratar exceções
+        // Tratar outras exceções
         echo "Ocorreu um erro: " . $e->getMessage();
         exit();
     } finally {
-        // Finaliza as variáveis de conexão
+        // Fecha a declaração e a conexão com o banco de dados
         $stmt = null;
         $pdo = null;
     }

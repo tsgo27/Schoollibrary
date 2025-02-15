@@ -175,12 +175,8 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../public/js/SweetAlert_Insert_Acervo.js"></script>
-<script src="../public/js/SweetAlert_Update_Acervo.js"></script>
 <script src="../public/js/EditCamposAcervo.js"></script>
 <script src="../public/js/PesquisarAutor.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
-
 </html>

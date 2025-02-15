@@ -177,11 +177,8 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../public/js/EditCamposGenero.js"></script>
-<script src="../public/js/SweetAlert_Insert_Genero.js"></script>
-<script src="../public/js/SweetAlert_Update_Genero.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
 <script src="../public/js/PesquisarAutor.js"></script>
 </html>

@@ -77,6 +77,10 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     <h2 class="ml-lg-2">Editoras</h2>
                                 </div>
                                 <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
+                                    <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
+                                        <i class="material-icons">&#xE147;</i>
+                                        <span>Adicionar</span>
+                                    </a>
                                     <div class="container">
                                         <div class="box-search">
                                             <input type="search" class="form-control" placeholder="Informe nome Editora" id="pesquisar">
@@ -104,18 +108,18 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                             throw new Exception('A conexão com o banco de dados não foi estabelecida.');
                                         }
 
-                                        $sql = "SELECT * FROM editora WHERE StatusEditora = 'Inativos' ORDER BY data_registro DESC";
+                                        $sql = "SELECT * FROM editora WHERE StatusEditora = 'Inativo' ORDER BY data_registro DESC";
                                         $result = $pdo->query($sql);
                                         
                                         if ($result->rowCount() > 0) {
                                             while ($editora_data = $result->fetch(PDO::FETCH_ASSOC)) {
                                                 
+                                                echo "<tr>";
                                                 echo "<td>" . htmlspecialchars($editora_data['codEditora']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($editora_data['NomeEditora']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($editora_data['Cidade']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($editora_data['Estado']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($editora_data['StatusEditora']) . "</td>";
-
 
                                                 echo "<td class='col-lg-3'>
                                                     <a href='#editEmployeeModal' class='edit editarEditora btn btn-warning' data-toggle='modal'>Editar</a>
@@ -140,8 +144,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 
 
-
-<!---------Modal Editar Editora-Start--------------->
+<!---------Modal Editar Editora---------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -195,10 +198,8 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../public/js/SweetAlert_Update_Editora.js"></script>
-<script src="../public/js/SweetAlert_Insert_Editora.js"></script>
+<script src="../public/js/EditCamposEditora.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
 <script src="../public/js/PesquisarEditoras.js"></script>
 </html>

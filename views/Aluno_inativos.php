@@ -148,7 +148,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 
 
-<!-------------Modal Editar Aluno-Start---------------->
+<!-------------Modal Editar Aluno----------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -188,11 +188,8 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../public/js/EditCampos_Alunos.js"></script>  
-<script src="../public/js/SweetAlert_Insert_Aluno.js"></script>   
-<script src="../public/js/SweetAlert_Update_Aluno.js"></script>   
+<script src="../public/js/EditCampos_Alunos.js"></script>     
 <script src="../public/js/MenuSidebar.js"></script>
 <script src="../public/js/Pesquisar.js"></script>
 </html>

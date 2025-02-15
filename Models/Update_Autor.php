@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception('Token CSRF inválido');
         }
 
-        // Obtém e filtra os dados do formulário Autor
+        // Filtrando e sanitizando os dados do formulário
         $codAutor = htmlspecialchars(filter_input(INPUT_POST, 'codAutor', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $autor = htmlspecialchars(filter_input(INPUT_POST, 'editaAutor', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $statusAutor = htmlspecialchars(filter_input(INPUT_POST, 'editaStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
@@ -34,19 +34,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindValue(':statusAutor', $statusAutor);
 
         // Executa a query de atualização
-        if (!$stmt->execute()) {
+        if ($stmt->execute()) {
+            // Redireciona o usuário para a página de origem
+            header("Location: http://localhost/schoollibrary/views/Autor.php");
+            exit();
+        } else {
             throw new Exception("Erro na atualização");
         }
         
     } catch (Exception $e) {
-        // Exibe erro genérico
+        // Tratar outras exceções
         echo "Ocorreu um erro: " . $e->getMessage();
         exit();
-        
     } finally {
-        // Libera recursos, fechando a declaração e a conexão com o banco de dados
+        // Fecha a declaração e a conexão com o banco de dados
         $stmt = null;
         $pdo = null;
     }
-}
-?>
+}?>

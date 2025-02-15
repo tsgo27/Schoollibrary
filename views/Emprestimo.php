@@ -147,44 +147,13 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                                 echo "<td>" . htmlspecialchars($user_data['DataEmprestimo']) . "</td>";
                                                 echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['DataDevolucao']) . "</td>";
                                                 echo "<td style='color: " . htmlspecialchars($statusColor) . ";'>" . htmlspecialchars($user_data['StatusEmprestimo']) . "</td>";
-                                                
 
                                                 echo "<td class='col-lg-3'>
                                                 <a href='#editEmployeeModal' class='edit editarEmprestimo btn btn-warning' data-toggle='modal'>Editar</a>
                                                 <button class='comprovante btn btn-info' data-cod-emprestimo='{$user_data['codEmprestimo']}' style='width: 82px;'>Cupom</button>
-                                                <button class='observacao btn btn-primary' data-toggle='modal' data-target='#observacaoModal_{$user_data['codEmprestimo']}'style='width: 160px;'>Detalhes</button>
                                                 </td>";
                                                 echo "</tr>";
 
-
-                                            // Modal inserir Observação-- Start--------------->
-                                                echo "<div class='modal fade' id='observacaoModal_{$user_data['codEmprestimo']}' tabindex='-1' role='dialog' aria-labelledby='observacaoModalLabel' aria-hidden='true'>
-                                            <div class='modal-dialog' role='document'>
-                                                <div class='modal-content'>
-                                                    <div class='modal-header'>
-                                                        <h5 class='modal-title' id='observacaoModalLabel'>Pendências Aluno</h5>
-                                                        <button type='button' class='close' data-dismiss='modal' aria-label='Fechar'>
-                                                            <span aria-hidden='true'>&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class='modal-body'>
-                                                        <!-- Formulário para a observação -->
-                                                        <form method='POST' action='../Models/Insert_Detalhes_Aluno.php'>
-                                                            <input type='hidden' name='codEmprestimo' value='{$user_data['codEmprestimo']}'>
-                                                            <div class='form-group'>
-                                                                <label for='observacaoTextarea'>Escreva aqui Obsevações:</label>
-                                                                <textarea id='observacaoTextarea' name='observacao' class='form-control' rows='3'></textarea>
-                                                            </div>
-                                                            <div class='modal-footer'>
-                                                                <button type='button' class='btn btn-secondary' data-dismiss='modal'>Fechar</button>
-                                                                <button type='submit' class='btn btn-primary'>Salvar</button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </div>";
-                                            // Modal Observação--End--------------->
                                             }
                                         } else {
                                             echo "<tr><td colspan='12'>Nenhum resultado encontrado.</td></tr>";

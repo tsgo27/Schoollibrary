@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Executa a query de atualização na tabela obra
         if (!$stmtUpdateObra->execute()) {
-            throw new Exception("Erro na atualização da tabela obra");
+            throw new Exception("Erro na atualização");
         }
 
         // Executa a query de atualização na tabela obra
