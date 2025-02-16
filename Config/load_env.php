@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/config_log.php';
+require_once __DIR__ . '/log_error.php';
 
 /*
 * Carregar variáveis ​​de ambiente do arquivo .env

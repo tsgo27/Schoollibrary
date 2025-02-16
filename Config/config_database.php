@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/load_env.php';
-require_once __DIR__ . '/config_log.php';
+require_once __DIR__ . '/log_error.php';
 
 /*
 * Conexões de banco de dados

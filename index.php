@@ -1,7 +1,7 @@
 <?php
 define('VIEW_PATH', __DIR__ . '/views/');
 define('ERROR_PATH', __DIR__ . '/Page/');
-require_once __DIR__ . '/Config/config_log.php';
+require_once __DIR__ . '/Config/log_error.php';
 
 // Obtém e sanitiza a URL
 $url = filter_var($_GET['url'] ?? '', FILTER_SANITIZE_URL);

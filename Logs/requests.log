@@ -1,0 +1,8 @@
+[2025-02-16 02:14:48] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+[2025-02-16 02:14:48] Dados recebidos: {"csrf_token":"e8904ca35789572a71503c87fc7c41a909bca04eacf4563b640396c56f75ab4d","codEditora":"33","editaEditora":"Fant","editaCidade":"Osasco","editaEstado":"S\u00e3o Paulo-SP","editaStatus":"Ativo"}
+
+[2025-02-16 02:16:42] Requisição recebida: POST - /schoollibrary/Models/Insert_Autor.php
+[2025-02-16 02:16:42] Dados recebidos: {"csrf_token":"4d640c6e8113950c446bf5112a88a9e1a0f98d80e3bf60a2474bee41635a02ad","addAutor":"Amanda Aguiar","addStatus":"Ativo"}
+
+[2025-02-16 02:20:52] Requisição recebida: POST - /schoollibrary/Models/Insert_Genero.php
+[2025-02-16 02:20:52] Dados recebidos: {"csrf_token":"927f781448b91f4a452b75afdded1ca4ff07ec844605f60ef562e710f9848581","addGenero":"Coringa","addStatus":"Ativo"}
