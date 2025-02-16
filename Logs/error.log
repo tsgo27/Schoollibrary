@@ -1,0 +1,2 @@
+[16-Feb-2025 00:38:10 America/Sao_Paulo] PHP Warning:  Undefined array key "observacao" in C:\xampp\htdocs\Schoollibrary\views\Aluno_inativos.php on line 126
+[16-Feb-2025 00:38:10 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\views\Aluno_inativos.php on line 126

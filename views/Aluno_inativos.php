@@ -123,8 +123,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                                 echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['telefone']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['email']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['user_status']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['observacao']) . "</td>";
-
 
                                                 echo "<td class='col-lg-3'>
                                                     <a href='#editEmployeeModal' class='edit editarUsuario btn btn-warning' data-toggle='modal'>Editar</a>
