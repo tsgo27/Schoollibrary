@@ -1,10 +1,1 @@
-[2025-02-17 10:34:43] ERROR: Arquivo .env não encontrado ou inacessível.
-[17-Feb-2025 10:42:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function logMessage() in C:\xampp\htdocs\Schoollibrary\Models\Update_Acervo.php:5
-Stack trace:
-#0 {main}
-  thrown in C:\xampp\htdocs\Schoollibrary\Models\Update_Acervo.php on line 5
-[17-Feb-2025 10:47:54 America/Sao_Paulo] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\Schoollibrary\Config\log_requests.php:16
-Stack trace:
-#0 C:\xampp\htdocs\Schoollibrary\Models\Update_Acervo.php(5): logMessage('Requisi\xC3\xA7\xC3\xA3o re...')
-#1 {main}
-  thrown in C:\xampp\htdocs\Schoollibrary\Config\log_requests.php on line 16
+[17-Feb-2025 17:11:10 America/Sao_Paulo] PHP Warning:  Erro 404: Página 'perfil.php' não encontrada. in C:\xampp\htdocs\Schoollibrary\index.php on line 28

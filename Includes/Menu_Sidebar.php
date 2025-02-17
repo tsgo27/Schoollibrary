@@ -22,7 +22,6 @@
                     <li><a href="Editora.php">Editoras</a></li>
                     <li><a href="Acervo.php">Acervos</a></li>
                     <li><a href="Genero.php">Gêneros</a></li>
-                    <li><a href="Usuarios.php">Usuários</a></li>
                     <li><a href="Aluno.php">Alunos</a></li>
                 </ul>
             </li>

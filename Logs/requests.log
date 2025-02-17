@@ -49,3 +49,245 @@
     "editarEmail": "dani@email.com",
     "editarStatus": "Inativo"
 }
+[2025-02-17 14:53:52] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "25a9c2ffb71edee6a977e697bf83f037087bdcd6ea4d407a37312db9c7fcb1e5",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": " O Jardim Secreto",
+    "AddSubtitulo": "Flores da Esperança",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolução": "2025-02-24",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-17 14:54:17] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "4f87ac0759ddc6097b31004420fc29f1b2fcb6fa2424ec49a2343834ef94a813",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": " O Jardim Secreto",
+    "AddSubtitulo": "Flores da Esperança",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolução": "2025-02-24",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-17 14:57:20] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "05f99fd209ad390372f7c6b6927ec94552cf0fe689a7778d2e1249ab5c44a9c7",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": "O Último Refúgio ",
+    "AddSubtitulo": "Entre Montanhas",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolução": "2025-02-24",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-17 15:01:00] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "dfbe6e570c000ee3b2465b7116f58f0fa404cdb4edeae82a7656c9fe677b68a0",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": " O Jardim Secreto",
+    "AddSubtitulo": "Flores da Esperança",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolução": "2025-02-24",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-17 15:03:46] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "b36975fbd7ae18615641c6cb1fc5814f924a34e97498b7fa174a3f3101fa4a8e",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": " O Jardim Secreto",
+    "AddSubtitulo": "Flores da Esperança",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolução": "2025-02-24",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-17 15:06:25] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "b3466fd1633cf9296d7e42505378bd616449bae399861a38ee545c752c45d728",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": " O Jardim Secreto",
+    "AddSubtitulo": "Flores da Esperança",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolução": "2025-02-24",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-17 15:08:25] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "e46a285f266e21bd480d84c8ee30a1c59a97526b8f1e89e88a5e0f3b241152e2",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": " O Jardim Secreto",
+    "AddSubtitulo": "Flores da Esperança",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolução": "2025-02-17",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-17 15:09:49] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "bf2ca54816536cb6585d2f4f4b37db733d0e2dddcbc3c915f8cc7832cffe4a89",
+    "AddMatricula": "202320208",
+    "AddAluno": "joão Gustavo",
+    "AddTitulo": "O Último Refúgio ",
+    "AddSubtitulo": "Entre Montanhas",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolução": "2025-02-24",
+    "AddStatus_Livro": "Disponível"
+}
+[2025-02-17 15:11:22] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "4362b722d27ee9a54eb8939f7a6730d1de8dba98fd46ab532e60f7a551e0b077",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": " O Jardim Secreto",
+    "AddSubtitulo": "Flores da Esperança",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolução": "2025-02-24",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-17 15:13:35] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "3137b9b77ccdef10906f65957f9c82e5207f95bb78a0a0c4a3944e663bec2935",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": " O Jardim Secreto",
+    "AddSubtitulo": "Flores da Esperança",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolução": "2025-02-24",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-17 15:14:50] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "e9f13785d32f5c921a26d51a2898b648551be3b5666d588d76e5a5d94d9b0fa8",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": " O Jardim Secreto",
+    "AddSubtitulo": "Flores da Esperança",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolução": "2025-02-17",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-17 15:17:41] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "2f13016fe8f85afc9398b1bd0d62c5be145330da6e4fb489bda62b4aad9186a8",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": " O Jardim Secreto",
+    "AddSubtitulo": "Flores da Esperança",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolucao": "2025-02-24",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-17 15:20:17] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "d514125684403e6b9ff15aaf553f26e8f0fdfbaa660f9aa92b2af1b17b886844",
+    "codEmprestimo": "22",
+    "editaMatricula": "202320209",
+    "editaAluno": "Debora Soares",
+    "editaTitulo": " O Jardim Secreto",
+    "editaSubtitulo": "Flores da Esperança",
+    "editaEmprestimo": "2025-02-17",
+    "editaDevolucao": "2025-02-24",
+    "Status_Livro": "Disponível"
+}
+[2025-02-17 15:20:22] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "b2fba6c5f51813936eef6d833316e6145a3baf6afcb0e1515051b8b4e66660ce",
+    "codEmprestimo": "22",
+    "editaMatricula": "202320209",
+    "editaAluno": "Debora Soares",
+    "editaTitulo": " O Jardim Secreto",
+    "editaSubtitulo": "Flores da Esperança",
+    "editaEmprestimo": "2025-02-17",
+    "editaDevolucao": "2025-02-24",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-17 16:16:08] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "bff5db4515264e8a04669a8e8b4657c52adfd6ad606d6f883c28a3ca437cfbc8",
+    "AddMatricula": "202319204",
+    "AddAluno": "Carol Maia",
+    "AddTitulo": "O Último Refúgio ",
+    "AddSubtitulo": "Entre Montanhas",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolucao": "2025-02-24",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-17 16:17:18] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "6b68fd52daa23319b4fabee843e7c04fc0389a2e83bbea19a1e2af798378d3a3",
+    "codEmprestimo": "23",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "O Último Refúgio ",
+    "editaSubtitulo": "Entre Montanhas",
+    "editaEmprestimo": "2025-02-17",
+    "editaDevolucao": "2025-02-24",
+    "Status_Livro": "Disponível"
+}
+[2025-02-17 16:17:21] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "f71251e545ea4e9c22f6b0854df86662850d0aabeb65ae38a7f455116918ad0c",
+    "codEmprestimo": "23",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "O Último Refúgio ",
+    "editaSubtitulo": "Entre Montanhas",
+    "editaEmprestimo": "2025-02-17",
+    "editaDevolucao": "2025-02-24",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-17 16:17:57] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "639ea392522d53a6cbf9cf8552c69c86ba571122d7da42bca84a7654f1b68ddc",
+    "AddMatricula": "202319204",
+    "AddAluno": "Carol Maia",
+    "AddTitulo": "Aventuras Fantásticas",
+    "AddSubtitulo": "Descobrindo Mundos ",
+    "DataEmprestimo": "2025-02-17",
+    "DataDevolucao": "2025-02-24",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-17 16:24:22] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "32",
+    "matricula": "202320207",
+    "editarNome": "Ivani Filho",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "ivani.filho@teste.com",
+    "editarStatus": "Inativo"
+}
+[2025-02-17 16:25:25] Requisição recebida: POST - /schoollibrary/Models/Update_Acervo.php
+{
+    "csrf_token": "2da82e4cc928e65fe4b9604e7252f9f8d3c2b5a086c9f80d22455a0576010605",
+    "codAcervo": "25",
+    "editaAcervo": "CB-LD-RR",
+    "editaStatus": "Inativo"
+}
+[2025-02-17 17:01:59] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "d8ce1abb1b9d858d8faca1294c745b76182fd973e87698745972fae42667ae2a",
+    "codEmprestimo": "23",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "O Último Refúgio ",
+    "editaSubtitulo": "Entre Montanhas",
+    "editaEmprestimo": "2025-02-17",
+    "editaDevolucao": "2025-02-24",
+    "Status_Livro": "Disponível"
+}
+[2025-02-17 17:26:24] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "8457cc138e558baa40fdad87a6d68b8efeaa3b43556ac1b2eff1cc8c21e9fe1e",
+    "codEmprestimo": "23",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "O Último Refúgio ",
+    "editaSubtitulo": "Entre Montanhas",
+    "editaEmprestimo": "2025-02-17",
+    "editaDevolucao": "2025-02-24",
+    "Status_Livro": "Emprestado"
+}

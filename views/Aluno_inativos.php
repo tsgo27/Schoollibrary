@@ -46,8 +46,9 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                             <span class="xp-user-live"></span>
                                         </a>
                                         <ul class="dropdown-menu small-menu">
-                                            <li><a href=""><span class="material-icons">person_outline</span><?php echo 'Olá, ' . $userName; ?></li>
-                                            <li><a href="../Controllers/LogoutController.php"><span class="material-icons">logout</span>Sair</a></li>
+                                            <li><a href=""><span class="material-icons">person_outline</span><?php echo 'Olá, ' . $userName; ?></a></li>
+                                            <li><a href="Usuarios.php"><span class="material-icons">settings</span>Perfil</a></li>
+                                            <li><a href="<?php echo BASE_URL; ?>/Controllers/LogoutController.php"><span class="material-icons">logout</span>Sair</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -100,7 +101,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <th>Telefone</th>
                                         <th>Email</th>
                                         <th>Status</th>
-                                        <th>Obs. / Empréstimo</th>
                                         <th>Ação</th>
                                     </tr>
                                 </thead>
@@ -125,7 +125,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                                 echo "<td>" . htmlspecialchars($user_data['user_status']) . "</td>";
 
                                                 echo "<td class='col-lg-3'>
-                                                    <a href='#editEmployeeModal' class='edit editarUsuario btn btn-warning' data-toggle='modal'>Editar</a>
+                                                    <a href='#editEmployeeModal' class='edit editarUsuario btn btn-warning' data-toggle='modal' title='Editar aluno'>Editar</a>
                                                     </td>";
                                                 echo "</tr>";
                                             }

@@ -10,6 +10,7 @@ if (!isset($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Verifica o token CSRF
@@ -25,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $DateEmprestimo = htmlspecialchars(filter_input(INPUT_POST, 'DataEmprestimo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $DateDevolucao = htmlspecialchars(filter_input(INPUT_POST, 'DataDevolucao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $Status = htmlspecialchars(filter_input(INPUT_POST, 'AddStatus_Livro', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-
+        
         // Verificando se os campos obrigatórios estão preenchidos
         if (empty($matricula) || empty($aluno) || empty($titulo) || empty($DateEmprestimo) || empty($DateDevolucao) || empty($Status)) {
             exit();

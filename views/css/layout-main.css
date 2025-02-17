@@ -771,4 +771,18 @@ footer {
 
 
 
-/*--------------*/
+/*-----Modal Exibir Detalhes----*/
+.modal-content {
+    border-radius: 15px; /* Deixa as bordas arredondadas */
+    padding: 20px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-footer {
+    border-top: 1px solid #ddd;
+}
+
+
