@@ -1,8 +1,51 @@
-[2025-02-16 02:14:48] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
-[2025-02-16 02:14:48] Dados recebidos: {"csrf_token":"e8904ca35789572a71503c87fc7c41a909bca04eacf4563b640396c56f75ab4d","codEditora":"33","editaEditora":"Fant","editaCidade":"Osasco","editaEstado":"S\u00e3o Paulo-SP","editaStatus":"Ativo"}
-
-[2025-02-16 02:16:42] Requisição recebida: POST - /schoollibrary/Models/Insert_Autor.php
-[2025-02-16 02:16:42] Dados recebidos: {"csrf_token":"4d640c6e8113950c446bf5112a88a9e1a0f98d80e3bf60a2474bee41635a02ad","addAutor":"Amanda Aguiar","addStatus":"Ativo"}
-
-[2025-02-16 02:20:52] Requisição recebida: POST - /schoollibrary/Models/Insert_Genero.php
-[2025-02-16 02:20:52] Dados recebidos: {"csrf_token":"927f781448b91f4a452b75afdded1ca4ff07ec844605f60ef562e710f9848581","addGenero":"Coringa","addStatus":"Ativo"}
+[2025-02-17 11:25:34] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "ac16bf626b678922a1ae43d37ed962bfc054942b20e4ff8950efed20fa44e97c",
+    "codEditora": "33",
+    "editaEditora": "Fantf",
+    "editaCidade": "Osasco",
+    "editaEstado": "São Paulo-SP",
+    "editaStatus": "Ativo"
+}
+[2025-02-17 11:28:29] Requisição recebida: POST - /schoollibrary/Models/Update_Acervo.php
+{
+    "csrf_token": "86abaa55ed23b8369938bbfa1e56460ebddf0311365f293b3a2749fa9d7bbee5",
+    "codAcervo": "25",
+    "editaAcervo": "CB-LD-RR",
+    "editaStatus": "Ativo"
+}
+[2025-02-17 11:28:46] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "7109727bf876301f9d925d5d8b261787162f7aa317da4d753da150b08822dfda",
+    "codObra": "22",
+    "editaIsbn": "978-0-4567890-1",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaSubtitulo": "Versos Sob a Lua",
+    "editaAutor": "Lídia Poetisa",
+    "editaEdicao": "1",
+    "editaAno": "1998",
+    "editaCopia": "1",
+    "editaAcervo": "GB-4-L-1-1",
+    "editaGenero": "Literatura Infantojuvenil",
+    "editaEditora": "Saraiva",
+    "editaSituacao": "Disponível"
+}
+[2025-02-17 11:29:53] Requisição recebida: POST - /schoollibrary/Models/Update_Usuario.php
+{
+    "csrf_token": "606e2a4ba92d134b6e9d14195590cdbf810dd1c0cf9666fcf8c71864190d0d17",
+    "idUsuario": "18",
+    "matricula": "458441255",
+    "editarNome": "Daniel",
+    "editarTelefone": "6299259-4658",
+    "editarEmail": "daniel.soares@teste.com",
+    "editarTipoUser": "Administrador"
+}
+[2025-02-17 11:31:33] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "35",
+    "matricula": "548789889",
+    "editarNome": "Mia Silva",
+    "editarTelefone": "6299259-4607",
+    "editarEmail": "dani@email.com",
+    "editarStatus": "Inativo"
+}

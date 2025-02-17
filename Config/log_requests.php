@@ -1,23 +1,24 @@
 <?php
 /**
- * Função para registrar mensagens personalizadas no log
+ * Função para registrar logs formatados corretamente
  *
- * @param string $message A mensagem que será registrada no log
+ * @param string $message A mensagem principal do log
+ * @param array|null $data Dados adicionais para o log (exemplo: $_REQUEST)
  */
-
-function logMessage($message) {
-    // Define novamente o caminho do arquivo de log dentro da função
+function logMessage($message, $data = null) {
+    // Define o caminho do arquivo de log
     $logFile = __DIR__ . '/../Logs/requests.log';
 
-    // Obtém a data e hora atual no formato 'YYYY-MM-DD HH:MM:SS'
+    // Obtém a data e hora atual
     $date = date('Y-m-d H:i:s');
-    
-    // Monta a mensagem do log com a data e a mensagem recebida
-    $logMessage = "[$date] " . $message . PHP_EOL;
-    
-    // Escreve a mensagem no arquivo de log, adicionando ao final do arquivo
-    file_put_contents($logFile, $logMessage, FILE_APPEND);
+
+    // Registra a mensagem principal (requisição)
+    file_put_contents($logFile, "[$date] " . $message . PHP_EOL, FILE_APPEND);
+
+    // Se houver dados adicionais, formata e grava separadamente
+    if (!empty($data)) {
+        $jsonData = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        file_put_contents($logFile, $jsonData . PHP_EOL, FILE_APPEND);
+    }
 }
-
-
 ?>
