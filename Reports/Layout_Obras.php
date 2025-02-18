@@ -18,7 +18,6 @@ require_once __DIR__ . '/../Config/bootstrap.php';
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th>ISBN</th>
                     <th>Titulo</th>
                     <th>SubTitulo</th>
                     <th>Autor</th>

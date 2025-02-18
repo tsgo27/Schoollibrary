@@ -19,7 +19,7 @@ $(document).ready(function() {
                 if (response.length > 0) {
                     response.forEach(emprestimo => {
                         modalBody.append(`
-                        <p><strong>Título:</strong> ${emprestimo.TituloLivro}</p>
+                        <p><strong>Livro:</strong> ${emprestimo.TituloLivro}</p>
                         <p><strong>Data Empréstimo:</strong> ${emprestimo.DataEmprestimo}</p>
                         <p><strong>Data Devolução:</strong> ${emprestimo.DataDevolucao}</p>
                         <hr>
