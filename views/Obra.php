@@ -20,11 +20,11 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
     <?php
     // Include Menu Sidebar
-    require_once __DIR__ . '/../Includes/Menu_Sidebar.php';  
+    require_once __DIR__ . '/../Includes/Menu_Sidebar.php';
     ?>
 
 
-<!--------NavbBar Start------------------------------->
+    <!--------NavbBar Start------------------------------->
     <div id="content">
         <div class="top-navbar">
             <div class="xd-topbar">
@@ -64,13 +64,13 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                 </div>
             </div>
         </div>
-<!--------NavbBar END--------------------------------->
+        <!--------NavbBar END--------------------------------->
 
 
 
 
 
-<!--------Select dinamico--Start---------------------->
+        <!--------Select dinamico--Start---------------------->
         <div class="row">
             <div class="col-md-3 col-sm-6 b5" id="select-editora">
                 <select class="form-control" id="select-editoras">
@@ -111,12 +111,12 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                 </select>
             </div>
         </div>
-<!--------Select dinamico--END------------------------>
+        <!--------Select dinamico--END------------------------>
 
 
 
 
-<!--------Tabela Principal-content-Start-------------->
+        <!--------Tabela Principal-content-Start-------------->
         <div class="main-content">
             <div class="row">
                 <div class="col-md-12">
@@ -204,11 +204,18 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                                 echo "<td>" . htmlspecialchars($Obrar_data['Genero']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($Obrar_data['Editora']) . "</td>";
                                                 echo "<td style='color: " . htmlspecialchars($statusColor) . ";'>" . htmlspecialchars($Obrar_data['Situacao']) . "</td>";
-                                                
+
                                                 echo "<td class='col-lg-3'>
                                                 <a href='#editEmployeeModal' class='edit editarObra btn btn-warning' data-toggle='modal' title='Editar obra'>Editar</a>
+                                                <a href='#' class='btn btn-info visualizarObra' data-id='" . htmlspecialchars($Obrar_data['codObra']) . "' data-status='" . htmlspecialchars(trim($Obrar_data['Situacao'])) . "' title='Visualizar detalhes'>
+                                                <i class='material-icons'>visibility</i>
+                                                </a>
+
+
                                                 </td>";
                                                 echo "</tr>";
+
+                                                
                                             }
                                         } else {
                                             echo "<tr><td colspan='12'>Nenhum resultado encontrado.</td></tr>";
@@ -224,12 +231,33 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                         </div>
                     </div>
                 </div>
-<!--------Tabela Principal-content-END---------------->
+                <!--------Tabela Principal-content-END---------------->
 
 
 
+                <!--------Modal de Detalhes da Obra-------------------->
+                <div id="detalhesObraModal" class="modal fade" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" style="max-width: 30%;">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"><i class="material-icons">library_books</i> Detalhes da Obra</h5>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-bordered">
+                                    <tbody id="detalhesObraBody">
+                                        <!-- Os dados serão carregados aqui via AJAX -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------Modal de Detalhes da Obra---------------->
 
-<!---------Modal Adicionar Obras-Start------------->
+
+
+                <!---------Modal Adicionar Obras-Start------------->
                 <div class="modal fade" tabindex="-1" id="addEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -297,18 +325,18 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                                     <input type="submit" name="submit" id="submitAdicionar" class="btn btn-success" value="Adicionar">
                                 </div>
-                            </div>
+                        </div>
                         </form>
                     </div>
                 </div>
-<!---------Modal Obras-END------------------------->
+                <!---------Modal Obras-END------------------------->
 
 
 
 
 
 
-<!---------Modal Editar Obras-Start----------------->
+                <!---------Modal Editar Obras-Start----------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -369,7 +397,8 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <select name="editaSituacao" id="editaSituacao" maxlength="15" class="form-control">
                                             <option value="Manutenção">Manutenção</option>
                                             <option value="Descontinuado">Descontinuado</option>
-                                            <option value="Disponível">Disponível</option>
+                                            <option value="Descontinuado">Descontinuado</option>
+                                            <option value="Emprestado">	Emprestado</option>
                                         </select>
                                     </div>
                                 </div>
@@ -377,11 +406,11 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                                     <input type="submit" name="update" id="update" class="btn btn-success" value="Atualizar">
                                 </div>
-                            </div>
+                        </div>
                         </form>
                     </div>
                 </div>
-<!---------Modal Editar--Obras-END------------------>
+                <!---------Modal Editar--Obras-END------------------>
             </div>
         </div>
     </div>
@@ -389,12 +418,13 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../public/js/FiltrarTabela.js"></script>
 <script src="../public/js/EditCamposObra.js"></script>
+<script src="../Public/js/get_buscar_detalhes_obra.js"></script>
 <script src="../public/js/SweetAlert_Update_Obra.js"></script>
-<script src="../public/js/SweetAlert_Insert_Obra.js"></script>
+<script src="../public/js/SweetAlert_Update_Obra.js"></script>
 <script src="../public/js/BuscarNomeAutores.js"></script>
 <script src="../public/js/BuscarAcervo.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>

@@ -411,3 +411,291 @@
     "editaExpiracao": "2024-08-16",
     "situacao": "Reservado"
 }
+[2025-02-18 16:24:13] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "2fb1d930a7fdf8648dcf6aec74bac6ea093d9309980be5929a0352af19dd8945",
+    "codEmprestimo": "23",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "O Último Refúgio ",
+    "editaSubtitulo": "Entre Montanhas",
+    "editaEmprestimo": "2025-02-17",
+    "editaDevolucao": "2025-02-24",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 16:24:18] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "a412ccb98371ccc9687b41e7217a611a2fdef8cc6c8cb5b2549e0f5ec64b9780",
+    "codEmprestimo": "22",
+    "editaMatricula": "202320209",
+    "editaAluno": "Debora Soares",
+    "editaTitulo": " O Jardim Secreto",
+    "editaSubtitulo": "Flores da Esperança",
+    "editaEmprestimo": "2025-02-17",
+    "editaDevolucao": "2025-02-24",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 16:55:53] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "916b8ae07037dec2e4293ef900228cf22be97bd87b837c81bfb822bc02d6f627",
+    "codObra": "16",
+    "editaIsbn": "978-0-456789-0",
+    "editaTitulo": "Noite de Mistérios ",
+    "editaSubtitulo": "Sombras do Passado",
+    "editaAutor": "Rodrigo Detetive",
+    "editaEdicao": "1",
+    "editaAno": "2021",
+    "editaCopia": "4",
+    "editaAcervo": "GB-4-L-1-2",
+    "editaGenero": "Mistério",
+    "editaEditora": "Imaginários Ltda.",
+    "editaSituacao": "Disponível"
+}
+[2025-02-18 16:56:31] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "1c20f070dc364dc98ff2a8a6aedb985abe4f5a0f4088c63219d43c8c8d1b3cf6",
+    "codEmprestimo": "24",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "Aventuras Fantásticas",
+    "editaSubtitulo": "Descobrindo Mundos ",
+    "editaEmprestimo": "2025-02-17",
+    "editaDevolucao": "2025-02-24",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 16:56:35] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "0ecd44b252596acf855859606d26255f8a10d8b61fd876e3a4e0606722b964db",
+    "codEmprestimo": "24",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "Aventuras Fantásticas",
+    "editaSubtitulo": "Descobrindo Mundos ",
+    "editaEmprestimo": "2025-02-17",
+    "editaDevolucao": "2025-02-24",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-18 16:58:28] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "68c0183d15c2c0a8a65c0e98c5d86f6ba4825c29fd5915295b5aedfe60f7cebe",
+    "AddMatricula": "202319204",
+    "AddAluno": "Carol Maia",
+    "AddTitulo": "Poemas da Meia-Noite",
+    "AddSubtitulo": "Versos Sob a Lua",
+    "DataEmprestimo": "2025-02-18",
+    "DataDevolucao": "2025-02-18",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-18 16:58:44] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "875a874d68d40ad35d8dc681beea12ce9fa229e1378b90006f0235ccb9554d33",
+    "codEmprestimo": "25",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaSubtitulo": "Versos Sob a Lua",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-18",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 16:58:50] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "875a874d68d40ad35d8dc681beea12ce9fa229e1378b90006f0235ccb9554d33",
+    "codEmprestimo": "25",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaSubtitulo": "Versos Sob a Lua",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-18",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 16:59:20] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "96fcdd6652628c21845605a1a2115b88a35a4e39072e649e53853c0e16a14d7b",
+    "codEmprestimo": "25",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaSubtitulo": "Versos Sob a Lua",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-18",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 16:59:32] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "0559dc865cae0353b015e7df1593b5247afa05c34d3fac0cc539870a8a5ca2e5",
+    "codEmprestimo": "25",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaSubtitulo": "Versos Sob a Lua",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-18",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-18 17:03:11] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "677ea7c7386115a805e0871bf87eb65c05920eb75ef19c633e36635d0a6fb63a",
+    "AddMatricula": "202320206",
+    "AddAluno": "Rafal oliveira",
+    "AddTitulo": "Além das Estrelas ",
+    "AddSubtitulo": "Explorando o Cosmos",
+    "DataEmprestimo": "2025-02-18",
+    "DataDevolucao": "2025-02-25",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-18 17:03:34] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "957b93dacd6dd9866d1c82de42d5526cc3b08b9ace627033a4a296c424bc11db",
+    "codEmprestimo": "26",
+    "editaMatricula": "202320206",
+    "editaAluno": "Rafal oliveira",
+    "editaTitulo": "Além das Estrelas ",
+    "editaSubtitulo": "Explorando o Cosmos",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-25",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 17:03:38] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "2e3843677f24cce0489dc10002fb9bc070a1dc9db9457aebc1af949ecf1f17df",
+    "codEmprestimo": "26",
+    "editaMatricula": "202320206",
+    "editaAluno": "Rafal oliveira",
+    "editaTitulo": "Além das Estrelas ",
+    "editaSubtitulo": "Explorando o Cosmos",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-25",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-18 17:11:26] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "6d9d18bce5ac56d3238f896dca0eb5c5ca9a7f343eb66cdd32515d7c901a6d2b",
+    "codEmprestimo": "26",
+    "editaMatricula": "202320206",
+    "editaAluno": "Rafal oliveira",
+    "editaTitulo": "Além das Estrelas ",
+    "editaSubtitulo": "Explorando o Cosmos",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-25",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 17:11:32] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "f285be4b3773ea7e97d1855501b601aba082710e5f667c71a0a22314da949f40",
+    "codEmprestimo": "26",
+    "editaMatricula": "202320206",
+    "editaAluno": "Rafal oliveira",
+    "editaTitulo": "Além das Estrelas ",
+    "editaSubtitulo": "Explorando o Cosmos",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-25",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 17:11:37] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "8452c0b284d9276023095f86e84b37e7d474a57c0c12ca1360e0a1c242769098",
+    "codEmprestimo": "25",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaSubtitulo": "Versos Sob a Lua",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-18",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 17:11:41] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "f44e45ed362292b45cbd063b6418f1865dad3708698e2366e581385aed1f747d",
+    "codEmprestimo": "24",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "Aventuras Fantásticas",
+    "editaSubtitulo": "Descobrindo Mundos ",
+    "editaEmprestimo": "2025-02-17",
+    "editaDevolucao": "2025-02-24",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 17:13:09] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "6a8fdd2f078b1e5007f2312e1f775820f35f5df3601132a9864e5f9f4ba314e5",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": "Poemas da Meia-Noite",
+    "AddSubtitulo": "Versos Sob a Lua",
+    "DataEmprestimo": "2025-02-18",
+    "DataDevolucao": "2025-02-25",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-18 17:13:37] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "cd61d99ce45d8b50de33316348068035cccb229b0512278e70f268f432a324cb",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": "Poesias Efêmeras",
+    "AddSubtitulo": "Versos do Coração ",
+    "DataEmprestimo": "2025-02-18",
+    "DataDevolucao": "2025-02-25",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-18 17:13:49] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "40c0658b642369918d1baf38b64602a9ed30c575050e3a30bcc6642e792b06f5",
+    "codEmprestimo": "27",
+    "editaMatricula": "202320209",
+    "editaAluno": "Debora Soares",
+    "editaTitulo": "Poesias Efêmeras",
+    "editaSubtitulo": "Versos do Coração ",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-25",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 17:13:55] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "f3647a2ed08af6359ecbb8635434a0363cde087047d28b1f6d1cad5f74495dbe",
+    "codEmprestimo": "27",
+    "editaMatricula": "202320209",
+    "editaAluno": "Debora Soares",
+    "editaTitulo": "Poesias Efêmeras",
+    "editaSubtitulo": "Versos do Coração ",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-25",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 17:14:00] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "e665949e3925d6aa5c43cca170882f937963af5b41501368f20eda1c3541e89f",
+    "codEmprestimo": "27",
+    "editaMatricula": "202320209",
+    "editaAluno": "Debora Soares",
+    "editaTitulo": "Poesias Efêmeras",
+    "editaSubtitulo": "Versos do Coração ",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-25",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-18 17:14:14] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "e0a737957a66586d44c302ed8e1efd1656aceb86aa76ecae52bd21f0bceda7a5",
+    "codEmprestimo": "27",
+    "editaMatricula": "202320209",
+    "editaAluno": "Debora Soares",
+    "editaTitulo": "Poesias Efêmeras",
+    "editaSubtitulo": "Versos do Coração ",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-25",
+    "Status_Livro": "Disponível"
+}
+[2025-02-18 17:14:18] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "bbc52d9034570e747a26f5078a9d5b8c9202c204697b65176e9d175f1f5c00d2",
+    "codEmprestimo": "27",
+    "editaMatricula": "202320209",
+    "editaAluno": "Debora Soares",
+    "editaTitulo": "Poesias Efêmeras",
+    "editaSubtitulo": "Versos do Coração ",
+    "editaEmprestimo": "2025-02-18",
+    "editaDevolucao": "2025-02-25",
+    "Status_Livro": "Emprestado"
+}
