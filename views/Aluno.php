@@ -154,8 +154,8 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                                     <i class='material-icons'>wysiwyg</i>
                                                 </a>
                                                 <a href='#emprestimosModal' class='btn $btnClass verEmprestimos text-white btn-sm' 
-                                                    data-id='" . htmlspecialchars($user_data['id_Aluno']) . "'title='Empréstimos do aluno'>
-                                                    <i class='material-icons'>library_books</i>
+                                                data-id='" . htmlspecialchars($user_data['id_Aluno']) . "'title='Empréstimos do aluno'>
+                                                <i class='material-icons'>library_books</i>
                                                 </a>
                                             </td>";
                                             }

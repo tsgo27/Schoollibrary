@@ -207,13 +207,12 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
                                                 echo "<td class='col-lg-3'>
                                                 <a href='#editEmployeeModal' class='edit editarObra btn btn-warning' data-toggle='modal' title='Editar obra'>Editar</a>
-                                                <a href='#' class='btn btn-info visualizarObra' data-id='" . htmlspecialchars($Obrar_data['codObra']) . "' data-status='" . htmlspecialchars(trim($Obrar_data['Situacao'])) . "' title='Visualizar detalhes'>
-                                                <i class='material-icons'>visibility</i>
+                                                <a href='#' class='btn btn-info visualizarObra' data-id='" . htmlspecialchars($Obrar_data['codObra']) . "' data-status='" . htmlspecialchars(trim($Obrar_data['Situacao'])) . "' title='Visualizar detalhes' style='color: white; background-color: #007bff; font-size: 14px; padding: 5px 10px;'>
+                                                <i class='material-icons'>library_books</i>
                                                 </a>
-
-
                                                 </td>";
                                                 echo "</tr>";
+
 
                                                 
                                             }
