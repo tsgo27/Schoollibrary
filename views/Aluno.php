@@ -178,9 +178,9 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 
 
-                <!-------------Modal para Exibir Detalhes-------------->
+                <!-------------Modal para Exibir Detalhes Aluno-------------->
                 <div class="modal fade" id="viewDetailsModal" tabindex="-1" role="dialog" aria-labelledby="viewDetailsModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document" style="max-width: 30%; width: auto;">
+                    <div class="modal-dialog" role="document" style="max-width: 35%; width: auto;">
                         <div class="modal-content" style="border-radius: 10px; padding: 15px;">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="viewDetailsModalLabel"> <i class="material-icons">person</i> Detalhes do Aluno</h5>
@@ -211,13 +211,10 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <!-------------Modal para Exibir Detalhes-------------->
+                <!-------------Modal para Exibir Detalhes Aluno-------------->
 
 
 
@@ -272,7 +269,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Nome</label>
                                         <input type="text" name="nome" maxlength="60" class="form-control" required>
                                         <label>Telefone</label>
-                                        <input type="tel" name="telefone" maxlength="14" class="form-control phone_with_ddd" required>
+                                        <input type="text" name="telefone" class="form-control phone_with_ddd" required>
                                         <label>E-mail</label>
                                         <input type="email" name="email" maxlength="60" class="form-control" required>
                                         <label>Status Aluno</label>
@@ -314,7 +311,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Nome</label>
                                         <input type="text" name="editarNome" id="editarNome" maxlength="60" class="form-control">
                                         <label>Telefone</label>
-                                        <input type="tel" name="editarTelefone" id="editarTelefone" maxlength="14" class="form-control phone_with_ddd">
+                                        <input type="text" name="editarTelefone" id="editarTelefone" class="form-control phone_with_ddd">
                                         <label>E-mail</label>
                                         <input type="email" name="editarEmail" id="editarEmail" maxlength="100" class="form-control">
                                         <label>Status Aluno</label>
@@ -338,7 +335,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('.phone_with_ddd').mask('00 00000-0000'); // Mascara telefone
+        $('.phone_with_ddd').mask('(00) 0000-00000'); // Mascara telefone
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>

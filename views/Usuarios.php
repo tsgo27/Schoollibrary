@@ -182,7 +182,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Nome</label>
                                         <input type="text" name="nome" maxlength="60" class="form-control" required>
                                         <label>Telefone</label>
-                                        <input type="tel" name="telefone" maxlength="13" class="form-control phone_with_ddd" required>
+                                        <input type="text" name="telefone" class="form-control phone_with_ddd" required>
                                         <label>E-mail</label>
                                         <input type="email" name="email" maxlength="60" class="form-control" required>
                                         <label>Senha</label>
@@ -233,7 +233,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Nome</label>
                                         <input type="text" name="editarNome" id="editarNome" maxlength="60" class="form-control">
                                         <label>Telefone</label>
-                                        <input type="tel" name="editarTelefone" id="editarTelefone" maxlength="14" class="form-control phone_with_ddd">
+                                        <input type="text" name="editarTelefone" id="editarTelefone" class="form-control phone_with_ddd">
                                         <label>E-mail</label>
                                         <input type="email" name="editarEmail" id="editarEmail" maxlength="100" class="form-control">
                                         <label>Tipo Usuário</label>

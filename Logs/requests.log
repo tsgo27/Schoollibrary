@@ -291,3 +291,111 @@
     "editaDevolucao": "2025-02-24",
     "Status_Livro": "Emprestado"
 }
+[2025-02-17 21:39:56] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "66 98123-0800",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-02-17 21:43:17] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "(66) 9812-30800",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-02-17 21:45:57] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "(66) 9812-30800",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-02-17 21:46:31] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "(66) 9812-30800",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-02-17 21:47:45] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "(66) 9812-30800",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-02-17 21:56:38] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "(66) 9812-30800",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-02-17 22:02:15] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "(66) 9812-30800",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-02-17 22:06:34] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "(66) 9812-30800",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-02-17 22:15:58] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "526836196c91db000305c12d2b4c726360f022db3cda9923aeeeca05476695b9",
+    "codEmprestimo": "21",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": " O Jardim Secreto",
+    "editaSubtitulo": "Flores da Esperança",
+    "editaEmprestimo": "2023-12-22",
+    "editaDevolucao": "2023-12-20",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-17 22:16:23] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "1f24051a4a6788d87b97e66beba81d27a5bc9ac1108c90d861c66748539bd14c",
+    "codEmprestimo": "21",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": " O Jardim Secreto",
+    "editaSubtitulo": "Flores da Esperança",
+    "editaEmprestimo": "2023-12-22",
+    "editaDevolucao": "2023-12-20",
+    "Status_Livro": "Disponível"
+}
+[2025-02-17 22:16:31] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "73e54e5c40b420e8a2e46e70c28e7084211dee73162794138adb23ea6298f97e",
+    "codEmprestimo": "21",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": " O Jardim Secreto",
+    "editaSubtitulo": "Flores da Esperança",
+    "editaEmprestimo": "2023-12-22",
+    "editaDevolucao": "2023-12-20",
+    "Status_Livro": "Emprestado"
+}
