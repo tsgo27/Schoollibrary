@@ -399,3 +399,15 @@
     "editaDevolucao": "2023-12-20",
     "Status_Livro": "Emprestado"
 }
+[2025-02-18 11:46:52] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "cdeb1c7f14df91052b519a4c08f083243a6887556a55ae189081204b53a5f912",
+    "codReserva": "15",
+    "editaMatricula": "202320206",
+    "editaAluno": "Rafal oliveira",
+    "editaTitulo": "Entre Dois Mundos",
+    "editaSubtitulo": "A Fronteira Invisível",
+    "editaReserva": "2024-08-09",
+    "editaExpiracao": "2024-08-16",
+    "situacao": "Reservado"
+}

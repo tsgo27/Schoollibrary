@@ -148,7 +148,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                                 
                                                 echo "<td class='col-lg-3'>
                                                     <a href='#editEmployeeModal' class='edit editarReserva btn btn-warning' data-toggle='modal' title='Editar reserva'>Editar</a>
-                                                    <!--button class='delete excluirReserva btn btn-danger excluir-button' data-cod-reserva='{$user_data['CodReserva']}'>Excluir</button-->
                                                     </td>";
                                                 echo "</tr>";
                                             }
