@@ -19,7 +19,6 @@ require_once __DIR__ . '/../Config/bootstrap.php';
             <thead>
                 <tr>
                     <th>Titulo</th>
-                    <th>SubTitulo</th>
                     <th>Autor</th>
                     <th>Edição</th>
                     <th>Ano</th>
@@ -46,7 +45,6 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                             echo "<tr>";
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Isbn']) . "</td>";
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Titulo']) . "</td>";
-                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['SubTitulo']) . "</td>";
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Autor']) . "</td>";
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Edicao']) . "</td>";
                             echo "<td class='col-lg-1'>" . htmlspecialchars($user_data['Ano']) . "</td>";

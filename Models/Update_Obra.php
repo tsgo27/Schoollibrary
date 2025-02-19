@@ -21,7 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $codObra = htmlspecialchars(filter_input(INPUT_POST, 'codObra', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $isbn = htmlspecialchars(filter_input(INPUT_POST, 'editaIsbn', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $titulo = htmlspecialchars(filter_input(INPUT_POST, 'editaTitulo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $subtitulo = htmlspecialchars(filter_input(INPUT_POST, 'editaSubtitulo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $autor = htmlspecialchars(filter_input(INPUT_POST, 'editaAutor', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $edicao = htmlspecialchars(filter_input(INPUT_POST, 'editaEdicao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $ano = htmlspecialchars(filter_input(INPUT_POST, 'editaAno', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
@@ -32,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $situacao = htmlspecialchars(filter_input(INPUT_POST, 'editaSituacao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
         // Cria a query de atualização usando Prepared Statements
-        $sqlUpdateObra = "UPDATE obra SET Isbn = :isbn, Titulo = :titulo, SubTitulo = :subtitulo, Autor = :autor, Edicao = :edicao, Ano = :ano, Copia = :copia, Acervo = :acervo, Genero = :genero, Editora = :editora, Situacao = :situacao WHERE CodObra = :codObra";
+        $sqlUpdateObra = "UPDATE obra SET Isbn = :isbn, Titulo = :titulo, Autor = :autor, Edicao = :edicao, Ano = :ano, Copia = :copia, Acervo = :acervo, Genero = :genero, Editora = :editora, Situacao = :situacao WHERE CodObra = :codObra";
         $stmtUpdateObra = $pdo->prepare($sqlUpdateObra);
 
         if (!$stmtUpdateObra) {
@@ -43,7 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmtUpdateObra->bindValue(':codObra', $codObra);
         $stmtUpdateObra->bindValue(':isbn', $isbn);
         $stmtUpdateObra->bindValue(':titulo', $titulo);
-        $stmtUpdateObra->bindValue(':subtitulo', $subtitulo);
         $stmtUpdateObra->bindValue(':autor', $autor);
         $stmtUpdateObra->bindValue(':edicao', $edicao);
         $stmtUpdateObra->bindValue(':ano', $ano);

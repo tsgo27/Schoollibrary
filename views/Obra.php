@@ -274,8 +274,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <input type="text" name="AddIsbn" id="AddIsbn" maxlength="60" class="form-control" required>
                                         <label>Título Livro</label>
                                         <input type="text" name="AddTitulo" id="AddTitulo" maxlength="60" class="form-control" required>
-                                        <label>Subtítulo</label>
-                                        <input type="text" name="AddSubtitulo" id="AddSubtitulo" maxlength="60" class="form-control" required>
                                         <label>Autores</label>
                                         <input type="text" name="AddAutor" id="AddAutor" maxlength="60" placeholder="Digite nome do autor" class="form-control" required>
                                         <div id="authorSuggestions"></div>
@@ -354,8 +352,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <input type="text" name="editaIsbn" id="editaIsbn" maxlength="60" class="form-control">
                                         <label>Título Livro</label>
                                         <input type="text" name="editaTitulo" id="editaTitulo" maxlength="60" class="form-control">
-                                        <label>Subtítulo</label>
-                                        <input type="text" name="editaSubtitulo" id="editaSubtitulo" maxlength="60" class="form-control">
                                         <label>Autores</label>
                                         <input type="text" name="editaAutor" id="editaAutor" class="form-control">
                                         <label>Edição</label>
