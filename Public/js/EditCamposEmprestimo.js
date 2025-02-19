@@ -4,17 +4,15 @@ $(document).ready(function() {
         const matricula = $(this).closest('tr').find('td:eq(1)').text();
         const aluno = $(this).closest('tr').find('td:eq(2)').text();
         const titulo = $(this).closest('tr').find('td:eq(3)').text();
-        const subtitulo = $(this).closest('tr').find('td:eq(4)').text();
-        const emprestimo = $(this).closest('tr').find('td:eq(5)').text();
-        const devolucao = $(this).closest('tr').find('td:eq(6)').text();
-        const status = $(this).closest('tr').find('td:eq(7)').text(); 
+        const emprestimo = $(this).closest('tr').find('td:eq(4)').text();
+        const devolucao = $(this).closest('tr').find('td:eq(5)').text();
+        const status = $(this).closest('tr').find('td:eq(6)').text(); 
 
         // Preencher os campos do formulário de edição
         $('#codEmprestimo').val(codEmprestimo);
         $('#editaMatricula').val(matricula);
         $('#editaAluno').val(aluno);
         $('#editaTitulo').val(titulo);
-        $('#editaSubtitulo').val(subtitulo);
         $('#editaEmprestimo').val(emprestimo);
         $('#editaDevolucao').val(devolucao);
         $('#Status_Livro').val(status);

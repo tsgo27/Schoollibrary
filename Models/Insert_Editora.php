@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Cria a query de inserção usando Prepared Statements
-        $sql = "INSERT INTO editora (NomeEditora, Cidade, Estado, StatusEditora, data_registro) VALUES (?, ?, ?, ?, NOW())";
+        $sql = "INSERT INTO editora (nome_editora, cidade_editora, estado_editora, status_editora, data_registro) VALUES (?, ?, ?, ?, NOW())";
         $stmt = $pdo->prepare($sql);
 
         if (!$stmt) {

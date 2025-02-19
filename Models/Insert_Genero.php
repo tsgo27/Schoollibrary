@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception('Token CSRF inválido');
         }
 
-        // Filtrando os dados do formulário usando apenas htmlspecialchars()
+        // Filtrando os dados do formulário 
         $genero = htmlspecialchars(filter_input(INPUT_POST, 'addGenero', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $status = htmlspecialchars(filter_input(INPUT_POST, 'addStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
@@ -27,8 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Cria a query de inserção usando Prepared Statements
-        $sql = "INSERT INTO genero (NomeGenero, StatusGenero, data_registro) VALUES (:genero, :status, NOW())";
-        // Prepara a declaração SQL
+        $sql = "INSERT INTO genero (nome_genero, status_genero, data_registro) VALUES (?, ?, NOW())";
         $stmt = $pdo->prepare($sql);
 
         if (!$stmt) {
@@ -37,8 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Vincula os parâmetros com os valores.
-        $stmt->bindParam(':genero', $genero);
-        $stmt->bindParam(':status', $status);
+        $stmt->bindParam(1, $genero);
+        $stmt->bindParam(2, $status);
 
         if ($stmt->execute()) {
             // Redireciona o usuário para a página de origem.

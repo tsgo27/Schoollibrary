@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../Config/bootstrap.php';
-$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -102,11 +106,10 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <th>ID</th>
                                         <th>Matrícula</th>
                                         <th>Aluno</th>
-                                        <th>Titulo</th>
-                                        <th>Subtítulo</th>
+                                        <th>Titulo Livro</th>
                                         <th>Empréstimo</th>
                                         <th>Devolução</th>
-                                        <th>Status</th>
+                                        <th>Situação</th>
                                         <th>Ação</th>
                                     </tr>
                                 </thead>
@@ -117,14 +120,14 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                             throw new Exception('A conexão com o banco de dados não foi estabelecida.');
                                         }
 
-                                        $sql = "SELECT * FROM emprestimo WHERE StatusEmprestimo IN ('Disponível', 'Emprestado', 'Reservado', 'Manutenção', 'Descontinuado') ORDER BY data_registro DESC";
+                                        $sql = "SELECT * FROM emprestimo WHERE status_emprestimo IN ('Disponível', 'Emprestado', 'Reservado', 'Manutenção', 'Descontinuado') ORDER BY data_registro DESC";
                                         $result = $pdo->query($sql);
 
                                         if ($result->rowCount() > 0) {
                                             while ($user_data = $result->fetch(PDO::FETCH_ASSOC)) {
                                                 // Define a cor do status com base no valor de Situacao
                                                 $statusColor = '';
-                                                switch ($user_data['StatusEmprestimo']) {
+                                                switch ($user_data['status_emprestimo']) {
                                                     case 'Disponível':
                                                         $statusColor = '#008000';  // Verde para disponível
                                                         break;
@@ -140,18 +143,17 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                                 }
 
                                                 echo "<tr>";
-                                                echo "<td>" . htmlspecialchars($user_data['codEmprestimo']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['MatriculaAluno']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['NomeAluno']) . "</td>";
-                                                echo "<td class='table-cell-wrap'>" . htmlspecialchars($user_data['TituloLivro']) . "</td>";
-                                                echo "<td class='table-cell-wrap'>" . htmlspecialchars($user_data['SubTituloLivro']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['DataEmprestimo']) . "</td>";
-                                                echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['DataDevolucao']) . "</td>";
-                                                echo "<td style='color: " . htmlspecialchars($statusColor) . ";'>" . htmlspecialchars($user_data['StatusEmprestimo']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['id_emprestimo']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['matricula_aluno']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['nome_aluno']) . "</td>";
+                                                echo "<td class='table-cell-wrap'>" . htmlspecialchars($user_data['titulo_livro']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['data_emprestimo']) . "</td>";
+                                                echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['data_devolucao']) . "</td>";
+                                                echo "<td style='color: " . htmlspecialchars($statusColor) . ";'>" . htmlspecialchars($user_data['status_emprestimo']) . "</td>";
 
                                                 echo "<td class='col-lg-3'>
                                                 <a href='#editEmployeeModal' class='edit editarEmprestimo btn btn-warning' data-toggle='modal' title='Editar emprétimo'>Editar</a>
-                                                <button class='comprovante btn btn-info' data-cod-emprestimo='{$user_data['codEmprestimo']}' style='width: 82px;'>Cupom</button>
+                                                <button class='comprovante btn btn-info' data-cod-emprestimo='{$user_data['id_emprestimo']}' style='width: 82px;'>Cupom</button>
                                                 </td>";
                                                 echo "</tr>";
 
@@ -195,9 +197,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Título Livro</label>
                                         <input type="text" name="AddTitulo" id="AddTitulo" maxlength="60" placeholder="Digite nome do livro" class="form-control" required>
                                         <div id="tituloSuggestions"></div>
-                                        <label>Subtítulo</label>
-                                        <input type="text" name="AddSubtitulo" id="AddSubtitulo" maxlength="60" class="form-control" required>
-                                        <div id="SubTituloSuggestions"></div>
                                         <label>Data do Emprestimo</label>
                                         <input type="date" name="DataEmprestimo" id="DataEmprestimo" maxlength="10" class="form-control" required>
                                         <label>Data da Devolução</label>
@@ -242,8 +241,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <input type="text" name="editaAluno" id="editaAluno" maxlength="60" class="form-control" readonly>
                                         <label>Titulo Livro</label>
                                         <input type="text" name="editaTitulo" id="editaTitulo" maxlength="60" class="form-control">
-                                        <label>Subtitulo</label>
-                                        <input type="text" name="editaSubtitulo" id="editaSubtitulo" maxlength="60" class="form-control">
                                         <label>Data Emprestimo</label>
                                         <input type="date" name="editaEmprestimo" id="editaEmprestimo" maxlength="60" class="form-control">
                                         <label>Data Devolução</label>

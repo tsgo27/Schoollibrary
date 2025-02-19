@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../Config/bootstrap.php';
-$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -122,7 +126,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                             while ($user_data = $result->fetch(PDO::FETCH_ASSOC)) {
 
                                                 // Consultar se o aluno tem empréstimo ativo
-                                                $stmt = $pdo->prepare("SELECT COUNT(*) FROM emprestimo WHERE MatriculaAluno = :matricula AND StatusEmprestimo = 'Emprestado'");
+                                                $stmt = $pdo->prepare("SELECT COUNT(*) FROM emprestimo WHERE matricula_aluno = :matricula AND status_emprestimo = 'Emprestado'");
                                                 $stmt->bindParam(':matricula', $user_data['matricula'], PDO::PARAM_INT);
                                                 $stmt->execute();
                                                 $emprestimosAtivos = $stmt->fetchColumn();

@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $Status = htmlspecialchars(filter_input(INPUT_POST, 'editaStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
         // Cria a query de atualização usando Prepared Statements
-        $sql = "UPDATE acervo SET Acervo = :Acervo, StatusAcervo = :Status WHERE codAcervo = :codAcervo";
+        $sql = "UPDATE acervo SET acervo = :Acervo, status_acervo = :Status WHERE id_acervo = :codAcervo";
         $stmt = $pdo->prepare($sql);
 
         if (!$stmt) {

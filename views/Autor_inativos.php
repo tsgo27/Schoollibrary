@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../Config/bootstrap.php';
-$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -57,7 +61,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                     </div>
                 </div>
                 <div class="xp-breadcrumbbar text-center">
-                    <h4 class="page-title">Autores - Inativos</h4>
+                    <h4 class="page-title">Autor - Inativos</h4>
                     <ol class="breadcrumb">
                         <li class="sub-titulo"><a>School Library / Autores</a></li>
                     </ol>
@@ -77,7 +81,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                         <div class="table-title">
                             <div class="row">
                                 <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
-                                    <h2 class="ml-lg-2">Autores</h2>
+                                    <h2 class="ml-lg-2">Autor</h2>
                                 </div>
                                 <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
                                     <div class="container">
@@ -105,16 +109,16 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                             throw new Exception('A conexão com o banco de dados não foi estabelecida.');
                                         }
 
-                                        $sql = "SELECT * FROM Autor WHERE StatusAutor = 'Inativo' ORDER BY data_registro DESC";
+                                        $sql = "SELECT * FROM Autor WHERE status_autor = 'Inativo' ORDER BY data_registro DESC";
                                         $result = $pdo->query($sql);
 
                                         if ($result->rowCount() > 0) {
                                             while ($user_data = $result->fetch(PDO::FETCH_ASSOC)) {
                                         
                                                 echo "<tr>";
-                                                echo "<td>" . htmlspecialchars($user_data ['codAutor']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['NomeAutor']) . "</td>";
-                                                echo "<td>" .  htmlspecialchars($user_data ['StatusAutor']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data ['id_autor']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['nome_autor']) . "</td>";
+                                                echo "<td>" .  htmlspecialchars($user_data ['status_autor']) . "</td>";
 
                                                 echo "<td class='col-lg-3'>
                                                     <a href='#editEmployeeModal' class='edit editarAutor btn btn-warning' data-toggle='modal' title='Editar autor'>Editar</a>

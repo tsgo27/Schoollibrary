@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../Config/bootstrap.php';
-$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -109,18 +113,18 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                             throw new Exception('A conexão com o banco de dados não foi estabelecida.');
                                         }
 
-                                        $sql = "SELECT * FROM editora WHERE StatusEditora = 'Inativo' ORDER BY data_registro DESC";
+                                        $sql = "SELECT * FROM editora WHERE status_editora = 'Inativo' ORDER BY data_registro DESC";
                                         $result = $pdo->query($sql);
                                         
                                         if ($result->rowCount() > 0) {
                                             while ($editora_data = $result->fetch(PDO::FETCH_ASSOC)) {
                                                 
                                                 echo "<tr>";
-                                                echo "<td>" . htmlspecialchars($editora_data['codEditora']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($editora_data['NomeEditora']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($editora_data['Cidade']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($editora_data['Estado']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($editora_data['StatusEditora']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($editora_data['id_editora']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($editora_data['nome_editora']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($editora_data['cidade_editora']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($editora_data['estado_editora']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($editora_data['status_editora']) . "</td>";
 
                                                 echo "<td class='col-lg-3'>
                                                     <a href='#editEmployeeModal' class='edit editarEditora btn btn-warning' data-toggle='modal' title='Editar editora'>Editar</a>

@@ -21,21 +21,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $codEmprestimo = htmlspecialchars(filter_input(INPUT_POST, 'codEmprestimo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $aluno = htmlspecialchars(filter_input(INPUT_POST, 'editaAluno', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $titulo = htmlspecialchars(filter_input(INPUT_POST, 'editaTitulo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $subtitulo = htmlspecialchars(filter_input(INPUT_POST, 'editaSubtitulo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $emprestimo = htmlspecialchars(filter_input(INPUT_POST, 'editaEmprestimo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $devolucao = htmlspecialchars(filter_input(INPUT_POST, 'editaDevolucao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $status = htmlspecialchars(filter_input(INPUT_POST, 'Status_Livro', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
         // Atualiza a tabela emprestimo
-        $sqlUpdateEmprestimo = "UPDATE emprestimo SET NomeAluno = :editaAluno, TituloLivro = :editaTitulo, 
-            SubTituloLivro = :editaSubtitulo, DataEmprestimo = :editaEmprestimo, DataDevolucao = :editaDevolucao, 
-            StatusEmprestimo = :Status_Livro WHERE codEmprestimo = :codEmprestimo";
+        $sqlUpdateEmprestimo = "UPDATE emprestimo SET nome_aluno = :editaAluno, titulo_livro = :editaTitulo, data_emprestimo = :editaEmprestimo, data_devolucao = :editaDevolucao, 
+        status_emprestimo = :Status_Livro WHERE id_emprestimo = :codEmprestimo";
         $stmtUpdateEmprestimo = $pdo->prepare($sqlUpdateEmprestimo);
 
         $stmtUpdateEmprestimo->bindValue(':codEmprestimo', $codEmprestimo);
         $stmtUpdateEmprestimo->bindValue(':editaAluno', $aluno);
         $stmtUpdateEmprestimo->bindValue(':editaTitulo', $titulo);
-        $stmtUpdateEmprestimo->bindValue(':editaSubtitulo', $subtitulo);
         $stmtUpdateEmprestimo->bindValue(':editaEmprestimo', $emprestimo);
         $stmtUpdateEmprestimo->bindValue(':editaDevolucao', $devolucao);
         $stmtUpdateEmprestimo->bindValue(':Status_Livro', $status);

@@ -20,11 +20,11 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                 <tr>
                     <th>Matrícula</th>
                     <th>Aluno</th>
-                    <th>Titulo</th>
+                    <th>Titulo Livro</th>
                     <th>Subtítulo</th>
                     <th>Data Reserva</th>
                     <th>Data Expiração</th>
-                    <th>Status</th>
+                    <th>Situação</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,7 +46,6 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['DataReserva']) . "</td>";
                             echo "<td class='col-lg-1'>" . htmlspecialchars($user_data['DataExpiracao']) . "</td>";
                             echo "<td class='col-lg-1'>" . htmlspecialchars($user_data['Situacao']) . "</td>";
-
 
                         }
                     }

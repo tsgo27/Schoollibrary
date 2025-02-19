@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Cria a query de inserção usando Prepared Statements
-        $sql = "INSERT INTO Autor (NomeAutor, StatusAutor, data_registro) VALUES (?, ?, NOW())";
+        $sql = "INSERT INTO Autor (nome_autor, status_autor, data_registro) VALUES (?, ?, NOW())";
         $stmt = $pdo->prepare($sql);
 
         if (!$stmt) {

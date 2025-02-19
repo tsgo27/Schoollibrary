@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../Config/bootstrap.php';
-$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -12,7 +16,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     <title>School Library | Autores</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../views/css/layout-main.css">
-    <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -20,11 +24,11 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
     <?php
     // Include Menu Sidebar
-    require_once __DIR__ . '/../Includes/Menu_Sidebar.php';  
+    require_once __DIR__ . '/../Includes/Menu_Sidebar.php';
     ?>
 
 
-<!--------NavbBar Start------------------------------->
+    <!--------NavbBar Start------------------------------->
     <div id="content">
         <div class="top-navbar">
             <div class="xd-topbar">
@@ -57,19 +61,18 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                     </div>
                 </div>
                 <div class="xp-breadcrumbbar text-center">
-                    <h4 class="page-title">Autores</h4>
+                    <h4 class="page-title">Autor</h4>
                     <ol class="breadcrumb">
                         <li class="sub-titulo"><a>School Library / Autores</a></li>
                     </ol>
                 </div>
             </div>
         </div>
-<!--------NavbBar END--------------------------------->
+        <!--------NavbBar END--------------------------------->
 
 
 
-
-<!--------Tabela Principal-content-Start-------------->
+        <!--------Tabela Principal-content-Start-------------->
         <div class="main-content">
             <div class="row">
                 <div class="col-md-12">
@@ -77,13 +80,13 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                         <div class="table-title">
                             <div class="row">
                                 <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
-                                    <h2 class="ml-lg-2">Autores</h2>
-                                </div>
-                                <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
                                     <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
                                         <i class="material-icons">&#xE147;</i>
                                         <span>Adicionar</span>
                                     </a>
+                                    <h2 class="ml-lg-2">Autores</h2>
+                                </div>
+                                <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
                                     <div class="container">
                                         <div class="box-search">
                                             <input type="search" class="form-control" placeholder="Informe nome do Autor" id="pesquisar">
@@ -103,29 +106,29 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php
+                                    <?php
                                     try {
                                         if (!isset($pdo)) {
                                             throw new Exception('A conexão com o banco de dados não foi estabelecida.');
                                         }
 
-                                        $sql = "SELECT * FROM Autor WHERE StatusAutor = 'Ativo' ORDER BY data_registro DESC";
+                                        $sql = "SELECT * FROM Autor WHERE status_autor = 'Ativo' ORDER BY data_registro DESC";
                                         $result = $pdo->query($sql);
 
                                         if ($result->rowCount() > 0) {
                                             while ($user_data = $result->fetch(PDO::FETCH_ASSOC)) {
-                                                
+
                                                 echo "<tr>";
-                                                echo "<td>" . htmlspecialchars($user_data ['codAutor']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['NomeAutor']) . "</td>";
-                                                echo "<td>" .  htmlspecialchars($user_data ['StatusAutor']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['id_autor']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['nome_autor']) . "</td>";
+                                                echo "<td>" .  htmlspecialchars($user_data['status_autor']) . "</td>";
 
                                                 echo "<td class='col-lg-3'>
                                                     <a href='#editEmployeeModal' class='edit editarAutor btn btn-warning' data-toggle='modal' title='Editar autor'>Editar</a>
                                                     </td>";
                                                 echo "<tr>";
                                             }
-                                        } else {  
+                                        } else {
                                             echo "<tr><td colspan='12'>Nenhum resultado encontrado.</td></tr>";
                                         }
                                     } catch (PDOException $e) {
@@ -139,11 +142,11 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                         </div>
                     </div>
                 </div>
-<!--------Tabela Principal-content-END---------------->
+                <!--------Tabela Principal-content-END---------------->
 
 
 
-<!---------Modal Adicionar Autor-Start------------->
+                <!---------Modal Adicionar Autor-Start------------->
                 <div class="modal fade" tabindex="-1" id="addEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -154,7 +157,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                 </button>
                             </div>
                             <form method="POST" action="<?php echo BASE_URL; ?>/Models/Insert_Autor.php" id="cadastroForm">
-                            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
+                                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label>Autor</label>
@@ -170,15 +173,15 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                                     <input type="submit" name="submit" id="submitAdicionar" class="btn btn-success" value="Adicionar">
                                 </div>
-                            </div>
+                        </div>
                         </form>
                     </div>
                 </div>
-<!---------Modal Autor--END------------------------>
+                <!---------Modal Autor--END------------------------>
 
 
 
-<!---------Modal Editar Autor-Start------------->
+                <!---------Modal Editar Autor-Start------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -189,7 +192,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                 </button>
                             </div>
                             <form method="POST" action="<?php echo BASE_URL; ?>/Models/Update_Autor.php" id="cadastroFormu">
-                            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
+                                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <input type="hidden" name="codAutor" id="codAutor" class="form-control">
@@ -206,11 +209,11 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                                     <input type="submit" name="update" id="update" class="btn btn-success" value="Atualizar">
                                 </div>
-                            </div>
+                        </div>
                         </form>
                     </div>
                 </div>
-<!---------Modal Autor-END---------------------->
+                <!---------Modal Autor-END---------------------->
             </div>
         </div>
     </div>
@@ -226,4 +229,5 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 <script src="../public/js/SweetAlert_Insert_Autor.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
 <script src="../public/js/PesquisarAutor.js"></script>
+
 </html>

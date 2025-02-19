@@ -6,7 +6,7 @@
 */
 
 $pdo->query("SET lc_time_names = 'pt_BR'");
-$sqlEmprestimos = "SELECT DATE_FORMAT(DataEmprestimo, '%m') as Mes, DATE_FORMAT(DataEmprestimo, '%M')
+$sqlEmprestimos = "SELECT DATE_FORMAT(data_emprestimo, '%m') as Mes, DATE_FORMAT(data_emprestimo, '%M')
 as NomeMes, COUNT(*) as Quantidade FROM emprestimo GROUP BY Mes";
 $resultEmprestimos = $pdo->query($sqlEmprestimos)->fetchAll(PDO::FETCH_ASSOC);
 

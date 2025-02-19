@@ -20,11 +20,11 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                 <tr>
                     <th>Matrícula</th>
                     <th>Aluno</th>
-                    <th>Titulo</th>
+                    <th>Titulo Livro</th>
                     <th>Subtítulo</th>
                     <th>Empréstimo</th>
                     <th>Devolução</th>
-                    <th>Status</th>
+                    <th>Situação</th>
                 </tr>
             </thead>
             <tbody>

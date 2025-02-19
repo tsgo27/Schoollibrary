@@ -7,7 +7,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 */
 
 $input = $_POST['input'];
-$query = $pdo->prepare("SELECT Acervo FROM acervo WHERE Acervo LIKE :input AND StatusAcervo = 'Ativo' LIMIT 10");
+$query = $pdo->prepare("SELECT Acervo FROM acervo WHERE Acervo LIKE :input AND status_acervo = 'Ativo' LIMIT 10");
 $query->bindValue(':input', '%' . $input . '%', PDO::PARAM_STR);
 $query->execute();
 

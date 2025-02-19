@@ -4,14 +4,14 @@ $(document).ready(function() {
         console.log("ID do aluno:", idAluno); // Depuração no console
 
         $.ajax({
-            url: "../Models/get_buscar_emprestimos.php", // Certifique-se que o caminho está correto
+            url: "../Models/get_buscar_emprestimos.php", 
             type: 'POST',
             data: {
                 id_aluno: idAluno
             },
             dataType: 'json',
             success: function(response) {
-                console.log("Dados recebidos:", response); // Depuração
+                console.log("Dados recebidos:", response); 
 
                 let modalBody = $('#emprestimosModal .modal-body');
                 modalBody.empty(); // Limpa os dados anteriores
@@ -19,9 +19,9 @@ $(document).ready(function() {
                 if (response.length > 0) {
                     response.forEach(emprestimo => {
                         modalBody.append(`
-                        <p><strong>Livro:</strong> ${emprestimo.TituloLivro}</p>
-                        <p><strong>Data Empréstimo:</strong> ${emprestimo.DataEmprestimo}</p>
-                        <p><strong>Data Devolução:</strong> ${emprestimo.DataDevolucao}</p>
+                        <p><strong>Livro:</strong> ${emprestimo.titulo_livro}</p>
+                        <p><strong>Data Empréstimo:</strong> ${emprestimo.data_emprestimo}</p>
+                        <p><strong>Data Devolução:</strong> ${emprestimo.data_devolucao}</p>
                         <hr>
                     `);
                     });

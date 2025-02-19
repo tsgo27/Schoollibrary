@@ -28,10 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $acervo = htmlspecialchars(filter_input(INPUT_POST, 'editaAcervo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $genero = htmlspecialchars(filter_input(INPUT_POST, 'editaGenero', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $editora = htmlspecialchars(filter_input(INPUT_POST, 'editaEditora', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $situacao = htmlspecialchars(filter_input(INPUT_POST, 'editaSituacao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        
 
         // Cria a query de atualização usando Prepared Statements
-        $sqlUpdateObra = "UPDATE obra SET Isbn = :isbn, Titulo = :titulo, Autor = :autor, Edicao = :edicao, Ano = :ano, Copia = :copia, Acervo = :acervo, Genero = :genero, Editora = :editora, Situacao = :situacao WHERE CodObra = :codObra";
+        $sqlUpdateObra = "UPDATE obra SET Isbn = :isbn, Titulo = :titulo, Autor = :autor, Edicao = :edicao, Ano = :ano, Copia = :copia, Acervo = :acervo, Genero = :genero, Editora = :editora WHERE CodObra = :codObra";
         $stmtUpdateObra = $pdo->prepare($sqlUpdateObra);
 
         if (!$stmtUpdateObra) {
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmtUpdateObra->bindValue(':acervo', $acervo);
         $stmtUpdateObra->bindValue(':genero', $genero);
         $stmtUpdateObra->bindValue(':editora', $editora);
-        $stmtUpdateObra->bindValue(':situacao', $situacao);
+       
 
         // Executa a query de atualização na tabela obra
         if (!$stmtUpdateObra->execute()) {

@@ -28,24 +28,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Cria a query de inserção usando Prepared Statements
-        $sql = "INSERT INTO acervo (Acervo, StatusAcervo, data_registro) VALUES (?, ?, NOW())";
+        $sql = "INSERT INTO acervo (acervo, status_acervo, data_registro) VALUES (?, ?, NOW())";
         $stmt = $pdo->prepare($sql);
 
         if (!$stmt) {
             echo "Erro na preparação da declaração: " . $pdo->errorInfo()[2];
             exit;
         }
-
-        // Vincula os parâmetros com os valores
+        
         $stmt->bindParam(1, $AddAcervo);
         $stmt->bindParam(2, $Status);
 
         if ($stmt->execute()) {
-            // Redireciona o usuário para a página de origem.
+            // Redireciona o usuário para a página de origem
             header("Location: http://localhost/schoollibrary/views/Acervo.php");
             exit();
         } else {
-            // Se ocorreu algum erro na inserção, exibe uma mensagem de erro
             echo "Ocorreu um erro durante o cadastro. Tente novamente mais tarde.";
         }
     } catch (Exception $e) {

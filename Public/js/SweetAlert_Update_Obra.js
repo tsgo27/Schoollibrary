@@ -1,22 +1,22 @@
 $(document).ready(function () {
-    // Evento de submissão do formulário
     $('#cadastroFormu').submit(function (event) {
-        event.preventDefault(); // Evita a submissão normal do formulário
-        
-        // Realiza a submissão do formulário usando AJAX
+        event.preventDefault(); 
         $.ajax({
             type: 'POST',
             url: $(this).attr('action'),
             data: $(this).serialize(),
             success: function () {
-                // Exibe o SweetAlert após o cadastro bem-sucedido
                 Swal.fire({
                     icon: 'success',
                     title: 'Sucesso!',
-                    text: 'Obrar atualizada com sucesso.',
-                    confirmButtonText: 'Fechar'
-                }).then(function () {
-                    location.reload(); // Recarrega a página após clicar no botão "Fechar"
+                    text: 'Obra atualizada com sucesso.',
+                    confirmButtonText: 'Fechar',
+                    timer: 5000, // Alerta permanecerá por 5 segundos antes de fechar automaticamente
+                    showConfirmButton: true 
+                }).then(function (result) {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    }
                 });
             },
             error: function () {

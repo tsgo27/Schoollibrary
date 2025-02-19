@@ -20,10 +20,9 @@ try {
         exit;
     }
 
-    $stmt = $pdo->prepare("SELECT TituloLivro, DataEmprestimo, DataDevolucao 
-    FROM emprestimo 
-    WHERE MatriculaAluno = :matricula 
-    AND StatusEmprestimo = 'Emprestado'");
+    $stmt = $pdo->prepare("SELECT titulo_livro, data_emprestimo, data_devolucao FROM emprestimo WHERE matricula_aluno = :matricula 
+    AND status_emprestimo = 'Emprestado'");
+
     $stmt->bindParam(':matricula', $aluno['matricula'], PDO::PARAM_INT);
     $stmt->execute();
 

@@ -19,7 +19,7 @@ try {
     $totalObras = $rowObras['total_obras'];
 
     // Consulta SQL para contar o número de obras emprestadas
-    $sqlEmprestadas = "SELECT COUNT(*) AS TotalEmprestado FROM emprestimo WHERE StatusEmprestimo = 'Emprestado'";
+    $sqlEmprestadas = "SELECT COUNT(*) AS TotalEmprestado FROM emprestimo WHERE status_emprestimo = 'Emprestado'";
     $resultEmprestadas = $pdo->query($sqlEmprestadas);
     $rowEmprestadas = $resultEmprestadas->fetch(PDO::FETCH_ASSOC);
     $TotalEmprestado = $rowEmprestadas['TotalEmprestado'];

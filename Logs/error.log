@@ -1,44 +1,96 @@
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $btnClass in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 210
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $user_data in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $btnClass in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 210
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $user_data in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $btnClass in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 210
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $user_data in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $btnClass in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 210
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $user_data in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $btnClass in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 210
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $user_data in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $btnClass in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 210
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $user_data in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $btnClass in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 210
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $user_data in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $btnClass in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 210
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $user_data in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $btnClass in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 210
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Undefined variable $user_data in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[18-Feb-2025 18:16:05 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 211
-[19-Feb-2025 01:08:38 America/Sao_Paulo] PHP Fatal error:  Uncaught Exception: Token CSRF inválido in C:\xampp\htdocs\Schoollibrary\Models\Update_Emprestimo.php:17
-Stack trace:
-#0 {main}
-  thrown in C:\xampp\htdocs\Schoollibrary\Models\Update_Emprestimo.php on line 17
-[19-Feb-2025 01:09:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Exception: Token CSRF inválido in C:\xampp\htdocs\Schoollibrary\Models\Update_Emprestimo.php:17
-Stack trace:
-#0 {main}
-  thrown in C:\xampp\htdocs\Schoollibrary\Models\Update_Emprestimo.php on line 17
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:05:35 America/Sao_Paulo] PHP Warning:  Undefined array key "NomeGenero" in C:\xampp\htdocs\Schoollibrary\views\Obra.php on line 113
+[19-Feb-2025 17:25:18 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:18 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:18 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:18 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:18 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:18 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:18 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:18 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:44 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:44 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:44 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:44 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:44 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:44 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:44 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:25:44 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:48 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:48 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:48 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:48 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:48 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:48 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:48 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:48 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:50 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:50 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:50 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:50 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:50 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:50 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:50 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:50 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:51 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:51 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:51 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:51 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:51 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:51 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:51 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:51 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:52 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:53 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:53 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:53 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:53 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:53 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:53 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:53 America/Sao_Paulo] PHP Warning:  Undefined array key "Acervo" in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18
+[19-Feb-2025 17:26:53 America/Sao_Paulo] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Schoollibrary\Models\get_acervos.php on line 18

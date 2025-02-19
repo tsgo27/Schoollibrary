@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../Config/bootstrap.php';
-$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -103,11 +107,10 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <th>ID</th>
                                         <th>Matrícula</th>
                                         <th>Aluno</th>
-                                        <th>Titulo</th>
-                                        <th>Subtítulo</th>
+                                        <th>Titulo Livro</th>
                                         <th>Data Reserva</th>
                                         <th>Data Expiração</th>
-                                        <th>Status</th>
+                                        <th>Situação</th>
                                         <th>Ação</th>
                                     </tr>
                                 </thead>
@@ -117,14 +120,14 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         if (!isset($pdo)) {
                                             throw new Exception('A conexão com o banco de dados não foi estabelecida.');
                                         }
-                                        $sql = "SELECT * FROM reservas WHERE Situacao IN ('Disponível', 'Emprestado', 'Reservado', 'Manutenção', 'Descontinuado') ORDER BY data_registro DESC";
+                                        $sql = "SELECT * FROM reservas WHERE situacao_reserva IN ('Disponível', 'Emprestado', 'Reservado', 'Manutenção', 'Descontinuado') ORDER BY data_registro DESC";
                                         $result = $pdo->query($sql);
 
                                         if ($result->rowCount() > 0) {
                                             while ($user_data = $result->fetch(PDO::FETCH_ASSOC)) {
                                                 // Define a cor do status com base no valor de Situacao
                                                 $statusColor = '';
-                                                switch ($user_data['Situacao']) {
+                                                switch ($user_data['situacao_reserva']) {
                                                     case 'Disponível':
                                                         $statusColor = '#008000';  // Verde para disponível
                                                         break;
@@ -137,14 +140,13 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                                 }
 
                                                 echo "<tr>";
-                                                echo "<td>" . htmlspecialchars($user_data['CodReserva']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['Matricula']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['NomeAluno']) . "</td>";
-                                                echo "<td class='table-cell-wrap'>" . htmlspecialchars($user_data['Titulo']) . "</td>";
-                                                echo "<td class='table-cell-wrap'>" . htmlspecialchars($user_data['SubTitulo']) . "</td>";
-                                                echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['DataReserva']) . "</td>";
-                                                echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['DataExpiracao']) . "</td>";
-                                                echo "<td style='color: " . htmlspecialchars($statusColor) . ";'>" . htmlspecialchars($user_data['Situacao']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['id_reserva']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['matricula_aluno']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['nome_aluno']) . "</td>";
+                                                echo "<td class='table-cell-wrap'>" . htmlspecialchars($user_data['titulo_livro']) . "</td>";
+                                                echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['data_reserva']) . "</td>";
+                                                echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['data_expiracao']) . "</td>";
+                                                echo "<td style='color: " . htmlspecialchars($statusColor) . ";'>" . htmlspecialchars($user_data['situacao_reserva']) . "</td>";
                                                 
                                                 echo "<td class='col-lg-3'>
                                                     <a href='#editEmployeeModal' class='edit editarReserva btn btn-warning' data-toggle='modal' title='Editar reserva'>Editar</a>
@@ -190,14 +192,11 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <label>Título Livro</label>
                                         <input type="text" name="AddTitulo" id="AddTitulo" maxlength="60" placeholder="Digite nome do livro" class="form-control">
                                         <div id="tituloSuggestions"></div>
-                                        <label>Subtítulo</label>
-                                        <input type="text" name="AddSubtitulo" id="AddSubtitulo" maxlength="60" class="form-control">
-                                        <div id="SubTituloSuggestions"></div>
                                         <label>Data Reserva</label>
-                                        <input type="date" name="DataReserva" id="DataEmprestimo" maxlength="10" class="form-control">
+                                        <input type="date" name="DataReserva" id="DataReserva" maxlength="10" class="form-control">
                                         <label>Data Expiração</label>
-                                        <input type="date" name="DataExpiracao" id="DataDevolução" maxlength="10" class="form-control">
-                                        <label>Status</label>
+                                        <input type="date" name="DataExpiracao" id="DataExpiracao" maxlength="10" class="form-control">
+                                        <label>Situação</label>
                                         <select name="Situacao" id="Situacao" class="form-control" required>
                                             <option value="Reservado">Reservado</option>
                                         </select>
@@ -236,13 +235,11 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <input type="text" name="editaAluno" id="editaAluno" maxlength="60" class="form-control" readonly>
                                         <label>Titulo Livro</label>
                                         <input type="text" name="editaTitulo" id="editaTitulo" maxlength="60" class="form-control">
-                                        <label>Subtitulo</label>
-                                        <input type="text" name="editaSubtitulo" id="editaSubtitulo" maxlength="60" class="form-control">
                                         <label>Data Reserva</label>
                                         <input type="date" name="editaReserva" id="editaReserva" maxlength="60" class="form-control">
                                         <label>Data Expiração</label>
                                         <input type="date" name="editaExpiracao" id="editaExpiracao" maxlength="60" class="form-control">
-                                        <label>Status</label>
+                                        <label>Situação</label>
                                         <select name="situacao" id="situacao" class="form-control">
                                             <option value="Disponível">Disponível</option>
                                             <option value="Reservado">Reservado</option>

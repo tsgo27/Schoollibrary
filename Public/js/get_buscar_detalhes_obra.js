@@ -3,7 +3,6 @@ $(document).ready(function() {
         var obraId = $(this).data("id");
         var status = $(this).data("status");
 
-        // Enviando dados via AJAX
         $.ajax({
             url: "../Models/get_buscar_detalhes_obra.php",
             type: "POST",
@@ -12,29 +11,28 @@ $(document).ready(function() {
                 var data = JSON.parse(response);
 
                 if (data.error) {
-                    Swal.fire({
-                        icon: 'info',
-                        title: 'Aviso',
-                        text: data.error,
-                        confirmButtonText: 'OK'
-                    });
+                    // Exibir mensagem no modal para "Obra Disponível"
+                    $("#detalhesObraBody").html(
+                        "<p class='text-center font-weight-bold'>" + data.error + "</p>"
+                    );
                 } else {
-                    // Exibir dados no modal conforme o status
+                    // Preencher modal com os dados recebidos
+                    var conteudo = "";
                     if (status === 'Reservado') {
-                        $("#detalhesObraBody").html(
-                            "<strong>Aluno:</strong> " + data[0].NomeAluno + "<br>" +
-                            "<strong>Reserva:</strong> " + data[0].DataReserva + "<br>" +
-                            "<strong>Data de Expiração:</strong> " + data[0].DataExpiracao
-                        );
+                        conteudo = "<b>Aluno:</b> " + data[0].nome_aluno + "<br>" +
+                                   "<b>Reserva:</b> " + data[0].data_reserva + "<br>" +
+                                   "<b>Data de Expiração:</b> " + data[0].data_expiracao;
+                                   
                     } else if (status === 'Emprestado') {
-                        $("#detalhesObraBody").html(
-                            "<strong>Aluno:</strong> " + data[0].NomeAluno + "<br>" +
-                            "<strong>Empréstimo:</strong> " + data[0].DataEmprestimo + "<br>" +
-                            "<strong>Data de Devolução:</strong> " + data[0].DataDevolucao
-                        );
+                        conteudo = "<b>Aluno:</b> " + data[0].nome_aluno + "<br>" +
+                                   "<b>Empréstimo:</b> " + data[0].data_emprestimo + "<br>" +
+                                   "<b>Data de Devolução:</b> " + data[0].data_devolucao;
                     }
-                    $("#detalhesObraModal").modal("show");
+                    $("#detalhesObraBody").html(conteudo);
                 }
+
+                // Exibir o modal
+                $("#detalhesObraModal").modal("show");
             }
         });
     });

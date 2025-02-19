@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../Config/bootstrap.php';
-$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -77,11 +81,11 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                     <option value="">Selecione Editora</option>
                     <?php
                     require_once __DIR__ . '/../Config/bootstrap.php';
-                    $query = $pdo->query("SELECT NomeEditora FROM editora;");
-                    $registros = $query->fetchAll(PDO::FETCH_ASSOC);
 
+                    $query = $pdo->query("SELECT nome_editora FROM editora;");
+                    $registros = $query->fetchAll(PDO::FETCH_ASSOC);
                     foreach ($registros as $registro) {
-                        echo "<option value=\"" . $registro['NomeEditora'] . "\">" . $registro['NomeEditora'] . "</option>";
+                        echo "<option value=\"" . $registro['nome_editora'] . "\">" . $registro['nome_editora'] . "</option>";
                     }
                     ?>
                 </select>
@@ -101,11 +105,12 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                     <option value="">Selecione Gênero</option>
                     <?php
                     require_once __DIR__ . '/../Config/bootstrap.php';
-                    $query = $pdo->query("SELECT NomeGenero FROM genero;");
+
+                    $query = $pdo->query("SELECT nome_genero FROM genero;");
                     $registros = $query->fetchAll(PDO::FETCH_ASSOC);
 
                     foreach ($registros as $registro) {
-                        echo "<option value=\"" . $registro['NomeGenero'] . "\">" . $registro['NomeGenero'] . "</option>";
+                        echo "<option value=\"" . $registro['nome_genero'] . "\">" . $registro['nome_genero'] . "</option>";
                     }
                     ?>
                 </select>
@@ -137,7 +142,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                 <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
                                     <div class="container">
                                         <div class="box-search">
-                                            <input type="search" class="form-control" placeholder="Digite Título da Obra ou Nome do Autor" id="pesquisar">
+                                            <input type="search" class="form-control" placeholder="Digite título da Obra ou nome do Autor" id="pesquisar">
                                         </div>
                                     </div>
                                 </div>
@@ -149,7 +154,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     <tr>
                                         <th>ID</th>
                                         <th>ISBN</th>
-                                        <th>Titulo</th>
+                                        <th>Titulo Livro</th>
                                         <th>Autor</th>
                                         <th>Edição</th>
                                         <th>Ano</th>
@@ -271,14 +276,14 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label>ISBN</label>
-                                        <input type="text" name="AddIsbn" id="AddIsbn" maxlength="60" class="form-control" required>
+                                        <input type="text" name="AddIsbn" id="AddIsbn" maxlength="13" class="form-control" required>
                                         <label>Título Livro</label>
                                         <input type="text" name="AddTitulo" id="AddTitulo" maxlength="60" class="form-control" required>
                                         <label>Autores</label>
                                         <input type="text" name="AddAutor" id="AddAutor" maxlength="60" placeholder="Digite nome do autor" class="form-control" required>
                                         <div id="authorSuggestions"></div>
                                         <label>Edição</label>
-                                        <input type="text" name="AddEdição" id="AddEdição" maxlength="60" class="form-control" required>
+                                        <input type="text" name="AddEdicao" id="AddEdicao" maxlength="60" class="form-control" required>
                                         <label>Ano</label>
                                         <input type="text" name="AddAno" id="AddAno" maxlength="4" class="form-control" required>
                                         <label>Cópia</label>
@@ -287,14 +292,14 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <input type="text" name="AddAcervo" id="AddAcervo" placeholder="Digite o acervo do livro" maxlength="60" class="form-control" required>
                                         <div id="acervoSuggestions"></div>
                                         <label>Gêneros</label>
-                                        <select type="text" name="AddEGenero" id="AddEGenero" class="form-control" required>
+                                        <select type="text" name="AddGenero" id="AddGenero" class="form-control" required>
                                             <?php
                                             require_once __DIR__ . '/../Config/bootstrap.php';
-                                            $query = $pdo->query("SELECT NomeGenero FROM genero ORDER BY NomeGenero;");
+                                            $query = $pdo->query("SELECT nome_genero FROM genero ORDER BY nome_genero;");
                                             $registros = $query->fetchAll(PDO::FETCH_ASSOC);
 
                                             foreach ($registros as $registro) {
-                                                echo "<option value=\"" . $registro['NomeGenero'] . "\">" . $registro['NomeGenero'] . "</option>";
+                                                echo "<option value=\"" . $registro['nome_genero'] . "\">" . $registro['nome_genero'] . "</option>";
                                             }
                                             ?>
                                         </select>
@@ -302,15 +307,15 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <select type="text" name="AddEditora" id="AddEditora" class="form-control" required>
                                             <?php
                                             require_once __DIR__ . '/../Config/bootstrap.php';
-                                            $query = $pdo->query("SELECT NomeEditora FROM editora ORDER BY NomeEditora ASC;");
+                                            $query = $pdo->query("SELECT nome_editora FROM editora ORDER BY nome_editora ASC;");
                                             $registros = $query->fetchAll(PDO::FETCH_ASSOC);
 
                                             foreach ($registros as $registro) {
-                                                echo "<option value=\"" . $registro['NomeEditora'] . "\">" . $registro['NomeEditora'] . "</option>";
+                                                echo "<option value=\"" . $registro['nome_editora'] . "\">" . $registro['nome_editora'] . "</option>";
                                             }
                                             ?>
                                         </select>
-                                        <label>Status Livro</label>
+                                        <label>Situação</label>
                                         <select type name="AddSituacao" id="AddSituacao" maxlength="15" class="form-control" required>
                                             <option value="Disponível">Disponível</option>
                                             <option value="Manutenção">Manutenção</option>
@@ -367,11 +372,11 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                             <?php
                                             require_once __DIR__ . '/../Config/bootstrap.php';
                                             // Query
-                                            $query = $pdo->query("SELECT NomeGenero FROM genero;");
+                                            $query = $pdo->query("SELECT nome_genero FROM genero;");
                                             $registros = $query->fetchAll(PDO::FETCH_ASSOC);
 
                                             foreach ($registros as $registro) {
-                                                echo "<option value=\"" . $registro['NomeGenero'] . "\">" . $registro['NomeGenero'] . "</option>";
+                                                echo "<option value=\"" . $registro['nome_genero'] . "\">" . $registro['nome_genero'] . "</option>";
                                             }
                                             ?>
                                         </select>
@@ -380,20 +385,13 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                             <?php
                                             require_once __DIR__ . '/../Config/bootstrap.php';
                                             // Query
-                                            $query = $pdo->query("SELECT NomeEditora FROM editora;");
+                                            $query = $pdo->query("SELECT nome_editora FROM editora;");
                                             $registros = $query->fetchAll(PDO::FETCH_ASSOC);
 
                                             foreach ($registros as $registro) {
-                                                echo "<option value=\"" . $registro['NomeEditora'] . "\">" . $registro['NomeEditora'] . "</option>";
+                                                echo "<option value=\"" . $registro['nome_editora'] . "\">" . $registro['nome_editora'] . "</option>";
                                             }
                                             ?>
-                                        </select>
-                                        <label>Status Livro</label>
-                                        <select name="editaSituacao" id="editaSituacao" maxlength="15" class="form-control">
-                                            <option value="Manutenção">Manutenção</option>
-                                            <option value="Descontinuado">Descontinuado</option>
-                                            <option value="Descontinuado">Descontinuado</option>
-                                            <option value="Emprestado"> Emprestado</option>
                                         </select>
                                     </div>
                                 </div>

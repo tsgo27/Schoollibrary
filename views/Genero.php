@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../Config/bootstrap.php';
-$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -75,13 +79,13 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                             <div class="table-title">
                                 <div class="row">
                                     <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
-                                        <h2 class="ml-lg-2">Gêneros</h2>
-                                    </div>
-                                    <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
-                                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
+                                    <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
                                             <i class="material-icons">&#xE147;</i>
                                             <span>Adicionar</span>
                                         </a>
+                                        <h2 class="ml-lg-2">Gêneros</h2>
+                                    </div>
+                                    <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
                                         <div class="container">
                                             <div class="box-search">
                                                 <input type="search" class="form-control" placeholder="Informe o Gênero" id="pesquisar">
@@ -107,16 +111,16 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                                 throw new Exception('A conexão com o banco de dados não foi estabelecida.');
                                             }
 
-                                            $sql = "SELECT * FROM genero WHERE StatusGenero = 'Ativo' ORDER BY data_registro DESC";
+                                            $sql = "SELECT * FROM genero WHERE status_genero = 'Ativo' ORDER BY data_registro DESC";
                                             $result = $pdo->query($sql);
                                             
                                             if ($result->rowCount() > 0) {
                                                 while ($genero_data = $result->fetch(PDO::FETCH_ASSOC)) {
                                                     
                                                     echo "<tr>";
-                                                    echo "<td>" . htmlspecialchars($genero_data['CodGenero']) . "</td>";
-                                                    echo "<td>" .  htmlspecialchars($genero_data['NomeGenero']) . "</td>";
-                                                    echo "<td>" .  htmlspecialchars($genero_data['StatusGenero']) . "</td>";
+                                                    echo "<td>" . htmlspecialchars($genero_data['id_genero']) . "</td>";
+                                                    echo "<td>" .  htmlspecialchars($genero_data['nome_genero']) . "</td>";
+                                                    echo "<td>" .  htmlspecialchars($genero_data['status_genero']) . "</td>";
                                                   
                                                     echo "<td class='col-lg-3'>
                                                     <a href='#editEmployeeModal' class='edit editarGenero btn btn-warning' data-toggle='modal' title='Editar genêro'>Editar</a>

@@ -18,7 +18,8 @@ require_once __DIR__ . '/../Config/bootstrap.php';
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th>Titulo</th>
+                    <th>Isbn</th>
+                    <th>Titulo Livro</th>
                     <th>Autor</th>
                     <th>Edição</th>
                     <th>Ano</th>
@@ -53,7 +54,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Genero']) . "</td>";
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Editora']) . "</td>";
                             echo "<td class='col-lg-0'>" . htmlspecialchars($user_data['Situacao']) . "</td>";
-                            echo "</tr>";
+                          
                         }
                     }
                 } catch (PDOException $e) {

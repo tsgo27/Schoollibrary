@@ -20,13 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Filtrando os dados do formulário usando htmlspecialchars()
         $codReserva = htmlspecialchars(filter_input(INPUT_POST, 'codReserva', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $titulo = htmlspecialchars(filter_input(INPUT_POST, 'editaTitulo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $subtitulo = htmlspecialchars(filter_input(INPUT_POST, 'editaSubtitulo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $DataReserva = htmlspecialchars(filter_input(INPUT_POST, 'editaReserva', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $DataExpiracao = htmlspecialchars(filter_input(INPUT_POST, 'editaExpiracao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $situacao = htmlspecialchars(filter_input(INPUT_POST, 'situacao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
         // Cria a query de atualização usando Prepared Statements
-        $sqlUpdateReserva = "UPDATE reservas SET Titulo = :editaTitulo, SubTitulo = :editaSubtitulo, DataReserva = :editaReserva, DataExpiracao = :editaExpiracao, Situacao = :Situacao WHERE CodReserva = :codReserva";
+        $sqlUpdateReserva = "UPDATE reservas SET titulo_livro = :editaTitulo, data_reserva = :editaReserva, data_expiracao = :editaExpiracao, situacao_reserva = :Situacao WHERE id_reserva = :codReserva";
         $stmtUpdateReserva = $pdo->prepare($sqlUpdateReserva);
 
         if (!$stmtUpdateReserva) {
@@ -36,7 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Vincula os parâmetros com os valores
         $stmtUpdateReserva->bindParam(':codReserva', $codReserva);
         $stmtUpdateReserva->bindParam(':editaTitulo', $titulo);
-        $stmtUpdateReserva->bindParam(':editaSubtitulo', $subtitulo);
         $stmtUpdateReserva->bindParam(':editaReserva', $DataReserva);
         $stmtUpdateReserva->bindParam(':editaExpiracao', $DataExpiracao);
         $stmtUpdateReserva->bindParam(':Situacao', $situacao);

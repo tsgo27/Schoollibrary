@@ -7,7 +7,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 */
 
 $input = $_POST['input'];
-$query = $pdo->prepare("SELECT Titulo, SubTitulo, Situacao FROM obra WHERE LOWER(Titulo) LIKE LOWER(:input) LIMIT 10");
+$query = $pdo->prepare("SELECT Titulo, Situacao FROM obra WHERE LOWER(Titulo) LIKE LOWER(:input) LIMIT 10");
 $query->bindValue(':input', '%' . $input . '%', PDO::PARAM_STR);
 $query->execute();
 
@@ -15,11 +15,10 @@ $results = $query->fetchAll(PDO::FETCH_ASSOC);
 if ($results) {
     foreach ($results as $result) {
         $titulo = htmlspecialchars($result['Titulo']);
-        $subtitulo = htmlspecialchars($result['SubTitulo']);
         $situacao = htmlspecialchars($result['Situacao']);
 
         if ($situacao == 'Disponível') {
-            $suggestion = '<div class="titulo-suggestion clickable" data-titulo="' . $titulo . '" data-subtitulo="' . $subtitulo . '">
+            $suggestion = '<div class="titulo-suggestion clickable" data-titulo="' . $titulo . '">
             <span style="color: green;">' . $titulo . '</span>
             </div>';
         } else {

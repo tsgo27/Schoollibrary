@@ -794,3 +794,1157 @@
     "editaDevolucao": "2025-02-26",
     "Status_Livro": "Emprestado"
 }
+[2025-02-19 11:17:45] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "5d42ded7828fde1b3ed486df8a27f129619db9238f72256d16a23790c6762421",
+    "AddMatricula": "202319203",
+    "AddAluno": "Dani Martins",
+    "AddTitulo": "Poemas da Meia-Noite",
+    "DataEmprestimo": "2025-02-19",
+    "DataDevolucao": "2025-02-26",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-19 11:18:40] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "5d42ded7828fde1b3ed486df8a27f129619db9238f72256d16a23790c6762421",
+    "codEmprestimo": "28",
+    "editaMatricula": "202319203",
+    "editaAluno": "Dani Martins",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Disponível"
+}
+[2025-02-19 11:18:44] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "5d42ded7828fde1b3ed486df8a27f129619db9238f72256d16a23790c6762421",
+    "codEmprestimo": "28",
+    "editaMatricula": "202319203",
+    "editaAluno": "Dani Martins",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-19 11:28:10] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "5d42ded7828fde1b3ed486df8a27f129619db9238f72256d16a23790c6762421",
+    "codEmprestimo": "28",
+    "editaMatricula": "202319203",
+    "editaAluno": "Dani Martins",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Disponível"
+}
+[2025-02-19 11:29:38] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "5d42ded7828fde1b3ed486df8a27f129619db9238f72256d16a23790c6762421",
+    "codEmprestimo": "28",
+    "editaMatricula": "202319203",
+    "editaAluno": "Dani Martins",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-19 11:33:41] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "5d42ded7828fde1b3ed486df8a27f129619db9238f72256d16a23790c6762421",
+    "AddIsbn": "978-0-45678-901",
+    "AddTitulo": "Java e vida",
+    "AddAutor": "Martine",
+    "AddEdição": "1",
+    "AddAno": "1992",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-NT",
+    "AddEGenero": "Aventura",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-19 11:49:46] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "5d42ded7828fde1b3ed486df8a27f129619db9238f72256d16a23790c6762421",
+    "AddIsbn": "123-12-125-55",
+    "AddTitulo": "Java",
+    "AddAutor": "Martine",
+    "AddEdicao": "1",
+    "AddAno": "1992",
+    "AddCopia": "5",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Aventura",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-19 11:50:09] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "5d42ded7828fde1b3ed486df8a27f129619db9238f72256d16a23790c6762421",
+    "codObra": "26",
+    "editaIsbn": "123-12-125-55",
+    "editaTitulo": "Java e vida",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "5",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 11:52:35] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "5d42ded7828fde1b3ed486df8a27f129619db9238f72256d16a23790c6762421",
+    "codObra": "25",
+    "editaIsbn": "978-0-45678-901",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "0",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 11:54:27] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "c75e92c35e2c3101ef1c0c95de54f7e217ca927f5f6ab269c529d2204482b6a8",
+    "codObra": "25",
+    "editaIsbn": "978-0-45678-901",
+    "editaTitulo": "Java e vida",
+    "editaAutor": "Martine",
+    "editaEdicao": "0",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Drama",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 11:57:54] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "c75e92c35e2c3101ef1c0c95de54f7e217ca927f5f6ab269c529d2204482b6a8",
+    "AddIsbn": "124-66-545-65",
+    "AddTitulo": "Java e vida",
+    "AddAutor": "Martine",
+    "AddEdicao": "1",
+    "AddAno": "1922",
+    "AddCopia": "5",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Aventura",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-19 11:58:05] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "c75e92c35e2c3101ef1c0c95de54f7e217ca927f5f6ab269c529d2204482b6a8",
+    "codObra": "27",
+    "editaIsbn": "124-66-545-65",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1922",
+    "editaCopia": "5",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 12:00:26] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "bbc7037f02ad71aec7c10057954cb5ba4ec3c36280d81cb8af87545247a487cb",
+    "codObra": "19",
+    "editaIsbn": "978-0-123456-1",
+    "editaTitulo": "Além das Estrelas ",
+    "editaAutor": "Lucas Astrônomo",
+    "editaEdicao": "4",
+    "editaAno": "2021",
+    "editaCopia": "1",
+    "editaAcervo": "GB-4-L-1-3",
+    "editaGenero": "Aventura",
+    "editaEditora": "Conhecimento Press"
+}
+[2025-02-19 12:00:37] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "bbc7037f02ad71aec7c10057954cb5ba4ec3c36280d81cb8af87545247a487cb",
+    "codObra": "19",
+    "editaIsbn": "978-0-123456-8",
+    "editaTitulo": "Além das Estrelas ",
+    "editaAutor": "Lucas Astrônomo",
+    "editaEdicao": "4",
+    "editaAno": "2021",
+    "editaCopia": "1",
+    "editaAcervo": "GB-4-L-1-3",
+    "editaGenero": "Aventura",
+    "editaEditora": "Conhecimento Press"
+}
+[2025-02-19 12:07:33] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "0a4ff46028b3dda32f9d8d049e38326b57e340639c3602c0d23789da14ccc883",
+    "codObra": "19",
+    "editaIsbn": "978-0-123456-7",
+    "editaTitulo": "Além das Estrelas ",
+    "editaAutor": "Lucas Astrônomo",
+    "editaEdicao": "4",
+    "editaAno": "2021",
+    "editaCopia": "1",
+    "editaAcervo": "GB-4-L-1-3",
+    "editaGenero": "Aventura",
+    "editaEditora": "Conhecimento Press"
+}
+[2025-02-19 12:12:00] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "78aed0cf8740ff45f37ed5d0d5ebf1806787081fa8b590de3dab7210eaf969fd",
+    "codObra": "19",
+    "editaIsbn": "978-0-123456-7",
+    "editaTitulo": "Além das Estrelas ",
+    "editaAutor": "Lucas Astrônomo",
+    "editaEdicao": "4",
+    "editaAno": "2021",
+    "editaCopia": "1",
+    "editaAcervo": "GB-4-L-1-3",
+    "editaGenero": "Aventura",
+    "editaEditora": "Conhecimento Press"
+}
+[2025-02-19 12:12:13] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+[2025-02-19 12:12:13] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "78aed0cf8740ff45f37ed5d0d5ebf1806787081fa8b590de3dab7210eaf969fd",
+    "codObra": "22",
+    "editaIsbn": "978-0-4567890-8",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaAutor": "Lídia Poetisa",
+    "editaEdicao": "1",
+    "editaAno": "1998",
+    "editaCopia": "1",
+    "editaAcervo": "GB-4-L-1-1",
+    "editaGenero": "Literatura Infantojuvenil",
+    "editaEditora": "Saraiva"
+}
+[2025-02-19 13:25:39] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "78aed0cf8740ff45f37ed5d0d5ebf1806787081fa8b590de3dab7210eaf969fd",
+    "AddIsbn": "985-59-562-55",
+    "AddTitulo": "Java e vida",
+    "AddAutor": "Martine",
+    "AddEdicao": "1",
+    "AddAno": "1992",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Aventura",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-19 13:25:52] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "78aed0cf8740ff45f37ed5d0d5ebf1806787081fa8b590de3dab7210eaf969fd",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-55",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:28:04] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+[2025-02-19 13:28:04] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "78aed0cf8740ff45f37ed5d0d5ebf1806787081fa8b590de3dab7210eaf969fd",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-58",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+{
+    "csrf_token": "78aed0cf8740ff45f37ed5d0d5ebf1806787081fa8b590de3dab7210eaf969fd",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-58",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:28:27] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "78aed0cf8740ff45f37ed5d0d5ebf1806787081fa8b590de3dab7210eaf969fd",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-55",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:30:10] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "e5aece5c1ca83cb0737dd9aa9d7d2889941e369c8404882a02630d604e933261",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-57",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:30:22] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "e5aece5c1ca83cb0737dd9aa9d7d2889941e369c8404882a02630d604e933261",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-58",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:30:22] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "e5aece5c1ca83cb0737dd9aa9d7d2889941e369c8404882a02630d604e933261",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-58",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:31:27] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "e5aece5c1ca83cb0737dd9aa9d7d2889941e369c8404882a02630d604e933261",
+    "codReserva": "15",
+    "editaMatricula": "202320206",
+    "editaAluno": "Rafal oliveira",
+    "editaTitulo": "Entre Dois Mundos",
+    "editaReserva": "2024-08-09",
+    "editaExpiracao": "2024-08-16",
+    "situacao": "Disponível"
+}
+[2025-02-19 13:33:14] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "e5aece5c1ca83cb0737dd9aa9d7d2889941e369c8404882a02630d604e933261",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-54",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:33:45] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "e5aece5c1ca83cb0737dd9aa9d7d2889941e369c8404882a02630d604e933261",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-57",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:34:12] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "4c9cd82163a625654f64263abfe5306e94b46b4e5888dd66e4817690fcee0e31",
+    "codObra": "22",
+    "editaIsbn": "978-0-4567890-9",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaAutor": "Lídia Poetisa",
+    "editaEdicao": "1",
+    "editaAno": "1998",
+    "editaCopia": "1",
+    "editaAcervo": "GB-4-L-1-1",
+    "editaGenero": "Literatura Infantojuvenil",
+    "editaEditora": "Saraiva"
+}
+{
+    "csrf_token": "4c9cd82163a625654f64263abfe5306e94b46b4e5888dd66e4817690fcee0e31",
+    "codObra": "22",
+    "editaIsbn": "978-0-4567890-9",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaAutor": "Lídia Poetisa",
+    "editaEdicao": "1",
+    "editaAno": "1998",
+    "editaCopia": "1",
+    "editaAcervo": "GB-4-L-1-1",
+    "editaGenero": "Literatura Infantojuvenil",
+    "editaEditora": "Saraiva"
+}
+[2025-02-19 13:34:49] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "4c9cd82163a625654f64263abfe5306e94b46b4e5888dd66e4817690fcee0e31",
+    "codObra": "21",
+    "editaIsbn": "978-0-345678-7",
+    "editaTitulo": "Entre Dois Mundos",
+    "editaAutor": "Roberto Viajante",
+    "editaEdicao": "1",
+    "editaAno": "1993",
+    "editaCopia": "5",
+    "editaAcervo": "GB-4-L-1-3",
+    "editaGenero": "Mistério",
+    "editaEditora": "Editora Enigma"
+}
+[2025-02-19 13:35:08] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "4c9cd82163a625654f64263abfe5306e94b46b4e5888dd66e4817690fcee0e31",
+    "codObra": "20",
+    "editaIsbn": "978-0-234567-2",
+    "editaTitulo": "O Código da História",
+    "editaAutor": "Clara Historiadora",
+    "editaEdicao": "1",
+    "editaAno": "1993",
+    "editaCopia": "5",
+    "editaAcervo": "CA-LE-N1",
+    "editaGenero": "Mistério",
+    "editaEditora": "Contos Coloridos"
+}
+[2025-02-19 13:38:07] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-55",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:38:44] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-58",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:39:08] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-00",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:41:02] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-11",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:41:29] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codObra": "14",
+    "editaIsbn": "978-0-234567-10",
+    "editaTitulo": "Enigmas da Ciência",
+    "editaAutor": "Carlos Cientista",
+    "editaEdicao": "3",
+    "editaAno": "2020",
+    "editaCopia": "3",
+    "editaAcervo": "CA-LE-N2",
+    "editaGenero": "Drama",
+    "editaEditora": "Imaginários Ltda."
+}
+[2025-02-19 13:43:05] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+[2025-02-19 13:43:05] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-10",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-10",
+    "editaTitulo": "Java",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:44:12] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+[2025-02-19 13:44:12] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-10",
+    "editaTitulo": "Java e vida",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codObra": "28",
+    "editaIsbn": "985-59-562-10",
+    "editaTitulo": "Java e vida",
+    "editaAutor": "Martine",
+    "editaEdicao": "1",
+    "editaAno": "1992",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Aventura",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-19 13:45:35] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAutor": "37",
+    "editaAutor": "Maria Silva",
+    "editaStatus": "Ativo"
+}
+[2025-02-19 13:47:28] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "AddMatricula": "202319204",
+    "AddAluno": "Carol Maia",
+    "AddTitulo": "Java e vida",
+    "DataEmprestimo": "2025-02-19",
+    "DataDevolucao": "2025-02-26",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-19 13:48:33] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codEmprestimo": "29",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "Java e vida",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Disponível"
+}
+[2025-02-19 13:48:37] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codEmprestimo": "29",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "Java e vida",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-19 13:52:59] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "AddMatricula": "202319204",
+    "AddAluno": "Carol Maia",
+    "AddTitulo": "Java e vida",
+    "DataEmprestimo": "2025-02-19",
+    "DataDevolucao": "2025-02-26",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-19 13:59:50] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "AddMatricula": "202320208",
+    "AddAluno": "joão Gustavo",
+    "AddTitulo": "Java e vida",
+    "DataEmprestimo": "2025-02-19",
+    "DataDevolucao": "2025-02-26",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-19 14:00:28] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codEmprestimo": "31",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": "Java e vida",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Disponível"
+}
+[2025-02-19 14:04:17] Requisição recebida: POST - /schoollibrary/Models/Insert_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "AddMatricula": "202320205",
+    "AddAluno": "Eminem Soares",
+    "AddTitulo": "Java e vida",
+    "DataReserva": "2025-02-19",
+    "DataExpiracao": "2025-02-26",
+    "Situacao": "Reservado"
+}
+[2025-02-19 14:05:12] Requisição recebida: POST - /schoollibrary/Models/Insert_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "AddMatricula": "202320205",
+    "AddAluno": "Eminem Soares",
+    "AddTitulo": "Java e vida",
+    "DataReserva": "2025-02-19",
+    "DataExpiracao": "2025-02-26",
+    "Situacao": "Reservado"
+}
+[2025-02-19 14:06:01] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codReserva": "15",
+    "editaMatricula": "202320206",
+    "editaAluno": "Rafal oliveira",
+    "editaTitulo": "Entre Dois Mundos",
+    "editaReserva": "2024-08-09",
+    "editaExpiracao": "2024-08-17",
+    "situacao": "Disponível"
+}
+[2025-02-19 14:06:53] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codReserva": "16",
+    "editaMatricula": "202320205",
+    "editaAluno": "Eminem Soares",
+    "editaTitulo": "O Código da História",
+    "editaReserva": "2024-08-17",
+    "editaExpiracao": "2024-08-23",
+    "situacao": "Reservado"
+}
+[2025-02-19 14:07:03] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codReserva": "16",
+    "editaMatricula": "202320205",
+    "editaAluno": "Eminem Soares",
+    "editaTitulo": "O Código da História",
+    "editaReserva": "2024-08-17",
+    "editaExpiracao": "2024-08-22",
+    "situacao": "Reservado"
+}
+[2025-02-19 14:07:30] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codReserva": "16",
+    "editaMatricula": "202320205",
+    "editaAluno": "Eminem Soares",
+    "editaTitulo": "O Código da História",
+    "editaReserva": "2024-08-17",
+    "editaExpiracao": "2024-08-21",
+    "situacao": "Reservado"
+}
+[2025-02-19 14:09:25] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "AddMatricula": "202320208",
+    "AddAluno": "joão Gustavo",
+    "AddTitulo": "Java e vida",
+    "DataEmprestimo": "2025-02-19",
+    "DataDevolucao": "2025-02-26",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-19 14:09:43] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codReserva": "15",
+    "editaMatricula": "202320206",
+    "editaAluno": "Rafal oliveira",
+    "editaTitulo": "Entre Dois Mundos",
+    "editaReserva": "2024-08-09",
+    "editaExpiracao": "2024-08-17",
+    "situacao": "Disponível"
+}
+[2025-02-19 14:09:57] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codReserva": "15",
+    "editaMatricula": "202320206",
+    "editaAluno": "Rafal oliveira",
+    "editaTitulo": "Entre Dois Mundos",
+    "editaReserva": "2024-08-09",
+    "editaExpiracao": "2024-08-17",
+    "situacao": "Reservado"
+}
+[2025-02-19 14:11:13] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codEmprestimo": "32",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": "Java e vida",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Disponível"
+}
+[2025-02-19 14:11:54] Requisição recebida: POST - /schoollibrary/Models/Insert_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": "Java e vida",
+    "DataReserva": "2025-02-19",
+    "DataExpiracao": "2025-02-26",
+    "Situacao": "Reservado"
+}
+[2025-02-19 14:13:39] Requisição recebida: POST - /schoollibrary/Models/Insert_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "AddMatricula": "202319203",
+    "AddAluno": "Dani Martins",
+    "AddTitulo": "Java e vida",
+    "DataReserva": "2025-02-19",
+    "DataExpiracao": "2025-02-26",
+    "Situacao": "Reservado"
+}
+[2025-02-19 14:16:36] Requisição recebida: POST - /schoollibrary/Models/Insert_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "AddMatricula": "202319203",
+    "AddAluno": "Dani Martins",
+    "AddTitulo": "Java e vida",
+    "DataReserva": "2025-02-19",
+    "DataExpiracao": "2025-02-26",
+    "Situacao": "Reservado"
+}
+[2025-02-19 14:18:59] Requisição recebida: POST - /schoollibrary/Models/Insert_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "AddMatricula": "202320209",
+    "AddAluno": "Debora Soares",
+    "AddTitulo": "Java e vida",
+    "DataReserva": "2025-02-19",
+    "DataExpiracao": "2025-02-26",
+    "Situacao": "Reservado"
+}
+[2025-02-19 14:19:23] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codReserva": "19",
+    "editaMatricula": "202320209",
+    "editaAluno": "Debora Soares",
+    "editaTitulo": "Java e vida",
+    "editaReserva": "2025-02-19",
+    "editaExpiracao": "2025-02-26",
+    "situacao": "Disponível"
+}
+[2025-02-19 14:24:04] Requisição recebida: POST - /schoollibrary/Models/Insert_Aluno.php
+{
+    "idAluno": "",
+    "matricula": "256987899",
+    "nome": "Lidia soares",
+    "telefone": "(62) 9925-94658",
+    "email": "lidia.soares@email.com",
+    "user_status": "Ativo"
+}
+[2025-02-19 14:24:24] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "36",
+    "matricula": "256987899",
+    "editarNome": "Lidia soares",
+    "editarTelefone": "(62) 9925-94659",
+    "editarEmail": "lidia.soares@email.com",
+    "editarStatus": "Ativo"
+}
+[2025-02-19 14:37:42] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codReserva": "16",
+    "editaMatricula": "202320205",
+    "editaAluno": "Eminem Soares",
+    "editaTitulo": "O Código da História",
+    "editaReserva": "2024-08-17",
+    "editaExpiracao": "2024-08-21",
+    "situacao": "Disponível"
+}
+[2025-02-19 14:37:49] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codReserva": "16",
+    "editaMatricula": "202320205",
+    "editaAluno": "Eminem Soares",
+    "editaTitulo": "O Código da História",
+    "editaReserva": "2024-08-17",
+    "editaExpiracao": "2024-08-21",
+    "situacao": "Reservado"
+}
+[2025-02-19 14:40:23] Requisição recebida: POST - /schoollibrary/Models/Insert_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "AddMatricula": "202319204",
+    "AddAluno": "Carol Maia",
+    "AddTitulo": "Java e vida",
+    "DataReserva": "2025-02-19",
+    "DataExpiracao": "2025-02-26",
+    "Situacao": "Reservado"
+}
+[2025-02-19 14:45:14] Requisição recebida: POST - /schoollibrary/Models/Insert_Genero.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "addGenero": "Miai",
+    "addStatus": "Ativo"
+}
+[2025-02-19 14:46:48] Requisição recebida: POST - /schoollibrary/Models/Insert_Genero.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "addGenero": "Mdia",
+    "addStatus": "Ativo"
+}
+[2025-02-19 14:47:00] Requisição recebida: POST - /schoollibrary/Models/Update_Genero.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codGenero": "30",
+    "editaGenero": "Alegria",
+    "editaStatus": "Ativo"
+}
+[2025-02-19 14:48:16] Requisição recebida: POST - /schoollibrary/Models/Update_Genero.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codGenero": "30",
+    "editaGenero": "Alegria",
+    "editaStatus": "Ativo"
+}
+[2025-02-19 15:33:33] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codEmprestimo": "32",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": "Java e vida",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-19 15:44:54] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codEmprestimo": "32",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": "Java e vida",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Disponível"
+}
+[2025-02-19 15:45:07] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codReserva": "0",
+    "editaMatricula": "202319204",
+    "editaAluno": "Carol Maia",
+    "editaTitulo": "Java e vida",
+    "editaReserva": "2025-02-19",
+    "editaExpiracao": "2025-02-26",
+    "situacao": "Disponível"
+}
+[2025-02-19 16:04:21] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAutor": "37",
+    "editaAutor": "Maria Lis",
+    "editaStatus": "Ativo"
+}
+[2025-02-19 16:04:26] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAutor": "37",
+    "editaAutor": "Maria Lis",
+    "editaStatus": "Inativo"
+}
+[2025-02-19 16:05:16] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAutor": "37",
+    "editaAutor": "Maria Lis",
+    "editaStatus": "Ativo",
+    "update": "Atualizar"
+}
+[2025-02-19 16:05:24] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAutor": "37",
+    "editaAutor": "Maria Silva",
+    "editaStatus": "Ativo"
+}
+[2025-02-19 16:15:43] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAutor": "37",
+    "editaAutor": "Maria Silva",
+    "editaStatus": "Inativo"
+}
+[2025-02-19 16:15:57] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAutor": "36",
+    "editaAutor": "Maria Rita",
+    "editaStatus": "Inativo"
+}
+[2025-02-19 16:16:07] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAutor": "37",
+    "editaAutor": "Maria Silva",
+    "editaStatus": "Ativo",
+    "update": "Atualizar"
+}
+[2025-02-19 16:16:13] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAutor": "36",
+    "editaAutor": "Maria Rita",
+    "editaStatus": "Ativo",
+    "update": "Atualizar"
+}
+[2025-02-19 16:16:20] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAutor": "37",
+    "editaAutor": "Maria Silva",
+    "editaStatus": "Inativo"
+}
+[2025-02-19 16:16:26] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAutor": "37",
+    "editaAutor": "Maria Silva",
+    "editaStatus": "Ativo",
+    "update": "Atualizar"
+}
+[2025-02-19 16:30:30] Requisição recebida: POST - /schoollibrary/Models/Update_Acervo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAcervo": "24",
+    "editaAcervo": "CB-LD-RW",
+    "editaStatus": "Ativo"
+}
+[2025-02-19 16:30:35] Requisição recebida: POST - /schoollibrary/Models/Update_Acervo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAcervo": "24",
+    "editaAcervo": "CB-LD-RW",
+    "editaStatus": "Inativo"
+}
+[2025-02-19 16:30:43] Requisição recebida: POST - /schoollibrary/Models/Update_Acervo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAcervo": "25",
+    "editaAcervo": "CB-LD-RR",
+    "editaStatus": "Ativo",
+    "update": "Atualizar"
+}
+[2025-02-19 16:30:49] Requisição recebida: POST - /schoollibrary/Models/Update_Acervo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAcervo": "24",
+    "editaAcervo": "CB-LD-RW",
+    "editaStatus": "Ativo",
+    "update": "Atualizar"
+}
+[2025-02-19 16:31:10] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codReserva": "16",
+    "editaMatricula": "202320205",
+    "editaAluno": "Eminem Soares",
+    "editaTitulo": "O Código da História",
+    "editaReserva": "2024-08-17",
+    "editaExpiracao": "2024-08-21",
+    "situacao": "Disponível"
+}
+[2025-02-19 16:53:31] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "35",
+    "matricula": "548789889",
+    "editarNome": "Mia Silva",
+    "editarTelefone": "6299259-4607",
+    "editarEmail": "dani@email.com",
+    "editarStatus": "Ativo",
+    "update": ""
+}
+[2025-02-19 16:53:36] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Ativo",
+    "update": ""
+}
+[2025-02-19 16:53:41] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "32",
+    "matricula": "202320207",
+    "editarNome": "Ivani Filho",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "ivani.filho@teste.com",
+    "editarStatus": "Ativo",
+    "update": ""
+}
+[2025-02-19 16:53:44] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "26",
+    "matricula": "202320121",
+    "editarNome": "Maria",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "maria.silva@teste.com",
+    "editarStatus": "Ativo",
+    "update": ""
+}
+[2025-02-19 16:53:55] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codReserva": "16",
+    "editaMatricula": "202320205",
+    "editaAluno": "Eminem Soares",
+    "editaTitulo": "O Código da História",
+    "editaReserva": "2024-08-17",
+    "editaExpiracao": "2024-08-21",
+    "situacao": "Reservado"
+}
+[2025-02-19 16:54:13] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codEditora": "33",
+    "editaEditora": "Fan",
+    "editaCidade": "Osasco",
+    "editaEstado": "São Paulo-SP",
+    "editaStatus": "Ativo"
+}
+[2025-02-19 16:55:39] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codEditora": "33",
+    "editaEditora": "Fan",
+    "editaCidade": "Osasco",
+    "editaEstado": "São Paulo-SP",
+    "editaStatus": "Ativo"
+}
+[2025-02-19 16:57:13] Requisição recebida: POST - /schoollibrary/Models/Insert_Editora.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "AddEditora": "Teste",
+    "AddCidade": "Aparecida",
+    "addEstado": "Goiás-GO",
+    "addStatus": "Ativo"
+}
+[2025-02-19 16:57:21] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codEditora": "34",
+    "editaEditora": "Teste",
+    "editaCidade": "Aparecida",
+    "editaEstado": "Goiás-GO",
+    "editaStatus": "Inativo"
+}
+[2025-02-19 16:57:28] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codEditora": "",
+    "editaEditora": "Teste",
+    "editaCidade": "Aparecida",
+    "editaEstado": "Goiás-GO",
+    "editaStatus": "Ativo",
+    "update": "Atualizar"
+}
+[2025-02-19 16:57:38] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codEditora": "",
+    "editaEditora": "Teste",
+    "editaCidade": "Aparecida",
+    "editaEstado": "Goiás-GO",
+    "editaStatus": "Ativo",
+    "update": "Atualizar"
+}
+[2025-02-19 16:58:54] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codEditora": "34",
+    "editaEditora": "Teste",
+    "editaCidade": "Aparecida",
+    "editaEstado": "Goiás-GO",
+    "editaStatus": "Ativo",
+    "update": "Atualizar"
+}
+[2025-02-19 16:59:10] Requisição recebida: POST - /schoollibrary/Models/Update_Acervo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAcervo": "25",
+    "editaAcervo": "CB-LD-RR",
+    "editaStatus": "Inativo"
+}
+[2025-02-19 16:59:17] Requisição recebida: POST - /schoollibrary/Models/Update_Acervo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAcervo": "25",
+    "editaAcervo": "CB-LD-RR",
+    "editaStatus": "Ativo",
+    "update": "Atualizar"
+}
+[2025-02-19 16:59:25] Requisição recebida: POST - /schoollibrary/Models/Update_Acervo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "codAcervo": "25",
+    "editaAcervo": "CB-LD-RV",
+    "editaStatus": "Ativo"
+}
+[2025-02-19 16:59:34] Requisição recebida: POST - /schoollibrary/Models/Insert_Acervo.php
+{
+    "csrf_token": "520076bca5cc465ade2c798f16483d4aad50404b2218aa875cbe3a408cfdbae6",
+    "AddAcervo": "CB-LD-88",
+    "AddStatus": "Ativo"
+}
