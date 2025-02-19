@@ -22,15 +22,15 @@ $(document).ready(function() {
                     // Exibir dados no modal conforme o status
                     if (status === 'Reservado') {
                         $("#detalhesObraBody").html(
-                            "Nome do Aluno: " + data[0].NomeAluno + "<br>" +
-                            "Data de Reserva: " + data[0].DataReserva + "<br>" +
-                            "Data de Expiração: " + data[0].DataExpiracao
+                            "<strong>Aluno:</strong> " + data[0].NomeAluno + "<br>" +
+                            "<strong>Reserva:</strong> " + data[0].DataReserva + "<br>" +
+                            "<strong>Data de Expiração:</strong> " + data[0].DataExpiracao
                         );
                     } else if (status === 'Emprestado') {
                         $("#detalhesObraBody").html(
-                            "Nome do Aluno: " + data[0].NomeAluno + "<br>" +
-                            "Data do Empréstimo: " + data[0].DataEmprestimo + "<br>" +
-                            "Data de Devolução: " + data[0].DataDevolucao
+                            "<strong>Aluno:</strong> " + data[0].NomeAluno + "<br>" +
+                            "<strong>Empréstimo:</strong> " + data[0].DataEmprestimo + "<br>" +
+                            "<strong>Data de Devolução:</strong> " + data[0].DataDevolucao
                         );
                     }
                     $("#detalhesObraModal").modal("show");

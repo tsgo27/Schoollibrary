@@ -150,11 +150,10 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                         <th>ID</th>
                                         <th>ISBN</th>
                                         <th>Titulo</th>
-                                        <th>SubTitulo</th>
                                         <th>Autor</th>
                                         <th>Edição</th>
                                         <th>Ano</th>
-                                        <th>Copia</th>
+                                        <th>Quantidade</th>
                                         <th>Acervo</th>
                                         <th>Gênero</th>
                                         <th>Editora</th>
@@ -195,7 +194,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                                 echo "<td>" . htmlspecialchars($Obrar_data['codObra']) . "</td>";
                                                 echo "<td style='width: 360px;'>" . htmlspecialchars($Obrar_data['Isbn']) . "</td>";
                                                 echo "<td style='width: 280px;'>" . htmlspecialchars($Obrar_data['Titulo']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($Obrar_data['SubTitulo']) . "</td>";
                                                 echo "<td style='width: 250px;'>" . htmlspecialchars($Obrar_data['Autor']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($Obrar_data['Edicao']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($Obrar_data['Ano']) . "</td>";
@@ -212,9 +210,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                                 </a>
                                                 </td>";
                                                 echo "</tr>";
-
-
-                                                
                                             }
                                         } else {
                                             echo "<tr><td colspan='12'>Nenhum resultado encontrado.</td></tr>";
@@ -236,14 +231,16 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
                 <!--------Modal de Detalhes da Obra-------------------->
                 <div id="detalhesObraModal" class="modal fade" tabindex="-1" role="dialog">
-                    <div class="modal-dialog" style="max-width: 30%;">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title"><i class="material-icons">library_books</i> Detalhes da Obra</h5>
+                    <div class="modal-dialog modal-dialog-centered" style="max-width: 30%;">
+                        <div class="modal-content" style="border: none; box-shadow: none;">
+                            <div class="modal-header" style="border-bottom: none;">
+                                <h5 class="modal-title">
+                                    <i class="material-icons">library_books</i> Detalhes da Obra
+                                </h5>
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                             </div>
                             <div class="modal-body">
-                                <table class="table table-bordered">
+                                <table class="table">
                                     <tbody id="detalhesObraBody">
                                         <!-- Os dados serão carregados aqui via AJAX -->
                                     </tbody>
@@ -253,6 +250,9 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                     </div>
                 </div>
                 <!--------Modal de Detalhes da Obra---------------->
+
+
+
 
 
 
@@ -397,7 +397,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                             <option value="Manutenção">Manutenção</option>
                                             <option value="Descontinuado">Descontinuado</option>
                                             <option value="Descontinuado">Descontinuado</option>
-                                            <option value="Emprestado">	Emprestado</option>
+                                            <option value="Emprestado"> Emprestado</option>
                                         </select>
                                     </div>
                                 </div>
@@ -428,5 +428,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 <script src="../public/js/BuscarAcervo.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
 <script src="../public/js/Pesquisar.js"></script>
+<script src="../public/js/Modal.js"></script>
 
 </html>

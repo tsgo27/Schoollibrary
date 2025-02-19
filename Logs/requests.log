@@ -699,3 +699,98 @@
     "editaDevolucao": "2025-02-25",
     "Status_Livro": "Emprestado"
 }
+[2025-02-19 01:08:38] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "19a808c5f188897ce5e05abad5d18dc7fc9c7eef7735a1e1df9fc5a75fefa8d8",
+    "codEmprestimo": "21",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": " O Jardim Secreto",
+    "editaSubtitulo": "Flores da Esperança",
+    "editaEmprestimo": "2023-12-22",
+    "editaDevolucao": "2023-12-27",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-19 01:08:53] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "4f663a2d656a1046186838a05cd92a6397ecee016df2cbb61b7fed88444f8ff5",
+    "codEmprestimo": "21",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": " O Jardim Secreto",
+    "editaSubtitulo": "Flores da Esperança",
+    "editaEmprestimo": "2023-12-22",
+    "editaDevolucao": "2023-12-27",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-19 01:09:34] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "10cd0b9652179e06d7c6af5787dbcf97746d3a33194737380b4ad6a89d0870d8",
+    "codEmprestimo": "14",
+    "editaMatricula": "202320120",
+    "editaAluno": "Igor Silva",
+    "editaTitulo": "Noite de Mistérios ",
+    "editaSubtitulo": "Sombras Do Passado",
+    "editaEmprestimo": "2023-11-15",
+    "editaDevolucao": "2023-12-20",
+    "Status_Livro": "Disponível"
+}
+[2025-02-19 01:09:49] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "30e68a64504ef3215786ba22c2ca2fc06fb37263bb995e5d85b8b9740e7ec118",
+    "codEmprestimo": "14",
+    "editaMatricula": "202320120",
+    "editaAluno": "Igor Silva",
+    "editaTitulo": "Noite de Mistérios ",
+    "editaSubtitulo": "Sombras Do Passado",
+    "editaEmprestimo": "2023-11-15",
+    "editaDevolucao": "2023-12-20",
+    "Status_Livro": "Disponível"
+}
+[2025-02-19 01:10:01] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "3db5e7119e7c7d8b75a5247291ccd81848718b59027ec5fa94a76a8697d6a3f3",
+    "codEmprestimo": "14",
+    "editaMatricula": "202320120",
+    "editaAluno": "Igor Silva",
+    "editaTitulo": "Noite de Mistérios ",
+    "editaSubtitulo": "Sombras Do Passado",
+    "editaEmprestimo": "2023-11-15",
+    "editaDevolucao": "2023-12-20",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-19 01:19:22] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "8096ad8db4d7735a46d8798b522cabd04be153dd32876149cfe47d40b5cd7dac",
+    "AddMatricula": "202320208",
+    "AddAluno": "joão Gustavo",
+    "AddTitulo": "Livros de teste1",
+    "AddSubtitulo": "testando1",
+    "DataEmprestimo": "2025-02-19",
+    "DataDevolucao": "2025-02-26",
+    "AddStatus_Livro": "Emprestado"
+}
+[2025-02-19 01:19:41] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "59b87d3879ab5dfe71fcb85fed0548da5f954c91396abe2073d96407e7898b94",
+    "codEmprestimo": "22",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": "Livros de teste1",
+    "editaSubtitulo": "testando1",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Disponível"
+}
+[2025-02-19 01:19:49] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "4b23e843240af8197473b4b4c5a20c7400c27816d69f46117c500f02a888b47b",
+    "codEmprestimo": "22",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": "Livros de teste1",
+    "editaSubtitulo": "testando1",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Emprestado"
+}

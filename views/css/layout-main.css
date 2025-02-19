@@ -685,9 +685,11 @@ table.table .avatar {
     padding: 20px 30px;
 }
 
+
 .modal .modal-content {
     border-radius: 10px;
-    
+    position: fixed;
+    top: 80px;
 }
 
 .modal .modal-footer {
