@@ -2069,3 +2069,46 @@
     "editaExpiracao": "2025-02-26",
     "situacao": "Reservado"
 }
+[2025-02-20 11:37:53] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "eb20097289fc66e9d581345014a39a60282b012d88ab2902865d21b124f8c891",
+    "codEmprestimo": "32",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": "Java",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Disponível"
+}
+[2025-02-20 11:38:19] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "eb20097289fc66e9d581345014a39a60282b012d88ab2902865d21b124f8c891",
+    "codEmprestimo": "31",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": "Java",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Disponível"
+}
+[2025-02-20 11:40:22] Requisição recebida: POST - /schoollibrary/Models/Insert_Reservas.php
+{
+    "csrf_token": "eb20097289fc66e9d581345014a39a60282b012d88ab2902865d21b124f8c891",
+    "AddMatricula": "202320207",
+    "AddAluno": "Ivani Filho",
+    "AddTitulo": "ja",
+    "DataReserva": "2025-02-20",
+    "DataExpiracao": "2025-02-27",
+    "Situacao": "Reservado"
+}
+[2025-02-20 11:40:47] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "eb20097289fc66e9d581345014a39a60282b012d88ab2902865d21b124f8c891",
+    "codReserva": "0",
+    "editaMatricula": "202320207",
+    "editaAluno": "Ivani Filho",
+    "editaTitulo": "Java",
+    "editaReserva": "2025-02-20",
+    "editaExpiracao": "2025-02-27",
+    "situacao": "Reservado"
+}

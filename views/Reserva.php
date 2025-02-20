@@ -234,8 +234,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <label>Aluno</label>
                                         <input type="text" name="editaAluno" id="editaAluno" maxlength="60" class="form-control" readonly>
                                         <label>Titulo Livro</label>
-                                        <input type="text" name="editaTitulo" id="editaTitulo" placeholder="Digite nome do livro" maxlength="60" class="form-control">
-                                        <div id="tituloSuggestions"></div>
+                                        <input type="text" name="editaTitulo" id="editaTitulo" maxlength="60" class="form-control">
                                         <label>Data Reserva</label>
                                         <input type="date" name="editaReserva" id="editaReserva" maxlength="60" class="form-control">
                                         <label>Data Expiração</label>
