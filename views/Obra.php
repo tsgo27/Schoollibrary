@@ -142,7 +142,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                 <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
                                     <div class="container">
                                         <div class="box-search">
-                                            <input type="search" class="form-control" placeholder="Digite título da Obra ou nome do Autor" id="pesquisar">
+                                            <input type="search" class="form-control" placeholder="Digite título da obra" id="pesquisar">
                                         </div>
                                     </div>
                                 </div>
@@ -286,7 +286,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <input type="text" name="AddEdicao" id="AddEdicao" maxlength="60" class="form-control" required>
                                         <label>Ano</label>
                                         <input type="text" name="AddAno" id="AddAno" maxlength="4" class="form-control" required>
-                                        <label>Cópia</label>
+                                        <label>Quantidade</label>
                                         <input type="text" name="AddCopia" id="AddCopia" maxlength="60" class="form-control" required>
                                         <label>Acervo</label>
                                         <input type="text" name="AddAcervo" id="AddAcervo" placeholder="Digite o acervo do livro" maxlength="60" class="form-control" required>
@@ -363,7 +363,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <input type="text" name="editaEdicao" id="editaEdicao" maxlength="60" class="form-control">
                                         <label>Ano</label>
                                         <input type="text" name="editaAno" id="editaAno" maxlength="60" class="form-control">
-                                        <label>Cópia</label>
+                                        <label>Qunatidade</label>
                                         <input type="text" name="editaCopia" id="editaCopia" maxlength="60" class="form-control">
                                         <label>Acervo</label>
                                         <input type="text" name="editaAcervo" id="editaAcervo" maxlength="60" class="form-control">

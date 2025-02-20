@@ -1948,3 +1948,25 @@
     "AddAcervo": "CB-LD-88",
     "AddStatus": "Ativo"
 }
+[2025-02-19 22:16:12] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "86c9b5300be4c5fcdb61201f498cf284695806c292a5edd80e069df9df3a7445",
+    "codEmprestimo": "32",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": "Java e vida",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Emprestado"
+}
+[2025-02-19 22:17:22] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "86c9b5300be4c5fcdb61201f498cf284695806c292a5edd80e069df9df3a7445",
+    "codEmprestimo": "32",
+    "editaMatricula": "202320208",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": "Java e vida",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-26",
+    "Status_Livro": "Disponível"
+}

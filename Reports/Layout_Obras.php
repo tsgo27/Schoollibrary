@@ -23,7 +23,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                     <th>Autor</th>
                     <th>Edição</th>
                     <th>Ano</th>
-                    <th>Copia</th>
+                    <th>Quantidade</th>
                     <th>Acervo</th>
                     <th>Gênero</th>
                     <th>Editora</th>

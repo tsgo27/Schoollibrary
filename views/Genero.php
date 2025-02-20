@@ -88,7 +88,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                     <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
                                         <div class="container">
                                             <div class="box-search">
-                                                <input type="search" class="form-control" placeholder="Informe o Gênero" id="pesquisar">
+                                                <input type="search" class="form-control" placeholder="Digite o nome gênero" id="pesquisar">
                                             </div>
                                         </div>
                                     </div>

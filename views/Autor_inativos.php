@@ -61,7 +61,7 @@ if (!isset($_SESSION['csrf_token'])) {
                     </div>
                 </div>
                 <div class="xp-breadcrumbbar text-center">
-                    <h4 class="page-title">Autor - Inativos</h4>
+                    <h4 class="page-title">Autores - Inativos</h4>
                     <ol class="breadcrumb">
                         <li class="sub-titulo"><a>School Library / Autores</a></li>
                     </ol>
@@ -86,7 +86,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                 <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
                                     <div class="container">
                                         <div class="box-search">
-                                            <input type="search" class="form-control" placeholder="Informe nome do Autor" id="pesquisar">
+                                            <input type="search" class="form-control" placeholder="Digite o nome do autor" id="pesquisar">
                                         </div>
                                     </div>
                                 </div>
