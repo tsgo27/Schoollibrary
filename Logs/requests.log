@@ -1970,3 +1970,33 @@
     "editaDevolucao": "2025-02-26",
     "Status_Livro": "Disponível"
 }
+[2025-02-19 23:46:00] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "86c9b5300be4c5fcdb61201f498cf284695806c292a5edd80e069df9df3a7445",
+    "AddIsbn": "440-33-454-24",
+    "AddTitulo": "Avanço da IA",
+    "AddAutor": "[{\"value\":\"Machado de Assis\"},{\"value\":\"Clarice Lispector\"},{\"value\":\"José de Alencar\"}]",
+    "AddEdicao": "1",
+    "AddAno": "2024",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Alegria",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-19 23:51:49] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "86c9b5300be4c5fcdb61201f498cf284695806c292a5edd80e069df9df3a7445",
+    "AddIsbn": "234-443-44-24",
+    "AddTitulo": "Avançao da IA",
+    "AddAutor": "[{\"value\":\"Monteiro Lobato\"},{\"value\":\"José de Alencar\"}]",
+    "AddEdicao": "1",
+    "AddAno": "2024",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Alegria",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}

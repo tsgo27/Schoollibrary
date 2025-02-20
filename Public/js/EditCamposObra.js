@@ -12,8 +12,6 @@ $(document).ready(function() {
         const editora = $(this).closest('tr').find('td:eq(9)').text();
         const situacao = $(this).closest('tr').find('td:eq(10)').text(); 
 
-        console.log("Situação capturada:", situacao); // Debug
-
         $('#codObra').val(codObra);
         $('#editaIsbn').val(isbn);
         $('#editaTitulo').val(titulo);

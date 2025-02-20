@@ -410,7 +410,7 @@ if (!isset($_SESSION['csrf_token'])) {
     </div>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../public/js/FiltrarTabela.js"></script>
@@ -423,5 +423,4 @@ if (!isset($_SESSION['csrf_token'])) {
 <script src="../public/js/MenuSidebar.js"></script>
 <script src="../public/js/Pesquisar.js"></script>
 <script src="../public/js/Modal.js"></script>
-
 </html>

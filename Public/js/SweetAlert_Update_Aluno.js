@@ -1,8 +1,5 @@
 $(document).ready(function () {
-    // Variável para controlar se houve alterações no formulário
     var hasChanges = false;
-    
-    // Função para marcar que houve alterações no formulário
     function markChanges() {
         hasChanges = true;
     }
