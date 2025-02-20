@@ -1,29 +1,40 @@
 $(document).ready(function () {
-  $("#AddTitulo").on("input", function () {
-    let input = $(this).val();
+  function buscarSugestoes(inputField) {
+    let input = $(inputField).val();
     if (input.length >= 2) {
       $.ajax({
         url: "../Models/get_titulo_livro.php",
         type: "POST",
         data: { input: input },
         success: function (data) {
-          $("#tituloSuggestions").html(data);
+          $(inputField).siblings("#tituloSuggestions").html(data);
         }
       });
     } else {
-      $("#tituloSuggestions").html("");
+      $(inputField).siblings("#tituloSuggestions").html("");
     }
+  }
+
+  // Monitorar tanto o campo de cadastro quanto o de edição
+  $(document).on("input", "#AddTitulo, #editaTitulo", function () {
+    buscarSugestoes(this);
   });
 
-  // Handle the click event on suggested titles
+  // Selecionar sugestão e preencher o campo correto
   $(document).on("click", ".titulo-suggestion", function () {
-    let titulo = $(this).data('titulo');
-    let subtitulo = $(this).data('subtitulo');
+    let titulo = $(this).data("titulo");
 
-    // Preencher automaticamente os campos Título e Subtítulo
-    $("#AddTitulo").val(titulo);
-    $("#AddSubtitulo").val(subtitulo);
+    if ($("#AddTitulo").is(":focus")) {
+      $("#AddTitulo").val(titulo);
+    } else if ($("#editaTitulo").is(":focus")) {
+      $("#editaTitulo").val(titulo);
+    }
 
-    $("#tituloSuggestions").html(""); // Clear the suggestions
+    $("#tituloSuggestions").html(""); // Limpar sugestões
+  });
+
+  // Reativar eventos ao abrir o modal de edição
+  $('#editEmployeeModal').on('shown.bs.modal', function () {
+    $("#editaTitulo").trigger("input"); // Dispara o evento para ativar a busca
   });
 });

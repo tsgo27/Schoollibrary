@@ -1,0 +1,2 @@
+[20-Feb-2025 09:53:19 America/Sao_Paulo] Erro de conexão: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[20-Feb-2025 10:11:50 America/Sao_Paulo] PHP Warning:  Erro 404: Página 'javacript' não encontrada. in C:\xampp\htdocs\Schoollibrary\index.php on line 28

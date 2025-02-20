@@ -1,25 +1,35 @@
 $(document).ready(function() {
-  $("#AddAcervo").on("input", function() {
-    let input = $(this).val();
-    if (input.length >= 2) {
-      $.ajax({
-        url: "../Models/get_acervos.php",
-        type: "POST",
-        data: { input: input },
-        success: function(data) {
-          $("#acervoSuggestions").html(data);
-        }
-      });
-    } else {
-      $("#acervoSuggestions").html("");
-    }
-  });
+  function buscarAcervo(inputSelector, suggestionsSelector) {
+    $(inputSelector).on("input", function() {
+      let input = $(this).val().trim();
+      if (input.length >= 2) {
+        $.ajax({
+          url: "../Models/get_acervos.php",
+          type: "POST",
+          data: { input: input },
+          dataType: "html",
+          success: function(data) {
+            $(suggestionsSelector).html(data);
+          },
+          error: function() {
+            console.log("Erro ao buscar sugestões.");
+          }
+        });
+      } else {
+        $(suggestionsSelector).html("");
+      }
+    });
+  }
 
-  // Handle the click event on suggested authors
+  // Função para preencher o campo ao clicar na sugestão
   $(document).on("click", ".acervo-suggestion", function() {
     let NameAcervo = $(this).text();
-    $("#AddAcervo").val(NameAcervo);
-    $("#acervoSuggestions").html(""); // Clear the suggestions
+    let inputField = $(this).closest("div").prev("input");
+    inputField.val(NameAcervo);
+    $(".acervo-suggestions").html(""); // Limpa todas as sugestões
   });
-});
 
+  // Aplicando a função aos dois inputs
+  buscarAcervo("#AddAcervo", "#acervoSuggestions");
+  buscarAcervo("#editaAcervo", "#acervoSuggestionsEdit");
+});

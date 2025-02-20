@@ -281,7 +281,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <input type="text" name="AddTitulo" id="AddTitulo" maxlength="60" class="form-control" required>
                                         <label>Autores</label>
                                         <input type="text" name="AddAutor" id="AddAutor" maxlength="60" placeholder="Digite nome do autor" class="form-control" required>
-                                        <div id="authorSuggestions"></div>
+                                        <div id="authorSuggestionsEdit"></div>
                                         <label>Edição</label>
                                         <input type="text" name="AddEdicao" id="AddEdicao" maxlength="60" class="form-control" required>
                                         <label>Ano</label>
@@ -289,8 +289,8 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <label>Quantidade</label>
                                         <input type="text" name="AddCopia" id="AddCopia" maxlength="60" class="form-control" required>
                                         <label>Acervo</label>
-                                        <input type="text" name="AddAcervo" id="AddAcervo" placeholder="Digite o acervo do livro" maxlength="60" class="form-control" required>
-                                        <div id="acervoSuggestions"></div>
+                                        <input type="text" name="AddAcervo" id="AddAcervo" placeholder="Digite o acervo do livro" maxlength="10" class="form-control" required>
+                                        <div id="acervoSuggestions" class="acervo-suggestions"></div>
                                         <label>Gêneros</label>
                                         <select type="text" name="AddGenero" id="AddGenero" class="form-control" required>
                                             <?php
@@ -357,16 +357,18 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <input type="text" name="editaIsbn" id="editaIsbn" maxlength="60" class="form-control">
                                         <label>Título Livro</label>
                                         <input type="text" name="editaTitulo" id="editaTitulo" maxlength="60" class="form-control">
-                                        <label>Autores</label>
-                                        <input type="text" name="editaAutor" id="editaAutor" class="form-control">
+                                        <label>Editar Autor</label>
+                                        <input type="text" name="editaAutor" id="editaAutor" maxlength="60" placeholder="Digite nome do autor" class="form-control" required>
+                                        <div id="authorSuggestionsEdita"></div>
                                         <label>Edição</label>
                                         <input type="text" name="editaEdicao" id="editaEdicao" maxlength="60" class="form-control">
                                         <label>Ano</label>
                                         <input type="text" name="editaAno" id="editaAno" maxlength="60" class="form-control">
                                         <label>Qunatidade</label>
                                         <input type="text" name="editaCopia" id="editaCopia" maxlength="60" class="form-control">
-                                        <label>Acervo</label>
-                                        <input type="text" name="editaAcervo" id="editaAcervo" maxlength="60" class="form-control">
+                                        <label>Editar Acervo</label>
+                                        <input type="text" name="editaAcervo" id="editaAcervo" placeholder="Digite o acervo do livro" maxlength="10" class="form-control">
+                                        <div id="acervoSuggestionsEdit" class="acervo-suggestions"></div>
                                         <label>Gêneros</label>
                                         <select type="text" name="editaGenero" id="editaGenero" class="form-control">
                                             <?php
@@ -423,4 +425,5 @@ if (!isset($_SESSION['csrf_token'])) {
 <script src="../public/js/MenuSidebar.js"></script>
 <script src="../public/js/Pesquisar.js"></script>
 <script src="../public/js/Modal.js"></script>
+
 </html>

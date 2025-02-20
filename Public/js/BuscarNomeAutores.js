@@ -1,25 +1,35 @@
 $(document).ready(function () {
-  $("#AddAutor").on("input", function () {
-    let input = $(this).val();
-    if (input.length >= 2) {
-      $.ajax({
-        url: "../Models/get_nome_autor.php",
-        type: "POST",
-        data: { input: input },
-        success: function (data) {
-          $("#authorSuggestions").html(data);
-        }
-      });
-    } else {
-      $("#authorSuggestions").html("");
-    }
-  });
+  function setupAuthorAutocomplete(inputSelector, suggestionsSelector) {
+    $(document).on("input", inputSelector, function () {
+      let input = $(this).val().trim();
 
-  // Handle the click event on suggested authors
-  $(document).on("click", ".author-suggestion", function () {
-    let authorName = $(this).text();
-    $("#AddAutor").val(authorName);
-    $("#authorSuggestions").html(""); // Clear the suggestions
-  });
+      if (input.length >= 2) {
+        $.ajax({
+          url: "../Models/get_nome_autor.php",
+          type: "POST",
+          data: { input: input },
+          dataType: "html",
+          success: function (data) {
+            $(suggestionsSelector).html(data);
+          },
+          error: function () {
+            console.log("Erro ao buscar sugestões.");
+          }
+        });
+      } else {
+        $(suggestionsSelector).html("");
+      }
+    });
+
+    // Ao clicar na sugestão, preencher o campo e ocultar sugestões
+    $(document).on("click", ".author-suggestion", function () {
+      let authorName = $(this).text();
+      $(inputSelector).val(authorName);
+      $(suggestionsSelector).html("");
+    });
+  }
+
+  // Aplica a função nos campos de adição e edição
+  setupAuthorAutocomplete("#AddAutor", "#authorSuggestionsEdit");
+  setupAuthorAutocomplete("#editaAutor", "#authorSuggestionsEdita");
 });
-
