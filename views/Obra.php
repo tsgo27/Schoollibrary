@@ -44,13 +44,12 @@ if (!isset($_SESSION['csrf_token'])) {
                         <div class="xp-profilebar text-right">
                             <nav class="navbar p-0">
                                 <ul class="nav navbar-nav flex-row ml-auto">
-                                <li class="dropdown nav-item">
+                                    <li class="dropdown nav-item">
                                         <a class="nav-link d-flex align-items-center" href="" data-toggle="dropdown" style="text-decoration: none;">
-                                            <div class="text-right mr-2">
-                                                <span style="font-weight: bold;"><?php echo 'Olá, ' . $userName; ?></span><br>
-                                                <small class="text-muted"><?php echo $userTipo; ?></small>
+                                            <div class="d-flex flex-column justify-content-center text-right mr-2" style="min-height: 46px;">
+                                                <span style="font-weight: bold; white-space: nowrap;"><?php echo 'Olá, ' . $userName; ?></span>
                                             </div>
-                                            <img src="../public/img/perfil.png" alt="Imagem do usuário" class="user-profile-img"/>
+                                            <img src="../public/img/perfil.png" alt="Imagem do usuário" class="user-profile-img" />
                                             <span class="xp-user-live"></span>
                                         </a>
                                         <ul class="dropdown-menu small-menu">
@@ -423,4 +422,5 @@ if (!isset($_SESSION['csrf_token'])) {
 <script src="../public/js/MenuSidebar.js"></script>
 <script src="../public/js/Pesquisar.js"></script>
 <script src="../public/js/Modal.js"></script>
+
 </html>

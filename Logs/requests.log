@@ -2185,3 +2185,13 @@
     "editarEmail": "tsgo.soares@gmail.com",
     "editarTipoUser": "Administrador"
 }
+[2025-02-21 14:10:55] Requisição recebida: POST - /schoollibrary/Models/Update_Usuario.php
+{
+    "csrf_token": "1bde56aa38eb0d4e7b31bcb83a7c265c2f8f29b4e3d95cf9ad9c7459366a907b",
+    "idUsuario": "18",
+    "matricula": "458441255",
+    "editarNome": "Daniel",
+    "editarTelefone": "6299259-4658",
+    "editarEmail": "daniel.soares@teste.com",
+    "editarTipoUser": "Bibliotecaria"
+}

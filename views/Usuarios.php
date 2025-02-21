@@ -16,19 +16,19 @@ if (!isset($_SESSION['csrf_token'])) {
     <title>School Library | Usuários</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../views/css/layout-main.css">
-    <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    
+
     <?php
     // Include Menu Sidebar
-    require_once __DIR__ . '/../Includes/Menu_Sidebar.php';  
+    require_once __DIR__ . '/../Includes/Menu_Sidebar.php';
     ?>
 
 
-<!-------------NavbBar Start------------------------->
+    <!-------------NavbBar Start------------------------->
     <div id="content">
         <div class="top-navbar">
             <div class="xd-topbar">
@@ -44,13 +44,13 @@ if (!isset($_SESSION['csrf_token'])) {
                         <div class="xp-profilebar text-right">
                             <nav class="navbar p-0">
                                 <ul class="nav navbar-nav flex-row ml-auto">
-                                <li class="dropdown nav-item">
+                                    <li class="dropdown nav-item">
                                         <a class="nav-link d-flex align-items-center" href="" data-toggle="dropdown" style="text-decoration: none;">
-                                            <div class="text-right mr-2">
-                                                <span style="font-weight: bold;"><?php echo 'Olá, ' . $userName; ?></span><br>
-                                                <small class="text-muted"><?php echo $userTipo; ?></small>
+                                            <div class="d-flex flex-column justify-content-center text-right mr-2" style="min-height: 46px;">
+                                                <span style="font-weight: bold; white-space: nowrap;"><?php echo 'Olá, ' . $userName; ?></span>
+                                                <small class="text-muted" style="margin-left: 10px; white-space: nowrap;"><?php echo $userTipo; ?></small>
                                             </div>
-                                            <img src="../public/img/perfil.png" alt="Imagem do usuário" class="user-profile-img"/>
+                                            <img src="../public/img/perfil.png" alt="Imagem do usuário" class="user-profile-img" />
                                             <span class="xp-user-live"></span>
                                         </a>
                                         <ul class="dropdown-menu small-menu">
@@ -58,6 +58,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                             <li><a href="<?php echo BASE_URL; ?>/Controllers/LogoutController.php"><span class="material-icons">logout</span>Sair</a></li>
                                         </ul>
                                     </li>
+
                                 </ul>
                             </nav>
                         </div>
@@ -68,11 +69,11 @@ if (!isset($_SESSION['csrf_token'])) {
                 </div>
             </div>
         </div>
-<!-------------NavbBar END--------------------------->
+        <!-------------NavbBar END--------------------------->
 
 
 
-<!-------------Tabela Principal-content-Start-------->
+        <!-------------Tabela Principal-content-Start-------->
         <div class="main-content">
             <div class="row">
                 <div class="col-md-12">
@@ -122,7 +123,7 @@ if (!isset($_SESSION['csrf_token'])) {
 
                                         $sql = "SELECT * FROM usuarios ORDER BY data_registro DESC";
                                         $result = $pdo->query($sql);
-                                        
+
                                         if ($result->rowCount() > 0) {
                                             while ($user_data = $result->fetch(PDO::FETCH_ASSOC)) {
                                                 $statusClass = $user_data['user_status'] === 'Ativo' ? 'btn-danger' : 'btn-success';
@@ -143,7 +144,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                                 echo "<td>" . htmlspecialchars($user_data['email'], ENT_QUOTES, 'UTF-8') . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['user_status'], ENT_QUOTES, 'UTF-8') . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['user_tipo'], ENT_QUOTES, 'UTF-8') . "</td>";
-                                            
+
 
                                                 echo "<td class='col-lg-3'>
                                                     <a href='#editEmployeeModal' class='edit editarUsuario btn btn-warning' data-toggle='modal' title='Editar usuário'>Editar</a>
@@ -163,11 +164,11 @@ if (!isset($_SESSION['csrf_token'])) {
                         </div>
                     </div>
                 </div>
-<!-------------Tabela Principal-content-END---------->
+                <!-------------Tabela Principal-content-END---------->
 
 
 
-<!-------------Modal Adicionar Usuário-Start---------->
+                <!-------------Modal Adicionar Usuário-Start---------->
                 <div class="modal fade" tabindex="-1" id="addEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -178,7 +179,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                 </button>
                             </div>
                             <form method="POST" action="<?php echo BASE_URL; ?>/Models/Insert_Usuario.php" id="cadastroForm">
-                            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
+                                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label>Matrícula</label>
@@ -208,16 +209,16 @@ if (!isset($_SESSION['csrf_token'])) {
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                                     <input type="submit" name="submit" id="submitAdicionar" class="btn btn-success" value="Adicionar">
                                 </div>
-                            </div>
+                        </div>
                         </form>
                     </div>
                 </div>
-<!-------------Modal Adicionar Usuário--END----------->
+                <!-------------Modal Adicionar Usuário--END----------->
 
 
 
 
-<!-------------Modal Editar Usuário-Start---------------->
+                <!-------------Modal Editar Usuário-Start---------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -228,7 +229,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                 </button>
                             </div>
                             <form method="POST" action="<?php echo BASE_URL; ?>/Models/Update_Usuario.php" id="updateForm">
-                            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
+                                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <input type="hidden" name="idUsuario" id="idUsuario" class="form-control">
@@ -256,15 +257,15 @@ if (!isset($_SESSION['csrf_token'])) {
                             </form>
                         </div>
                     </div>
-<!-------------Modal Editar usuário-END------------------>
+                    <!-------------Modal Editar usuário-END------------------>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <script>
-$(document).ready(function() {
-    $('.phone_with_ddd').mask('00 00000-0000'); // Mascara telefone
-});
+    $(document).ready(function() {
+        $('.phone_with_ddd').mask('00 00000-0000'); // Mascara telefone
+    });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

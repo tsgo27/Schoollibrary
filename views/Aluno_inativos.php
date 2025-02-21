@@ -16,7 +16,7 @@ if (!isset($_SESSION['csrf_token'])) {
     <title>School Library | Alunos</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../views/css/layout-main.css">
-    <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -24,11 +24,11 @@ if (!isset($_SESSION['csrf_token'])) {
 
     <?php
     // Include Menu Sidebar
-    require_once __DIR__ . '/../Includes/Menu_Sidebar.php';  
+    require_once __DIR__ . '/../Includes/Menu_Sidebar.php';
     ?>
 
 
-<!----NavbBar Start------------------------------------>
+    <!----NavbBar Start------------------------------------>
     <div id="content">
         <div class="top-navbar">
             <div class="xd-topbar">
@@ -44,13 +44,12 @@ if (!isset($_SESSION['csrf_token'])) {
                         <div class="xp-profilebar text-right">
                             <nav class="navbar p-0">
                                 <ul class="nav navbar-nav flex-row ml-auto">
-                                <li class="dropdown nav-item">
+                                    <li class="dropdown nav-item">
                                         <a class="nav-link d-flex align-items-center" href="" data-toggle="dropdown" style="text-decoration: none;">
-                                            <div class="text-right mr-2">
-                                                <span style="font-weight: bold;"><?php echo 'Olá, ' . $userName; ?></span><br>
-                                                <small class="text-muted"><?php echo $userTipo; ?></small>
+                                            <div class="d-flex flex-column justify-content-center text-right mr-2" style="min-height: 46px;">
+                                                <span style="font-weight: bold; white-space: nowrap;"><?php echo 'Olá, ' . $userName; ?></span>
                                             </div>
-                                            <img src="../public/img/perfil.png" alt="Imagem do usuário" class="user-profile-img"/>
+                                            <img src="../public/img/perfil.png" alt="Imagem do usuário" class="user-profile-img" />
                                             <span class="xp-user-live"></span>
                                         </a>
                                         <ul class="dropdown-menu small-menu">
@@ -68,11 +67,11 @@ if (!isset($_SESSION['csrf_token'])) {
                 </div>
             </div>
         </div>
-<!---------NavbBar END--------------------------------->
+        <!---------NavbBar END--------------------------------->
 
 
 
-<!---------Tabela Principal-content-Start-------------->
+        <!---------Tabela Principal-content-Start-------------->
         <div class="main-content">
             <div class="row">
                 <div class="col-md-12">
@@ -117,7 +116,7 @@ if (!isset($_SESSION['csrf_token'])) {
 
                                         $sql = "SELECT * FROM alunos WHERE user_status = 'Inativo' ORDER BY data_registro DESC";
                                         $result = $pdo->query($sql);
-                                        
+
                                         if ($result->rowCount() > 0) {
                                             while ($user_data = $result->fetch(PDO::FETCH_ASSOC)) {
 
@@ -133,7 +132,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                                     </td>";
                                                 echo "</tr>";
                                             }
-                                        } else {  
+                                        } else {
                                             echo "<tr><td colspan='12'>Nenhum resultado encontrado.</td></tr>";
                                         }
                                     } catch (PDOException $e) {
@@ -145,12 +144,12 @@ if (!isset($_SESSION['csrf_token'])) {
                         </div>
                     </div>
                 </div>
-<!-------------Tabela Principal-content-END------------>
+                <!-------------Tabela Principal-content-END------------>
 
 
 
 
-<!-------------Modal Editar Aluno----------------->
+                <!-------------Modal Editar Aluno----------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -169,7 +168,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <label>Nome</label>
                                         <input type="text" name="editarNome" id="editarNome" maxlength="60" class="form-control">
                                         <label>Telefone</label>
-                                        <input type="tel" name="editarTelefone" id="editarTelefone"  maxlength="14" class="form-control">
+                                        <input type="tel" name="editarTelefone" id="editarTelefone" maxlength="14" class="form-control">
                                         <label>E-mail</label>
                                         <input type="email" name="editarEmail" id="editarEmail" maxlength="100" class="form-control">
                                         <label>Status Aluno</label>
@@ -186,12 +185,13 @@ if (!isset($_SESSION['csrf_token'])) {
                             </form>
                         </div>
                     </div>
-<!-------------Modal Editar Aluno-END------------------>
+                    <!-------------Modal Editar Aluno-END------------------>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../public/js/EditCampos_Alunos.js"></script>     
+<script src="../public/js/EditCampos_Alunos.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
 <script src="../public/js/Pesquisar.js"></script>
+
 </html>

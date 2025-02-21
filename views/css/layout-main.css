@@ -6,7 +6,7 @@
     width: 46px;
     height: 46px;
     border-radius: 50%;
-    margin-left: 5px;
+    margin-left: -10px;
 }
 
 
@@ -459,7 +459,8 @@ a:focus {
     opacity: 1;
     display: block;
     visibility: visible;
-    right: 42px;   
+    right: 14px; 
+    margin-left: -111px;  
 }   
 
 .dropdown-menu {

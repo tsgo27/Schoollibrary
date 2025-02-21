@@ -42,8 +42,6 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                     <li class="dropdown nav-item">
                                         <a class="nav-link d-flex align-items-center" href="" data-toggle="dropdown" style="text-decoration: none;">
                                             <div class="d-flex flex-column justify-content-center text-right mr-2" style="min-height: 46px;">
-                                                <span style="font-weight: bold; white-space: nowrap;"><?php echo 'Olá, ' . $userName; ?></span>
-                                                <small class="text-muted" style="margin-left: 10px; white-space: nowrap;"><?php echo $userTipo; ?></small>
                                             </div>
                                             <img src="../public/img/perfil.png" alt="Imagem do usuário" class="user-profile-img" />
                                             <span class="xp-user-live"></span>

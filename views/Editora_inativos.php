@@ -16,7 +16,7 @@ if (!isset($_SESSION['csrf_token'])) {
     <title>School Library | Editoras</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../views/css/layout-main.css">
-    <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -24,11 +24,11 @@ if (!isset($_SESSION['csrf_token'])) {
 
     <?php
     // Include Menu Sidebar
-    require_once __DIR__ . '/../Includes/Menu_Sidebar.php';  
+    require_once __DIR__ . '/../Includes/Menu_Sidebar.php';
     ?>
 
 
-<!--------NavbBar Start----------------------------->
+    <!--------NavbBar Start----------------------------->
     <div id="content">
         <div class="top-navbar">
             <div class="xd-topbar">
@@ -44,13 +44,12 @@ if (!isset($_SESSION['csrf_token'])) {
                         <div class="xp-profilebar text-right">
                             <nav class="navbar p-0">
                                 <ul class="nav navbar-nav flex-row ml-auto">
-                                <li class="dropdown nav-item">
+                                    <li class="dropdown nav-item">
                                         <a class="nav-link d-flex align-items-center" href="" data-toggle="dropdown" style="text-decoration: none;">
-                                            <div class="text-right mr-2">
-                                                <span style="font-weight: bold;"><?php echo 'Olá, ' . $userName; ?></span><br>
-                                                <small class="text-muted"><?php echo $userTipo; ?></small>
+                                            <div class="d-flex flex-column justify-content-center text-right mr-2" style="min-height: 46px;">
+                                                <span style="font-weight: bold; white-space: nowrap;"><?php echo 'Olá, ' . $userName; ?></span>
                                             </div>
-                                            <img src="../public/img/perfil.png" alt="Imagem do usuário" class="user-profile-img"/>
+                                            <img src="../public/img/perfil.png" alt="Imagem do usuário" class="user-profile-img" />
                                             <span class="xp-user-live"></span>
                                         </a>
                                         <ul class="dropdown-menu small-menu">
@@ -68,10 +67,10 @@ if (!isset($_SESSION['csrf_token'])) {
                 </div>
             </div>
         </div>
-<!--------NavbBar END------------------------------->
+        <!--------NavbBar END------------------------------->
 
 
-<!--------Tabela Principal-content-Start------------>
+        <!--------Tabela Principal-content-Start------------>
         <div class="main-content">
             <div class="row">
                 <div class="col-md-12">
@@ -102,7 +101,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <th>Ação</th>
                                     </tr>
                                 </thead>
-                                 <tbody>
+                                <tbody>
                                     <?php
                                     try {
                                         if (!isset($pdo)) {
@@ -111,10 +110,10 @@ if (!isset($_SESSION['csrf_token'])) {
 
                                         $sql = "SELECT * FROM editora WHERE status_editora = 'Inativo' ORDER BY data_registro DESC";
                                         $result = $pdo->query($sql);
-                                        
+
                                         if ($result->rowCount() > 0) {
                                             while ($editora_data = $result->fetch(PDO::FETCH_ASSOC)) {
-                                                
+
                                                 echo "<tr>";
                                                 echo "<td>" . htmlspecialchars($editora_data['id_editora']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($editora_data['nome_editora']) . "</td>";
@@ -127,7 +126,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                                     </td>";
                                                 echo "<tr>";
                                             }
-                                        } else {  
+                                        } else {
                                             echo "<tr><td colspan='12'>Nenhum resultado encontrado.</td></tr>";
                                         }
                                     } catch (PDOException $e) {
@@ -141,11 +140,11 @@ if (!isset($_SESSION['csrf_token'])) {
                         </div>
                     </div>
                 </div>
-<!--------Tabela Principal-content-END-------------->
+                <!--------Tabela Principal-content-END-------------->
 
 
 
-<!---------Modal Editar Editora---------------->
+                <!---------Modal Editar Editora---------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -156,7 +155,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                 </button>
                             </div>
                             <form method="POST" action="<?php echo BASE_URL; ?>/Models/Update_Editora.php" id="cadastroFormu">
-                            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
+                                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <input type="hidden" name="codEditora" id="codEditora" class="form-control">
@@ -187,7 +186,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                                     <input type="submit" name="update" id="update" class="btn btn-success" value="Atualizar">
                                 </div>
-                            </div>
+                        </div>
                         </form>
                     </div>
                 </div>
@@ -195,7 +194,7 @@ if (!isset($_SESSION['csrf_token'])) {
         </div>
     </div>
     </div>
-<!---------Modal Editar--Editora-END---------------->
+    <!---------Modal Editar--Editora-END---------------->
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -203,4 +202,5 @@ if (!isset($_SESSION['csrf_token'])) {
 <script src="../public/js/EditCamposEditora.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
 <script src="../public/js/PesquisarEditoras.js"></script>
+
 </html>
