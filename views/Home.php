@@ -10,7 +10,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Library | Home</title>
     <link rel="stylesheet" href="../views/css/layout-main.css">
-    <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -18,12 +18,12 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 
     <?php
     // Include Menu Sidebar
-    require_once __DIR__ . '/../Includes/Menu_Sidebar.php';  
+    require_once __DIR__ . '/../Includes/Menu_Sidebar.php';
     ?>
 
 
 
-<!--------NavbBar Start------------------------------->
+    <!--------NavbBar Start------------------------------->
     <div id="content">
         <div class="top-navbar">
             <div class="xd-topbar">
@@ -40,13 +40,16 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                             <nav class="navbar p-0">
                                 <ul class="nav navbar-nav flex-row ml-auto">
                                     <li class="dropdown nav-item">
-                                        <a class="nav-link" href="" data-toggle="dropdown">
-                                            <img src="../public/img/perfil.png" alt="Imagem do usuário" style="width: 46px; border-radius:50%;" />
+                                        <a class="nav-link d-flex align-items-center" href="" data-toggle="dropdown" style="text-decoration: none;">
+                                            <div class="d-flex flex-column justify-content-center text-right mr-2" style="min-height: 46px;">
+                                                <span style="font-weight: bold; white-space: nowrap;"><?php echo 'Olá, ' . $userName; ?></span>
+                                                <small class="text-muted" style="margin-left: 10px; white-space: nowrap;"><?php echo $userTipo; ?></small>
+                                            </div>
+                                            <img src="../public/img/perfil.png" alt="Imagem do usuário" class="user-profile-img" />
                                             <span class="xp-user-live"></span>
                                         </a>
                                         <ul class="dropdown-menu small-menu">
-                                            <li><a href=""><span class="material-icons">person_outline</span><?php echo 'Olá, ' . $userName; ?></a></li>
-                                            <li><a href="Usuarios.php"><span class="material-icons">settings</span>Perfil</a></li>
+                                            <li><a href="Usuarios.php"><span class="material-icons">person</span>Perfil</a></li>
                                             <li><a href="<?php echo BASE_URL; ?>/Controllers/LogoutController.php"><span class="material-icons">logout</span>Sair</a></li>
                                         </ul>
                                     </li>
@@ -57,29 +60,27 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                 </div>
                 <div class="xp-breadcrumbbar text-center">
                     <h4 class="page-title">Home</h4>
-                    <ol class="breadcrumb">
-                        <li class="sub-titulo"><a>School Library / Home</a></li>
-                    </ol>
                 </div>
             </div>
         </div>
-<!--------NavbBar END--------------------------------->
+        <!--------NavbBar END--------------------------------->
 
 
 
-    <?php
-    // Include Charts-Google
-    require_once __DIR__ . '/../Includes/Cards.php';
-    require_once __DIR__ . '/../Includes/Grafico_barras.php';
-    require_once __DIR__ . '/../Includes/Grafico_pizza.php';
-       
-    ?>
-        
+        <?php
+        // Include Charts-Google
+        require_once __DIR__ . '/../Includes/Cards.php';
+        require_once __DIR__ . '/../Includes/Grafico_barras.php';
+        require_once __DIR__ . '/../Includes/Grafico_pizza.php';
+
+        ?>
+
     </div>
-     
+
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
+
 </html>

@@ -2112,3 +2112,76 @@
     "editaExpiracao": "2025-02-27",
     "situacao": "Reservado"
 }
+[2025-02-21 01:07:22] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "924edf3ee36565bb9acb16cbf98e4f50caf0f79e1853b05b92bfcf46c01e36d5",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "1",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-21 01:08:05] Requisição recebida: POST - /schoollibrary/Models/Update_Usuario.php
+{
+    "csrf_token": "924edf3ee36565bb9acb16cbf98e4f50caf0f79e1853b05b92bfcf46c01e36d5",
+    "idUsuario": "18",
+    "matricula": "458441255",
+    "editarNome": "Daniel Soaes",
+    "editarTelefone": "6299259-4658",
+    "editarEmail": "daniel.soares@teste.com",
+    "editarTipoUser": "Administrador"
+}
+[2025-02-21 01:11:48] Requisição recebida: POST - /schoollibrary/Models/Update_Usuario.php
+{
+    "csrf_token": "dd30aebf868d8a406b3c8cd773c8a94e5d677a442e47892af66edecc700c8075",
+    "idUsuario": "18",
+    "matricula": "458441255",
+    "editarNome": "Daniel",
+    "editarTelefone": "6299259-4658",
+    "editarEmail": "daniel.soares@teste.com",
+    "editarTipoUser": "Administrador"
+}
+[2025-02-21 01:12:06] Requisição recebida: POST - /schoollibrary/Models/Update_Usuario.php
+{
+    "csrf_token": "dd30aebf868d8a406b3c8cd773c8a94e5d677a442e47892af66edecc700c8075",
+    "idUsuario": "18",
+    "matricula": "458441255",
+    "editarNome": "Daniel Soares",
+    "editarTelefone": "6299259-4658",
+    "editarEmail": "daniel.soares@teste.com",
+    "editarTipoUser": "Administrador"
+}
+[2025-02-21 01:42:44] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "30",
+    "matricula": "202320205",
+    "editarNome": "Eminem Soares",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "eminem.soares@teste.com",
+    "editarStatus": "Inativo"
+}
+[2025-02-21 01:44:28] Requisição recebida: POST - /schoollibrary/Models/Update_Usuario.php
+{
+    "csrf_token": "5923b219ce193e39563bbe5fcb8d2d2663e94d20fa9ef83cb697f7fda66429ce",
+    "idUsuario": "1",
+    "matricula": "202120121",
+    "editarNome": "Tiago",
+    "editarTelefone": "62 99259-4657",
+    "editarEmail": "tsgo.soares@gmail.com",
+    "editarTipoUser": "Administrador"
+}
+[2025-02-21 01:44:52] Requisição recebida: POST - /schoollibrary/Models/Update_Usuario.php
+{
+    "csrf_token": "5c50958853e64873af78ccdd28177e15185f22162be3118c7d9e418385bc5590",
+    "idUsuario": "1",
+    "matricula": "202120120",
+    "editarNome": "Tiago",
+    "editarTelefone": "6299259-4657",
+    "editarEmail": "tsgo.soares@gmail.com",
+    "editarTipoUser": "Administrador"
+}

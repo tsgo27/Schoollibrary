@@ -44,14 +44,17 @@ if (!isset($_SESSION['csrf_token'])) {
                         <div class="xp-profilebar text-right">
                             <nav class="navbar p-0">
                                 <ul class="nav navbar-nav flex-row ml-auto">
-                                    <li class="dropdown nav-item">
-                                        <a class="nav-link" href="" data-toggle="dropdown">
-                                            <img src="../public/img/perfil.png" alt="Imagem do usuário" style="width: 46px; border-radius:50%;" />
+                                <li class="dropdown nav-item">
+                                        <a class="nav-link d-flex align-items-center" href="" data-toggle="dropdown" style="text-decoration: none;">
+                                            <div class="text-right mr-2">
+                                                <span style="font-weight: bold;"><?php echo 'Olá, ' . $userName; ?></span><br>
+                                                <small class="text-muted"><?php echo $userTipo; ?></small>
+                                            </div>
+                                            <img src="../public/img/perfil.png" alt="Imagem do usuário" class="user-profile-img"/>
                                             <span class="xp-user-live"></span>
                                         </a>
                                         <ul class="dropdown-menu small-menu">
-                                            <li><a href=""><span class="material-icons">person_outline</span><?php echo 'Olá, ' . $userName; ?></a></li>
-                                            <li><a href="Usuarios.php"><span class="material-icons">settings</span>Perfil</a></li>
+                                            <li><a href="Usuarios.php"><span class="material-icons">person</span>Perfil</a></li>
                                             <li><a href="<?php echo BASE_URL; ?>/Controllers/LogoutController.php"><span class="material-icons">logout</span>Sair</a></li>
                                         </ul>
                                     </li>
@@ -62,9 +65,6 @@ if (!isset($_SESSION['csrf_token'])) {
                 </div>
                 <div class="xp-breadcrumbbar text-center">
                     <h4 class="page-title">Autores - Inativos</h4>
-                    <ol class="breadcrumb">
-                        <li class="sub-titulo"><a>School Library / Autores</a></li>
-                    </ol>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <?php
 /*
-* Exibir nome do usuário logado
+* Exibir nome e tipo do usuário logado
 *
 */
 
@@ -12,10 +12,10 @@ try {
         exit();
     }
 
-    // Consulta o nome do usuário no banco de dados
-    $stmt = $pdo->prepare("SELECT nome FROM usuarios WHERE matricula = ?");
+    // Consulta o nome e tipo do usuário no banco de dados
+    $stmt = $pdo->prepare("SELECT nome, user_tipo FROM usuarios WHERE matricula = ?");
     $stmt->execute([$matricula]);
-    $user = $stmt->fetchColumn();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if (!$user) {
         session_destroy(); // Destroi a sessão para evitar inconsistências
@@ -23,7 +23,8 @@ try {
         exit();
     }
 
-    $userName = $user;
+    $userName = $user['nome'];
+    $userTipo = $user['user_tipo'];
 } catch (Exception $e) {
     session_destroy(); // Garante que a sessão será encerrada em caso de erro
     header("Location:/schoollibrary/views/Login.php");

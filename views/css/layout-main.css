@@ -2,6 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 
+.user-profile-img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+
 
 body,
 html {
@@ -31,7 +39,7 @@ html {
 
 
 .navbar-nav .nav-link {
-    right: 30px;
+    right: -1px;
 }
 
 #select-editora{
@@ -329,11 +337,10 @@ a:focus {
 .top-navbar {
     width: 100%;
     height: 90px;
-    /* Ajustar Margin do Navbar da págaina ----Tiago---- */
     z-index: 9;
     position: relative;
-    padding: 15px 30px;
-    background-color: #63A0FF;
+    padding: 4px 30px;
+    background-color: #003d7a;
 }
 
 .xd-topbar {
@@ -341,6 +348,10 @@ a:focus {
     position: relative;
 }
 
+.mr-2, .mx-2 {
+    margin-right: 1.5rem !important;
+    height: 59px;
+}
 
 
 .page-title {
@@ -448,7 +459,7 @@ a:focus {
     opacity: 1;
     display: block;
     visibility: visible;
-    left: -140px;   
+    right: 42px;   
 }   
 
 .dropdown-menu {
