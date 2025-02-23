@@ -21,10 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $genero = htmlspecialchars(filter_input(INPUT_POST, 'addGenero', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $status = htmlspecialchars(filter_input(INPUT_POST, 'addStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
-        // Verificando se os campos obrigatórios estão preenchidos
-        if (empty($genero) || empty($status)) {
-            exit();
-        }
 
         // Cria a query de inserção usando Prepared Statements
         $sql = "INSERT INTO genero (nome_genero, status_genero, data_registro) VALUES (?, ?, NOW())";

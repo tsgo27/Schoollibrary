@@ -1,9 +1,8 @@
 <?php
 require_once __DIR__ . '/../Config/bootstrap.php';
 
-// Registra no log o tipo de requisição (GET, POST, etc.) e a URL acessada
+// Registra no log o tipo de requisição (POST) e a URL acessada
 logMessage("Requisição recebida: " . $_SERVER['REQUEST_METHOD'] . " - " . $_SERVER['REQUEST_URI'], $_REQUEST);
-
 
 // Gera o token CSRF se ainda não existir
 if (!isset($_SESSION['csrf_token'])) {
@@ -19,48 +18,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Filtrando os dados do formulário usando htmlspecialchars()
         $codReserva = htmlspecialchars(filter_input(INPUT_POST, 'codReserva', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $matricula = htmlspecialchars(filter_input(INPUT_POST, 'editaMatricula', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $turma = htmlspecialchars(filter_input(INPUT_POST, 'editaTurma', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $aluno = htmlspecialchars(filter_input(INPUT_POST, 'editaAluno', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $titulo = htmlspecialchars(filter_input(INPUT_POST, 'editaTitulo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $DataReserva = htmlspecialchars(filter_input(INPUT_POST, 'editaReserva', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $DataExpiracao = htmlspecialchars(filter_input(INPUT_POST, 'editaExpiracao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $situacao = htmlspecialchars(filter_input(INPUT_POST, 'situacao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $status = htmlspecialchars(filter_input(INPUT_POST, 'editaSituacao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
-        // Cria a query de atualização usando Prepared Statements
-        $sqlUpdateReserva = "UPDATE reservas SET titulo_livro = :editaTitulo, data_reserva = :editaReserva, data_expiracao = :editaExpiracao, situacao_reserva = :Situacao WHERE id_reserva = :codReserva";
-        $stmtUpdateReserva = $pdo->prepare($sqlUpdateReserva);
-
-        if (!$stmtUpdateReserva) {
-            throw new Exception("Erro na preparação da declaração: " . $pdo->errorInfo()[2]);
-        }
+        
+        // Query atualizar dados da tabela reservas
+        $sql = "UPDATE reservas SET matricula_aluno = :editaMatricula, turma_aluno = :editaTurma, nome_aluno = :editaAluno, titulo_livro = :editaTitulo, 
+        data_reserva = :editaReserva, data_expiracao = :editaExpiracao, situacao_reserva = :editaSituacao WHERE id_reserva = :codReserva";
+        $stmt = $pdo->prepare($sql);
 
         // Vincula os parâmetros com os valores
-        $stmtUpdateReserva->bindParam(':codReserva', $codReserva);
-        $stmtUpdateReserva->bindParam(':editaTitulo', $titulo);
-        $stmtUpdateReserva->bindParam(':editaReserva', $DataReserva);
-        $stmtUpdateReserva->bindParam(':editaExpiracao', $DataExpiracao);
-        $stmtUpdateReserva->bindParam(':Situacao', $situacao);
+        $stmt->bindValue(':codReserva', $codReserva);
+        $stmt->bindValue(':editaMatricula', $matricula);
+        $stmt->bindValue(':editaTurma', $turma);
+        $stmt->bindValue(':editaAluno', $aluno);
+        $stmt->bindValue(':editaTitulo', $titulo);
+        $stmt->bindValue(':editaReserva', $DataReserva);
+        $stmt->bindValue(':editaExpiracao', $DataExpiracao);
+        $stmt->bindValue(':editaSituacao', $status);
+        $stmt->execute();
 
-        // Executa a query de atualização na tabela reservas
-        if ($stmtUpdateReserva->execute()) {
-            // Atualiza a Situacao na tabela obra
-            $sqlUpdateObra = "UPDATE obra SET Situacao = :Situacao WHERE Titulo = :editaTitulo";
-            $stmtUpdateObra = $pdo->prepare($sqlUpdateObra);
+        
+        // Query para atualiza situção da obra
+        $sqlUpdateObra = "UPDATE obra SET Situacao = :Situacao WHERE Titulo = :editaTitulo";
+        $stmtUpdateObra = $pdo->prepare($sqlUpdateObra);
 
-            if (!$stmtUpdateObra) {
-                throw new Exception("Erro na preparação da declaração: " . $pdo->errorInfo()[2]);
-            }
-
-            // Vincula os parâmetros com os valores
-            $stmtUpdateObra->bindParam(':Situacao', $situacao);
-            $stmtUpdateObra->bindParam(':editaTitulo', $titulo);
-
-            // Executa a query na tabela obra
-            $stmtUpdateObra->execute();
-        } else {
-            throw new Exception("Erro na atualização");
-        }
-    } catch (Exception $e) {
-        echo "Ocorreu um erro: " . $e->getMessage();
-        exit();
+        $stmtUpdateObra->bindValue(':Situacao', $status);
+        $stmtUpdateObra->bindValue(':editaTitulo', $titulo);
+        $stmtUpdateObra->execute();
+            
     } finally {
         // Fecha as declarações e a conexão com o banco de dados
         $stmtUpdateReserva = null;

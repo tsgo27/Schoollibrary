@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../Config/bootstrap.php';
 
 /*
-* Buscar nome do aluno pela matricula
+* Buscar nome e turma do aluno pela matricula
 *
 */
 
@@ -12,32 +12,28 @@ try {
     }
 
     $matricula = $_POST["matricula"];
-    $sql = "SELECT nome, user_status FROM alunos WHERE matricula = :matricula";
+    $sql = "SELECT nome, turma, user_status FROM alunos WHERE matricula = :matricula";
 
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(":matricula", $matricula, PDO::PARAM_INT);
     $stmt->execute();
 
-    // Verifique se a consulta foi bem-sucedida
     if ($stmt->rowCount() > 0) {
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         $nome = $row["nome"];
+        $turma = $row["turma"];
         $status = $row["user_status"];
 
-        // Verifique o status do aluno
         if ($status == 'Ativo') {
-            // Se o aluno estiver ativo, retorne o nome do aluno
-            echo $nome;
+            // Retorna nome e turma no formato JSON
+            echo json_encode(["nome" => $nome, "turma" => $turma]);
         } else {
-            // Se o aluno estiver inativo, exiba a mensagem "Aluno com pendência"
-            echo "Aluno com pendência";
+            echo json_encode(["nome" => "Aluno com pendência", "turma" => ""]);
         }
     } else {
-        // Se não encontrou resultados, retorne uma mensagem de erro
-        echo "Aluno não encontrado";
+        echo json_encode(["nome" => "Aluno não encontrado", "turma" => ""]);
     }
 } catch (PDOException $e) {
-    // Tratamento de exceção para consultas preparadas
-    echo "Erro na consulta SQL: " . $e->getMessage();
+    echo json_encode(["erro" => "Erro na consulta SQL: " . $e->getMessage()]);
 }
 ?>

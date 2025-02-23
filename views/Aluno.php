@@ -104,6 +104,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                     <tr>
                                         <th>ID</th>
                                         <th>Matrícula</th>
+                                        <th>Turma</th>
                                         <th>Nome</th>
                                         <th>Telefone</th>
                                         <th>Email</th>
@@ -137,6 +138,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                                 echo "<tr>";
                                                 echo "<td>" . htmlspecialchars($user_data['id_Aluno']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['matricula']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['turma']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['nome']) . "</td>";
                                                 echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['telefone']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['email']) . "</td>";
@@ -148,8 +150,9 @@ if (!isset($_SESSION['csrf_token'])) {
                                                 </a>
                                                 <a href='#viewDetailsModal' class='btn btn-info text-white btn-sm' data-toggle='modal' 
                                                     data-id='" . htmlspecialchars($user_data['id_Aluno']) . "' 
-                                                    data-nome='" . htmlspecialchars($user_data['nome']) . "' 
                                                     data-matricula='" . htmlspecialchars($user_data['matricula']) . "' 
+                                                    data-turma='" . htmlspecialchars($user_data['turma']) . "' 
+                                                    data-nome='" . htmlspecialchars($user_data['nome']) . "' 
                                                     data-telefone='" . htmlspecialchars($user_data['telefone']) . "' 
                                                     data-email='" . htmlspecialchars($user_data['email']) . "' 
                                                     data-status='" . htmlspecialchars($user_data['user_status']) . "' 
@@ -268,6 +271,9 @@ if (!isset($_SESSION['csrf_token'])) {
                                     <div class="form-group">
                                         <label>Matrícula</label>
                                         <input type="text" name="matricula" maxlength="9" class="form-control" required>
+                                        <label>Turma</label>
+                                        <input type="text" name="turma" id="turma" maxlength="9" class="form-control" required>
+                                        <small class="form-text text-muted">Padrão turma: 3º A</small>
                                         <label>Nome</label>
                                         <input type="text" name="nome" maxlength="60" class="form-control" required>
                                         <label>Telefone</label>
@@ -310,6 +316,9 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <input type="hidden" name="idAluno" id="idAluno" class="form-control">
                                         <label>Matrícula</label>
                                         <input type="text" name="matricula" id="matricula" maxlength="9" class="form-control">
+                                        <label>Turma</label>
+                                        <input type="text" name="editaTurma" id="editaTurma" maxlength="9" class="form-control" required>
+                                        <small class="form-text text-muted">Padrão turma: 3º A</small>
                                         <label>Nome</label>
                                         <input type="text" name="editarNome" id="editarNome" maxlength="60" class="form-control">
                                         <label>Telefone</label>

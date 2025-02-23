@@ -1,25 +1,19 @@
 <?php
 require_once __DIR__ . '/../Config/bootstrap.php';
 
-// Registra no log o tipo de requisição (GET, POST, etc.) e a URL acessada
+// Registra no log o tipo de requisição (POST,) e a URL acessada
 logMessage("Requisição recebida: " . $_SERVER['REQUEST_METHOD'] . " - " . $_SERVER['REQUEST_URI'], $_REQUEST);
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
-
         // Filtrando os dados do formulário usando htmlspecialchars e FILTER_DEFAULT
         $matricula = htmlspecialchars(filter_input(INPUT_POST, 'matricula', FILTER_SANITIZE_NUMBER_INT), ENT_QUOTES, 'UTF-8');
+        $turma = htmlspecialchars(filter_input(INPUT_POST, 'turma', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $nome = htmlspecialchars(filter_input(INPUT_POST, 'nome', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $telefone = htmlspecialchars(filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_NUMBER_INT), ENT_QUOTES, 'UTF-8');
         $email = htmlspecialchars(filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL), ENT_QUOTES, 'UTF-8');
         $status = htmlspecialchars(filter_input(INPUT_POST, 'user_status', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-
-        // Verificando se os campos obrigatórios foram preenchidos
-        if (empty($matricula) || empty($nome) || empty($email)) {
-            echo "error_required";
-            exit;
-        }
 
         // Validando se a matrícula já está cadastrada no banco
         $stmt = $pdo->prepare("SELECT COUNT(*) FROM alunos WHERE matricula = ?");
@@ -40,9 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             // Inserindo os dados do formulário no banco
             $stmt = $pdo->prepare(
-                "INSERT INTO alunos (matricula, nome, telefone, email, user_status, data_registro) VALUES (?, ?, ?, ?, ?, NOW())"
+                "INSERT INTO alunos (matricula, turma, nome, telefone, email, user_status, data_registro) VALUES (?, ?, ?, ?, ?, ?, NOW())"
             );
-            $stmt->execute([$matricula, $nome, $telefone, $email, $status]);
+            $stmt->execute([$matricula, $turma, $nome, $telefone, $email, $status]);
 
             if ($stmt->rowCount() > 0) {
                 echo "success";

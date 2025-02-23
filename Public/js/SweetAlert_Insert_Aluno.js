@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     // Evento para detectar alterações nos campos do formulário
     document.querySelector('input[name="matricula"]').addEventListener('input', markChanges);
+    document.querySelector('input[name="turma"]').addEventListener('input', markChanges);
     document.querySelector('input[name="nome"]').addEventListener('input', markChanges);
     document.querySelector('input[name="telefone"]').addEventListener('input', markChanges);
     document.querySelector('input[name="email"]').addEventListener('input', markChanges);
@@ -26,6 +27,7 @@ $(document).ready(function() {
         // Obtém os dados do formulário
         const idAluno = document.querySelector('input[name="idAluno"]').value;
         const matricula = document.querySelector('input[name="matricula"]').value;
+        const turma = document.querySelector('input[name="turma"]').value;
         const nome = document.querySelector('input[name="nome"]').value;
         const telefone = document.querySelector('input[name="telefone"]').value;
         const email = document.querySelector('input[name="email"]').value;
@@ -38,6 +40,7 @@ $(document).ready(function() {
             data: {
                 idAluno: idAluno,
                 matricula: matricula,
+                turma: turma,
                 nome: nome,
                 telefone: telefone,
                 email: email,

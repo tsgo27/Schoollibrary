@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#AddTitulo").on("input", function () {
+  $("#add_titulo_livro").on("input", function () {
     let input = $(this).val();
     if (input.length >= 2) {
       $.ajax({
@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 
     // Preencher automaticamente os campos Título
-    $("#AddTitulo").val(titulo);
+    $("#add_titulo_livro").val(titulo);
  
     
 

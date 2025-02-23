@@ -1,13 +1,9 @@
 <?php
 require_once __DIR__ . '/../Config/bootstrap.php';
 
-// Registra no log o tipo de requisição (GET, POST, etc.) e a URL acessada
+// Registra no log o tipo de requisição (POST) e a URL acessada
 logMessage("Requisição recebida: " . $_SERVER['REQUEST_METHOD'] . " - " . $_SERVER['REQUEST_URI'], $_REQUEST);
 
-// Gera o token CSRF se ainda não existir
-if (!isset($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
@@ -17,57 +13,66 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Filtrando os dados do formulário 
-        $matricula = htmlspecialchars(filter_input(INPUT_POST, 'AddMatricula', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $aluno = htmlspecialchars(filter_input(INPUT_POST, 'AddAluno', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $titulo = htmlspecialchars(filter_input(INPUT_POST, 'AddTitulo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $DateEmprestimo = htmlspecialchars(filter_input(INPUT_POST, 'DataEmprestimo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $DateDevolucao = htmlspecialchars(filter_input(INPUT_POST, 'DataDevolucao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $Status = htmlspecialchars(filter_input(INPUT_POST, 'AddStatus_Livro', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $matricula = htmlspecialchars(filter_input(INPUT_POST, 'add_matricula_aluno', FILTER_SANITIZE_NUMBER_INT), ENT_QUOTES, 'UTF-8');
+        $turma = htmlspecialchars(filter_input(INPUT_POST, 'add_turma_aluno', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $aluno = htmlspecialchars(filter_input(INPUT_POST, 'add_nome_aluno', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $titulo = htmlspecialchars(filter_input(INPUT_POST, 'add_titulo_livro', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $DateEmprestimo = htmlspecialchars(filter_input(INPUT_POST, 'add_data_emprestimo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $DateDevolucao = htmlspecialchars(filter_input(INPUT_POST, 'add_data_devolucao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $Status = htmlspecialchars(filter_input(INPUT_POST, 'add_status_livro', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
-        // Verificando se os campos obrigatórios estão preenchidos
-        if (empty($matricula) || empty($aluno) || empty($titulo) || empty($DateEmprestimo) || empty($DateDevolucao) || empty($Status)) {
-            exit();
-        }
-
-        // Cria a query de inserção usando Prepared Statements
-        $sql = "INSERT INTO emprestimo (matricula_aluno, nome_aluno, titulo_livro, data_emprestimo, data_devolucao, status_emprestimo, data_registro)
-        VALUES (?, ?, ?, ?, ?, ?, NOW())";
+        // Query de inserção tabela 'emprestimo'
+        $sql = "INSERT INTO emprestimo (matricula_aluno, turma_aluno, nome_aluno, titulo_livro, data_emprestimo, data_devolucao, status_emprestimo, data_registro)
+        VALUES (:add_matricula_aluno, :add_turma_aluno, :add_nome_aluno, :add_titulo_livro, :add_data_emprestimo, :add_data_devolucao, :add_status_livro, NOW())";
         $stmt = $pdo->prepare($sql);
 
-        // Vincula os parâmetros com os valores
-        $stmt->bindParam(1, $matricula);
-        $stmt->bindParam(2, $aluno);
-        $stmt->bindParam(3, $titulo);
-        $stmt->bindParam(4, $DateEmprestimo);
-        $stmt->bindParam(5, $DateDevolucao);
-        $stmt->bindParam(6, $Status);
-
-        if ($stmt->execute()) {
-            // Atualiza o status da obra na tabela 'obra'
-            $updateStatusSql = "UPDATE obra SET Situacao = ? WHERE Titulo = ?";
-            $updateStmt = $pdo->prepare($updateStatusSql);
-            $updateStmt->bindParam(1, $Status);
-            $updateStmt->bindParam(2, $titulo);
-
-            if ($updateStmt->execute()) {
-                // Redireciona o usuário para a página de origem.
-                header("Location: http://localhost/schoollibrary/views/Emprestimo.php");
-                exit();
-            } else {
-                // Se ocorreu algum erro na atualização do status da obra
-                echo "Ocorreu um erro ao atualizar o status da obra. Tente novamente mais tarde.";
-            }
-        } else {
-            // Se ocorreu algum erro na inserção, exibe uma mensagem de erro
-            echo "Ocorreu um erro durante o cadastro. Tente novamente mais tarde.";
+        if (!$stmt) {
+            throw new Exception("Erro na preparação da declaração de inserção: " . implode(" | ", $pdo->errorInfo()));
         }
+
+        // Vincula os parâmetros com os valores
+        $stmt->bindParam('add_matricula_aluno', $matricula);
+        $stmt->bindParam('add_turma_aluno', $turma);
+        $stmt->bindParam('add_nome_aluno', $aluno);
+        $stmt->bindParam('add_titulo_livro', $titulo);
+        $stmt->bindParam('add_data_emprestimo', $DateEmprestimo);
+        $stmt->bindParam('add_data_devolucao', $DateDevolucao);
+        $stmt->bindParam('add_status_livro', $Status);
+        $stmt->execute();
+
+
     } catch (Exception $e) {
-        echo "Ocorreu um erro: " . $e->getMessage();
+        logMessage("Erro ao processar emprestimo: " . $e->getMessage());
+        echo "Erro ao inserir a emprestimo revise código. Consulte o suporte técnico.";
         exit();
     }
 
-    // Fecha a declaração e a conexão com o banco de dados
-    $stmt = null;
-    $pdo = null;
+
+    // Bloco TRY UPDATE
+    try {
+        // Query para atualizar 'situacao' Obra
+        $sqlUpdateObra = "UPDATE obra SET Situacao = :Situacao WHERE Titulo = :AddTitulo";
+        $stmtUpdateObra = $pdo->prepare($sqlUpdateObra);
+
+        if (!$stmtUpdateObra) {
+            throw new Exception("Erro na preparação da declaração de atualização: " . implode(" | ", $pdo->errorInfo()));
+        }
+        // Vincula os parâmetros com os valores
+        $stmtUpdateObra->bindValue(':Situacao', $status);
+        $stmtUpdateObra->bindValue(':AddTitulo', $titulo);
+        $stmtUpdateObra->execute();
+
+
+    } catch (Exception $e) {
+        logMessage("Erro ao processar reserva: " . $e->getMessage()); 
+        echo "Erro ao processar a reserva. Consulte o suporte técnico.";
+        exit();
+
+    } finally {
+        // Fecha as declarações e a conexão com o banco de dados
+        $stmt = null;
+        $stmtUpdateObra = null;
+        $pdo = null;
+    }
 }
 ?>

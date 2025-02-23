@@ -104,6 +104,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                     <tr>
                                         <th>ID</th>
                                         <th>Matrícula</th>
+                                        <th>Turma</th>
                                         <th>Aluno</th>
                                         <th>Titulo Livro</th>
                                         <th>Empréstimo</th>
@@ -144,10 +145,11 @@ if (!isset($_SESSION['csrf_token'])) {
                                                 echo "<tr>";
                                                 echo "<td>" . htmlspecialchars($user_data['id_emprestimo']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['matricula_aluno']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['turma_aluno']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['nome_aluno']) . "</td>";
-                                                echo "<td class='table-cell-wrap'>" . htmlspecialchars($user_data['titulo_livro']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['titulo_livro']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['data_emprestimo']) . "</td>";
-                                                echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['data_devolucao']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['data_devolucao']) . "</td>";
                                                 echo "<td style='color: " . htmlspecialchars($statusColor) . ";'>" . htmlspecialchars($user_data['status_emprestimo']) . "</td>";
 
                                                 echo "<td class='col-lg-3'>
@@ -189,18 +191,20 @@ if (!isset($_SESSION['csrf_token'])) {
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label>Matrícula</label>
-                                        <input type="text" name="AddMatricula" id="AddMatricula" maxlength="9" class="form-control" required>
+                                        <input type="text" name="add_matricula_aluno" id="add_matricula_aluno" maxlength="9" class="form-control" required>
+                                        <label>Turma</label>
+                                        <input type="text" name="add_turma_aluno" id="add_turma_aluno" maxlength="5" class="form-control" required readonly>
                                         <label>Aluno</label>
-                                        <input type="text" name="AddAluno" id="AddAluno" maxlength="60" class="form-control" required readonly>
+                                        <input type="text" name="add_nome_aluno" id="add_nome_aluno" maxlength="60" class="form-control" required readonly>
                                         <label>Título Livro</label>
-                                        <input type="text" name="AddTitulo" id="AddTitulo" maxlength="60" placeholder="Digite nome do livro" class="form-control" required>
+                                        <input type="text" name="add_titulo_livro" id="add_titulo_livro" maxlength="60" placeholder="Digite nome do livro" class="form-control" required>
                                         <div id="tituloSuggestions"></div>
                                         <label>Data do Emprestimo</label>
-                                        <input type="date" name="DataEmprestimo" id="DataEmprestimo" maxlength="10" class="form-control" required>
+                                        <input type="date" name="add_data_emprestimo" id="add_data_emprestimo" maxlength="10" class="form-control" required>
                                         <label>Data da Devolução</label>
-                                        <input type="date" name="DataDevolucao" id="DataDevolucao" maxlength="10" class="form-control" required>
+                                        <input type="date" name="add_data_devolucao" id="add_data_devolucao" maxlength="10" class="form-control" required>
                                         <label>Situação</label>
-                                        <select name="AddStatus_Livro" id="AddStatus_Livro" class="form-control" required>
+                                        <select name="add_status_livro" id="add_status_livro" class="form-control" required>
                                             <option value="Emprestado">Emprestado</option>
                                             <option value="Disponível">Disponível</option>
                                         </select>
@@ -235,6 +239,8 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <input type="hidden" name="codEmprestimo" id="codEmprestimo" class="form-control">
                                         <label>Matricula</label>
                                         <input type="text" name="editaMatricula" id="editaMatricula" maxlength="60" class="form-control">
+                                        <label>Turma</label>
+                                        <input type="text" name="editaTurma" id="editaTurma" maxlength="5" class="form-control" required readonly>
                                         <label>Aluno</label>
                                         <input type="text" name="editaAluno" id="editaAluno" maxlength="60" class="form-control" readonly>
                                         <label>Titulo Livro</label>

@@ -1,27 +1,32 @@
 $(document).ready(function() {
-    function buscarNomeAluno(matricula, campoAluno) {
+    function buscarDadosAluno(matricula, campoAluno, campoTurma) {
         if (matricula !== "") {
             $.ajax({
                 type: "POST",
                 url: "../Models/get_nome_aluno.php",
                 data: { matricula: matricula },
+                dataType: "json",
                 success: function(response) {
-                    $(campoAluno).val(response);
+                    if (response.erro) {
+                        alert(response.erro);
+                    } else {
+                        $(campoAluno).val(response.nome);
+                        $(campoTurma).val(response.turma);
+                    }
                 },
                 error: function() {
-                    alert("Erro ao buscar o nome do aluno.");
+                    alert("Erro ao buscar os dados do aluno.");
                 }
             });
         }
     }
 
-    // Adicionar - Quando o campo Matricula perde o foco
-    $("#AddMatricula").on("blur", function() {
-        buscarNomeAluno($(this).val(), "#AddAluno");
+    // Quando o campo Matricula perde o foco
+    $("#add_matricula_aluno").on("blur", function() {
+        buscarDadosAluno($(this).val(), "#add_nome_aluno", "#add_turma_aluno");
     });
 
-    // Editar - Quando o campo editaMatricula perde o foco
     $("#editaMatricula").on("blur", function() {
-        buscarNomeAluno($(this).val(), "#editaAluno");
+        buscarDadosAluno($(this).val(), "#editaAluno", "#editaTurma");
     });
 });

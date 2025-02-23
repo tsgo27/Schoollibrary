@@ -105,6 +105,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                     <tr>
                                         <th>ID</th>
                                         <th>Matrícula</th>
+                                        <th>Turma</th>
                                         <th>Aluno</th>
                                         <th>Titulo Livro</th>
                                         <th>Data Reserva</th>
@@ -141,6 +142,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                                 echo "<tr>";
                                                 echo "<td>" . htmlspecialchars($user_data['id_reserva']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['matricula_aluno']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['turma_aluno']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['nome_aluno']) . "</td>";
                                                 echo "<td class='table-cell-wrap'>" . htmlspecialchars($user_data['titulo_livro']) . "</td>";
                                                 echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['data_reserva']) . "</td>";
@@ -185,18 +187,20 @@ if (!isset($_SESSION['csrf_token'])) {
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label>Matrícula</label>
-                                        <input type="text" name="AddMatricula" id="AddMatricula" maxlength="9" class="form-control">
+                                        <input type="text" name="add_matricula_aluno" id="add_matricula_aluno" maxlength="9" class="form-control">
+                                        <label>Turma</label>
+                                        <input type="text" name="add_turma_aluno" id="add_turma_aluno" maxlength="5" class="form-control" readonly>
                                         <label>Aluno</label>
-                                        <input type="text" name="AddAluno" id="AddAluno" maxlength="60" class="form-control" readonly>
+                                        <input type="text" name="add_nome_aluno" id="add_nome_aluno" maxlength="60" class="form-control" readonly>
                                         <label>Título Livro</label>
-                                        <input type="text" name="AddTitulo" id="AddTitulo" maxlength="60" placeholder="Digite nome do livro" class="form-control">
+                                        <input type="text" name="add_titulo_livro" id="add_titulo_livro" maxlength="60" placeholder="Digite nome do livro" class="form-control">
                                         <div id="tituloSuggestions"></div>
                                         <label>Data Reserva</label>
-                                        <input type="date" name="DataReserva" id="DataReserva" maxlength="10" class="form-control">
+                                        <input type="date" name="add_data_reserva" id="add_data_reserva" maxlength="10" class="form-control">
                                         <label>Data Expiração</label>
-                                        <input type="date" name="DataExpiracao" id="DataExpiracao" maxlength="10" class="form-control">
+                                        <input type="date" name="add_data_expiracao" id="add_data_expiracao" maxlength="10" class="form-control">
                                         <label>Situação</label>
-                                        <select name="Situacao" id="Situacao" class="form-control" required>
+                                        <select name="add_situacao" id="add_situacao" class="form-control" required>
                                             <option value="Reservado">Reservado</option>
                                         </select>
                                     </div>
@@ -230,6 +234,8 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <input type="hidden" name="codReserva" id="codReserva" class="form-control">
                                         <label>Matricula</label>
                                         <input type="text" name="editaMatricula" id="editaMatricula" maxlength="60" class="form-control">
+                                        <label>Turma</label>
+                                        <input type="text" name="editaTurma" id="editaTurma" maxlength="5" class="form-control" readonly>
                                         <label>Aluno</label>
                                         <input type="text" name="editaAluno" id="editaAluno" maxlength="60" class="form-control" readonly>
                                         <label>Titulo Livro</label>
@@ -239,7 +245,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <label>Data Expiração</label>
                                         <input type="date" name="editaExpiracao" id="editaExpiracao" maxlength="60" class="form-control">
                                         <label>Situação</label>
-                                        <select name="situacao" id="situacao" class="form-control">
+                                        <select name="editaSituacao" id="editaSituacao" class="form-control">
                                             <option value="Disponível">Disponível</option>
                                             <option value="Reservado">Reservado</option>
                                         </select>

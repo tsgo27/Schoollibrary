@@ -1,19 +1,21 @@
 $(document).ready(function () {
     var hasChanges = false;
+
     function markChanges() {
         hasChanges = true;
     }
 
     // Evento para detectar alterações nos campos do formulário
     document.getElementById('matricula').addEventListener('input', markChanges);
+    document.getElementById('editaTurma').addEventListener('input', markChanges);
     document.getElementById('editarNome').addEventListener('input', markChanges);
     document.getElementById('editarTelefone').addEventListener('input', markChanges);
     document.getElementById('editarEmail').addEventListener('input', markChanges);
-    document.getElementById('editarStatus').addEventListener('input', markChanges);
+    document.getElementById('editarStatus').addEventListener('change', markChanges);
 
     // Evento submit do formulário
     document.getElementById('update').addEventListener('click', function (event) {
-        // Se não houver alterações no formulário, não exibe o alerta e deixa o formulário ser submetido normalmente
+        // Se não houver alterações no formulário, permite o envio normal sem alerta
         if (!hasChanges) {
             return;
         }
@@ -29,8 +31,7 @@ $(document).ready(function () {
             document.getElementById('updateForm').submit();
         });
 
-        // Cancela o evento de submissão do formulário para que não seja enviado sem a exibição do alerta
+        // Cancela a submissão para aguardar o alerta
         event.preventDefault();
     });
 });
-
