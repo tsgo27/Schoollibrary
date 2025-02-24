@@ -127,7 +127,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                         <i class="material-icons">&#xE147;</i>
                                         <span>Adicionar</span>
                                     </a>
-                                    <a href="../Reports/Obras.php" target="_blank" class="btn btn-primary" id="printReport">
+                                    <a href="../Reports/config_relatorio_obra_ativo.php" target="_blank" class="btn btn-primary" id="printReport">
                                         <i class="material-icons">&#xe8ad;</i>
                                         <span>Imprimir</span>
                                     </a>
@@ -325,14 +325,14 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                         </form>
                     </div>
                 </div>
-                <!---------Modal Obras-END------------------------->
+                <!---------Modal Adicionar Obra-END------------------------->
 
 
 
 
 
 
-                <!---------Modal Editar Obras-Start----------------->
+                <!---------Modal Editar Obra-Start----------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -357,7 +357,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                         <input type="text" name="editaEdicao" id="editaEdicao" maxlength="60" class="form-control">
                                         <label>Ano</label>
                                         <input type="text" name="editaAno" id="editaAno" maxlength="60" class="form-control">
-                                        <label>Qunatidade</label>
+                                        <label>Quantidade</label>
                                         <input type="text" name="editaCopia" id="editaCopia" maxlength="60" class="form-control">
                                         <label>Acervo</label>
                                         <input type="text" name="editaAcervo" id="editaAcervo" maxlength="10" class="form-control">
@@ -387,20 +387,26 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                             }
                                             ?>
                                         </select>
+                                        <label>Situação</label>
+                                        <select type="text" name="editaSituacao" id="editaSituacao" maxlength="15" class="form-control">
+                                            <option value="Manutenção">Manutenção</option>
+                                            <option value="Inativo">Inativo</option>
+                                            <option value="Descontinuado">Descontinuado</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                                     <input type="submit" name="update" id="update" class="btn btn-success" value="Atualizar">
                                 </div>
+                            </form>
+
                         </div>
-                        </form>
                     </div>
+                    <!---------Modal Editar--Obras-END------------------>
                 </div>
-                <!---------Modal Editar--Obras-END------------------>
             </div>
         </div>
-    </div>
     </div>
 
 </body>

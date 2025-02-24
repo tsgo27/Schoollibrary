@@ -79,7 +79,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                         <i class="material-icons">&#xE147;</i>
                                         <span>Adicionar</span>
                                     </a>
-                                    <a href="../Reports/Reservas.php" target="_blank" class="btn btn-primary" id="gerarRelatorio">
+                                    <a href="../Reports/config_relatorio_reserva_ativo.php" target="_blank" class="btn btn-primary" id="gerarRelatorio">
                                         <i class="material-icons">&#xe8ad;</i>
                                         <span>Imprimir</span>
                                     </a>

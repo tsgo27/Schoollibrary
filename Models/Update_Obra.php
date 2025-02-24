@@ -4,7 +4,6 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 // Registra no log o tipo de requisição (POST) e a URL acessada
 logMessage("Requisição recebida: " . $_SERVER['REQUEST_METHOD'] . " - " . $_SERVER['REQUEST_URI'], $_REQUEST);
 
-
 // Gera o token CSRF se ainda não existir
 if (!isset($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -28,10 +27,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $acervo = htmlspecialchars(filter_input(INPUT_POST, 'editaAcervo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $genero = htmlspecialchars(filter_input(INPUT_POST, 'editaGenero', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $editora = htmlspecialchars(filter_input(INPUT_POST, 'editaEditora', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+
+        // Verificar se 'editaSituacao' foi enviado. Se não, busca o valor atual no banco de dados
+        $situacao = htmlspecialchars(filter_input(INPUT_POST, 'editaSituacao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         
+        // Se 'editaSituacao' não foi enviado (está vazio), obter o valor atual da obra no banco de dados
+        if (empty($situacao)) {
+            $stmtGetSituacao = $pdo->prepare("SELECT Situacao FROM obra WHERE CodObra = :codObra");
+            $stmtGetSituacao->bindValue(':codObra', $codObra);
+            $stmtGetSituacao->execute();
+            $row = $stmtGetSituacao->fetch(PDO::FETCH_ASSOC);
+            $situacao = $row['Situacao'];  // Mantém o valor atual
+            $stmtGetSituacao = null;  // Fecha a consulta
+        }
 
         // Cria a query de atualização usando Prepared Statements
-        $sqlUpdateObra = "UPDATE obra SET Isbn = :isbn, Titulo = :titulo, Autor = :autor, Edicao = :edicao, Ano = :ano, Copia = :copia, Acervo = :acervo, Genero = :genero, Editora = :editora WHERE CodObra = :codObra";
+        $sqlUpdateObra = "UPDATE obra SET Isbn = :isbn, Titulo = :titulo, Autor = :autor, Edicao = :edicao, Ano = :ano, Copia = :copia, Acervo = :acervo, Genero = :genero, Editora = :editora, Situacao = :situacao WHERE CodObra = :codObra";
         $stmtUpdateObra = $pdo->prepare($sqlUpdateObra);
 
         if (!$stmtUpdateObra) {
@@ -49,8 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmtUpdateObra->bindValue(':acervo', $acervo);
         $stmtUpdateObra->bindValue(':genero', $genero);
         $stmtUpdateObra->bindValue(':editora', $editora);
-       
-
+        $stmtUpdateObra->bindValue(':situacao', $situacao);  // Atualiza o campo de situação
+        
         // Executa a query de atualização na tabela obra
         if (!$stmtUpdateObra->execute()) {
             throw new Exception("Erro na atualização");
@@ -58,7 +69,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Executa a query de atualização na tabela obra
         $stmtUpdateObra->execute();
-
 
     } finally {
         // Fecha as declarações e a conexão com o banco de dados

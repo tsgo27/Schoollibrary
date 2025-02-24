@@ -19,9 +19,9 @@ require_once __DIR__ . '/../Config/bootstrap.php';
             <thead>
                 <tr>
                     <th>Matrícula</th>
+                    <th>Turma</th>
                     <th>Aluno</th>
                     <th>Titulo Livro</th>
-                    <th>Subtítulo</th>
                     <th>Data Reserva</th>
                     <th>Data Expiração</th>
                     <th>Situação</th>
@@ -33,19 +33,19 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                     if (!isset($pdo)) {
                         throw new Exception('A conexão com o banco de dados não foi estabelecida.');
                     }
-                    $sql = "SELECT * FROM reservas WHERE Situacao IN ('Disponível', 'Emprestado', 'Reservado', 'Manutenção', 'Descontinuado') ORDER BY data_registro DESC";
+                    $sql = "SELECT * FROM reservas WHERE situacao_reserva IN ('Disponível', 'Reservado') ORDER BY data_registro DESC";
                     $result = $pdo->query($sql);
 
                     if ($result->rowCount() > 0) {
                         while ($user_data = $result->fetch(PDO::FETCH_ASSOC)) {
                             echo "<tr>";
-                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Matricula']) . "</td>";
-                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['NomeAluno']) . "</td>";
-                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Titulo']) . "</td>";
-                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['SubTitulo']) . "</td>";
-                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['DataReserva']) . "</td>";
-                            echo "<td class='col-lg-1'>" . htmlspecialchars($user_data['DataExpiracao']) . "</td>";
-                            echo "<td class='col-lg-1'>" . htmlspecialchars($user_data['Situacao']) . "</td>";
+                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['matricula_aluno']) . "</td>";
+                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['turma_aluno']) . "</td>";
+                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['nome_aluno']) . "</td>";
+                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['titulo_livro']) . "</td>";
+                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['data_reserva']) . "</td>";
+                            echo "<td class='col-lg-1'>" . htmlspecialchars($user_data['data_expiracao']) . "</td>";
+                            echo "<td class='col-lg-1'>" . htmlspecialchars($user_data['situacao_reserva']) . "</td>";
 
                         }
                     }

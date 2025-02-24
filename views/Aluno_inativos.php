@@ -74,7 +74,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                         <div class="table-title">
                             <div class="row">
                                 <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
-                                    <a href="../Reports/Alunos_inativos.php" target="_blank" class="btn btn-primary" id="gerarRelatorio">
+                                    <a href="../Reports/config_relatorio_aluno_inativo.php" target="_blank" class="btn btn-primary" id="gerarRelatorio">
                                         <i class="material-icons">&#xe8ad;</i>
                                         <span>Imprimir</span>
                                     </a>

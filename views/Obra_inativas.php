@@ -8,7 +8,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Library | Empréstimos</title>
+    <title>School Library | Obra</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../views/css/layout-main.css">
     <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon" />
@@ -58,11 +58,12 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                     </div>
                 </div>
                 <div class="xp-breadcrumbbar text-center">
-                    <h4 class="page-title">Empréstimos</h4>
+                    <h4 class="page-title">Obras</h4>
                 </div>
             </div>
         </div>
         <!--------NavbBar END--------------------------------->
+
 
 
 
@@ -74,20 +75,16 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                         <div class="table-title">
                             <div class="row">
                                 <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
-                                    <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
-                                        <i class="material-icons">&#xE147;</i>
-                                        <span>Adicionar</span>
-                                    </a>
-                                    <a href="../Reports/config_relatorio_emprestimo_ativo.php" target="_blank" class="btn btn-primary" id="gerarRelatorio">
+                                    <a href="../Reports/config_relatorio_obra_inativa.php" target="_blank" class="btn btn-primary" id="printReport">
                                         <i class="material-icons">&#xe8ad;</i>
                                         <span>Imprimir</span>
                                     </a>
-                                    <h2 class="ml-lg-2">Empréstimos</h2>
+                                    <h2 class="ml-lg-2">Obras</h2>
                                 </div>
                                 <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
                                     <div class="container">
                                         <div class="box-search">
-                                            <input type="search" class="form-control" placeholder="Digite o nome do aluno ou o título da obra" id="pesquisar">
+                                            <input type="search" class="form-control" placeholder="Digite título da obra" id="pesquisar">
                                         </div>
                                     </div>
                                 </div>
@@ -98,12 +95,15 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Matrícula</th>
-                                        <th>Turma</th>
-                                        <th>Aluno</th>
+                                        <th>ISBN</th>
                                         <th>Titulo Livro</th>
-                                        <th>Empréstimo</th>
-                                        <th>Devolução</th>
+                                        <th>Autor</th>
+                                        <th>Edição</th>
+                                        <th>Ano</th>
+                                        <th>Quantidade</th>
+                                        <th>Acervo</th>
+                                        <th>Gênero</th>
+                                        <th>Editora</th>
                                         <th>Situação</th>
                                         <th>Ação</th>
                                     </tr>
@@ -115,14 +115,14 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                             throw new Exception('A conexão com o banco de dados não foi estabelecida.');
                                         }
 
-                                        $sql = "SELECT * FROM emprestimo WHERE status_emprestimo IN ('Disponível', 'Emprestado', 'Reservado', 'Manutenção', 'Descontinuado') ORDER BY data_registro DESC";
+                                        $sql = "SELECT * FROM obra WHERE Situacao IN ('Inativo') ORDER BY data_registro DESC";
                                         $result = $pdo->query($sql);
 
                                         if ($result->rowCount() > 0) {
-                                            while ($user_data = $result->fetch(PDO::FETCH_ASSOC)) {
+                                            while ($Obrar_data = $result->fetch(PDO::FETCH_ASSOC)) {
                                                 // Define a cor do status com base no valor de Situacao
                                                 $statusColor = '';
-                                                switch ($user_data['status_emprestimo']) {
+                                                switch ($Obrar_data['Situacao']) {
                                                     case 'Disponível':
                                                         $statusColor = '#008000';  // Verde para disponível
                                                         break;
@@ -138,18 +138,23 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                                 }
 
                                                 echo "<tr>";
-                                                echo "<td>" . htmlspecialchars($user_data['id_emprestimo']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['matricula_aluno']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['turma_aluno']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['nome_aluno']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['titulo_livro']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['data_emprestimo']) . "</td>";
-                                                echo "<td>" . htmlspecialchars($user_data['data_devolucao']) . "</td>";
-                                                echo "<td style='color: " . htmlspecialchars($statusColor) . ";'>" . htmlspecialchars($user_data['status_emprestimo']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($Obrar_data['codObra']) . "</td>";
+                                                echo "<td style='width: 360px;'>" . htmlspecialchars($Obrar_data['Isbn']) . "</td>";
+                                                echo "<td style='width: 280px;'>" . htmlspecialchars($Obrar_data['Titulo']) . "</td>";
+                                                echo "<td style='width: 250px;'>" . htmlspecialchars($Obrar_data['Autor']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($Obrar_data['Edicao']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($Obrar_data['Ano']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($Obrar_data['Copia']) . "</td>";
+                                                echo "<td style='width: 230px;'>" . htmlspecialchars($Obrar_data['Acervo']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($Obrar_data['Genero']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($Obrar_data['Editora']) . "</td>";
+                                                echo "<td style='color: " . htmlspecialchars($statusColor) . ";'>" . htmlspecialchars($Obrar_data['Situacao']) . "</td>";
 
                                                 echo "<td class='col-lg-3'>
-                                                <a href='#editEmployeeModal' class='edit editarEmprestimo btn btn-warning' data-toggle='modal' title='Editar emprétimo'>Editar</a>
-                                                <button class='comprovante btn btn-info' data-cod-emprestimo='{$user_data['id_emprestimo']}' style='width: 82px;'>Cupom</button>
+                                                <a href='#editEmployeeModal' class='edit editarObra btn btn-warning' data-toggle='modal' title='Editar obra'>Editar</a>
+                                                <a href='#' class='btn btn-info visualizarObra' data-id='" . htmlspecialchars($Obrar_data['codObra']) . "' data-status='" . htmlspecialchars(trim($Obrar_data['Situacao'])) . "' title='Visualizar detalhes' style='color: white; background-color: #007bff; font-size: 14px; padding: 5px 10px;'>
+                                                <i class='material-icons'>library_books</i>
+                                                </a>
                                                 </td>";
                                                 echo "</tr>";
                                             }
@@ -171,83 +176,95 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 
 
 
-                <!---------Modal Adicionar Emprétimos-Start---------->
-                <div class="modal fade" tabindex="-1" id="addEmployeeModal" role="dialog">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Adicionar Emprestimo</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+                <!--------Modal de Detalhes da Obra-------------------->
+                <div id="detalhesObraModal" class="modal fade" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered" style="max-width: 30%;">
+                        <div class="modal-content" style="border: none; box-shadow: none;">
+                            <div class="modal-header" style="border-bottom: none;">
+                                <h5 class="modal-title">
+                                    <i class="material-icons">library_books</i> Detalhes da Obra
+                                </h5>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
                             </div>
-                            <form method="POST" action="<?php echo BASE_URL; ?>/Models/Insert_Emprestimo.php" id="cadastroForm">
-                                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <label>Matrícula</label>
-                                        <input type="text" name="add_matricula_aluno" id="add_matricula_aluno" maxlength="9" class="form-control" required>
-                                        <label>Turma</label>
-                                        <input type="text" name="add_turma_aluno" id="add_turma_aluno" maxlength="5" class="form-control" required readonly>
-                                        <label>Aluno</label>
-                                        <input type="text" name="add_nome_aluno" id="add_nome_aluno" maxlength="60" class="form-control" required readonly>
-                                        <label>Título Livro</label>
-                                        <input type="text" name="add_titulo_livro" id="add_titulo_livro" maxlength="60" placeholder="Digite nome do livro" class="form-control" required>
-                                        <div id="tituloSuggestions"></div>
-                                        <label>Data do Emprestimo</label>
-                                        <input type="date" name="add_data_emprestimo" id="add_data_emprestimo" maxlength="10" class="form-control" required>
-                                        <label>Data da Devolução</label>
-                                        <input type="date" name="add_data_devolucao" id="add_data_devolucao" maxlength="10" class="form-control" required>
-                                        <label>Situação</label>
-                                        <select name="add_status_livro" id="add_status_livro" class="form-control" required>
-                                            <option value="Emprestado">Emprestado</option>
-                                            <option value="Disponível">Disponível</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                    <input type="submit" name="submit" id="submitAdicionar" class="btn btn-success" value="Adicionar">
-                                </div>
+                            <div class="modal-body">
+                                <table class="table">
+                                    <tbody id="detalhesObraBody">
+                                        <!-- Os dados serão carregados aqui via AJAX -->
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        </form>
                     </div>
                 </div>
-                <!---------Modal Emprétimos--END--------------------->
+                <!--------Modal de Detalhes da Obra---------------->
 
 
 
-                <!---------Modal Editar Emprétimos-Start------------->
+
+
+
+
+                <!---------Modal Editar Obra-Start----------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Editar Emprestimo</h5>
+                                <h5 class="modal-title">Editar Obra</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form method="POST" action="<?php echo BASE_URL; ?>/Models/Update_Emprestimo.php" id="cadastroFormu">
+                            <form method="POST" action="<?php echo BASE_URL; ?>/Models/Update_Obra.php" id="cadastroFormu">
                                 <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <input type="hidden" name="codEmprestimo" id="codEmprestimo" class="form-control">
-                                        <label>Matricula</label>
-                                        <input type="text" name="editaMatricula" id="editaMatricula" maxlength="60" class="form-control">
-                                        <label>Turma</label>
-                                        <input type="text" name="editaTurma" id="editaTurma" maxlength="5" class="form-control" required readonly>
-                                        <label>Aluno</label>
-                                        <input type="text" name="editaAluno" id="editaAluno" maxlength="60" class="form-control" readonly>
-                                        <label>Titulo Livro</label>
+                                        <input type="hidden" name="codObra" id="codObra" class="form-control">
+                                        <label>ISBN</label>
+                                        <input type="text" name="editaIsbn" id="editaIsbn" maxlength="60" class="form-control">
+                                        <label>Título Livro</label>
                                         <input type="text" name="editaTitulo" id="editaTitulo" maxlength="60" class="form-control">
-                                        <label>Data Emprestimo</label>
-                                        <input type="date" name="editaEmprestimo" id="editaEmprestimo" maxlength="60" class="form-control">
-                                        <label>Data Devolução</label>
-                                        <input type="date" name="editaDevolucao" id="editaDevolucao" maxlength="60" class="form-control">
-                                        <label>Status Livro</label>
-                                        <select name="Status_Livro" id="Status_Livro" class="form-control">
-                                            <option value="Disponível">Disponível</option>
-                                            <option value="Emprestado">Emprestado</option>
+                                        <label>Autores</label>
+                                        <input type="text" name="editaAutor" id="editaAutor" class="form-control">
+                                        <label>Edição</label>
+                                        <input type="text" name="editaEdicao" id="editaEdicao" maxlength="60" class="form-control">
+                                        <label>Ano</label>
+                                        <input type="text" name="editaAno" id="editaAno" maxlength="60" class="form-control">
+                                        <label>Quantidade</label>
+                                        <input type="text" name="editaCopia" id="editaCopia" maxlength="60" class="form-control">
+                                        <label>Acervo</label>
+                                        <input type="text" name="editaAcervo" id="editaAcervo" maxlength="10" class="form-control">
+                                        <label>Gêneros</label>
+                                        <select type="text" name="editaGenero" id="editaGenero" class="form-control">
+                                            <?php
+                                            require_once __DIR__ . '/../Config/bootstrap.php';
+                                            // Query
+                                            $query = $pdo->query("SELECT nome_genero FROM genero;");
+                                            $registros = $query->fetchAll(PDO::FETCH_ASSOC);
+
+                                            foreach ($registros as $registro) {
+                                                echo "<option value=\"" . $registro['nome_genero'] . "\">" . $registro['nome_genero'] . "</option>";
+                                            }
+                                            ?>
+                                        </select>
+                                        <label>Editoras</label>
+                                        <select type="text" name="editaEditora" id="editaEditora" class="form-control">
+                                            <?php
+                                            require_once __DIR__ . '/../Config/bootstrap.php';
+                                            // Query
+                                            $query = $pdo->query("SELECT nome_editora FROM editora;");
+                                            $registros = $query->fetchAll(PDO::FETCH_ASSOC);
+
+                                            foreach ($registros as $registro) {
+                                                echo "<option value=\"" . $registro['nome_editora'] . "\">" . $registro['nome_editora'] . "</option>";
+                                            }
+                                            ?>
+                                        </select>
+                                        <label>Situação</label>
+                                        <select type="text" name="editaSituacao" id="editaSituacao" maxlength="15" class="form-control">
+                                            <!-- As opções 'Disponível', 'Reservado' e 'Emprestado' são removidas -->
+                                            <option value="Manutenção">Manutenção</option>
+                                            <option value="Inativo">Inativo</option>
+                                            <option value="Descontinuado">Descontinuado</option>
                                         </select>
                                     </div>
                                 </div>
@@ -255,28 +272,29 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                                     <input type="submit" name="update" id="update" class="btn btn-success" value="Atualizar">
                                 </div>
+                            </form>
+
                         </div>
-                        </form>
                     </div>
+                    <!---------Modal Editar--Obras-END------------------>
                 </div>
-                <!---------Modal Editar-Emprétimos-END--------------->
             </div>
         </div>
     </div>
-    </div>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../public/js/EditCamposEmprestimo.js"></script>
-<script src="../public/js/SweetAlert_Insert_Emprestimo.js"></script>
-<script src="../public/js/SweetAlert_Update_Emprestimo.js"></script>
-<script src="../public/js/BuscarNomeAluno.js"></script>
-<script src="../public/js/BuscarTituloLivro.js"></script>
-<script src="../Public/js/Comprovante.js"></script>
-<script src="../public/js/PesquisarEmprestimo.js"></script>
+<script src="../public/js/FiltrarTabela.js"></script>
+<script src="../public/js/EditCamposObra.js"></script>
+<script src="../Public/js/get_buscar_detalhes_obra.js"></script>
+<script src="../public/js/SweetAlert_Update_Obra.js"></script>
+<script src="../public/js/SweetAlert_Update_Obra.js"></script>
+<script src="../public/js/BuscarNomeAutores.js"></script>
+<script src="../public/js/BuscarAcervo.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
+<script src="../public/js/Pesquisar.js"></script>
+<script src="../public/js/Modal.js"></script>
 
 </html>

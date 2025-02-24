@@ -578,3 +578,124 @@
     "AddSituacao": "Disponível",
     "submit": "Adicionar"
 }
+[2025-02-24 14:13:18] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "2",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-24 14:13:57] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "3",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-24 14:13:57] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "3",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-24 14:17:40] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+[2025-02-24 14:17:40] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codObra": "22",
+    "editaIsbn": "978-0-4567890-9",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaAutor": "Lídia Poetisa",
+    "editaEdicao": "1",
+    "editaAno": "1998",
+    "editaCopia": "1",
+    "editaAcervo": "GB-4-L-1-1",
+    "editaGenero": "Literatura Infantojuvenil",
+    "editaEditora": "Saraiva",
+    "editaSituacao": "Inativo"
+}
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codObra": "22",
+    "editaIsbn": "978-0-4567890-9",
+    "editaTitulo": "Poemas da Meia-Noite",
+    "editaAutor": "Lídia Poetisa",
+    "editaEdicao": "1",
+    "editaAno": "1998",
+    "editaCopia": "1",
+    "editaAcervo": "GB-4-L-1-1",
+    "editaGenero": "Literatura Infantojuvenil",
+    "editaEditora": "Saraiva",
+    "editaSituacao": "Inativo"
+}
+[2025-02-24 14:27:02] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codAutor": "37",
+    "editaAutor": "Maria Silva",
+    "editaStatus": "Inativo"
+}
+[2025-02-24 14:27:15] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codAutor": "37",
+    "editaAutor": "Maria Silva",
+    "editaStatus": "Ativo",
+    "update": "Atualizar"
+}
+[2025-02-24 14:27:35] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editaTurma": "3º A",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Inativo"
+}
+[2025-02-24 14:27:42] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "44",
+    "matricula": "202540034",
+    "editaTurma": "3º A",
+    "editarNome": "Maisa reis",
+    "editarTelefone": "620025-60660",
+    "editarEmail": "maisa@email.com",
+    "editarStatus": "Inativo"
+}
+[2025-02-24 14:42:38] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codObra": "21",
+    "editaIsbn": "978-0-345678-7",
+    "editaTitulo": "Entre Dois Mundos",
+    "editaAutor": "Roberto Viajante",
+    "editaEdicao": "2",
+    "editaAno": "1993",
+    "editaCopia": "5",
+    "editaAcervo": "GB-4-L-1-3",
+    "editaGenero": "Mistério",
+    "editaEditora": "Editora Enigma"
+}

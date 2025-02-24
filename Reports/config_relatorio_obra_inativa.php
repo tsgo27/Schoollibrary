@@ -34,7 +34,7 @@ $dompdf = new Dompdf($options);
 $dompdf->setPaper('A4', 'landscape'); // Define a orientação para paisagem
 
 // CARREGAR O CONTEÚDO DO ARQUIVO PHP
-require_once __DIR__.'/Layout_Obras_inativos.php';
+require_once __DIR__.'/Layout_Obras_inativas.php';
 $htmlContent = ob_get_clean(); // OBTÉM E LIMPA O OUTPUT BUFFER
 
 // Concatenar a data formatada com o conteúdo HTML

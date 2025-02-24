@@ -3,7 +3,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,18 +12,21 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 </head>
 
 <body>
-    <h1>School Library - Relatório de Empréstimos</h1>
+    <h1>School Library - Relatório de Obras - Inativas</h1>
     <hr>
     <div class="table-responsive">
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th>Matrícula</th>
-                    <th>Turma</th>
-                    <th>Aluno</th>
+                    <th>Isbn</th>
                     <th>Titulo Livro</th>
-                    <th>Empréstimo</th>
-                    <th>Devolução</th>
+                    <th>Autor</th>
+                    <th>Edição</th>
+                    <th>Ano</th>
+                    <th>Quantidade</th>
+                    <th>Acervo</th>
+                    <th>Gênero</th>
+                    <th>Editora</th>
                     <th>Situação</th>
                 </tr>
             </thead>
@@ -35,19 +38,22 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                     throw new Exception('A conexão com o banco de dados não foi estabelecida.');
                     }
 
-                    $sql = "SELECT * FROM emprestimo WHERE status_emprestimo IN ('Disponível', 'Emprestado') ORDER BY data_registro DESC";
+                    $sql = "SELECT * FROM obra WHERE Situacao IN ('Inativo') ORDER BY data_registro DESC";
                     $result = $pdo->query($sql);
-                    
+
                     if ($result->rowCount() > 0) {
                         while ($user_data = $result->fetch(PDO::FETCH_ASSOC)) {
                             echo "<tr>";
-                            echo "<td class='col-lg-2'>" . $user_data['matricula_aluno'] . "</td>";
-                            echo "<td class='col-lg-2'>" . $user_data['turma_aluno'] . "</td>";
-                            echo "<td class='col-lg-2'>" . $user_data['nome_aluno'] . "</td>";
-                            echo "<td class='col-lg-2'>" . $user_data['titulo_livro'] . "</td>";
-                            echo "<td class='col-lg-2'>" . $user_data['data_emprestimo'] . "</td>";
-                            echo "<td class='col-lg-1'>" . $user_data['data_devolucao'] . "</td>";
-                            echo "<td class='col-lg-1'>" . $user_data['status_emprestimo'] . "</td>";
+                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Isbn']) . "</td>";
+                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Titulo']) . "</td>";
+                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Autor']) . "</td>";
+                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Edicao']) . "</td>";
+                            echo "<td class='col-lg-1'>" . htmlspecialchars($user_data['Ano']) . "</td>";
+                            echo "<td class='col-lg-1'>" . htmlspecialchars($user_data['Copia']) . "</td>";
+                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Acervo']) . "</td>";
+                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Genero']) . "</td>";
+                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['Editora']) . "</td>";
+                            echo "<td class='col-lg-0'>" . htmlspecialchars($user_data['Situacao']) . "</td>";
                           
                         }
                     }

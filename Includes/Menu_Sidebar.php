@@ -31,6 +31,7 @@
                     <i class="material-icons">subtitles_off</i>Itens Inativos
                 </a>
                 <ul class="collapse list-unstyled menu" id="inactiveItemsSubmenu">
+                    <li><a href="Obra_inativas.php">Obras</a></li>
                     <li><a href="Autor_inativos.php">Autores</a></li>
                     <li><a href="Editora_inativos.php">Editoras</a></li>
                     <li><a href="Acervo_inativos.php">Acervos</a></li>
