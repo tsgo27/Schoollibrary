@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23/02/2025 às 19:51
+-- Tempo de geração: 24/02/2025 às 04:09
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -171,7 +171,11 @@ INSERT INTO `emprestimo` (`id_emprestimo`, `matricula_aluno`, `turma_aluno`, `no
 (27, 202320209, '3º A', 'Debora Soares', 'Poesias Efêmeras', '2025-02-15', '2025-02-18', 'Emprestado', '2025-02-18 17:13:37'),
 (32, 202320208, '3º A', 'joão Gustavo', 'Avançao da IA', '2025-02-22', '2025-02-19', 'Disponível', '2025-02-19 14:09:25'),
 (33, 202320207, '3º A', 'Ivani Filho', ' O Jardim Secreto', '2025-02-16', '2025-02-23', 'Disponível', '2025-02-23 15:23:14'),
-(34, 202319203, '4º A', 'Dani Martins', 'O Código da História', '2025-02-16', '2025-02-23', 'Emprestado', '2025-02-23 15:28:18');
+(34, 202319203, '4º A', 'Dani Martins', 'O Código da História', '2025-02-16', '2025-02-23', 'Emprestado', '2025-02-23 15:28:18'),
+(35, 202320206, '3º A', 'Rafal oliveira', ' O Jardim Secreto', '2025-02-16', '2025-02-23', 'Emprestado', '2025-02-23 21:52:28'),
+(36, 202320207, '3º A', 'Ivani Filho', 'O Último Refúgio ', '2025-02-16', '2025-02-23', 'Emprestado', '2025-02-23 22:00:07'),
+(37, 202319202, '2º A', 'Daniel Soares', 'Aventuras Fantásticas', '2025-02-16', '2025-03-02', 'Emprestado', '2025-02-23 22:02:20'),
+(38, 202320121, '1º A', 'Maria', 'Java ', '2025-02-16', '2025-02-23', 'Emprestado', '2025-02-23 22:27:43');
 
 -- --------------------------------------------------------
 
@@ -274,17 +278,17 @@ CREATE TABLE `obra` (
 --
 
 INSERT INTO `obra` (`codObra`, `Isbn`, `Titulo`, `Autor`, `Edicao`, `Ano`, `Copia`, `Acervo`, `Genero`, `Editora`, `Situacao`, `data_registro`) VALUES
-(13, '978-0-123456-7', 'Aventuras Fantásticas', 'Laura A. Escritora', 1, 2022, 2, 'GV-TR-1', 'Fantasia', 'Saraiva', 'Disponível', '2023-12-13 10:17:43'),
+(13, '978-0-123456-7', 'Aventuras Fantásticas', 'Laura A. Escritora', 1, 2022, 2, 'GV-TR-1', 'Fantasia', 'Saraiva', 'Emprestado', '2023-12-13 10:17:43'),
 (14, '978-0-234567-10', 'Enigmas da Ciência', 'Carlos Cientista', 3, 2020, 3, 'CA-LE-N2', 'Drama', 'Imaginários Ltda.', 'Disponível', '2023-12-13 10:26:06'),
-(15, '978-0-345678-9', ' O Jardim Secreto', ' Sofia Jardineira', 2, 2019, 1, 'CA-LE-N2', 'Infantojuvenil', 'Imaginários Ltda.', 'Disponível', '2023-12-13 10:27:51'),
+(15, '978-0-345678-9', ' O Jardim Secreto', ' Sofia Jardineira', 2, 2019, 1, 'CA-LE-N2', 'Infantojuvenil', 'Imaginários Ltda.', NULL, '2023-12-13 10:27:51'),
 (16, '978-0-456789-0', 'Noite de Mistérios ', 'Rodrigo Detetive', 1, 2021, 4, 'GB-4-L-1-2', 'Mistério', 'Imaginários Ltda.', 'Disponível', '2023-12-13 10:37:41'),
 (17, ' 978-0-567890-1', 'Poesias Efêmeras', 'Ana Poetisa  ', 4, 2018, 2, 'GB-4-L-1-2', 'Poesia', 'Imaginários Ltda.', 'Emprestado', '2023-12-13 10:38:49'),
-(18, '978-0-678901-2', 'O Último Refúgio ', 'Victor Viajante', 5, 1995, 1, 'CA-LE-N2', 'Ficção Científica', 'Exploração Livros', 'Reservado', '2023-12-13 15:52:10'),
+(18, '978-0-678901-2', 'O Último Refúgio ', 'Victor Viajante', 5, 1995, 1, 'CA-LE-N2', 'Ficção Científica', 'Exploração Livros', 'Emprestado', '2023-12-13 15:52:10'),
 (19, '978-0-123456-7', 'Além das Estrelas ', 'Lucas Astrônomo', 4, 2021, 1, 'GB-4-L-1-3', 'Aventura', 'Conhecimento Press', 'Reservado', '2023-12-13 16:03:35'),
 (20, '978-0-234567-2', 'O Código da História', 'Clara Historiadora', 1, 1993, 5, 'CA-LE-N1', 'Mistério', 'Contos Coloridos', NULL, '2023-12-13 16:11:20'),
 (21, '978-0-345678-7', 'Entre Dois Mundos', 'Roberto Viajante', 1, 1993, 5, 'GB-4-L-1-3', 'Mistério', 'Editora Enigma', 'Disponível', '2023-12-13 16:14:05'),
 (22, '978-0-4567890-9', 'Poemas da Meia-Noite', 'Lídia Poetisa', 1, 1998, 1, 'GB-4-L-1-1', 'Literatura Infantojuvenil', 'Saraiva', 'Disponível', '2023-12-13 16:15:49'),
-(28, '985-59-562-10', 'Java ', 'Martine', 1, 1992, 1, 'CB-LD-NT', 'Aventura', 'Arte das Palavras', 'Disponível', '2025-02-19 13:25:39'),
+(28, '985-59-562-10', 'Java ', 'Martine', 1, 1992, 1, 'CB-LD-NT', 'Aventura', 'Arte das Palavras', 'Emprestado', '2025-02-19 13:25:39'),
 (30, '234-443-44-24', 'Avançao da IA', 'Monteiro Lobato', 1, 2024, 1, 'CB-LD-NT', 'Alegria', 'Arte das Palavras', 'Disponível', '2025-02-19 23:51:49');
 
 -- --------------------------------------------------------
@@ -310,11 +314,11 @@ CREATE TABLE `reservas` (
 --
 
 INSERT INTO `reservas` (`id_reserva`, `matricula_aluno`, `turma_aluno`, `nome_aluno`, `titulo_livro`, `data_reserva`, `data_expiracao`, `situacao_reserva`, `data_registro`) VALUES
-(3, 202319204, '3º B', 'Carol Maia', 'O Código da História', '2025-02-16', '2025-03-02', 'Disponível', '2025-02-23 15:05:41'),
 (4, 202320208, '3º A', 'joão Gustavo', 'Além das Estrelas ', '2025-02-16', '2025-02-23', 'Reservado', '2025-02-23 15:09:12'),
 (5, 202320206, '3º A', 'Rafal oliveira', 'O Código da História', '2025-02-16', '2025-02-23', 'Disponível', '2025-02-23 15:10:33'),
 (6, 202319203, '4º A', 'Dani Martins', 'O Último Refúgio ', '2025-02-16', '2025-02-23', 'Disponível', '2025-02-23 15:31:40'),
-(7, 202319203, '4º A', 'Dani Martins', 'O Último Refúgio ', '2025-02-16', '2025-02-23', 'Reservado', '2025-02-23 15:43:30');
+(7, 202319203, '4º A', 'Dani Martins', 'O Último Refúgio ', '2025-02-16', '2025-02-23', 'Disponível', '2025-02-23 15:43:30'),
+(8, 202320206, '3º A', 'Rafal oliveira', ' O Jardim Secreto', '2025-02-16', '2025-02-23', 'Disponível', '2025-02-23 21:51:09');
 
 -- --------------------------------------------------------
 
@@ -439,7 +443,7 @@ ALTER TABLE `editora`
 -- AUTO_INCREMENT de tabela `emprestimo`
 --
 ALTER TABLE `emprestimo`
-  MODIFY `id_emprestimo` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id_emprestimo` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de tabela `estado`
@@ -463,13 +467,13 @@ ALTER TABLE `obra`
 -- AUTO_INCREMENT de tabela `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id_reserva` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_reserva` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idUsuario` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `idUsuario` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
