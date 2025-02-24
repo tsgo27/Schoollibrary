@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22/02/2025 às 15:56
+-- Tempo de geração: 23/02/2025 às 19:51
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -80,7 +80,8 @@ INSERT INTO `alunos` (`id_Aluno`, `matricula`, `turma`, `nome`, `telefone`, `ema
 (31, 202320206, '3º A', 'Rafal oliveira', '62992594657', 'rafael.oliveira@teste.com', 'Ativo', '2023-12-13 17:01:24'),
 (32, 202320207, '3º A', 'Ivani Filho', '6200000-0000', 'ivani.filho@teste.com', 'Ativo', '2023-12-13 17:02:14'),
 (33, 202320208, '3º A', 'joão Gustavo', '6200000-0000', 'joao.gustavo@teste.com', 'Ativo', '2023-12-13 17:02:50'),
-(34, 202320209, '3º A', 'Debora Soares', '6201255-9899', 'debora.soares@teste.com', 'Ativo', '2023-12-13 17:03:26');
+(34, 202320209, '3º A', 'Debora Soares', '6201255-9899', 'debora.soares@teste.com', 'Ativo', '2023-12-13 17:03:26'),
+(44, 202540034, '3º A', 'Maisa reis', '620025-60660', 'maisa@email.com', 'Ativo', '2025-02-22 12:24:16');
 
 -- --------------------------------------------------------
 
@@ -152,7 +153,7 @@ INSERT INTO `editora` (`id_editora`, `nome_editora`, `cidade_editora`, `estado_e
 CREATE TABLE `emprestimo` (
   `id_emprestimo` int(4) NOT NULL,
   `matricula_aluno` int(9) NOT NULL,
-  `turma_aluno` varchar(5) NOT NULL,
+  `turma_aluno` varchar(5) DEFAULT NULL,
   `nome_aluno` varchar(50) NOT NULL,
   `titulo_livro` varchar(100) NOT NULL,
   `data_emprestimo` date NOT NULL,
@@ -165,9 +166,12 @@ CREATE TABLE `emprestimo` (
 -- Despejando dados para a tabela `emprestimo`
 --
 
-INSERT INTO `emprestimo` (`id_emprestimo`, `matricula_aluno`, `nome_aluno`, `titulo_livro`, `data_emprestimo`, `data_devolucao`, `status_emprestimo`, `data_registro`) VALUES
-(27, 202320209, 'Debora Soares', 'Poesias Efêmeras', '2025-02-18', '2025-02-25', 'Emprestado', '2025-02-18 17:13:37'),
-(32, 202320208, 'joão Gustavo', 'Java e vida', '2025-02-19', '2025-02-26', 'Disponível', '2025-02-19 14:09:25');
+INSERT INTO `emprestimo` (`id_emprestimo`, `matricula_aluno`, `turma_aluno`, `nome_aluno`, `titulo_livro`, `data_emprestimo`, `data_devolucao`, `status_emprestimo`, `data_registro`) VALUES
+(1, 202319204, '3º B', 'Carol Maia', 'Java ', '2025-02-23', '2025-02-26', 'Emprestado', '2025-02-23 00:22:17'),
+(27, 202320209, '3º A', 'Debora Soares', 'Poesias Efêmeras', '2025-02-15', '2025-02-18', 'Emprestado', '2025-02-18 17:13:37'),
+(32, 202320208, '3º A', 'joão Gustavo', 'Avançao da IA', '2025-02-22', '2025-02-19', 'Disponível', '2025-02-19 14:09:25'),
+(33, 202320207, '3º A', 'Ivani Filho', ' O Jardim Secreto', '2025-02-16', '2025-02-23', 'Disponível', '2025-02-23 15:23:14'),
+(34, 202319203, '4º A', 'Dani Martins', 'O Código da História', '2025-02-16', '2025-02-23', 'Emprestado', '2025-02-23 15:28:18');
 
 -- --------------------------------------------------------
 
@@ -275,12 +279,12 @@ INSERT INTO `obra` (`codObra`, `Isbn`, `Titulo`, `Autor`, `Edicao`, `Ano`, `Copi
 (15, '978-0-345678-9', ' O Jardim Secreto', ' Sofia Jardineira', 2, 2019, 1, 'CA-LE-N2', 'Infantojuvenil', 'Imaginários Ltda.', 'Disponível', '2023-12-13 10:27:51'),
 (16, '978-0-456789-0', 'Noite de Mistérios ', 'Rodrigo Detetive', 1, 2021, 4, 'GB-4-L-1-2', 'Mistério', 'Imaginários Ltda.', 'Disponível', '2023-12-13 10:37:41'),
 (17, ' 978-0-567890-1', 'Poesias Efêmeras', 'Ana Poetisa  ', 4, 2018, 2, 'GB-4-L-1-2', 'Poesia', 'Imaginários Ltda.', 'Emprestado', '2023-12-13 10:38:49'),
-(18, '978-0-678901-2', 'O Último Refúgio ', 'Victor Viajante', 5, 1995, 1, 'CA-LE-N2', 'Ficção Científica', 'Exploração Livros', 'Disponível', '2023-12-13 15:52:10'),
-(19, '978-0-123456-7', 'Além das Estrelas ', 'Lucas Astrônomo', 4, 2021, 1, 'GB-4-L-1-3', 'Aventura', 'Conhecimento Press', 'Disponível', '2023-12-13 16:03:35'),
-(20, '978-0-234567-2', 'O Código da História', 'Clara Historiadora', 1, 1993, 5, 'CA-LE-N1', 'Mistério', 'Contos Coloridos', 'Reservado', '2023-12-13 16:11:20'),
-(21, '978-0-345678-7', 'Entre Dois Mundos', 'Roberto Viajante', 1, 1993, 5, 'GB-4-L-1-3', 'Mistério', 'Editora Enigma', 'Reservado', '2023-12-13 16:14:05'),
+(18, '978-0-678901-2', 'O Último Refúgio ', 'Victor Viajante', 5, 1995, 1, 'CA-LE-N2', 'Ficção Científica', 'Exploração Livros', 'Reservado', '2023-12-13 15:52:10'),
+(19, '978-0-123456-7', 'Além das Estrelas ', 'Lucas Astrônomo', 4, 2021, 1, 'GB-4-L-1-3', 'Aventura', 'Conhecimento Press', 'Reservado', '2023-12-13 16:03:35'),
+(20, '978-0-234567-2', 'O Código da História', 'Clara Historiadora', 1, 1993, 5, 'CA-LE-N1', 'Mistério', 'Contos Coloridos', NULL, '2023-12-13 16:11:20'),
+(21, '978-0-345678-7', 'Entre Dois Mundos', 'Roberto Viajante', 1, 1993, 5, 'GB-4-L-1-3', 'Mistério', 'Editora Enigma', 'Disponível', '2023-12-13 16:14:05'),
 (22, '978-0-4567890-9', 'Poemas da Meia-Noite', 'Lídia Poetisa', 1, 1998, 1, 'GB-4-L-1-1', 'Literatura Infantojuvenil', 'Saraiva', 'Disponível', '2023-12-13 16:15:49'),
-(28, '985-59-562-10', 'Java e vida', 'Martine', 1, 1992, 1, 'CB-LD-NT', 'Aventura', 'Arte das Palavras', 'Disponível', '2025-02-19 13:25:39'),
+(28, '985-59-562-10', 'Java ', 'Martine', 1, 1992, 1, 'CB-LD-NT', 'Aventura', 'Arte das Palavras', 'Disponível', '2025-02-19 13:25:39'),
 (30, '234-443-44-24', 'Avançao da IA', 'Monteiro Lobato', 1, 2024, 1, 'CB-LD-NT', 'Alegria', 'Arte das Palavras', 'Disponível', '2025-02-19 23:51:49');
 
 -- --------------------------------------------------------
@@ -292,6 +296,7 @@ INSERT INTO `obra` (`codObra`, `Isbn`, `Titulo`, `Autor`, `Edicao`, `Ano`, `Copi
 CREATE TABLE `reservas` (
   `id_reserva` int(4) NOT NULL,
   `matricula_aluno` int(9) NOT NULL,
+  `turma_aluno` varchar(5) NOT NULL,
   `nome_aluno` varchar(50) NOT NULL,
   `titulo_livro` varchar(100) NOT NULL,
   `data_reserva` date NOT NULL,
@@ -304,12 +309,12 @@ CREATE TABLE `reservas` (
 -- Despejando dados para a tabela `reservas`
 --
 
-INSERT INTO `reservas` (`id_reserva`, `matricula_aluno`, `nome_aluno`, `titulo_livro`, `data_reserva`, `data_expiracao`, `situacao_reserva`, `data_registro`) VALUES
-(0, 202319204, 'Carol Maia', 'Java e vida', '2025-02-19', '2025-02-26', 'Disponível', '2025-02-19 14:40:23'),
-(13, 202320209, 'Debora Soares', ' O Jardim Secreto', '2024-08-09', '2024-08-16', 'Disponível', '2024-08-09 14:51:53'),
-(15, 202320206, 'Rafal oliveira', 'Entre Dois Mundos', '2024-08-09', '2024-08-17', 'Reservado', '2024-08-09 15:05:38'),
-(16, 202320205, 'Eminem Soares', 'O Código da História', '2024-08-17', '2024-08-21', 'Reservado', '2024-08-09 15:06:17'),
-(19, 202320209, 'Debora Soares', 'Java e vida', '2025-02-19', '2025-02-26', 'Disponível', '2025-02-19 14:18:59');
+INSERT INTO `reservas` (`id_reserva`, `matricula_aluno`, `turma_aluno`, `nome_aluno`, `titulo_livro`, `data_reserva`, `data_expiracao`, `situacao_reserva`, `data_registro`) VALUES
+(3, 202319204, '3º B', 'Carol Maia', 'O Código da História', '2025-02-16', '2025-03-02', 'Disponível', '2025-02-23 15:05:41'),
+(4, 202320208, '3º A', 'joão Gustavo', 'Além das Estrelas ', '2025-02-16', '2025-02-23', 'Reservado', '2025-02-23 15:09:12'),
+(5, 202320206, '3º A', 'Rafal oliveira', 'O Código da História', '2025-02-16', '2025-02-23', 'Disponível', '2025-02-23 15:10:33'),
+(6, 202319203, '4º A', 'Dani Martins', 'O Último Refúgio ', '2025-02-16', '2025-02-23', 'Disponível', '2025-02-23 15:31:40'),
+(7, 202319203, '4º A', 'Dani Martins', 'O Último Refúgio ', '2025-02-16', '2025-02-23', 'Reservado', '2025-02-23 15:43:30');
 
 -- --------------------------------------------------------
 
@@ -416,7 +421,7 @@ ALTER TABLE `acervo`
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `id_Aluno` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_Aluno` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT de tabela `autor`
@@ -429,6 +434,12 @@ ALTER TABLE `autor`
 --
 ALTER TABLE `editora`
   MODIFY `id_editora` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT de tabela `emprestimo`
+--
+ALTER TABLE `emprestimo`
+  MODIFY `id_emprestimo` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT de tabela `estado`
@@ -447,6 +458,12 @@ ALTER TABLE `genero`
 --
 ALTER TABLE `obra`
   MODIFY `codObra` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT de tabela `reservas`
+--
+ALTER TABLE `reservas`
+  MODIFY `id_reserva` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`

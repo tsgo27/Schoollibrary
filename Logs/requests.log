@@ -1,35 +1,79 @@
-[2025-02-23 15:23:14] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+[2025-02-23 15:43:30] Requisição recebida: POST - /schoollibrary/Models/Insert_Reservas.php
 {
     "csrf_token": "ac24e62cf17ccb1039c2ae81441d4332f9cc669b7eec8e32acb55c8539bcc4f8",
-    "add_matricula_aluno": "202320207",
+    "add_matricula_aluno": "202319203",
+    "add_turma_aluno": "4º A",
+    "add_nome_aluno": "Dani Martins",
+    "add_titulo_livro": "O Último Refúgio ",
+    "add_data_reserva": "2025-02-16",
+    "add_data_expiracao": "2025-02-23",
+    "add_situacao": "Reservado"
+}
+[2025-02-23 21:49:46] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "2f3ad129cace08c304e7043f93bea58147d5f53acd06e0c0c1ae69bdcc5f0afc",
+    "codReserva": "7",
+    "editaMatricula": "202319203",
+    "editaTurma": "4º A",
+    "editaAluno": "Dani Martins",
+    "editaTitulo": "O Último Refúgio ",
+    "editaReserva": "2025-02-16",
+    "editaExpiracao": "2025-02-23",
+    "editaSituacao": "Disponível"
+}
+[2025-02-23 21:51:09] Requisição recebida: POST - /schoollibrary/Models/Insert_Reservas.php
+{
+    "csrf_token": "2f3ad129cace08c304e7043f93bea58147d5f53acd06e0c0c1ae69bdcc5f0afc",
+    "add_matricula_aluno": "202320206",
     "add_turma_aluno": "3º A",
-    "add_nome_aluno": "Ivani Filho",
+    "add_nome_aluno": "Rafal oliveira",
+    "add_titulo_livro": " O Jardim Secreto",
+    "add_data_reserva": "2025-02-16",
+    "add_data_expiracao": "2025-02-23",
+    "add_situacao": "Reservado"
+}
+[2025-02-23 21:51:40] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "2f3ad129cace08c304e7043f93bea58147d5f53acd06e0c0c1ae69bdcc5f0afc",
+    "codReserva": "8",
+    "editaMatricula": "202320206",
+    "editaTurma": "3º A",
+    "editaAluno": "Rafal oliveira",
+    "editaTitulo": " O Jardim Secreto",
+    "editaReserva": "2025-02-16",
+    "editaExpiracao": "2025-02-23",
+    "editaSituacao": "Disponível"
+}
+[2025-02-23 21:52:28] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "2f3ad129cace08c304e7043f93bea58147d5f53acd06e0c0c1ae69bdcc5f0afc",
+    "add_matricula_aluno": "202320206",
+    "add_turma_aluno": "3º A",
+    "add_nome_aluno": "Rafal oliveira",
     "add_titulo_livro": " O Jardim Secreto",
     "add_data_emprestimo": "2025-02-16",
     "add_data_devolucao": "2025-02-23",
     "add_status_livro": "Emprestado"
 }
-[2025-02-23 15:23:29] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+[2025-02-23 22:00:07] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
 {
-    "csrf_token": "ac24e62cf17ccb1039c2ae81441d4332f9cc669b7eec8e32acb55c8539bcc4f8",
-    "codEmprestimo": "33",
-    "editaMatricula": "202320207",
-    "editaTurma": "3º A",
-    "editaAluno": "Ivani Filho",
-    "editaTitulo": " O Jardim Secreto",
-    "editaEmprestimo": "2025-02-16",
-    "editaDevolucao": "2025-02-23",
-    "Status_Livro": "Disponível"
+    "csrf_token": "2f3ad129cace08c304e7043f93bea58147d5f53acd06e0c0c1ae69bdcc5f0afc",
+    "add_matricula_aluno": "202320207",
+    "add_turma_aluno": "3º A",
+    "add_nome_aluno": "Ivani Filho",
+    "add_titulo_livro": "O Último Refúgio ",
+    "add_data_emprestimo": "2025-02-16",
+    "add_data_devolucao": "2025-02-23",
+    "add_status_livro": "Emprestado"
 }
-[2025-02-23 15:24:26] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+[2025-02-23 22:02:20] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
 {
-    "csrf_token": "ac24e62cf17ccb1039c2ae81441d4332f9cc669b7eec8e32acb55c8539bcc4f8",
-    "codReserva": "5",
-    "editaMatricula": "202320206",
-    "editaTurma": "3º A",
-    "editaAluno": "Rafal oliveira",
-    "editaTitulo": "O Código da História",
-    "editaReserva": "2025-02-16",
-    "editaExpiracao": "2025-02-23",
-    "editaSituacao": "Disponível"
+    "csrf_token": "2f3ad129cace08c304e7043f93bea58147d5f53acd06e0c0c1ae69bdcc5f0afc",
+    "add_matricula_aluno": "202319202",
+    "add_turma_aluno": "2º A",
+    "add_nome_aluno": "Daniel Soares",
+    "add_titulo_livro": "Aventuras Fantásticas",
+    "add_data_emprestimo": "2025-02-16",
+    "add_data_devolucao": "2025-03-02",
+    "add_status_livro": "Emprestado"
 }

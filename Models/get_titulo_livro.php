@@ -14,8 +14,8 @@ $query->execute();
 $results = $query->fetchAll(PDO::FETCH_ASSOC);
 if ($results) {
     foreach ($results as $result) {
-        $titulo = htmlspecialchars($result['Titulo']);
-        $situacao = htmlspecialchars($result['Situacao']);
+        $titulo = htmlspecialchars($result['Titulo'] ?? '', ENT_QUOTES, 'UTF-8');
+        $situacao = htmlspecialchars($result['Situacao'] ?? 'Indisponível', ENT_QUOTES, 'UTF-8'); // Define um valor padrão
 
         if ($situacao == 'Disponível') {
             $suggestion = '<div class="titulo-suggestion clickable" data-titulo="' . $titulo . '">
@@ -33,3 +33,4 @@ if ($results) {
 } else {
     echo 'Sem sugestões ou livro não disponível';
 }
+
