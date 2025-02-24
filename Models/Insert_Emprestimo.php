@@ -44,6 +44,7 @@
             $stmt->bindParam('add_data_devolucao', $DateDevolucao);
             $stmt->bindParam('add_status_livro', $Status);
             $stmt->execute();
+
         } catch (Exception $e) {
             logMessage("Erro ao processar emprestimo: " . $e->getMessage());
             echo "Erro ao inserir a emprestimo revise código. Consulte o suporte técnico.";
@@ -65,10 +66,12 @@
             $stmtUpdateObra->bindValue(':Situacao', $Status);
             $stmtUpdateObra->bindValue(':AddTitulo', $titulo);
             $stmtUpdateObra->execute();
+
         } catch (Exception $e) {
             logMessage("Erro ao processar reserva: " . $e->getMessage());
             echo "Erro ao processar a reserva. Consulte o suporte técnico.";
             exit();
+            
         } finally {
             // Fecha as declarações e a conexão com o banco de dados
             $stmt = null;

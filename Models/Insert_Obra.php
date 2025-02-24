@@ -31,13 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Cria a query de inserção
         $sql = "INSERT INTO obra (Isbn, Titulo, Autor, Edicao, Ano, Copia, Acervo, Genero, Editora, Situacao, data_registro)
-                VALUES (:isbn, :titulo, :autor, :edicao, :ano, :copia, :acervo, :genero, :editora, :situacao, NOW())";
-
+        VALUES (:isbn, :titulo, :autor, :edicao, :ano, :copia, :acervo, :genero, :editora, :situacao, NOW())";
         $stmt = $pdo->prepare($sql);
 
         if (!$stmt) {
-            echo "Erro na preparação da declaração: " . $pdo->errorInfo()[2];
-            exit;
+            throw new Exception("Erro na preparação da declaração de inserção: " . implode(" | ", $pdo->errorInfo()));
         }
 
         // Vincula os parâmetros com os valores
@@ -60,13 +58,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Se ocorreu algum erro na inserção, exibe uma mensagem de erro
             echo "Ocorreu um erro durante o cadastro. Tente novamente mais tarde.";
         }
-    } catch (Exception $e) {
-        echo "Ocorreu um erro: " . $e->getMessage();
-        exit();
-    }
 
-    // Fecha a declaração e a conexão com o banco de dados
-    $stmt = null;
-    $pdo = null;
+    } catch (Exception $e) {
+        logMessage("Erro ao processar a inserção da obra: " . $e->getMessage());
+        echo "Ocorreu um erro ao cadastrar a obra. Consulte o suporte técnico.";
+        exit();
+        
+    } finally {
+        // Fecha a declaração e a conexão com o banco de dados
+        $stmt = null;
+        $pdo = null;
+    }
 }
 ?>

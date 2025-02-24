@@ -13,49 +13,47 @@ if (!isset($_SESSION['csrf_token'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Verifica o token CSRF
-        if (!verify_csrf_token($_POST['csrf_token'])) {
+        if (!isset($_POST['csrf_token']) || !verify_csrf_token($_POST['csrf_token'])) {
             throw new Exception('Token CSRF inválido');
         }
 
-        // Filtrando os dados do formulário usando apenas htmlspecialchars()
-        $codEditora = htmlspecialchars(filter_input(INPUT_POST, 'codEditora', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        // Filtrando os dados do formulário
+        $codEditora = filter_input(INPUT_POST, 'codEditora', FILTER_SANITIZE_NUMBER_INT);
         $editora = htmlspecialchars(filter_input(INPUT_POST, 'editaEditora', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $cidade = htmlspecialchars(filter_input(INPUT_POST, 'editaCidade', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $estado = htmlspecialchars(filter_input(INPUT_POST, 'editaEstado', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $editaStatus = htmlspecialchars(filter_input(INPUT_POST, 'editaStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
+
         // Cria a query de atualização usando Prepared Statements
-        $sql = "UPDATE editora SET nome_editora = :editora, cidade_editora = :cidade, estado_editora = :estado, status_editora = :editaStatus WHERE id_editora = :codEditora";
+        $sql = "UPDATE editora SET nome_editora = :editora, cidade_editora = :cidade, estado_editora = :estado, status_editora = :editaStatus 
+        WHERE id_editora = :codEditora";
         $stmt = $pdo->prepare($sql);
 
         if (!$stmt) {
-            throw new Exception("Erro na preparação da declaração: " . $pdo->errorInfo()[2]);
+            throw new Exception("Erro na preparação da declaração: " . implode(" | ", $pdo->errorInfo()));
         }
 
         // Vincula os parâmetros com os valores
-        $stmt->bindValue(':codEditora', $codEditora);
-        $stmt->bindValue(':editora', $editora);
-        $stmt->bindValue(':cidade', $cidade);
-        $stmt->bindValue(':estado', $estado);
-        $stmt->bindValue(':editaStatus', $editaStatus);
+        $stmt->bindValue(':codEditora', $codEditora, PDO::PARAM_INT);
+        $stmt->bindValue(':editora', $editora, PDO::PARAM_STR);
+        $stmt->bindValue(':cidade', $cidade, PDO::PARAM_STR);
+        $stmt->bindValue(':estado', $estado, PDO::PARAM_STR);
+        $stmt->bindValue(':editaStatus', $editaStatus, PDO::PARAM_STR);
 
         // Executa a query de atualização
-        if ($stmt->execute()) {
-            // Redireciona o usuário para a página de origem
-            header("Location: http://localhost/schoollibrary/views/Editora.php");
-            exit();
-        } else {
-            throw new Exception("Erro na atualização");
-        }
-        
-    } catch (Exception $e) {
-        // Tratar outras exceções
-        echo "Ocorreu um erro: " . $e->getMessage();
+        $stmt->execute();
+        logMessage("Editora atualizada com sucesso: ID $codEditora");
         exit();
+
+    } catch (Exception $e) {
+        logMessage("Erro ao atualizar editora: " . $e->getMessage());
+        echo "Ocorreu um erro. Consulte o suporte técnico.";
+        exit();
+        
     } finally {
         // Fecha a declaração e a conexão com o banco de dados
         $stmt = null;
         $pdo = null;
     }
 }
-?>

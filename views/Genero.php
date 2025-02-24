@@ -154,9 +154,9 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label>Gênero</label>
-                                        <input type="text" name="addGenero" id="addGenero" maxlength="80" class="form-control" required>
+                                        <input type="text" name="add_genero" id="add_genero" maxlength="60" class="form-control" required>
                                         <label>Status</label>
-                                        <select name="addStatus" id="addStatus" class="form-control" required>
+                                        <select name="add_status" id="add_status" class="form-control" required>
                                             <option value="Ativo">Ativo</option>
                                             <option value="Inativo">Inativo</option>
                                         </select>
@@ -166,15 +166,15 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                                     <input type="submit" name="submit" id="submitAdicionar" class="btn btn-success" value="Adicionar">
                                 </div>
-                        </div>
+                            </div>
                         </form>
                     </div>
                 </div>
-                <!---------Modal Acervo Gênero--END----------------->
+                <!---------Modal Adicionar Gênero--END----------------->
 
 
 
-                <!---------Modal Editar Gênero-Start---------------->
+                <!---------Modal Editar Gênero-Start------------------->
                 <div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">

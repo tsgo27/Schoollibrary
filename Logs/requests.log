@@ -154,3 +154,427 @@
     "user_tipo": "Administrador",
     "user_status": "Ativo"
 }
+[2025-02-24 10:19:19] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codReserva": "5",
+    "editaMatricula": "202320206",
+    "editaTurma": "3º A",
+    "editaAluno": "Rafal oliveira",
+    "editaTitulo": "O Código da História",
+    "editaReserva": "2025-02-16",
+    "editaExpiracao": "2025-02-23",
+    "editaSituacao": "Reservado"
+}
+[2025-02-24 10:23:13] Requisição recebida: POST - /schoollibrary/Models/Insert_Reservas.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_matricula_aluno": "202320207",
+    "add_turma_aluno": "3º A",
+    "add_nome_aluno": "Ivani Filho",
+    "add_titulo_livro": "Avançao da IA",
+    "add_data_reserva": "2025-02-17",
+    "add_data_expiracao": "2025-02-24",
+    "add_situacao": "Reservado"
+}
+[2025-02-24 10:33:55] Requisição recebida: POST - /schoollibrary/Models/Insert_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_editora": "Veja",
+    "add_cidade": "Aparecida",
+    "add_estado": "Goiás-GO",
+    "add_status": "Ativo"
+}
+[2025-02-24 10:34:46] Requisição recebida: POST - /schoollibrary/Models/Insert_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_editora": "Vaja 2",
+    "add_cidade": "Aparecida",
+    "add_estado": "Goiás-GO",
+    "add_status": "Ativo"
+}
+[2025-02-24 10:35:29] Requisição recebida: POST - /schoollibrary/Models/Insert_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_editora": "Veja 2",
+    "add_cidade": "Aparecida",
+    "add_estado": "Goiás-GO",
+    "add_status": "Ativo"
+}
+[2025-02-24 10:37:23] Requisição recebida: POST - /schoollibrary/Models/Insert_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_editora": "veja 2",
+    "add_cidade": "Aparecida",
+    "add_estado": "Goiás-GO",
+    "add_status": "Ativo"
+}
+[2025-02-24 10:37:23] Erro ao processar editora: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+[2025-02-24 10:38:21] Requisição recebida: POST - /schoollibrary/Models/Insert_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_editora": "Veja 2",
+    "add_cidade": "Aparecida",
+    "add_estado": "Acre-AC",
+    "add_status": "Ativo"
+}
+[2025-02-24 10:38:21] Erro ao processar editora: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'school_library.editor' doesn't exist
+[2025-02-24 10:46:28] Requisição recebida: POST - /schoollibrary/Models/Insert_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_editora": "veja 2",
+    "add_cidade": "Aparecida",
+    "add_estado": "Acre-AC",
+    "add_status": "Ativo"
+}
+[2025-02-24 10:46:28] Erro ao processar editora: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'school_library.editor' doesn't exist
+[2025-02-24 10:47:50] Requisição recebida: POST - /schoollibrary/Models/Insert_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_editora": "Veja 2",
+    "add_cidade": "Aparecida",
+    "add_estado": "Acre-AC",
+    "add_status": "Ativo"
+}
+[2025-02-24 10:47:50] Erro ao processar editora: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+[2025-02-24 10:49:21] Requisição recebida: POST - /schoollibrary/Models/Insert_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_editora": "Veja",
+    "add_cidade": "Aparecida",
+    "add_estado": "Acre-AC",
+    "add_status": "Ativo"
+}
+[2025-02-24 10:49:31] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codEditora": "36",
+    "editaEditora": "Veja 2",
+    "editaCidade": "Aparecida",
+    "editaEstado": "Acre-AC",
+    "editaStatus": "Ativo"
+}
+[2025-02-24 10:49:54] Requisição recebida: POST - /schoollibrary/Models/Insert_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_editora": "Veja",
+    "add_cidade": "Aparecida",
+    "add_estado": "Acre-AC",
+    "add_status": "Ativo"
+}
+[2025-02-24 10:54:53] Requisição recebida: POST - /schoollibrary/Models/Insert_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_editora": "Veja 2",
+    "add_cidade": "Aparecida",
+    "add_estado": "Acre-AC",
+    "add_status": "Ativo"
+}
+[2025-02-24 10:55:56] Requisição recebida: POST - /schoollibrary/Models/Insert_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_editora": "Veja 3",
+    "add_cidade": "Aparecida",
+    "add_estado": "Acre-AC",
+    "add_status": "Ativo"
+}
+[2025-02-24 11:00:29] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codEditora": "39",
+    "editaEditora": "Veja 3",
+    "editaCidade": "Aparecida",
+    "editaEstado": "Acre-AC",
+    "editaStatus": "Ativo"
+}
+[2025-02-24 11:00:29] Editora atualizada com sucesso: ID 39
+[2025-02-24 11:06:52] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codEditora": "39",
+    "editaEditora": "Veja 3",
+    "editaCidade": "Aparecida",
+    "editaEstado": "Alagoas-AL",
+    "editaStatus": "Ativo"
+}
+[2025-02-24 11:06:52] Editora atualizada com sucesso: ID 39
+[2025-02-24 11:06:59] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codEditora": "39",
+    "editaEditora": "Veja 3",
+    "editaCidade": "Aparecida",
+    "editaEstado": "Bahia-BA",
+    "editaStatus": "Ativo"
+}
+[2025-02-24 11:06:59] Editora atualizada com sucesso: ID 39
+[2025-02-24 11:11:25] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codEditora": "39",
+    "editaEditora": "Veja 3",
+    "editaCidade": "Aparecida",
+    "editaEstado": "Acre-AC",
+    "editaStatus": "Ativo"
+}
+[2025-02-24 11:11:25] Editora atualizada com sucesso: ID 39
+[2025-02-24 11:21:25] Requisição recebida: POST - /schoollibrary/Models/Insert_Genero.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_genero": "His",
+    "add_status": "Ativo"
+}
+[2025-02-24 11:21:25] Erro ao processar gênero: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+[2025-02-24 11:22:35] Requisição recebida: POST - /schoollibrary/Models/Insert_Genero.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_genero": "His",
+    "add_status": "Ativo"
+}
+[2025-02-24 11:22:35] Erro ao processar gênero: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+[2025-02-24 11:25:55] Requisição recebida: POST - /schoollibrary/Models/Insert_Genero.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_genero": "His",
+    "add_status": "Ativo"
+}
+[2025-02-24 11:25:55] Erro ao processar gênero: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+[2025-02-24 11:28:00] Requisição recebida: POST - /schoollibrary/Models/Insert_Genero.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_genero": "His",
+    "add_status": "Ativo"
+}
+[2025-02-24 11:28:49] Requisição recebida: POST - /schoollibrary/Models/Update_Genero.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codGenero": "31",
+    "editaGenero": "Hist",
+    "editaStatus": "Ativo"
+}
+[2025-02-24 11:33:10] Requisição recebida: POST - /schoollibrary/Models/Update_Genero.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codGenero": "31",
+    "editaGenero": "Histio",
+    "editaStatus": "Ativo"
+}
+[2025-02-24 11:33:10] gênero atualizada com sucesso: ID 31
+[2025-02-24 11:33:24] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codEditora": "39",
+    "editaEditora": "Veja 3",
+    "editaCidade": "Aparecida",
+    "editaEstado": "Amazonas-AM",
+    "editaStatus": "Ativo"
+}
+[2025-02-24 11:33:24] Editora atualizada com sucesso: ID 39
+[2025-02-24 11:52:16] Requisição recebida: POST - /schoollibrary/Models/Insert_Genero.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_genero": "Ale",
+    "add_status": "Ativo"
+}
+[2025-02-24 11:53:32] Requisição recebida: POST - /schoollibrary/Models/Insert_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_editora": "Lux",
+    "add_cidade": "Aparecida",
+    "add_estado": "Acre-AC",
+    "add_status": "Ativo"
+}
+[2025-02-24 11:58:18] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "AddIsbn": "234-443-44-24",
+    "AddTitulo": "História de zico",
+    "AddAutor": "Martine",
+    "AddEdicao": "1",
+    "AddAno": "1981",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Historia",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-24 12:01:26] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "AddIsbn": "234-443-44-24",
+    "AddTitulo": "História de zico",
+    "AddAutor": "Martine",
+    "AddEdicao": "1",
+    "AddAno": "1981",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Historia",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-24 12:04:03] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "AddIsbn": "985-59-562-1",
+    "AddTitulo": "História de Zico",
+    "AddAutor": "Amanda Silva",
+    "AddEdicao": "1",
+    "AddAno": "1981",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-RW",
+    "AddGenero": "Historia",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-24 12:05:05] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "AddIsbn": "234-443-44-24",
+    "AddTitulo": "História de zico",
+    "AddAutor": " Sofia Jardineira",
+    "AddEdicao": "1",
+    "AddAno": "1981",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Historia",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-24 12:06:04] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "AddIsbn": "234-443-44-24",
+    "AddTitulo": "História de zico",
+    "AddAutor": "Amanda Silva",
+    "AddEdicao": "1",
+    "AddAno": "1981",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Historia",
+    "AddEditora": "Lux",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-24 12:07:41] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "AddIsbn": "234-443-44-24",
+    "AddTitulo": "Zico",
+    "AddAutor": "Amanda Silva",
+    "AddEdicao": "1",
+    "AddAno": "1981",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Historia",
+    "AddEditora": "Exploração Livros",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-24 13:37:29] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codAutor": "37",
+    "editaAutor": "Maria Silvb",
+    "editaStatus": "Ativo"
+}
+[2025-02-24 13:37:34] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codAutor": "37",
+    "editaAutor": "Maria Silva",
+    "editaStatus": "Ativo"
+}
+[2025-02-24 13:37:40] Requisição recebida: POST - /schoollibrary/Models/Update_Editora.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codEditora": "40",
+    "editaEditora": "Lux",
+    "editaCidade": "Aparecida",
+    "editaEstado": "Amapá-AP",
+    "editaStatus": "Ativo"
+}
+[2025-02-24 13:37:40] Editora atualizada com sucesso: ID 40
+[2025-02-24 13:37:48] Requisição recebida: POST - /schoollibrary/Models/Update_Acervo.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codAcervo": "26",
+    "editaAcervo": "CB-LD-89",
+    "editaStatus": "Ativo"
+}
+[2025-02-24 13:37:55] Requisição recebida: POST - /schoollibrary/Models/Update_Genero.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codGenero": "32",
+    "editaGenero": "Alef",
+    "editaStatus": "Ativo"
+}
+[2025-02-24 13:37:55] gênero atualizada com sucesso: ID 32
+[2025-02-24 13:38:02] Requisição recebida: POST - /schoollibrary/Models/Insert_Genero.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "add_genero": "Feli",
+    "add_status": "Ativo"
+}
+[2025-02-24 13:39:20] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codObra": "36",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Zico Rj",
+    "editaAutor": "",
+    "editaEdicao": "1",
+    "editaAno": "1981",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Historia",
+    "editaEditora": "Exploração Livros"
+}
+[2025-02-24 13:41:33] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "AddIsbn": "234-443-44-2",
+    "AddTitulo": "Flamengo",
+    "AddAutor": "Amanda Silva",
+    "AddEdicao": "1",
+    "AddAno": "2025",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-RW",
+    "AddGenero": "Alef",
+    "AddEditora": "Saraiva",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-24 13:42:57] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "AddIsbn": "458-5658-5562",
+    "AddTitulo": "lIS",
+    "AddAutor": "Amanda Silva",
+    "AddEdicao": "1",
+    "AddAno": "3",
+    "AddCopia": "4",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Alef",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-24 13:46:15] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "AddIsbn": "234-443-44-24",
+    "AddTitulo": "O pinoquio",
+    "AddAutor": "Carlos Cientista",
+    "AddEdicao": "1",
+    "AddAno": "1928",
+    "AddCopia": "2",
+    "AddAcervo": "CB-LD-89",
+    "AddGenero": "Alef",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}

@@ -158,11 +158,11 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label>Editora</label>
-                                        <input type="text" name="AddEditora" id="AddEditora" maxlength="60" class="form-control" required>
+                                        <input type="text" name="add_editora" id="add_editora" maxlength="60" class="form-control" required>
                                         <label>Cidade</label>
-                                        <input type="text" name="AddCidade" id="AddCidade" maxlength="60" class="form-control" required>
+                                        <input type="text" name="add_cidade" id="add_cidade" maxlength="60" class="form-control" required>
                                         <label>Estado</label>
-                                        <select name="addEstado" id="addEstado" class="form-control" required>
+                                        <select name="add_estado" id="add_estado" class="form-control" required>
                                             <?php
                                             require_once __DIR__ . '/../Config/bootstrap.php';
                                             $query = $pdo->query("SELECT nome_estado FROM estado;");
@@ -174,7 +174,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                             ?>
                                         </select>
                                         <label>Status</label>
-                                        <select name="addStatus" id="addStatus" class="form-control" required>
+                                        <select name="add_status" id="add_status" class="form-control" required>
                                             <option value="Ativo">Ativo</option>
                                             <option value="Inativo">Inativo</option>
                                         </select>
@@ -184,11 +184,11 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                                     <input type="submit" name="submit" id="submitAdicionar" class="btn btn-success" value="Adicionar">
                                 </div>
-                        </div>
+                            </div>
                         </form>
                     </div>
                 </div>
-                <!---------Modal Acervo Editora--END---------------->
+                <!---------Modal Adicionar Editora--END------------->
 
 
 

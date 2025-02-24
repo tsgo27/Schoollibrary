@@ -22,32 +22,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $genero = htmlspecialchars(filter_input(INPUT_POST, 'editaGenero', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $statusGenero = htmlspecialchars(filter_input(INPUT_POST, 'editaStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
+
         // Cria a query de atualização usando Prepared Statements
-        $sql = "UPDATE genero SET nome_genero = :genero, status_genero = :statusGenero WHERE 	id_genero = :codGenero";
+        $sql = "UPDATE genero SET nome_genero = :genero, status_genero = :statusGenero WHERE id_genero = :codGenero";
         $stmt = $pdo->prepare($sql);
 
         if (!$stmt) {
-            throw new Exception("Erro na preparação da declaração: " . $pdo->errorInfo()[2]);
+            throw new Exception("Erro na preparação da declaração: " . implode(" | ", $pdo->errorInfo()));
         }
 
         // Vincula os parâmetros com os valores
-        $stmt->bindValue(':codGenero', $codGenero);
-        $stmt->bindValue(':genero', $genero);
-        $stmt->bindValue(':statusGenero', $statusGenero);
+        $stmt->bindValue(':codGenero', $codGenero, PDO::PARAM_INT);
+        $stmt->bindValue(':genero', $genero, PDO::PARAM_STR);
+        $stmt->bindValue(':statusGenero', $statusGenero, PDO::PARAM_STR);
 
         // Executa a query de atualização
-        if ($stmt->execute()) {
-            // Redireciona o usuário para a página de origem
-            header("Location: http://localhost/schoollibrary/views/Genero.php");
-            exit();
-        } else {
-            throw new Exception("Erro na atualização");
-        }
+        $stmt->execute();
+        logMessage("gênero atualizada com sucesso: ID $codGenero");
+        exit();
         
     } catch (Exception $e) {
-        // Tratar outras exceções
-        echo "Ocorreu um erro: " . $e->getMessage();
+        logMessage("Erro ao atualizar editora: " . $e->getMessage());
+        echo "Ocorreu um erro. Consulte o suporte técnico.";
         exit();
+
     } finally {
         // Fecha a declaração e a conexão com o banco de dados
         $stmt = null;

@@ -1,8 +1,9 @@
 <?php
-session_start();
+
 ini_set('session.cookie_secure', 1);  // Se o site usa HTTPS, ativa cookies seguros
 ini_set('session.cookie_httponly', 1); // Impede acesso aos cookies via JavaScript
 
+session_start();
 require_once __DIR__ . '/../Config/config_database.php';
 require_once __DIR__ . '/../Config/config_csrf.php';
 

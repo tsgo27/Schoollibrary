@@ -36,13 +36,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Vincula os parâmetros com os valores
-        $stmt->bindValue(':add_matricula_aluno', $matricula);
-        $stmt->bindValue(':add_turma_aluno', $turma);
-        $stmt->bindValue(':add_nome_aluno', $aluno);
-        $stmt->bindValue(':add_titulo_livro', $titulo);
-        $stmt->bindValue(':add_data_reserva', $dataReserva);
-        $stmt->bindValue(':add_expiracao', $dataExpiracao);
-        $stmt->bindValue(':add_situacao', $status);
+        $stmt->bindValue('add_matricula_aluno', $matricula);
+        $stmt->bindValue('add_turma_aluno', $turma);
+        $stmt->bindValue('add_nome_aluno', $aluno);
+        $stmt->bindValue('add_titulo_livro', $titulo);
+        $stmt->bindValue('add_data_reserva', $dataReserva);
+        $stmt->bindValue('add_expiracao', $dataExpiracao);
+        $stmt->bindValue('add_situacao', $status);
         $stmt->execute();
 
     } catch (Exception $e) {
