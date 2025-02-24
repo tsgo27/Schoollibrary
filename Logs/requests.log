@@ -77,3 +77,14 @@
     "add_data_devolucao": "2025-03-02",
     "add_status_livro": "Emprestado"
 }
+[2025-02-23 22:27:43] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "2f3ad129cace08c304e7043f93bea58147d5f53acd06e0c0c1ae69bdcc5f0afc",
+    "add_matricula_aluno": "202320121",
+    "add_turma_aluno": "1º A",
+    "add_nome_aluno": "Maria",
+    "add_titulo_livro": "Java ",
+    "add_data_emprestimo": "2025-02-16",
+    "add_data_devolucao": "2025-02-23",
+    "add_status_livro": "Emprestado"
+}

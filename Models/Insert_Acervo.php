@@ -4,7 +4,6 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 // Registra no log o tipo de requisição (GET, POST, etc.) e a URL acessada
 logMessage("Requisição recebida: " . $_SERVER['REQUEST_METHOD'] . " - " . $_SERVER['REQUEST_URI'], $_REQUEST);
 
-
 // Gera o token CSRF se ainda não existir
 if (!isset($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -21,9 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $AddAcervo = htmlspecialchars(filter_input(INPUT_POST, 'AddAcervo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $Status = htmlspecialchars(filter_input(INPUT_POST, 'AddStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
-        
+
         // Verificando se os campos obrigatórios estão preenchidos
-        if (empty($AddAcervo) ||empty($Status)) {
+        if (empty($AddAcervo) || empty($Status)) {
             exit();
         }
 
@@ -35,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Erro na preparação da declaração: " . $pdo->errorInfo()[2];
             exit;
         }
-        
+
         $stmt->bindParam(1, $AddAcervo);
         $stmt->bindParam(2, $Status);
 
@@ -55,4 +54,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = null;
     $pdo = null;
 }
-?>

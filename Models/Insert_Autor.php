@@ -4,7 +4,6 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 // Registra no log o tipo de requisição (GET, POST, etc.) e a URL acessada
 logMessage("Requisição recebida: " . $_SERVER['REQUEST_METHOD'] . " - " . $_SERVER['REQUEST_URI'], $_REQUEST);
 
-
 // Gera o token CSRF se ainda não existir
 if (!isset($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -16,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!verify_csrf_token($_POST['csrf_token'])) {
             throw new Exception('Token CSRF inválido');
         }
-        
+
         // Filtrando os dados do formulário usando htmlspecialchars()
         $Autor = htmlspecialchars(filter_input(INPUT_POST, 'addAutor', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $Status = htmlspecialchars(filter_input(INPUT_POST, 'addStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
@@ -42,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             // Redireciona o usuário para a página de origem.
             header("Location: http://localhost/schoollibrary/views/Autor.php");
-            exit(); 
+            exit();
         } else {
             // Se ocorreu algum erro na inserção, exibe uma mensagem de erro
             echo "Ocorreu um erro durante o cadastro. Tente novamente mais tarde.";
@@ -56,4 +55,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = null;
     $pdo = null;
 }
-?>

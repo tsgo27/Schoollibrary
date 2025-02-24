@@ -4,6 +4,10 @@
     // Registra no log o tipo de requisição (POST) e a URL acessada
     logMessage("Requisição recebida: " . $_SERVER['REQUEST_METHOD'] . " - " . $_SERVER['REQUEST_URI'], $_REQUEST);
 
+    // Gera o token CSRF se ainda não existir
+    if (!isset($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         try {
@@ -39,8 +43,6 @@
             $stmt->bindParam('add_data_devolucao', $DateDevolucao);
             $stmt->bindParam('add_status_livro', $Status);
             $stmt->execute();
-
-
         } catch (Exception $e) {
             logMessage("Erro ao processar emprestimo: " . $e->getMessage());
             echo "Erro ao inserir a emprestimo revise código. Consulte o suporte técnico.";
@@ -62,12 +64,10 @@
             $stmtUpdateObra->bindValue(':Situacao', $Status);
             $stmtUpdateObra->bindValue(':AddTitulo', $titulo);
             $stmtUpdateObra->execute();
-
         } catch (Exception $e) {
-            logMessage("Erro ao processar reserva: " . $e->getMessage()); 
+            logMessage("Erro ao processar reserva: " . $e->getMessage());
             echo "Erro ao processar a reserva. Consulte o suporte técnico.";
             exit();
-
         } finally {
             // Fecha as declarações e a conexão com o banco de dados
             $stmt = null;

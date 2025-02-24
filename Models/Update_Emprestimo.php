@@ -4,6 +4,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 // Registra no log o tipo de requisição (POST) e a URL acessada
 logMessage("Requisição recebida: " . $_SERVER['REQUEST_METHOD'] . " - " . $_SERVER['REQUEST_URI'], $_REQUEST);
 
+
 // Gera o token CSRF se ainda não existir
 if (!isset($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
