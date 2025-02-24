@@ -17,19 +17,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Filtra os dados do formulário usando htmlspecialchars() e filter_input()
-        $codObra = htmlspecialchars(filter_input(INPUT_POST, 'codObra', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $isbn = htmlspecialchars(filter_input(INPUT_POST, 'editaIsbn', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $titulo = htmlspecialchars(filter_input(INPUT_POST, 'editaTitulo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $autor = htmlspecialchars(filter_input(INPUT_POST, 'editaAutor', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $edicao = htmlspecialchars(filter_input(INPUT_POST, 'editaEdicao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $ano = htmlspecialchars(filter_input(INPUT_POST, 'editaAno', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $copia = htmlspecialchars(filter_input(INPUT_POST, 'editaCopia', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $acervo = htmlspecialchars(filter_input(INPUT_POST, 'editaAcervo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $genero = htmlspecialchars(filter_input(INPUT_POST, 'editaGenero', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $editora = htmlspecialchars(filter_input(INPUT_POST, 'editaEditora', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $codObra = htmlspecialchars(filter_input(INPUT_POST, 'codObra', FILTER_DEFAULT) ?? '', ENT_QUOTES, 'UTF-8');
+        $isbn = htmlspecialchars(filter_input(INPUT_POST, 'editaIsbn', FILTER_DEFAULT) ?? '', ENT_QUOTES, 'UTF-8');
+        $titulo = htmlspecialchars(filter_input(INPUT_POST, 'editaTitulo', FILTER_DEFAULT) ?? '', ENT_QUOTES, 'UTF-8');
+        $autor = htmlspecialchars(filter_input(INPUT_POST, 'editaAutor', FILTER_DEFAULT) ?? '', ENT_QUOTES, 'UTF-8');
+        $edicao = htmlspecialchars(filter_input(INPUT_POST, 'editaEdicao', FILTER_DEFAULT) ?? '', ENT_QUOTES, 'UTF-8');
+        $ano = htmlspecialchars(filter_input(INPUT_POST, 'editaAno', FILTER_DEFAULT) ?? '', ENT_QUOTES, 'UTF-8');
+        $copia = htmlspecialchars(filter_input(INPUT_POST, 'editaCopia', FILTER_DEFAULT) ?? '', ENT_QUOTES, 'UTF-8');
+        $acervo = htmlspecialchars(filter_input(INPUT_POST, 'editaAcervo', FILTER_DEFAULT) ?? '', ENT_QUOTES, 'UTF-8');
+        $genero = htmlspecialchars(filter_input(INPUT_POST, 'editaGenero', FILTER_DEFAULT) ?? '', ENT_QUOTES, 'UTF-8');
+        $editora = htmlspecialchars(filter_input(INPUT_POST, 'editaEditora', FILTER_DEFAULT) ?? '', ENT_QUOTES, 'UTF-8');
+
 
         // Verificar se 'editaSituacao' foi enviado. Se não, busca o valor atual no banco de dados
-        $situacao = htmlspecialchars(filter_input(INPUT_POST, 'editaSituacao', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $situacao = htmlspecialchars(filter_input(INPUT_POST, 'editaSituacao', FILTER_DEFAULT)?? '', ENT_QUOTES, 'UTF-8');
         
         // Se 'editaSituacao' não foi enviado (está vazio), obter o valor atual da obra no banco de dados
         if (empty($situacao)) {

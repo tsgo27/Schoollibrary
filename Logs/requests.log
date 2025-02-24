@@ -699,3 +699,42 @@
     "editaGenero": "Mistério",
     "editaEditora": "Editora Enigma"
 }
+[2025-02-24 14:52:33] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "33",
+    "matricula": "202320208",
+    "editaTurma": "3º A",
+    "editarNome": "joão Gustavo",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "joao.gustavo@teste.com",
+    "editarStatus": "Inativo"
+}
+[2025-02-24 14:56:47] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+[2025-02-24 14:56:47] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-26",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "3",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras"
+}
+[2025-02-24 15:00:34] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "8226ea8cb0a9689e14518908cb32acff50bc66071fff6d67a421be16d91bcb65",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-27",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "3",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras"
+}
