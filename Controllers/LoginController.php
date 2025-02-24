@@ -1,17 +1,12 @@
 <?php
-
+session_start();
 ini_set('session.cookie_secure', 1);  // Se o site usa HTTPS, ativa cookies seguros
 ini_set('session.cookie_httponly', 1); // Impede acesso aos cookies via JavaScript
 
-session_start();
 require_once __DIR__ . '/../Config/config_database.php';
 require_once __DIR__ . '/../Config/config_csrf.php';
 
-// Gera o token CSRF se ainda não existir
-if (!isset($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-}
-
+  
 // Função para buscar a matrícula atualizada do usuário
 function buscarNovaMatricula($pdo, $idUsuario)
 {

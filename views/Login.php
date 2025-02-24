@@ -1,7 +1,10 @@
 <?php
 session_start();
 define('BASE_URL', '/schoollibrary');
-require_once __DIR__ . '/../Config/config_csrf.php';
+
+if (!isset($_SESSION['csrf_token'])) {
+   $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

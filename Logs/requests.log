@@ -88,3 +88,69 @@
     "add_data_devolucao": "2025-02-23",
     "add_status_livro": "Emprestado"
 }
+[2025-02-23 23:37:24] Requisição recebida: POST - /schoollibrary/Models/Insert_Usuario.php
+{
+    "idUsuario": "",
+    "matricula": "202567530",
+    "nome": "Maria Silva",
+    "telefone": "62 99495-9494",
+    "email": "maria.silva@email.com",
+    "senha": "addmiferw",
+    "user_tipo": "Administrador",
+    "user_status": "Ativo"
+}
+[2025-02-23 23:42:37] Requisição recebida: POST - /schoollibrary/Models/Insert_Usuario.php
+{
+    "idUsuario": "",
+    "matricula": "202567530",
+    "nome": "Maria Silva",
+    "telefone": "62 99495-9494",
+    "email": "maria.silva@email.com",
+    "senha": "addmiferw",
+    "user_tipo": "Administrador",
+    "user_status": "Ativo"
+}
+[2025-02-23 23:43:14] Requisição recebida: POST - /schoollibrary/Models/Insert_Usuario.php
+{
+    "idUsuario": "",
+    "matricula": "202505503",
+    "nome": "maria",
+    "telefone": "62 99535-3393",
+    "email": "maria@email.com",
+    "senha": "adfaegadf",
+    "user_tipo": "Administrador",
+    "user_status": "Ativo"
+}
+[2025-02-23 23:45:49] Requisição recebida: POST - /schoollibrary/Models/Insert_Usuario.php
+{
+    "idUsuario": "",
+    "matricula": "202566935",
+    "nome": "maria",
+    "telefone": "62 99449-5532",
+    "email": "maria@email.com",
+    "senha": "daafgegewfw",
+    "user_tipo": "Administrador",
+    "user_status": "Ativo"
+}
+[2025-02-23 23:47:45] Requisição recebida: POST - /schoollibrary/Models/Insert_Usuario.php
+{
+    "idUsuario": "",
+    "matricula": "202549535",
+    "nome": "maria",
+    "telefone": "62 99565-3953",
+    "email": "maria@email.com",
+    "senha": "asdf",
+    "user_tipo": "Administrador",
+    "user_status": "Ativo"
+}
+[2025-02-24 00:06:44] Requisição recebida: POST - /schoollibrary/Models/Insert_Usuario.php
+{
+    "idUsuario": "",
+    "matricula": "202120345",
+    "nome": "maria silva",
+    "telefone": "62 99673-4253",
+    "email": "maria@email.com",
+    "senha": "admin",
+    "user_tipo": "Administrador",
+    "user_status": "Ativo"
+}

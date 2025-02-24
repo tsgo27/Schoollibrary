@@ -4,6 +4,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 // Registra no log o tipo de requisição e os dados recebidos
 logMessage("Requisição recebida: " . $_SERVER['REQUEST_METHOD'] . " - " . $_SERVER['REQUEST_URI'], $_REQUEST);
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Obtém e filtra os dados do formulário Editar
