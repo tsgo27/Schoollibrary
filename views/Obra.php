@@ -416,7 +416,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 <script src="../public/js/FiltrarTabela.js"></script>
 <script src="../public/js/EditCamposObra.js"></script>
 <script src="../Public/js/get_buscar_detalhes_obra.js"></script>
-<script src="../public/js/SweetAlert_Update_Obra.js"></script>
+<script src="../public/js/SweetAlert_Insert_Obra.js"></script>
 <script src="../public/js/SweetAlert_Update_Obra.js"></script>
 <script src="../public/js/BuscarNomeAutores.js"></script>
 <script src="../public/js/BuscarAcervo.js"></script>

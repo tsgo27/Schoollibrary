@@ -738,3 +738,76 @@
     "editaGenero": "Alegria",
     "editaEditora": "Arte das Palavras"
 }
+[2025-02-26 10:55:09] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "3300805bb94af32f1c688f4b7a03be25697272796a23cbd97d85fbebea84c7a6",
+    "AddIsbn": "445-5569-5589",
+    "AddTitulo": "Flamengo",
+    "AddAutor": "Igor Silva",
+    "AddEdicao": "1",
+    "AddAno": "1999",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Romance",
+    "AddEditora": "Veja 2",
+    "AddSituacao": "Disponível",
+    "submit": "Adicionar"
+}
+[2025-02-26 10:55:20] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "3300805bb94af32f1c688f4b7a03be25697272796a23cbd97d85fbebea84c7a6",
+    "codObra": "40",
+    "editaIsbn": "445-5569-5510",
+    "editaTitulo": "Flamengo",
+    "editaAutor": "Igor Silva",
+    "editaEdicao": "1",
+    "editaAno": "1999",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Romance",
+    "editaEditora": "Veja 2"
+}
+[2025-02-26 10:57:16] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "3300805bb94af32f1c688f4b7a03be25697272796a23cbd97d85fbebea84c7a6",
+    "AddIsbn": "4459-55412-45",
+    "AddTitulo": "Zico",
+    "AddAutor": "Igor Silva",
+    "AddEdicao": "1",
+    "AddAno": "1996",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Horror",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível"
+}
+[2025-02-26 10:58:40] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "3300805bb94af32f1c688f4b7a03be25697272796a23cbd97d85fbebea84c7a6",
+    "codObra": "41",
+    "editaIsbn": "4459-55412-45",
+    "editaTitulo": "Zico",
+    "editaAutor": "Igor Silva",
+    "editaEdicao": "1",
+    "editaAno": "1996",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Horror",
+    "editaEditora": "Arte das Palavras",
+    "editaSituacao": "Inativo"
+}
+[2025-02-26 11:00:19] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "3300805bb94af32f1c688f4b7a03be25697272796a23cbd97d85fbebea84c7a6",
+    "codObra": "41",
+    "editaIsbn": "4459-55412-45",
+    "editaTitulo": "Zico",
+    "editaAutor": "Igor Silva",
+    "editaEdicao": "1",
+    "editaAno": "1996",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Horror",
+    "editaEditora": "Arte das Palavras",
+    "editaSituacao": "Disponível"
+}

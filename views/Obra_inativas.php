@@ -261,7 +261,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                         </select>
                                         <label>Situação</label>
                                         <select type="text" name="editaSituacao" id="editaSituacao" maxlength="15" class="form-control">
-                                            <!-- As opções 'Disponível', 'Reservado' e 'Emprestado' são removidas -->
+                                            <option value="Disponível">Disponível</option>
                                             <option value="Manutenção">Manutenção</option>
                                             <option value="Inativo">Inativo</option>
                                             <option value="Descontinuado">Descontinuado</option>
@@ -286,13 +286,8 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../public/js/FiltrarTabela.js"></script>
 <script src="../public/js/EditCamposObra.js"></script>
-<script src="../Public/js/get_buscar_detalhes_obra.js"></script>
 <script src="../public/js/SweetAlert_Update_Obra.js"></script>
-<script src="../public/js/SweetAlert_Update_Obra.js"></script>
-<script src="../public/js/BuscarNomeAutores.js"></script>
-<script src="../public/js/BuscarAcervo.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
 <script src="../public/js/Pesquisar.js"></script>
 <script src="../public/js/Modal.js"></script>
