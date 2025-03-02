@@ -13,46 +13,36 @@ if (!isset($_SESSION['csrf_token'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Verifica o token CSRF
-        if (!verify_csrf_token($_POST['csrf_token'])) {
+        if (!isset($_POST['csrf_token']) || !verify_csrf_token($_POST['csrf_token'])) {
             throw new Exception('Token CSRF inválido');
         }
 
-        // Filtrando os dados do formulário usando htmlspecialchars()
-        $Autor = htmlspecialchars(filter_input(INPUT_POST, 'addAutor', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $Status = htmlspecialchars(filter_input(INPUT_POST, 'addStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
-        // Verificando se os campos obrigatórios estão preenchidos
-        if (empty($Autor) || empty($Status)) {
-            exit();
-        }
+        // Filtrando os dados do formulário
+        $autor = htmlspecialchars(filter_input(INPUT_POST, 'addAutor', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $status = htmlspecialchars(filter_input(INPUT_POST, 'addStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
-        // Cria a query de inserção usando Prepared Statements
-        $sql = "INSERT INTO Autor (nome_autor, status_autor, data_registro) VALUES (?, ?, NOW())";
+        // Query de inserção na tabela 'autor'
+        $sql = "INSERT INTO Autor (nome_autor, status_autor, data_registro) VALUES (:autor, :status, NOW())";
         $stmt = $pdo->prepare($sql);
 
         if (!$stmt) {
-            echo "Erro na preparação da declaração: " . $pdo->errorInfo()[2];
-            exit;
+            throw new Exception("Erro na preparação da declaração de inserção: " . implode(" | ", $pdo->errorInfo()));
         }
 
         // Vincula os parâmetros com os valores
-        $stmt->bindParam(1, $Autor);
-        $stmt->bindParam(2, $Status);
+        $stmt->bindParam(':autor', $autor);
+        $stmt->bindParam(':status', $status);
+        $stmt->execute();
 
-        if ($stmt->execute()) {
-            // Redireciona o usuário para a página de origem.
-            header("Location: http://localhost/schoollibrary/views/Autor.php");
-            exit();
-        } else {
-            // Se ocorreu algum erro na inserção, exibe uma mensagem de erro
-            echo "Ocorreu um erro durante o cadastro. Tente novamente mais tarde.";
-        }
     } catch (Exception $e) {
-        echo "Ocorreu um erro: " . $e->getMessage();
+        logMessage("Erro ao processar autor: " . $e->getMessage());
+        echo "Erro ao inserir autor. Consulte o suporte técnico.";
         exit();
-    }
 
-    // Fecha a declaração e a conexão com o banco de dados
-    $stmt = null;
-    $pdo = null;
+    } finally {
+        // Fecha a declaração e a conexão com o banco de dados
+        $stmt = null;
+        $pdo = null;
+    }
 }

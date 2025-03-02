@@ -811,3 +811,63 @@
     "editaEditora": "Arte das Palavras",
     "editaSituacao": "Disponível"
 }
+[2025-03-02 10:40:13] Requisição recebida: POST - /schoollibrary/Models/Insert_Autor.php
+{
+    "csrf_token": "5d1d0ab17a6afd693d6c6480246ba6627788f3ee24ab831725e47d6dc7405031",
+    "addAutor": "Marcos feliciano",
+    "addStatus": "Ativo"
+}
+[2025-03-02 10:40:37] Requisição recebida: POST - /schoollibrary/Models/Insert_Autor.php
+{
+    "csrf_token": "5d1d0ab17a6afd693d6c6480246ba6627788f3ee24ab831725e47d6dc7405031",
+    "addAutor": "Lili",
+    "addStatus": "Ativo"
+}
+[2025-03-02 10:40:49] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "5d1d0ab17a6afd693d6c6480246ba6627788f3ee24ab831725e47d6dc7405031",
+    "codAutor": "39",
+    "editaAutor": "Eleith",
+    "editaStatus": "Ativo"
+}
+[2025-03-02 10:43:26] Requisição recebida: POST - /schoollibrary/Models/Insert_Acervo.php
+{
+    "csrf_token": "5d1d0ab17a6afd693d6c6480246ba6627788f3ee24ab831725e47d6dc7405031",
+    "AddAcervo": "CB-LD-77",
+    "AddStatus": "Ativo"
+}
+[2025-03-02 10:43:35] Requisição recebida: POST - /schoollibrary/Models/Update_Acervo.php
+{
+    "csrf_token": "5d1d0ab17a6afd693d6c6480246ba6627788f3ee24ab831725e47d6dc7405031",
+    "codAcervo": "27",
+    "editaAcervo": "CB-LD-66",
+    "editaStatus": "Ativo"
+}
+[2025-03-02 10:49:40] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "5d1d0ab17a6afd693d6c6480246ba6627788f3ee24ab831725e47d6dc7405031",
+    "AddIsbn": "234-443-44-2",
+    "AddTitulo": "Flamengo campeão",
+    "AddAutor": "Marcos feliciano",
+    "AddEdicao": "1",
+    "AddAno": "1993",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-NT",
+    "AddGenero": "Historia",
+    "AddEditora": "Editora Enigma",
+    "AddSituacao": "Disponível"
+}
+[2025-03-02 10:51:39] Requisição recebida: POST - /schoollibrary/Models/Insert_Obra.php
+{
+    "csrf_token": "5d1d0ab17a6afd693d6c6480246ba6627788f3ee24ab831725e47d6dc7405031",
+    "AddIsbn": "234-443-44-2",
+    "AddTitulo": "Eleith",
+    "AddAutor": "Eleith",
+    "AddEdicao": "1",
+    "AddAno": "2025",
+    "AddCopia": "1",
+    "AddAcervo": "CB-LD-88",
+    "AddGenero": "Alegria",
+    "AddEditora": "Arte das Palavras",
+    "AddSituacao": "Disponível"
+}

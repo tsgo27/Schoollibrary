@@ -13,9 +13,10 @@ if (!isset($_SESSION['csrf_token'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Verifica o token CSRF
-        if (!verify_csrf_token($_POST['csrf_token'])) {
+        if (!isset($_POST['csrf_token']) || !verify_csrf_token($_POST['csrf_token'])) {
             throw new Exception('Token CSRF inválido');
         }
+
 
         // Filtrando e sanitizando os dados do formulário
         $codAutor = htmlspecialchars(filter_input(INPUT_POST, 'codAutor', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
@@ -43,7 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             throw new Exception("Erro na atualização");
         }
-        
     } catch (Exception $e) {
         // Tratar outras exceções
         echo "Ocorreu um erro: " . $e->getMessage();
@@ -53,4 +53,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = null;
         $pdo = null;
     }
-}?>
+}

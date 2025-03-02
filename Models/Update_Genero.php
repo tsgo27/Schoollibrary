@@ -13,9 +13,10 @@ if (!isset($_SESSION['csrf_token'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Verifica o token CSRF
-        if (!verify_csrf_token($_POST['csrf_token'])) {
+        if (!isset($_POST['csrf_token']) || !verify_csrf_token($_POST['csrf_token'])) {
             throw new Exception('Token CSRF inválido');
         }
+
 
         // Filtrando e sanitizando os dados do formulário
         $codGenero = htmlspecialchars(filter_input(INPUT_POST, 'codGenero', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
@@ -40,16 +41,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
         logMessage("gênero atualizada com sucesso: ID $codGenero");
         exit();
-        
     } catch (Exception $e) {
         logMessage("Erro ao atualizar editora: " . $e->getMessage());
         echo "Ocorreu um erro. Consulte o suporte técnico.";
         exit();
-
     } finally {
         // Fecha a declaração e a conexão com o banco de dados
         $stmt = null;
         $pdo = null;
     }
 }
-?>

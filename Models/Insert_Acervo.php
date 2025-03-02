@@ -17,41 +17,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception('Token CSRF inválido');
         }
 
-        // Filtrando os dados do formulário usando apenas htmlspecialchars()
-        $AddAcervo = htmlspecialchars(filter_input(INPUT_POST, 'AddAcervo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
-        $Status = htmlspecialchars(filter_input(INPUT_POST, 'AddStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        // Filtrando os dados do formulário
+        $acervo = htmlspecialchars(filter_input(INPUT_POST, 'AddAcervo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
+        $status = htmlspecialchars(filter_input(INPUT_POST, 'AddStatus', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
 
-        // Verificando se os campos obrigatórios estão preenchidos
-        if (empty($AddAcervo) || empty($Status)) {
-            exit();
-        }
-
-        // Cria a query de inserção usando Prepared Statements
-        $sql = "INSERT INTO acervo (acervo, status_acervo, data_registro) VALUES (?, ?, NOW())";
+        // Query de inserção na tabela 'acervo'
+        $sql = "INSERT INTO acervo (acervo, status_acervo, data_registro) VALUES (:acervo, :status, NOW())";
         $stmt = $pdo->prepare($sql);
 
         if (!$stmt) {
-            echo "Erro na preparação da declaração: " . $pdo->errorInfo()[2];
-            exit;
+            throw new Exception("Erro na preparação da declaração de inserção: " . implode(" | ", $pdo->errorInfo()));
         }
 
-        $stmt->bindParam(1, $AddAcervo);
-        $stmt->bindParam(2, $Status);
+        // Vincula os parâmetros com os valores
+        $stmt->bindParam(':acervo', $acervo);
+        $stmt->bindParam(':status', $status);
+        $stmt->execute();
 
-        if ($stmt->execute()) {
-            // Redireciona o usuário para a página de origem
-            header("Location: http://localhost/schoollibrary/views/Acervo.php");
-            exit();
-        } else {
-            echo "Ocorreu um erro durante o cadastro. Tente novamente mais tarde.";
-        }
     } catch (Exception $e) {
-        echo "Ocorreu um erro: " . $e->getMessage();
+        logMessage("Erro ao processar acervo: " . $e->getMessage());
+        echo "Erro ao inserir acervo. Consulte o suporte técnico.";
         exit();
+
+    } finally {
+        // Fecha a declaração e a conexão com o banco de dados
+        $stmt = null;
+        $pdo = null;
     }
 
-    // Fecha a declaração e a conexão com o banco de dados
-    $stmt = null;
-    $pdo = null;
 }

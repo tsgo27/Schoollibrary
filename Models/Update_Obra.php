@@ -12,9 +12,10 @@ if (!isset($_SESSION['csrf_token'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Verifica o token CSRF
-        if (!verify_csrf_token($_POST['csrf_token'])) {
+        if (!isset($_POST['csrf_token']) || !verify_csrf_token($_POST['csrf_token'])) {
             throw new Exception('Token CSRF inválido');
         }
+
 
         // Filtra os dados do formulário usando htmlspecialchars() e filter_input()
         $codObra = htmlspecialchars(filter_input(INPUT_POST, 'codObra', FILTER_DEFAULT) ?? '', ENT_QUOTES, 'UTF-8');
@@ -30,8 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         // Verificar se 'editaSituacao' foi enviado. Se não, busca o valor atual no banco de dados
-        $situacao = htmlspecialchars(filter_input(INPUT_POST, 'editaSituacao', FILTER_DEFAULT)?? '', ENT_QUOTES, 'UTF-8');
-        
+        $situacao = htmlspecialchars(filter_input(INPUT_POST, 'editaSituacao', FILTER_DEFAULT) ?? '', ENT_QUOTES, 'UTF-8');
+
         // Se 'editaSituacao' não foi enviado (está vazio), obter o valor atual da obra no banco de dados
         if (empty($situacao)) {
             $stmtGetSituacao = $pdo->prepare("SELECT Situacao FROM obra WHERE CodObra = :codObra");
@@ -62,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmtUpdateObra->bindValue(':genero', $genero);
         $stmtUpdateObra->bindValue(':editora', $editora);
         $stmtUpdateObra->bindValue(':situacao', $situacao);  // Atualiza o campo de situação
-        
+
         // Executa a query de atualização na tabela obra
         if (!$stmtUpdateObra->execute()) {
             throw new Exception("Erro na atualização");
@@ -70,11 +71,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Executa a query de atualização na tabela obra
         $stmtUpdateObra->execute();
-
     } finally {
         // Fecha as declarações e a conexão com o banco de dados
         $stmtUpdateObra = null;
         $pdo = null;
     }
 }
-?>

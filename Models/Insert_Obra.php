@@ -13,9 +13,10 @@ if (!isset($_SESSION['csrf_token'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Verifica o token CSRF
-        if (!verify_csrf_token($_POST['csrf_token'])) {
+        if (!isset($_POST['csrf_token']) || !verify_csrf_token($_POST['csrf_token'])) {
             throw new Exception('Token CSRF inválido');
         }
+
 
         // Filtrando os dados do formulário usando apenas htmlspecialchars()
         $isbn = htmlspecialchars(filter_input(INPUT_POST, 'AddIsbn', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
@@ -49,25 +50,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(":genero", $genero);
         $stmt->bindParam(":editora", $editora);
         $stmt->bindParam(":situacao", $situacao);
-
-        if ($stmt->execute()) {
-            // Redireciona o usuário para a página de origem.
-            header("Location: http://localhost/schoollibrary/views/Obra.php");
-            exit();
-        } else {
-            // Se ocorreu algum erro na inserção, exibe uma mensagem de erro
-            echo "Ocorreu um erro durante o cadastro. Tente novamente mais tarde.";
-        }
+        $stmt->execute();
 
     } catch (Exception $e) {
-        logMessage("Erro ao processar a inserção da obra: " . $e->getMessage());
-        echo "Ocorreu um erro ao cadastrar a obra. Consulte o suporte técnico.";
+        logMessage("Erro ao processar obra: " . $e->getMessage());
+        echo "Erro ao inserir obra. Consulte o suporte técnico.";
         exit();
-        
+
     } finally {
         // Fecha a declaração e a conexão com o banco de dados
         $stmt = null;
         $pdo = null;
     }
 }
-?>
+

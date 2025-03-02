@@ -13,9 +13,10 @@ if (!isset($_SESSION['csrf_token'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Verifica o token CSRF
-        if (!verify_csrf_token($_POST['csrf_token'])) {
+        if (!isset($_POST['csrf_token']) || !verify_csrf_token($_POST['csrf_token'])) {
             throw new Exception('Token CSRF inválido');
         }
+
 
         // Filtrando os dados do formulário
         $matricula = htmlspecialchars(filter_input(INPUT_POST, 'add_matricula_aluno', FILTER_SANITIZE_NUMBER_INT), ENT_QUOTES, 'UTF-8');
@@ -47,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     } catch (Exception $e) {
         logMessage("Erro ao precessar reserva: " . $e->getMessage());
-        echo "Erro ao inserir a reserva revise código. Consulte o suporte técnico.";
+        echo "Erro ao inserir reserva. Consulte o suporte técnico.";
         exit();
     }
 
@@ -70,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         logMessage("Erro ao processar reserva: " . $e->getMessage());
         echo "Erro ao processar a reserva. Consulte o suporte técnico.";
         exit();
-
+        
     } finally {
         // Fecha as declarações e a conexão com o banco de dados
         $stmt = null;

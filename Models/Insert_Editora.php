@@ -23,8 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $estado = htmlspecialchars(filter_input(INPUT_POST, 'add_estado', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
         $status = htmlspecialchars(filter_input(INPUT_POST, 'add_status', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
 
-        
-
         // Query de inserção na tabela 'editora'
         $sql = "INSERT INTO editora (nome_editora, cidade_editora, estado_editora, status_editora, data_registro) 
         VALUES (:editora, :cidade, :estado, :status, NOW())";
@@ -40,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':estado', $estado);
         $stmt->bindParam(':status', $status);
         $stmt->execute();
-
 
     } catch (Exception $e) {
         logMessage("Erro ao processar editora: " . $e->getMessage());

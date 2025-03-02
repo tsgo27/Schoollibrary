@@ -13,9 +13,10 @@ if (!isset($_SESSION['csrf_token'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Verifica o token CSRF
-        if (!verify_csrf_token($_POST['csrf_token'])) {
+        if (!isset($_POST['csrf_token']) || !verify_csrf_token($_POST['csrf_token'])) {
             throw new Exception('Token CSRF inválido');
         }
+
 
         // Filtrando os dados do formulário usando htmlspecialchars()
         $codEmprestimo = htmlspecialchars(filter_input(INPUT_POST, 'codEmprestimo', FILTER_DEFAULT), ENT_QUOTES, 'UTF-8');
@@ -52,7 +53,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmtUpdateObra->bindValue(':Situacao', $status);
         $stmtUpdateObra->bindValue(':editaTitulo', $titulo);
         $stmtUpdateObra->execute();
-
     } finally {
         // Fecha as declarações e a conexão com o banco de dados
         $stmt = null;
@@ -60,4 +60,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $pdo = null;
     }
 }
-?>
