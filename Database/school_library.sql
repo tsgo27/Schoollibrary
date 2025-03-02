@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/02/2025 às 04:09
+-- Tempo de geração: 02/03/2025 às 15:29
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -48,7 +48,8 @@ INSERT INTO `acervo` (`id_acervo`, `acervo`, `status_acervo`, `data_registro`) V
 (10, 'CA-LD-97', 'Ativo', '2024-08-02 17:14:47'),
 (24, 'CB-LD-RW', 'Ativo', '2024-08-05 16:33:41'),
 (25, 'CB-LD-RV', 'Ativo', '2024-08-09 16:59:17'),
-(26, 'CB-LD-88', 'Ativo', '2025-02-19 16:59:34');
+(26, 'CB-LD-88', 'Ativo', '2025-02-19 16:59:34'),
+(27, 'CB-LD-66', 'Ativo', '2025-03-02 10:43:26');
 
 -- --------------------------------------------------------
 
@@ -57,7 +58,7 @@ INSERT INTO `acervo` (`id_acervo`, `acervo`, `status_acervo`, `data_registro`) V
 --
 
 CREATE TABLE `alunos` (
-  `id_Aluno` int(4) NOT NULL,
+  `id_aluno` int(4) NOT NULL,
   `matricula` int(9) NOT NULL,
   `turma` varchar(5) DEFAULT NULL,
   `nome` varchar(60) DEFAULT NULL,
@@ -71,17 +72,17 @@ CREATE TABLE `alunos` (
 -- Despejando dados para a tabela `alunos`
 --
 
-INSERT INTO `alunos` (`id_Aluno`, `matricula`, `turma`, `nome`, `telefone`, `email`, `user_status`, `data_registro`) VALUES
-(24, 202320120, '3º A', 'Igor Silva', '6200000-0000', 'igor.silva@teste.com', 'Ativo', '2023-12-07 14:37:51'),
+INSERT INTO `alunos` (`id_aluno`, `matricula`, `turma`, `nome`, `telefone`, `email`, `user_status`, `data_registro`) VALUES
+(24, 202320120, '3º A', 'Igor Silva', '6200000-0000', 'igor.silva@teste.com', 'Inativo', '2023-12-07 14:37:51'),
 (26, 202320121, '1º A', 'Maria', '6200000-0000', 'maria.silva@teste.com', 'Ativo', '2023-12-07 16:01:58'),
 (27, 202319202, '2º A', 'Daniel Soares', '6200000-0000', 'daniel.soares@teste.com', 'Ativo', '2023-12-13 15:28:11'),
 (28, 202319203, '4º A', 'Dani Martins', '6200000-0000', 'dani.martins@teste.com', 'Ativo', '2023-12-13 16:58:23'),
 (29, 202319204, '3º B', 'Carol Maia', '6200000-0000', 'carol.maia@teste.com', 'Ativo', '2023-12-13 16:59:29'),
 (31, 202320206, '3º A', 'Rafal oliveira', '62992594657', 'rafael.oliveira@teste.com', 'Ativo', '2023-12-13 17:01:24'),
 (32, 202320207, '3º A', 'Ivani Filho', '6200000-0000', 'ivani.filho@teste.com', 'Ativo', '2023-12-13 17:02:14'),
-(33, 202320208, '3º A', 'joão Gustavo', '6200000-0000', 'joao.gustavo@teste.com', 'Ativo', '2023-12-13 17:02:50'),
+(33, 202320208, '3º A', 'joão Gustavo', '6200000-0000', 'joao.gustavo@teste.com', 'Inativo', '2023-12-13 17:02:50'),
 (34, 202320209, '3º A', 'Debora Soares', '6201255-9899', 'debora.soares@teste.com', 'Ativo', '2023-12-13 17:03:26'),
-(44, 202540034, '3º A', 'Maisa reis', '620025-60660', 'maisa@email.com', 'Ativo', '2025-02-22 12:24:16');
+(44, 202540034, '3º A', 'Maisa reis', '620025-60660', 'maisa@email.com', 'Inativo', '2025-02-22 12:24:16');
 
 -- --------------------------------------------------------
 
@@ -111,7 +112,9 @@ INSERT INTO `autor` (`id_autor`, `nome_autor`, `status_autor`, `data_registro`) 
 (8, 'Carlos Cientista', 'Ativo', '2023-12-13 10:15:26'),
 (9, ' Sofia Jardineira', 'Ativo', '2023-12-13 10:15:33'),
 (36, 'Maria Rita', 'Ativo', '2024-08-05 16:57:29'),
-(37, 'Maria Silva', 'Ativo', '2024-08-05 17:08:46');
+(37, 'Maria Silva', 'Ativo', '2024-08-05 17:08:46'),
+(38, 'Marcos feliciano', 'Ativo', '2025-03-02 10:40:13'),
+(39, 'Eleith', 'Ativo', '2025-03-02 10:40:37');
 
 -- --------------------------------------------------------
 
@@ -289,7 +292,10 @@ INSERT INTO `obra` (`codObra`, `Isbn`, `Titulo`, `Autor`, `Edicao`, `Ano`, `Copi
 (21, '978-0-345678-7', 'Entre Dois Mundos', 'Roberto Viajante', 1, 1993, 5, 'GB-4-L-1-3', 'Mistério', 'Editora Enigma', 'Disponível', '2023-12-13 16:14:05'),
 (22, '978-0-4567890-9', 'Poemas da Meia-Noite', 'Lídia Poetisa', 1, 1998, 1, 'GB-4-L-1-1', 'Literatura Infantojuvenil', 'Saraiva', 'Disponível', '2023-12-13 16:15:49'),
 (28, '985-59-562-10', 'Java ', 'Martine', 1, 1992, 1, 'CB-LD-NT', 'Aventura', 'Arte das Palavras', 'Emprestado', '2025-02-19 13:25:39'),
-(30, '234-443-44-24', 'Avançao da IA', 'Monteiro Lobato', 1, 2024, 1, 'CB-LD-NT', 'Alegria', 'Arte das Palavras', 'Disponível', '2025-02-19 23:51:49');
+(30, '234-443-44-24', 'Avançao da IA', 'Monteiro Lobato', 1, 2024, 1, 'CB-LD-NT', 'Alegria', 'Arte das Palavras', 'Disponível', '2025-02-19 23:51:49'),
+(31, '234-443-44-2', 'Histórica de Zico', 'Flavio Santos', 1, 1981, 1, 'CB-LD-NT', 'Alegria', 'Arte das Palavras', 'Disponível', '2025-02-25 14:36:22'),
+(32, '234-443-44-2', 'Flamengo campeão', 'Marcos feliciano', 1, 1993, 1, 'CB-LD-NT', 'Historia', 'Editora Enigma', 'Disponível', '2025-03-02 10:49:40'),
+(33, '234-443-44-2', 'Eleith', 'Eleith', 1, 2025, 1, 'CB-LD-88', 'Alegria', 'Arte das Palavras', 'Disponível', '2025-03-02 10:51:39');
 
 -- --------------------------------------------------------
 
@@ -360,7 +366,7 @@ ALTER TABLE `acervo`
 -- Índices de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  ADD PRIMARY KEY (`id_Aluno`);
+  ADD PRIMARY KEY (`id_aluno`);
 
 --
 -- Índices de tabela `autor`
@@ -419,19 +425,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `acervo`
 --
 ALTER TABLE `acervo`
-  MODIFY `id_acervo` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_acervo` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `id_Aluno` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_aluno` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT de tabela `autor`
 --
 ALTER TABLE `autor`
-  MODIFY `id_autor` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_autor` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT de tabela `editora`
@@ -461,7 +467,7 @@ ALTER TABLE `genero`
 -- AUTO_INCREMENT de tabela `obra`
 --
 ALTER TABLE `obra`
-  MODIFY `codObra` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `codObra` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de tabela `reservas`
