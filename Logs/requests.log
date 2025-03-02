@@ -871,3 +871,33 @@
     "AddEditora": "Arte das Palavras",
     "AddSituacao": "Disponível"
 }
+[2025-03-02 11:08:24] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "44",
+    "matricula": "202540034",
+    "editaTurma": "3º A",
+    "editarNome": "Maisa reis",
+    "editarTelefone": "620025-60660",
+    "editarEmail": "maisa@email.com",
+    "editarStatus": "Inativo"
+}
+[2025-03-02 11:08:34] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "33",
+    "matricula": "202320208",
+    "editaTurma": "3º A",
+    "editarNome": "joão Gustavo",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "joao.gustavo@teste.com",
+    "editarStatus": "Inativo"
+}
+[2025-03-02 11:09:09] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editaTurma": "3º A",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Inativo"
+}

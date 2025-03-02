@@ -19,6 +19,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
             <thead>
                 <tr>
                     <th>Matrícula</th>
+                    <th>Turma</th>
                     <th>Nome</th>
                     <th>Telefone</th>
                     <th>Email</th>
@@ -40,6 +41,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                         while ($user_data = $result->fetch(PDO::FETCH_ASSOC)) {
                             echo "<tr>";
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['matricula']) . "</td>";
+                            echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['turma']) . "</td>";
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['nome']) . "</td>";
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['telefone']) . "</td>";
                             echo "<td class='col-lg-2'>" . htmlspecialchars($user_data['email']) . "</td>";

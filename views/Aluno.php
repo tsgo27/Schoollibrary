@@ -131,7 +131,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                                 $btnText = $emprestimosAtivos > 0 ? 'Empréstimos' : 'Sem Empréstimos';
 
                                                 echo "<tr>";
-                                                echo "<td>" . htmlspecialchars($user_data['id_Aluno']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['id_aluno']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['matricula']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['turma']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['nome']) . "</td>";
@@ -144,7 +144,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                                 Editar
                                                 </a>
                                                 <a href='#viewDetailsModal' class='btn btn-info text-white btn-sm' data-toggle='modal' 
-                                                    data-id='" . htmlspecialchars($user_data['id_Aluno']) . "' 
+                                                    data-id='" . htmlspecialchars($user_data['id_aluno']) . "' 
                                                     data-matricula='" . htmlspecialchars($user_data['matricula']) . "' 
                                                     data-turma='" . htmlspecialchars($user_data['turma']) . "' 
                                                     data-nome='" . htmlspecialchars($user_data['nome']) . "' 
@@ -155,7 +155,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                                     <i class='material-icons'>wysiwyg</i>
                                                 </a>
                                                 <a href='#emprestimosModal' class='btn $btnClass verEmprestimos text-white btn-sm' 
-                                                data-id='" . htmlspecialchars($user_data['id_Aluno']) . "'title='Empréstimos do aluno'>
+                                                data-id='" . htmlspecialchars($user_data['id_aluno']) . "'title='Empréstimos do aluno'>
                                                 <i class='material-icons'>library_books</i>
                                                 </a>
                                             </td>";

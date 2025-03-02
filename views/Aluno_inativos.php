@@ -95,6 +95,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                     <tr>
                                         <th>ID</th>
                                         <th>Matrícula</th>
+                                        <th>Turma</th>
                                         <th>Nome</th>
                                         <th>Telefone</th>
                                         <th>Email</th>
@@ -115,8 +116,9 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                         if ($result->rowCount() > 0) {
                                             while ($user_data = $result->fetch(PDO::FETCH_ASSOC)) {
 
-                                                echo "<td>" . htmlspecialchars($user_data['id_Aluno']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['id_aluno']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['matricula']) . "</td>";
+                                                echo "<td>" . htmlspecialchars($user_data['turma']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['nome']) . "</td>";
                                                 echo "<td style='width: 150px;'>" . htmlspecialchars($user_data['telefone']) . "</td>";
                                                 echo "<td>" . htmlspecialchars($user_data['email']) . "</td>";
