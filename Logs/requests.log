@@ -901,3 +901,27 @@
     "editarEmail": "igor.silva@teste.com",
     "editarStatus": "Inativo"
 }
+[2025-03-02 11:40:55] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "5d1d0ab17a6afd693d6c6480246ba6627788f3ee24ab831725e47d6dc7405031",
+    "codEmprestimo": "38",
+    "editaMatricula": "202320121",
+    "editaTurma": "1º A",
+    "editaAluno": "Maria",
+    "editaTitulo": "Java ",
+    "editaEmprestimo": "2025-02-16",
+    "editaDevolucao": "2025-02-23",
+    "Status_Livro": "Disponível"
+}
+[2025-03-02 11:56:52] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "5d1d0ab17a6afd693d6c6480246ba6627788f3ee24ab831725e47d6dc7405031",
+    "codEmprestimo": "32",
+    "editaMatricula": "202320208",
+    "editaTurma": "3º A",
+    "editaAluno": "joão Gustavo",
+    "editaTitulo": "Avançao da IA",
+    "editaEmprestimo": "2025-02-19",
+    "editaDevolucao": "2025-02-21",
+    "Status_Livro": "Disponível"
+}

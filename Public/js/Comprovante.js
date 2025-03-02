@@ -2,12 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const comprovanteButtons = document.querySelectorAll('.comprovante');
     comprovanteButtons.forEach(function (button) {
         button.addEventListener("click", function () {
-            const codEmprestimo = this.getAttribute('data-cod-emprestimo');
             const emprestimoRow = this.closest('tr');
             const matricula = emprestimoRow.querySelector('td:nth-child(2)').innerText;
-            const aluno = emprestimoRow.querySelector('td:nth-child(3)').innerText;
-            const tituloLivro = emprestimoRow.querySelector('td:nth-child(4)').innerText;
-            const subtitulo = emprestimoRow.querySelector('td:nth-child(5)').innerText;
+            const turma = emprestimoRow.querySelector('td:nth-child(3)').innerText;
+            const aluno = emprestimoRow.querySelector('td:nth-child(4)').innerText;
+            const tituloLivro = emprestimoRow.querySelector('td:nth-child(5)').innerText;
             const dataEmprestimo = emprestimoRow.querySelector('td:nth-child(6)').innerText;
             const dataDevolucao = emprestimoRow.querySelector('td:nth-child(7)').innerText;
             const situacao = emprestimoRow.querySelector('td:nth-child(8)').innerText;
@@ -23,11 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
             // Configure o conteúdo dinâmico no elemento div
             comprovanteDiv.innerHTML = `
                 <img src="../Public/img/logo-colegio.png" alt="Logo da Escola" class="logo" style="width: 100px;">
+                
                 <h1>Cupom de Empréstimo</h1>
                 <p><strong>Matrícula:</strong> ${matricula}</p>
+                <p><strong>Turma:</strong> ${turma}</p>
                 <p><strong>Aluno:</strong> ${aluno}</p>
                 <p><strong>Título do Livro:</strong> ${tituloLivro}</p>
-                <p><strong>Subtítulo:</strong> ${subtitulo}</p>
                 <p><strong>Data de Empréstimo:</strong> ${dataEmprestimo}</p>
                 <p><strong>Data de Devolução:</strong> ${dataDevolucao}</p>
                 <p><strong>Status:</strong> ${situacao}</p>
