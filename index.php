@@ -5,13 +5,21 @@ require_once __DIR__ . '/Config/log_error.php';
 
 // Obtém e sanitiza a URL
 $url = filter_var($_GET['url'] ?? '', FILTER_SANITIZE_URL);
+
+// Verifica se o usuário está tentando acessar a pasta raiz ou URL inválida
+if ($url === '' || $url === 'schoollibrary') {
+    include ERROR_PATH . '403.php';
+    exit;
+}
+
+// Filtra o nome seguro da URL
 $safe_url = basename($url);
 
 // Define o caminho do arquivo correspondente à URL
 $file = VIEW_PATH . $safe_url . '.php';
 
-// Verifica se a URL está vazia ou se o arquivo existe e é válido
-if ($url === '' || !file_exists($file) || !is_file($file) || pathinfo($file, PATHINFO_EXTENSION) !== 'php') {
+// Verifica se o arquivo existe, é um arquivo PHP e é válido
+if (!file_exists($file) || !is_file($file) || pathinfo($file, PATHINFO_EXTENSION) !== 'php') {
     // Formata a mensagem de erro para o log
     $error_message = "Erro 404: Página '$safe_url' não encontrada.";
 
