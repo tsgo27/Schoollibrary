@@ -1,8 +1,7 @@
 $(document).ready(function() {
     $('.verEmprestimos').click(function() {
         let idAluno = $(this).data('id'); // Captura o ID do aluno
-        console.log("ID do aluno:", idAluno); // Depuração no console
-
+        
         $.ajax({
             url: "../Models/get_buscar_emprestimos.php", 
             type: 'POST',

@@ -190,5 +190,4 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 <script src="../public/js/EditCampos_Alunos.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
 <script src="../public/js/Pesquisar.js"></script>
-
 </html>

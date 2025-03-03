@@ -347,8 +347,8 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../public/js/EditCampos_Alunos.js"></script>
-<script src="../public/js/Get_buscar_emprestimos.js"></script>
-<script src="../public/js/Get_detalhes_aluno.js"></script>
+<script src="../public/js/get_emprestimos_aluno.js"></script>
+<script src="../public/js/get_detalhes_aluno.js"></script>
 <script src="../public/js/SweetAlert_Insert_Aluno.js"></script>
 <script src="../public/js/SweetAlert_Update_Aluno.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>

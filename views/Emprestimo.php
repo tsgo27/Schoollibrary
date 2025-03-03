@@ -273,8 +273,8 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 <script src="../public/js/EditCamposEmprestimo.js"></script>
 <script src="../public/js/SweetAlert_Insert_Emprestimo.js"></script>
 <script src="../public/js/SweetAlert_Update_Emprestimo.js"></script>
-<script src="../public/js/BuscarNomeAluno.js"></script>
-<script src="../public/js/BuscarTituloLivro.js"></script>
+<script src="../public/js/get_nome_aluno.js"></script>
+<script src="../public/js/get_titulo_livro.js"></script>
 <script src="../Public/js/Comprovante.js"></script>
 <script src="../public/js/PesquisarEmprestimo.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>

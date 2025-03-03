@@ -415,11 +415,11 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../public/js/FiltrarTabela.js"></script>
 <script src="../public/js/EditCamposObra.js"></script>
-<script src="../Public/js/get_buscar_detalhes_obra.js"></script>
+<script src="../Public/js/get_detalhes_obra.js"></script>
+<script src="../public/js/get_nome_autor.js"></script>
+<script src="../public/js/get_acervo.js"></script>
 <script src="../public/js/SweetAlert_Insert_Obra.js"></script>
 <script src="../public/js/SweetAlert_Update_Obra.js"></script>
-<script src="../public/js/BuscarNomeAutores.js"></script>
-<script src="../public/js/BuscarAcervo.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
 <script src="../public/js/Pesquisar.js"></script>
 <script src="../public/js/Modal.js"></script>
