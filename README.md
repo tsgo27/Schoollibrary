@@ -7,7 +7,8 @@ O Sistema foi desenvolvido para facilitar e otimizar o gerenciamento de livros, 
 
 ##
 
-![Screenshot_2](https://github.com/user-attachments/assets/8a5707a0-f012-4c1f-abd9-e28649642501)
+![img-home](https://github.com/user-attachments/assets/f7a82bb4-580e-4b56-86a3-4824a936b81b)
+
 
 ---
 
