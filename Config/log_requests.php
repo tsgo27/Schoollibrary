@@ -7,7 +7,7 @@
  */
 function logMessage($message, $data = null) {
     // Define o caminho do arquivo de log
-    $logFile = __DIR__ . '/../Logs/requests.log';
+    $logFile = __DIR__ . '/../logs/requests.log';
 
     // Obtém a data e hora atual
     $date = date('Y-m-d H:i:s');

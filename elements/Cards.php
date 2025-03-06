@@ -4,16 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Meta Tags de SEO (melhor organizadas) -->
     <meta name="description" content="CodedThemes">
     <meta name="keywords" content=" Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
     <meta name="author" content="CodedThemes">
-    <link rel="icon" href="../Includes/images/favicon.ico" type="image/x-icon">
+
+    <!-- Fonte Google (carregue antes do CSS para evitar reflows) -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../Includes/css/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../Includes/icon/themify-icons/themify-icons.css">
-    <link rel="stylesheet" type="text/css" href="../Includes/icon/icofont/css/icofont.css">
-    <link rel="stylesheet" href="../Includes/css/cards.css">
-    <link rel="stylesheet" type="text/css" href="../Includes/css/jquery.mCustomScrollbar.css">
+
+    <!-- Estilos Principais (bootstrap primeiro, depois ícones e estilos específicos) -->
+    <link rel="stylesheet" type="text/css" href="../elements/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../elements/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="../elements/icon/icofont/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="../elements/css/jquery.mCustomScrollbar.css">
+
+    <!-- Estilos Personalizados (CSS específico da aplicação) -->
+    <link rel="stylesheet" href="../elements/css/cards.css">
 </head>
 
 <body>

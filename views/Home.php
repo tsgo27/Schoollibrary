@@ -18,7 +18,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 
     <?php
     // Include Menu Sidebar
-    require_once __DIR__ . '/../Includes/Menu_Sidebar.php';
+    require_once __DIR__ . '/../elements/Menu_Sidebar.php';
     ?>
 
 
@@ -67,9 +67,9 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 
         <?php
         // Include Charts-Google
-        require_once __DIR__ . '/../Includes/Cards.php';
-        require_once __DIR__ . '/../Includes/Grafico_barras.php';
-        require_once __DIR__ . '/../Includes/Grafico_pizza.php';
+        require_once __DIR__ . '/../elements/Cards.php';
+        require_once __DIR__ . '/../elements/Grafico_barras.php';
+        require_once __DIR__ . '/../elements/Grafico_pizza.php';
 
         ?>
 

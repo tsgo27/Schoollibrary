@@ -8,7 +8,7 @@
 date_default_timezone_set('America/Sao_Paulo');
 
 // Define o caminho do arquivo de log corretamente
-$logFile = __DIR__ . '/../Logs/error.log';
+$logFile = __DIR__ . '/../logs/error.log';
 
 
 ini_set('log_errors', 1);

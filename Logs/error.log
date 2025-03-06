@@ -1,2 +1,2 @@
-[02-Mar-2025 22:58:21 America/Sao_Paulo] PHP Warning:  Erro 404: Página 'dh' não encontrada. in C:\xampp\htdocs\Schoollibrary\index.php on line 34
-[02-Mar-2025 23:01:37 America/Sao_Paulo] PHP Warning:  Erro 404: Página 'Of' não encontrada. in C:\xampp\htdocs\Schoollibrary\index.php on line 36
+[06-Mar-2025 13:59:04 America/Sao_Paulo] Erro de conexão: SQLSTATE[HY000] [1049] Unknown database 'school_librar'
+[06-Mar-2025 13:59:25 America/Sao_Paulo] PHP Warning:  Erro 404: Página 'Hom' não encontrada. in C:\xampp\htdocs\Schoollibrary\index.php on line 36

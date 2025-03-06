@@ -22,14 +22,14 @@ try {
     $formatted_error_message = '[' . date('d-M-Y H:i:s') . ' ' . date_default_timezone_get() . '] ' . $error_message . "\n";
 
     // Registra o erro no log com a mensagem formatada
-    error_log($formatted_error_message, 3, __DIR__ . '/../Logs/error.log'); 
+    error_log($formatted_error_message, 3, __DIR__ . '/../logs/error.log'); 
 
     // Redireciona para a página de erro dependendo do modo de depuração
     if (filter_var($_ENV['DEBUG_MODE'], FILTER_VALIDATE_BOOLEAN)) {
         $error_message = mb_convert_encoding($e->getMessage(), 'UTF-8', 'ISO-8859-1');
-        header("Location: ../page/erro_conexao.php?error=" . urlencode($error_message));
+        header("Location: ../error/erro_conexao.php?error=" . urlencode($error_message));
     } else {
-        header('Location: ../page/erro_conexao.php');
+        header('Location: ../error/erro_conexao.php');
     }
     exit();
 }

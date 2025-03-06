@@ -1,6 +1,6 @@
 <?php
 define('VIEW_PATH', __DIR__ . '/views/');
-define('ERROR_PATH', __DIR__ . '/Page/');
+define('ERROR_PATH', __DIR__ . '/error/');
 require_once __DIR__ . '/Config/log_error.php';
 
 // Obtém e sanitiza a URL

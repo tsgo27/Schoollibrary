@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <link rel="stylesheet" href="../Includes/css/Graficos.css">
+    <link rel="stylesheet" href="../elements/css/Graficos.css">
 </head>
 
 <body>

@@ -925,3 +925,75 @@
     "editaDevolucao": "2025-02-21",
     "Status_Livro": "Disponível"
 }
+[2025-03-06 14:00:21] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "7ae514a2848766c33dfbf1557c795acb3f47141632f87615b90b234c3dd6a0b8",
+    "codEmprestimo": "38",
+    "editaMatricula": "202320121",
+    "editaTurma": "1º A",
+    "editaAluno": "Maria",
+    "editaTitulo": "Java ",
+    "editaEmprestimo": "2025-02-16",
+    "editaDevolucao": "2025-02-23",
+    "Status_Livro": "Disponível"
+}
+[2025-03-06 14:00:26] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "7ae514a2848766c33dfbf1557c795acb3f47141632f87615b90b234c3dd6a0b8",
+    "codEmprestimo": "37",
+    "editaMatricula": "202319202",
+    "editaTurma": "2º A",
+    "editaAluno": "Daniel Soares",
+    "editaTitulo": "Aventuras Fantásticas",
+    "editaEmprestimo": "2025-02-16",
+    "editaDevolucao": "2025-03-02",
+    "Status_Livro": "Disponível"
+}
+[2025-03-06 14:00:42] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "7ae514a2848766c33dfbf1557c795acb3f47141632f87615b90b234c3dd6a0b8",
+    "codEmprestimo": "38",
+    "editaMatricula": "202320121",
+    "editaTurma": "1º A",
+    "editaAluno": "Maria",
+    "editaTitulo": "Java ",
+    "editaEmprestimo": "2025-03-06",
+    "editaDevolucao": "2025-03-13",
+    "Status_Livro": "Disponível"
+}
+[2025-03-06 14:00:54] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "7ae514a2848766c33dfbf1557c795acb3f47141632f87615b90b234c3dd6a0b8",
+    "codEmprestimo": "37",
+    "editaMatricula": "202319202",
+    "editaTurma": "2º A",
+    "editaAluno": "Daniel Soares",
+    "editaTitulo": "Aventuras Fantásticas",
+    "editaEmprestimo": "2025-03-06",
+    "editaDevolucao": "2025-03-13",
+    "Status_Livro": "Disponível"
+}
+[2025-03-06 14:01:01] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "7ae514a2848766c33dfbf1557c795acb3f47141632f87615b90b234c3dd6a0b8",
+    "codEmprestimo": "37",
+    "editaMatricula": "202319202",
+    "editaTurma": "2º A",
+    "editaAluno": "Daniel Soares",
+    "editaTitulo": "Aventuras Fantásticas",
+    "editaEmprestimo": "2025-03-06",
+    "editaDevolucao": "2025-03-13",
+    "Status_Livro": "Emprestado"
+}
+[2025-03-06 14:01:06] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "7ae514a2848766c33dfbf1557c795acb3f47141632f87615b90b234c3dd6a0b8",
+    "codEmprestimo": "38",
+    "editaMatricula": "202320121",
+    "editaTurma": "1º A",
+    "editaAluno": "Maria",
+    "editaTitulo": "Java ",
+    "editaEmprestimo": "2025-03-06",
+    "editaDevolucao": "2025-03-13",
+    "Status_Livro": "Emprestado"
+}
