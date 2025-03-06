@@ -997,3 +997,14 @@
     "editaDevolucao": "2025-03-13",
     "Status_Livro": "Emprestado"
 }
+[2025-03-06 14:06:37] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "7ae514a2848766c33dfbf1557c795acb3f47141632f87615b90b234c3dd6a0b8",
+    "add_matricula_aluno": "202320209",
+    "add_turma_aluno": "3º A",
+    "add_nome_aluno": "Debora Soares",
+    "add_titulo_livro": "Avançao da IA",
+    "add_data_emprestimo": "2025-03-06",
+    "add_data_devolucao": "2025-03-12",
+    "add_status_livro": "Emprestado"
+}

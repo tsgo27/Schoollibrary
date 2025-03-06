@@ -10,7 +10,7 @@ $idAluno = $_POST['id_aluno'];
 
 try {
     // Busca a matrícula do aluno
-    $stmtAluno = $pdo->prepare("SELECT matricula FROM alunos WHERE id_Aluno = :idAluno");
+    $stmtAluno = $pdo->prepare("SELECT matricula FROM alunos WHERE id_aluno = :idAluno");
     $stmtAluno->bindParam(':idAluno', $idAluno, PDO::PARAM_INT);
     $stmtAluno->execute();
     $aluno = $stmtAluno->fetch(PDO::FETCH_ASSOC);
