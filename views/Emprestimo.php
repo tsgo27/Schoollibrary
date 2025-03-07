@@ -278,5 +278,5 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 <script src="../Public/js/Comprovante.js"></script>
 <script src="../public/js/PesquisarEmprestimo.js"></script>
 <script src="../public/js/MenuSidebar.js"></script>
-
+<script src="../Public/js/validacao_datas_emprestimo.js"></script>
 </html>

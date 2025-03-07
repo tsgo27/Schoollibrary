@@ -1008,3 +1008,72 @@
     "add_data_devolucao": "2025-03-12",
     "add_status_livro": "Emprestado"
 }
+[2025-03-06 21:41:53] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "2a09a6a59d247a2f88e27f7fa061dc792b6469113cd3187cac4af763de66267d",
+    "add_matricula_aluno": "202320209",
+    "add_turma_aluno": "3º A",
+    "add_nome_aluno": "Debora Soares",
+    "add_titulo_livro": " O Jardim Secreto",
+    "add_data_emprestimo": "2025-03-06",
+    "add_data_devolucao": "2025-03-06",
+    "add_status_livro": "Emprestado"
+}
+[2025-03-06 21:47:05] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "2a09a6a59d247a2f88e27f7fa061dc792b6469113cd3187cac4af763de66267d",
+    "add_matricula_aluno": "202320121",
+    "add_turma_aluno": "1º A",
+    "add_nome_aluno": "Maria",
+    "add_titulo_livro": "Avançao da IA",
+    "add_data_emprestimo": "2025-03-06",
+    "add_data_devolucao": "2025-03-06",
+    "add_status_livro": "Emprestado"
+}
+[2025-03-06 21:50:46] Requisição recebida: POST - /schoollibrary/Models/Insert_Emprestimo.php
+{
+    "csrf_token": "2a09a6a59d247a2f88e27f7fa061dc792b6469113cd3187cac4af763de66267d",
+    "add_matricula_aluno": "202320121",
+    "add_turma_aluno": "1º A",
+    "add_nome_aluno": "Maria",
+    "add_titulo_livro": "O Código da História",
+    "add_data_emprestimo": "2025-03-06",
+    "add_data_devolucao": "2025-03-07",
+    "add_status_livro": "Emprestado"
+}
+[2025-03-06 21:57:09] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "2a09a6a59d247a2f88e27f7fa061dc792b6469113cd3187cac4af763de66267d",
+    "codEmprestimo": "41",
+    "editaMatricula": "202320121",
+    "editaTurma": "1º A",
+    "editaAluno": "Maria",
+    "editaTitulo": "O Código da História",
+    "editaEmprestimo": "2025-03-06",
+    "editaDevolucao": "2025-03-07",
+    "Status_Livro": "Disponível"
+}
+[2025-03-06 23:23:27] Requisição recebida: POST - /schoollibrary/Models/Insert_Autor.php
+{
+    "csrf_token": "2a09a6a59d247a2f88e27f7fa061dc792b6469113cd3187cac4af763de66267d",
+    "addAutor": "<script>alert(\"XSS injetado com sucesso!\");<\/script>",
+    "addStatus": "Ativo"
+}
+[2025-03-06 23:26:37] Requisição recebida: POST - /schoollibrary/Models/Insert_Autor.php
+{
+    "csrf_token": "2a09a6a59d247a2f88e27f7fa061dc792b6469113cd3187cac4af763de66267d",
+    "addAutor": "<img src=\"x\" onerror=\"alert('XSS Teste!')\">",
+    "addStatus": "Ativo"
+}
+[2025-03-06 23:27:34] Requisição recebida: POST - /schoollibrary/Models/Insert_Autor.php
+{
+    "csrf_token": "2a09a6a59d247a2f88e27f7fa061dc792b6469113cd3187cac4af763de66267d",
+    "addAutor": "<svg\/onload=alert(1)>",
+    "addStatus": "Ativo"
+}
+[2025-03-06 23:27:51] Requisição recebida: POST - /schoollibrary/Models/Insert_Autor.php
+{
+    "csrf_token": "2a09a6a59d247a2f88e27f7fa061dc792b6469113cd3187cac4af763de66267d",
+    "addAutor": "<iframe src=\"javascript:alert(1)\"><\/iframe>",
+    "addStatus": "Ativo"
+}
