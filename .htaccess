@@ -5,6 +5,11 @@ Allow from all
 # Protege contra Clickjacking com CSP
 Header always set Content-Security-Policy "frame-ancestors 'self'"
 
+# Proteção adicional contra ataques
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
 # Restringe o acesso a pastas específicas
 RewriteRule ^Config/ - [F,L]
 RewriteRule ^another-restricted-folder/ - [F,L]
