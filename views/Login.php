@@ -56,6 +56,6 @@ if (!isset($_SESSION['csrf_token'])) {
    </form>
 </body>
 
-<script src="../public/js/view_password.js"></script>
+<script src="../public/js/toggle_visibility_pwd.js"></script>
 <script src="../public/js/CapsLock.js"></script>
 </html>
