@@ -2,24 +2,26 @@ RewriteEngine On
 Options -Indexes
 Allow from all
 
+
+<IfModule mod_headers.c>
 # Protege contra Clickjacking com CSP
-Header always set Content-Security-Policy "frame-ancestors 'self'"
-
+    Header always set Content-Security-Policy "frame-ancestors 'self'"
 # Proteção adicional contra ataques
-Header always set X-Content-Type-Options "nosniff"
-Header always set Referrer-Policy "strict-origin-when-cross-origin"
-Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header always unset X-Powered-By
+</IfModule>
 
-# Remove o cabeçalho X-Powered-By
-Header always unset X-Powered-By
+# Bloqueia acesso direto ao LoginController.php
+RewriteCond %{THE_REQUEST} "GET /schoollibrary/Controllers/LoginController.php" [NC]
+RewriteRule .* - [R=403,L]
 
 # Restringe o acesso a pastas específicas
 RewriteRule ^Config/ - [F,L]
 RewriteRule ^another-restricted-folder/ - [F,L]
 
-# Se o arquivo ou diretório não existir
+# Se o arquivo ou diretório não existir, redireciona para index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
-# Redireciona todas as outras requisições para index.php com o parâmetro 'url'
 RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
