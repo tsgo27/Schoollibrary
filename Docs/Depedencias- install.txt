@@ -1,32 +1,33 @@
-Procedimento para instalar a biblioteca Dompdf e gerar relatórios em PDF. 
 Siga as instruções abaixo:
 
+|-------------------------------------------------------------------------------------------------------------------------|
+1º Configurar o caminho do log de erros do PHP para o projeto:
 
-------
-1° Configurar a extensão 'gd' no arquivo de configuração do XAMPP:
+	Abra o arquivo php.ini localizado em:C:\xampp\php\php.ini
 
-Abra o arquivo "php.ini" localizado na pasta do XAMPP "C:\xampp\php.ini".
+	Localize a linha:error_log="C:\xampp\php\logs\php_error_log"
 
-Localize a linha que contém a extensão referente a: ";extension=gd".
+	Modifique para apontar para o log do projeto dessa forma você vai visualizar erros do servidor xampp no seu log:
 
-Remova o ponto e vírgula (;) no início da linha para descomentar a extensão (extension=gd).
+	error_log="C:/Xampp/htdocs/Schoollibrary/Logs/error.log"
 
--------
-2° Baixar e Instalar o Composer:
-	
-Acesse o site oficial em: https://getcomposer.org/download/
+	Salve o arquivo e reinicie o Apache no XAMPP.
 
-Ou utilize o instalador direto em: https://getcomposer.org/Composer-Setup.exe
+|-------------------------------------------------------------------------------------------------------------------------|
 
+2º Configurar a extensão 'gd' no arquivo de configuração do XAMPP:
 
-------
-3° Execute o seguinte comando no terminal do vscode:
+	Abra o arquivo php.ini localizado na pasta do XAMPP:C:\xampp\php\php.ini
 
-	composer require dompdf/dompdf
+	Localize a linha que contém a extensão referente a:;extension=gd
 
+	Remova o ponto e vírgula (;) no início da linha para descomentar a extensão:extension=gd
 
--------
-4° Após completar todos os procedimentos, agora você pode criar relatórios em PDF. 
-Conforme sua necessidade.
+|-------------------------------------------------------------------------------------------------------------------------|
+3º Baixar e Instalar o Composer:
 
+	Acesse o site oficial em:https://getcomposer.org/download/
 
+	Ou utilize o instalador direto:https://getcomposer.org/Composer-Setup.exe
+
+|-------------------------------------------------------------------------------------------------------------------------|
