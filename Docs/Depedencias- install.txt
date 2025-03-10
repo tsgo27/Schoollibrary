@@ -31,3 +31,4 @@ Siga as instruções abaixo:
 	Ou utilize o instalador direto:https://getcomposer.org/Composer-Setup.exe
 
 |-------------------------------------------------------------------------------------------------------------------------|
+
