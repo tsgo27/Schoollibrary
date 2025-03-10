@@ -1,13 +1,19 @@
 <?php
-
-ini_set('session.cookie_secure', 1);  // Se o site usa HTTPS, ativa cookies seguros
-ini_set('session.cookie_httponly', 1); // Impede acesso aos cookies via JavaScript
-
-session_start();
 require_once __DIR__ . '/../Config/config_database.php';
 require_once __DIR__ . '/../Config/config_csrf.php';
 
-  
+// Definir os parâmetros dos cookies da sessão antes de iniciar
+session_set_cookie_params([
+    'lifetime' => 0, // Sessão expira ao fechar o navegador
+    'path' => '/',
+    'domain' => '', // Usa o domínio padrão
+    'secure' => (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'), // Apenas em HTTPS
+    'httponly' => true, // Impede acesso ao cookie via JavaScript
+    'samesite' => 'Strict' // Protege contra CSRF e ataques cross-site
+]);
+session_start();
+
+
 // Função para buscar a matrícula atualizada do usuário
 function buscarNovaMatricula($pdo, $idUsuario)
 {
