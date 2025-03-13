@@ -67,7 +67,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 </body>
 <script type='text/php'>
     if (isset($pdf)) {
-        $pdf->page_text(720, 550, "Página {PAGE_NUM} de {PAGE_COUNT}", null, 12, array(0,0,0));
+        $pdf->page_text(720, 570, "Página {PAGE_NUM} de {PAGE_COUNT}", null, 12, array(0,0,0));
     }
 </script>
 </html>
