@@ -48,7 +48,8 @@ if (!isset($_SESSION['csrf_token'])) {
                <div class="input-box">
                   <input type="submit" name="btnToEnter" value="Entrar">
                   <div id="caps-lock-alert">Caps Lock Ativado</div>
-                  <p id="versao">Versão Beta: 1.0.0</p>
+                  <p id="versao">© 2025, Sistema Bibliotecário Schoollibrary. Todos os direitos reservados.
+                  </p>
                </div>
             </div>
          </div>

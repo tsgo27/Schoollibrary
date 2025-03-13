@@ -26,12 +26,12 @@
 }
 
 #versao{
-    width: auto;
-    position: fixed;
-    top: 95%;
-    margin-left: 27%;
-    font-size: 13px;
-    color: #2a2936;
+  width: 50%;
+  position: fixed;
+  top: 96%;
+  margin-left: -11%;
+  font-size: 13px;
+  color: #2a2936;
 }
 
 
