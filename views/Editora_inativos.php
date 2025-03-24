@@ -153,11 +153,11 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                 <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <input type="hidden" name="codEditora" id="codEditora" class="form-control">
+                                        <input type="hidden" name="codEditora" id="codEditora" class="form-control" readonly>
                                         <label>Editora</label>
-                                        <input type="text" name="editaEditora" id="editaEditora" class="form-control">
+                                        <input type="text" name="editaEditora" id="editaEditora" class="form-control" readonly>
                                         <label>Cidade</label>
-                                        <input type="text" name="editaCidade" id="editaCidade" maxlength="60" class="form-control">
+                                        <input type="text" name="editaCidade" id="editaCidade" maxlength="60" class="form-control" readonly>
                                         <label>Estado</label>
                                         <select name="editaEstado" id="editaEstado" class="form-control">
                                             <?php

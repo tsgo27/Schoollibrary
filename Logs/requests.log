@@ -1077,3 +1077,491 @@
     "addAutor": "<iframe src=\"javascript:alert(1)\"><\/iframe>",
     "addStatus": "Ativo"
 }
+[2025-03-18 23:02:25] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "b3f2974f330a7a7fc504adc7cdc3ea4eb0effdbd25cdefca5e8c6abedfd69eb1",
+    "codReserva": "7",
+    "editaMatricula": "202319203",
+    "editaTurma": "4º A",
+    "editaAluno": "Dani Martins",
+    "editaTitulo": "O Último Refúgio ",
+    "editaReserva": "2025-03-17",
+    "editaExpiracao": "2025-03-21",
+    "editaSituacao": "Reservado"
+}
+[2025-03-20 20:58:26] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "9f62c8dd2cb7ed4143b70557e8a316eee3dbb024931aac09847a0ba0a2cf55fd",
+    "codEmprestimo": "38",
+    "editaMatricula": "202320121",
+    "editaTurma": "1º A",
+    "editaAluno": "Maria",
+    "editaTitulo": "Java ",
+    "editaEmprestimo": "2025-03-17",
+    "editaDevolucao": "2025-03-20",
+    "Status_Livro": "Emprestado"
+}
+[2025-03-20 20:59:03] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "9f62c8dd2cb7ed4143b70557e8a316eee3dbb024931aac09847a0ba0a2cf55fd",
+    "codEmprestimo": "37",
+    "editaMatricula": "202319202",
+    "editaTurma": "2º A",
+    "editaAluno": "Daniel Soares",
+    "editaTitulo": "Aventuras Fantásticas",
+    "editaEmprestimo": "2025-03-17",
+    "editaDevolucao": "2025-03-21",
+    "Status_Livro": "Emprestado"
+}
+[2025-03-20 21:00:07] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "44",
+    "matricula": "202540034",
+    "editarNome": "Maisa reis",
+    "editarTelefone": "620025-60660",
+    "editarEmail": "maisa@email.com",
+    "editarStatus": "Ativo",
+    "update": ""
+}
+[2025-03-20 21:00:51] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "44",
+    "matricula": "202540034",
+    "editaTurma": "3º B",
+    "editarNome": "Maisa reis",
+    "editarTelefone": "620025-60660",
+    "editarEmail": "maisa@email.com",
+    "editarStatus": "Ativo"
+}
+[2025-03-20 21:01:03] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "33",
+    "matricula": "202320208",
+    "editarNome": "joão Gustavo",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "joao.gustavo@teste.com",
+    "editarStatus": "Ativo",
+    "update": ""
+}
+[2025-03-20 21:01:16] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "33",
+    "matricula": "202320208",
+    "editaTurma": "1º A",
+    "editarNome": "joão Gustavo",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "joao.gustavo@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-03-20 21:01:27] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "32",
+    "matricula": "202320207",
+    "editaTurma": "4º A",
+    "editarNome": "Ivani Filho",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "ivani.filho@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-03-20 21:01:38] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "44",
+    "matricula": "202540034",
+    "editaTurma": "4º B",
+    "editarNome": "Maisa reis",
+    "editarTelefone": "620025-60660",
+    "editarEmail": "maisa@email.com",
+    "editarStatus": "Ativo"
+}
+[2025-03-20 21:01:46] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Ativo",
+    "update": ""
+}
+[2025-03-20 21:02:07] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editaTurma": "2º A",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-03-20 21:02:29] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "44",
+    "matricula": "202540034",
+    "editaTurma": "2º B",
+    "editarNome": "Maisa reis",
+    "editarTelefone": "620025-60660",
+    "editarEmail": "maisa@email.com",
+    "editarStatus": "Ativo"
+}
+[2025-03-20 21:02:41] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "44",
+    "matricula": "202540034",
+    "editaTurma": "2º B",
+    "editarNome": "Maisa reis",
+    "editarTelefone": "620025-60660",
+    "editarEmail": "maisa@email.com",
+    "editarStatus": "Inativo"
+}
+[2025-03-20 21:02:53] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "33",
+    "matricula": "202320208",
+    "editaTurma": "1º A",
+    "editarNome": "joão Gustavo",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "joao.gustavo@teste.com",
+    "editarStatus": "Inativo"
+}
+[2025-03-20 21:03:03] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editaTurma": "2º A",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Inativo"
+}
+[2025-03-20 21:04:05] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "9f62c8dd2cb7ed4143b70557e8a316eee3dbb024931aac09847a0ba0a2cf55fd",
+    "codEmprestimo": "35",
+    "editaMatricula": "202320206",
+    "editaTurma": "3º A",
+    "editaAluno": "Rafal oliveira",
+    "editaTitulo": " O Jardim Secreto",
+    "editaEmprestimo": "2025-03-17",
+    "editaDevolucao": "2025-03-21",
+    "Status_Livro": "Emprestado"
+}
+[2025-03-22 00:24:00] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "1889ec6cc4ab5fbfe332669e9630f6bdd7d72b8f0e2609f0071094c375c5832e",
+    "codEmprestimo": "27",
+    "editaMatricula": "202320209",
+    "editaTurma": "3º A",
+    "editaAluno": "Debora Soares",
+    "editaTitulo": "Poesias Efêmeras",
+    "editaEmprestimo": "2025-01-06",
+    "editaDevolucao": "2025-01-10",
+    "Status_Livro": "Emprestado"
+}
+[2025-03-23 23:26:22] Requisição recebida: POST - /schoollibrary/Models/Update_Emprestimo.php
+{
+    "csrf_token": "a8ac3cfd8e741d4f5cfb4b25d716fe9924eb00c0a2acc6cc72bc70390fe14975",
+    "codEmprestimo": "38",
+    "editaMatricula": "202320121",
+    "editaTurma": "1º A",
+    "editaAluno": "Maria",
+    "editaTitulo": "Histórica de Zico",
+    "editaEmprestimo": "2025-03-17",
+    "editaDevolucao": "2025-03-20",
+    "Status_Livro": "Emprestado"
+}
+[2025-03-23 23:30:43] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "31",
+    "matricula": "202320206",
+    "editaTurma": "3º A",
+    "editarNome": "Rafal oliveira",
+    "editarTelefone": "(62) 9925-94657",
+    "editarEmail": "rafael.oliveira@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-03-23 23:31:59] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "34",
+    "matricula": "202320209",
+    "editaTurma": "3º A",
+    "editarNome": "Debora Soares",
+    "editarTelefone": "(62) 0125-58989",
+    "editarEmail": "debora.soares@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-03-23 23:32:25] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "31",
+    "matricula": "202320206",
+    "editaTurma": "3º A",
+    "editarNome": "Rafal oliveira",
+    "editarTelefone": "(62) 9876-36534",
+    "editarEmail": "rafael.oliveira@teste.com",
+    "editarStatus": "Ativo"
+}
+[2025-03-23 23:34:18] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "44",
+    "matricula": "202540034",
+    "editarNome": "Maisa reis",
+    "editarTelefone": "620025-60660",
+    "editarEmail": "maisa@email.com",
+    "editarStatus": "Ativo",
+    "update": ""
+}
+[2025-03-23 23:34:42] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "44",
+    "matricula": "202540034",
+    "editaTurma": "1º A",
+    "editarNome": "Maisa reis",
+    "editarTelefone": "620025-60660",
+    "editarEmail": "maisa@email.com",
+    "editarStatus": "Ativo"
+}
+[2025-03-23 23:36:17] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "33",
+    "matricula": "202320208",
+    "editaTurma": "1º A",
+    "editarNome": "joão Gustavo",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "joao.gustavo@teste.com",
+    "editarStatus": "Ativo",
+    "update": ""
+}
+[2025-03-23 23:36:30] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editaTurma": "2º A",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Ativo",
+    "update": ""
+}
+[2025-03-23 23:37:08] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "44",
+    "matricula": "202540034",
+    "editaTurma": "1º A",
+    "editarNome": "Maisa reis",
+    "editarTelefone": "620025-60660",
+    "editarEmail": "maisa@email.com",
+    "editarStatus": "Inativo"
+}
+[2025-03-23 23:37:19] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "33",
+    "matricula": "202320208",
+    "editaTurma": "1º A",
+    "editarNome": "joão Gustavo",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "joao.gustavo@teste.com",
+    "editarStatus": "Inativo"
+}
+[2025-03-23 23:37:30] Requisição recebida: POST - /schoollibrary/Models/Update_Aluno.php
+{
+    "idAluno": "24",
+    "matricula": "202320120",
+    "editaTurma": "2º A",
+    "editarNome": "Igor Silva",
+    "editarTelefone": "6200000-0000",
+    "editarEmail": "igor.silva@teste.com",
+    "editarStatus": "Inativo"
+}
+[2025-03-23 23:39:29] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codAutor": "38",
+    "editaAutor": "Marcos feliciano",
+    "editaStatus": "Inativo"
+}
+[2025-03-23 23:39:43] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codAutor": "38",
+    "editaAutor": "Marcos feliciant",
+    "editaStatus": "Ativo",
+    "update": "Atualizar"
+}
+[2025-03-23 23:42:17] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codAutor": "38",
+    "editaAutor": "Marcos felician",
+    "editaStatus": "Ativo"
+}
+[2025-03-23 23:42:25] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codAutor": "38",
+    "editaAutor": "Marcos feliciano",
+    "editaStatus": "Ativo"
+}
+[2025-03-23 23:42:32] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codAutor": "38",
+    "editaAutor": "Marcos feliciano",
+    "editaStatus": "Inativo"
+}
+[2025-03-23 23:42:50] Requisição recebida: POST - /schoollibrary/Models/Update_Autor.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codAutor": "38",
+    "editaAutor": "Marcos feliciano",
+    "editaStatus": "Ativo",
+    "update": "Atualizar"
+}
+[2025-03-23 23:43:06] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "1",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras",
+    "editaSituacao": "Inativo"
+}
+[2025-03-23 23:44:43] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "1",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras",
+    "editaSituacao": "Disponível"
+}
+[2025-03-23 23:45:00] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "1",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras",
+    "editaSituacao": "Inativo"
+}
+[2025-03-23 23:46:33] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "1",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras",
+    "editaSituacao": "Manutenção"
+}
+[2025-03-23 23:47:25] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "1",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras",
+    "editaSituacao": "Disponível"
+}
+[2025-03-23 23:47:36] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "1",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras",
+    "editaSituacao": "Manutenção"
+}
+[2025-03-23 23:48:45] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "1",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras",
+    "editaSituacao": "Descontinuado"
+}
+[2025-03-23 23:49:03] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "1",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras",
+    "editaSituacao": "Manutenção"
+}
+[2025-03-23 23:50:09] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "1",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras",
+    "editaSituacao": "Inativo"
+}
+[2025-03-23 23:50:24] Requisição recebida: POST - /schoollibrary/Models/Update_Obra.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codObra": "30",
+    "editaIsbn": "234-443-44-24",
+    "editaTitulo": "Avançao da IA",
+    "editaAutor": "Monteiro Lobato",
+    "editaEdicao": "1",
+    "editaAno": "2024",
+    "editaCopia": "1",
+    "editaAcervo": "CB-LD-NT",
+    "editaGenero": "Alegria",
+    "editaEditora": "Arte das Palavras",
+    "editaSituacao": "Disponível"
+}

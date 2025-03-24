@@ -115,7 +115,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                             throw new Exception('A conexão com o banco de dados não foi estabelecida.');
                                         }
 
-                                        $sql = "SELECT * FROM obra WHERE Situacao IN ('Inativo') ORDER BY data_registro DESC";
+                                        $sql = "SELECT * FROM obra WHERE Situacao IN ('Inativo','Manutenção','Descontinuado') ORDER BY data_registro DESC";
                                         $result = $pdo->query($sql);
 
                                         if ($result->rowCount() > 0) {
@@ -152,8 +152,6 @@ require_once __DIR__ . '/../Config/bootstrap.php';
 
                                                 echo "<td class='col-lg-3'>
                                                 <a href='#editEmployeeModal' class='edit editarObra btn btn-warning' data-toggle='modal' title='Editar obra'>Editar</a>
-                                                <a href='#' class='btn btn-info visualizarObra' data-id='" . htmlspecialchars($Obrar_data['codObra']) . "' data-status='" . htmlspecialchars(trim($Obrar_data['Situacao'])) . "' title='Visualizar detalhes' style='color: white; background-color: #007bff; font-size: 14px; padding: 5px 10px;'>
-                                                <i class='material-icons'>library_books</i>
                                                 </a>
                                                 </td>";
                                                 echo "</tr>";
@@ -220,21 +218,21 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                     <div class="form-group">
                                         <input type="hidden" name="codObra" id="codObra" class="form-control">
                                         <label>ISBN</label>
-                                        <input type="text" name="editaIsbn" id="editaIsbn" maxlength="60" class="form-control">
+                                        <input type="text" name="editaIsbn" id="editaIsbn" maxlength="60" class="form-control" readonly>
                                         <label>Título Livro</label>
-                                        <input type="text" name="editaTitulo" id="editaTitulo" maxlength="60" class="form-control">
+                                        <input type="text" name="editaTitulo" id="editaTitulo" maxlength="60" class="form-control" readonly>
                                         <label>Autores</label>
-                                        <input type="text" name="editaAutor" id="editaAutor" class="form-control">
+                                        <input type="text" name="editaAutor" id="editaAutor" class="form-control" readonly>
                                         <label>Edição</label>
-                                        <input type="text" name="editaEdicao" id="editaEdicao" maxlength="60" class="form-control">
+                                        <input type="text" name="editaEdicao" id="editaEdicao" maxlength="60" class="form-control" readonly>
                                         <label>Ano</label>
-                                        <input type="text" name="editaAno" id="editaAno" maxlength="60" class="form-control">
+                                        <input type="text" name="editaAno" id="editaAno" maxlength="60" class="form-control" readonly>
                                         <label>Quantidade</label>
-                                        <input type="text" name="editaCopia" id="editaCopia" maxlength="60" class="form-control">
+                                        <input type="text" name="editaCopia" id="editaCopia" maxlength="60" class="form-control" readonly>
                                         <label>Acervo</label>
-                                        <input type="text" name="editaAcervo" id="editaAcervo" maxlength="10" class="form-control">
+                                        <input type="text" name="editaAcervo" id="editaAcervo" maxlength="10" class="form-control" readonly>
                                         <label>Gêneros</label>
-                                        <select type="text" name="editaGenero" id="editaGenero" class="form-control">
+                                        <select type="text" name="editaGenero" id="editaGenero" class="form-control" readonly>
                                             <?php
                                             require_once __DIR__ . '/../Config/bootstrap.php';
                                             // Query
@@ -247,7 +245,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                             ?>
                                         </select>
                                         <label>Editoras</label>
-                                        <select type="text" name="editaEditora" id="editaEditora" class="form-control">
+                                        <select type="text" name="editaEditora" id="editaEditora" class="form-control" readonly>
                                             <?php
                                             require_once __DIR__ . '/../Config/bootstrap.php';
                                             // Query

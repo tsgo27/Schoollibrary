@@ -161,13 +161,16 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                     <div class="form-group">
                                         <input type="hidden" name="idAluno" id="idAluno" class="form-control">
                                         <label>Matrícula</label>
-                                        <input type="text" name="matricula" id="matricula" maxlength="9" class="form-control">
+                                        <input type="text" name="matricula" id="matricula" maxlength="9" class="form-control" readonly>
+                                        <label>Turma</label>
+                                        <input type="text" name="editaTurma" id="editaTurma" maxlength="9" class="form-control" readonly>
+                                        <small class="form-text text-muted">Padrão turma: 3º A</small>
                                         <label>Nome</label>
-                                        <input type="text" name="editarNome" id="editarNome" maxlength="60" class="form-control">
+                                        <input type="text" name="editarNome" id="editarNome" maxlength="60" class="form-control" readonly>
                                         <label>Telefone</label>
-                                        <input type="tel" name="editarTelefone" id="editarTelefone" maxlength="14" class="form-control">
+                                        <input type="text" name="editarTelefone" id="editarTelefone" class="form-control phone_with_ddd" readonly>
                                         <label>E-mail</label>
-                                        <input type="email" name="editarEmail" id="editarEmail" maxlength="100" class="form-control">
+                                        <input type="email" name="editarEmail" id="editarEmail" maxlength="100" class="form-control" readonly>
                                         <label>Status Aluno</label>
                                         <select name="editarStatus" id="editarStatus" class="form-control">
                                             <option value="Ativo">Ativo</option>

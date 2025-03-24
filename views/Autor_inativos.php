@@ -155,7 +155,7 @@ require_once __DIR__ . '/../Config/bootstrap.php';
                                     <div class="form-group">
                                         <input type="hidden" name="codAutor" id="codAutor" class="form-control">
                                         <label>Autor</label>
-                                        <input type="text" name="editaAutor" id="editaAutor" class="form-control">
+                                        <input type="text" name="editaAutor" id="editaAutor" class="form-control" readonly>
                                         <label>Status</label>
                                         <select name="editaStatus" id="editaStatus" class="form-control">
                                             <option value="Ativo">Ativo</option>
