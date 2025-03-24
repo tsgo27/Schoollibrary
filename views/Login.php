@@ -36,7 +36,7 @@ if (!isset($_SESSION['csrf_token'])) {
                   <!-- Campo Matrícula com Ícone -->
                   <div class="input-wrapper">
                      <span class="material-icons">person</span>
-                     <input type="text" name="matricula" placeholder="Informe sua Matrícula" maxlength="9" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                     <input type="text" name="matricula" placeholder="Digite sua Matrícula" maxlength="9" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                   </div>
                </div>
                <div class="input-box">
