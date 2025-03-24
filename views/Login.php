@@ -8,21 +8,23 @@ if (!isset($_SESSION['csrf_token'])) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
-   
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>School Library | Login</title>
+   <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon" />
    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
    <link rel="stylesheet" href="./css/login.css">
    <link rel="stylesheet" href="../public/fonts/fonts.css">
-   <link rel="shortcut icon" href="../public/img/favicon-colegio.ico" type="image/x-icon"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
-<form action="<?php echo BASE_URL; ?>/Controllers/LoginController.php" method="POST">
-   <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
+   <form action="<?php echo BASE_URL; ?>/Controllers/LoginController.php" method="POST">
+      <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" autocomplete="off">
       <div class="container-login">
          <div class="img-box">
             <img src="../public/img/imag-login.png" alt="login" class="imag-login">
@@ -31,14 +33,20 @@ if (!isset($_SESSION['csrf_token'])) {
             <div class="form-box">
                <h2 class="text-login">Login</h2>
                <div class="input-box">
-               <input type="text" name="matricula" placeholder="Informe sua Matrícula" maxlength="9" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                  <!-- Campo Matrícula com Ícone -->
+                  <div class="input-wrapper">
+                     <span class="material-icons">person</span>
+                     <input type="text" name="matricula" placeholder="Informe sua Matrícula" maxlength="9" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                  </div>
                </div>
                <div class="input-box">
-                  <input type="password" name="ss" id="ss" class="form__input-text" placeholder="Senha" required />
-                  <i class="form__input-icon fas fa-eye" data-password-eye></i>
+                  <!-- Campo Senha com Ícone -->
+                  <div class="input-wrapper">
+                     <span class="material-icons">lock</span>
+                     <input type="password" name="ss" id="ss" class="form__input-text" placeholder="Senha" required />
+                     <i class="form__input-icon fas fa-eye" data-password-eye></i>
+                  </div>
                </div>
-               <?php
-               ?>
                <?php
                if (!empty($_SESSION['error'])) {
                   echo '<div class="alert alert-danger text-center" role="alert">' . $_SESSION['error'] . '</div>';
@@ -48,8 +56,7 @@ if (!isset($_SESSION['csrf_token'])) {
                <div class="input-box">
                   <input type="submit" name="btnToEnter" value="Entrar">
                   <div id="caps-lock-alert">Caps Lock Ativado</div>
-                  <p id="versao">© 2025, Sistema Bibliotecário Schoollibrary. Todos os direitos reservados.
-                  </p>
+                  <p id="versao">© 2025 Schoollibrary. Todos os direitos reservados.</p>
                </div>
             </div>
          </div>
@@ -59,4 +66,5 @@ if (!isset($_SESSION['csrf_token'])) {
 
 <script src="../public/js/toggle_visibility_pwd.js"></script>
 <script src="../public/js/CapsLock.js"></script>
+
 </html>

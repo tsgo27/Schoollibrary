@@ -1565,3 +1565,15 @@
     "editaEditora": "Arte das Palavras",
     "editaSituacao": "Disponível"
 }
+[2025-03-23 23:56:05] Requisição recebida: POST - /schoollibrary/Models/Update_Reservas.php
+{
+    "csrf_token": "20774d3ce84dd766293b3db094a29355d830bfc3d08ecc0bb7b7c1c2cfe85819",
+    "codReserva": "8",
+    "editaMatricula": "202320206",
+    "editaTurma": "3º A",
+    "editaAluno": "Rafal oliveira",
+    "editaTitulo": " O Jardim Secreto",
+    "editaReserva": "2025-03-17",
+    "editaExpiracao": "2025-03-28",
+    "editaSituacao": "Reservado"
+}

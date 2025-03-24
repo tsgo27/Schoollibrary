@@ -7,11 +7,27 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-
-
+.input-wrapper input {
+    padding-left: 40px; /* Espaço para o ícone */
+    text-indent: 30px; /* Ajusta a posição do texto do placeholder */
+    text-align: left; /* Garante que o texto do placeholder fique alinhado à esquerda, mas com indentação */
+ }
+ 
+ .input-wrapper input {
+    padding-left: 30px; /* Espaço para o ícone */
+ }
+ 
+ .input-wrapper .material-icons {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #9c9a9a; /* Cor do ícone */
+ }
+ 
 .text-login{
-    width: 175px;
+    width: 165px;
     margin-left: 30%;
     padding: 20px;
     
